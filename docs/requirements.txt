@@ -2,3 +2,4 @@ jupyter-book
 pydata-sphinx-theme==0.13.1
 matplotlib
 numpy
+sphinxcontrib.mermaid

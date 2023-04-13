@@ -6,3 +6,4 @@ root: intro
 chapters:
 - file: software_list
 - file: software_quality
+- file: capabilities
