@@ -36,6 +36,6 @@ html:
   # google_analytics_id: G-
 
 sphinx:
-  mermaid_version: 8.13.3
+  mermaid_version: 10.1.0
   extra_extensions:
     - 'sphinxcontrib.mermaid'
