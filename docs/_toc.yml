@@ -5,5 +5,5 @@ format: jb-book
 root: intro
 chapters:
 - file: software_list
-- file: software_quality
 - file: capabilities
+- file: software_quality
