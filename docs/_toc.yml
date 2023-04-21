@@ -3,8 +3,19 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: software_list
-- file: attributes
-- file: capabilities
-- file: software_quality
+parts:
+  - caption: Software Suite
+    chapters:
+    - file: software_list
+    # - file: connectivity
+    - file: attributes
+
+  - caption: Capabilities
+    chapters:
+    - file: capabilities
+    - file: capabilities/system_design
+    - file: capabilities/aero
+
+  - caption: Software Quality
+    chapters:
+    - file: software_quality
