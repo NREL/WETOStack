@@ -1,65 +1,66 @@
 
 # Capabilities
 
-This dashboard will outline typical workflows and capabilities involved
+This dashboard outlines typical workflows and capabilities involved
 in wind energy system design and analysis using the WETO Software Suite.
 
-````{card}
 
-System Design
+
+````{card}
+Plant Performance
+^^^
+Plant performance analysis involves the simulation of power production
+for the collection of wind turbines in a wind farm given the atmospheric
+conditions over a period of time. The result is typically represented
+as Annual Energy Production (AEP) in Megawatthours (MWh), Gigawatthours (GWh),
+or Terrawatthours (TWh).
+````
+
+````{card}
+Wake Loss
+^^^
+Wake loss modeling is the study of turbine-turbine interactions via wind turbine
+wakes. Typically, the interaction mechanism is energy loss due to a shadow in the
+wind speed behind a wind turbine, but other mechanisms such as influence on
+turbulence are also considered.
+````
+
+````{card}
+Rotor Optimization
+^^^
+Rotor optimization focuses on the iterative design of the rotor components
+such as blades and control systems. This process typically involves modeling
+the aerodynamic loads and subsequent elastic response of the blade. This
+aero-elastic model is used within an optimization algorithm to arrive at
+rotor designs that meet a set of requirements.
+````
+
+````{card}
+Control Co-Design
+^^^
+Control co-design is a method for advanced system designs that incorporate
+control systems into the structural and aerodynamic designs. The hardware
+and software systems are designed in a coupled sense rather than individually.
+The result is a blade that may only be operable or optimal with a specific
+controller, but the performance can be much greater than a decoupled design.
+````
+
+````{card}
+[](system_design)
 ^^^
 System design involves the high-level preliminary design of the power
 generation systems and their connection to the grid. Additionally, cost
 models are incorporated here to identify an initial estimate of the cost
 of energy.
-+++
-```{mermaid}
-mindmap
-    root((System))
-        Blade, tower, turbine components
-            Turbine controls
-            Farm layout
-                Farm controls
-        Balance of station
-        Cost
-```
-
 ````
 
-
 ````{card}
-
-Wind Turbine and Wind Farm Aerodynamics
+[](aero)
 ^^^
 The detailed design of wind turbine components and wind farms is detailed
 here. This process typically involves modeling system components at varying
 levels of fidelity while moving through the design space.
-+++
-```{mermaid}
-flowchart TD
-    A["ExaWind
-    RANS/LES hybrid, time accurate, blade resolved"]
-
-    B["AMR-Wind
-    LES, time accurate, actuator line"]
-
-    C["WindSE
-    RANS, time accurate, actuator disk"]
-
-    D["OpenFAST/FAST.Farm
-    Engineering models, time accurate, BEM, beam models"]
-
-    E["FLORIS
-    Analytical, steady state"]
-
-    A --- B
-    B --- C
-    C --- D
-    D --- E
-```
-
 ````
-
 
 ## Wireframe prototype
 
