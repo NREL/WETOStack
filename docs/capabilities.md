@@ -74,3 +74,23 @@ models are related, interconnected, and perform certain tasks.
 :alt: capabilities
 :align: center
 ```
+
+## Defining Capabilities
+
+The objective is to define the analyses, design processes, and other investigations that are
+possible with the existing software tools supported by WETO.
+
+1. Start by defining a specific task (analysis, design, validation, etc).
+2. Describe the context:
+- Why does anyone need to do this?
+- What does it mean in the big picture of wind energy?
+3. Create a map of steps taken to accomplish the task. This should be written in words to describe
+the tasks, and a flow chart may be useful to connect the task descriptions in sequence if
+multiple steps may occur concurrently.
+4. Attach a software tool to each task.
+
+The result should be a map of the software required to accomplish a high level piece of work
+with WETO software. To visualize the map, it is helpful to first draw the connections
+on paper. Once the graph is accurate, add the nodes and their connectivity to a text-based
+digital representation of the graph using [mermaid](https://mermaid.js.org/intro/) which allows to
+track changes to the graph and automatically render it on the website.
