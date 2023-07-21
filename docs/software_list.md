@@ -14,13 +14,19 @@ and analysis to cost modeling and supply chain analysis.
 
 These projects are actively funded by WETO as of FY23.
 
+**GitHub orgs**
+- https://github.com/nrel
+- https://github.com/exawind
+- https://github.com/openfast
+- https://github.com/wisdem
+- https://github.com/erf-model
+
 ### Physics Simulators
 - FLORIS: https://github.com/nrel/floris
 - FLASC: https://github.com/nrel/flasc
 - emu: https://github.com/nrel/emu_python
 - moa: https://github.com/nrel/moa_python
 - OpenFAST: https://github.com/openfast/openfast
-- SOWFA: https://github.com/nrel/sowfa
 - Nalu-Wind: https://github.com/exawind/nalu-wind
 - AMR-Wind: https://github.com/exawind/amr-wind
 - WISDEM: https://github.com/wisdem/wisdem
@@ -59,6 +65,7 @@ not actively funded.
 
 ### Physics Simulators
 
+- SOWFA: https://github.com/nrel/sowfa
 - python-toolbox: https://github.com/openfast/python_toolbox
 - matlab-toolbox: https://github.com/openfast/matlab_toolbox
 - weio: https://github.com/ebranlard/weio
