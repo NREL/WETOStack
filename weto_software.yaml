@@ -1,0 +1,227 @@
+
+FLORIS:
+    # General
+    github_account: nrel
+    github_repo: floris
+    primary_use: physics
+    active_funding: true
+
+    # Physics
+    time_domain: steady
+    physics_scope:
+        - farm
+    system_type:
+        - hawt
+    system_location: any
+    loads: false
+    governing_equations:
+        - steady-state analytical fluid dynamics
+
+    # Distribution
+    supported_platforms:
+        - any
+    package_manager:
+        - PyPI
+        - conda-forge
+    package_manager_url:
+        - https://PyPI.org/project/FLORIS/
+        - https://anaconda.org/conda-forge/floris
+    installation_complexity: 1
+
+    # Documentation
+    documentation_url: https://nrel.github.io/floris/intro.html
+    user_docs: true
+    developer_docs: true
+    api_docs: true
+    cli: false
+    installation: true
+    getting_started: true
+    examples_tutorials: true
+    readability: 7
+    project_coverage: 8
+
+    # WETO Integrations (downstream)
+    openfast: indirect
+
+FLASC:
+    # General
+    github_account: nrel
+    github_repo: flasc
+    primary_use: data analysis
+    active_funding: true
+
+    # Physics
+    time_domain:
+    physics_scope:
+    system_type:
+    system_location:
+    loads:
+    governing_equations:
+
+    # Distribution
+    supported_platforms:
+        - any
+    package_manager:
+        - PyPI
+    package_manager_url:
+        - https://PyPI.org/project/FlASC/
+    installation_complexity: 1
+
+    # Documentation
+    documentation_url: https://flasc.readthedocs.io/
+    user_docs: true
+    developer_docs: false
+    api_docs: false
+    cli: false
+    installation: true
+    getting_started: true
+    examples_tutorials: true
+    readability:
+    project_coverage:
+
+    # WETO Integrations (downstream)
+    floris: direct
+
+#     "emu_python": {
+#         "github_account": "nrel",
+#         "github_repo": "emu_python",
+#         "primary_use": "data_analysis",
+#         "time_domain": "n/a",
+#         "active_funding": true,
+#         "scope": "farm"
+#     },
+#     "moa_python": {
+#         "github_account": "nrel",
+#         "github_repo": "moa_python",
+#         "primary_use": "data_analysis",
+#         "time_domain": "n/a",
+#         "active_funding": true,
+#         "scope": "farm"
+#     },
+
+OpenFAST:
+    # General
+    github_account: openfast
+    github_repo: openfast
+    primary_use: physics
+    active_funding: true
+
+    # Physics
+    time_domain: unsteady
+    physics_scope: turbine
+    system_type:
+    - hawt
+    - vawt
+    system_location:
+    - any
+    loads:
+    - true
+    governing_equations:
+    - Blade Element Momentum Theory
+    - Geomtrically Exact Beam Theory
+    - Engineering models
+
+    # Distribution
+    supported_platforms:
+        - any
+    package_manager:
+        - Homebrew
+        - conda-forge
+    package_manager_url:
+        - https://formulae.brew.sh/formula/openfast
+        - https://anaconda.org/conda-forge/openfast
+    installation_complexity: 1
+
+    # Documentation
+    documentation_url: https://openfast.readthedocs.io/
+    user_docs: true
+    developer_docs: false
+    api_docs: false
+    cli: true
+    installation: true
+    getting_started: false
+    examples_tutorials: false
+    readability: 5
+    project_coverage: 6
+
+    # WETO Integrations (downstream)
+    rosco: direct
+
+#     "SOWFA": {
+#         "github_account": "nrel",
+#         "github_repo": "sowfa",
+#         "primary_use": "physics",
+#         "time_domain": "dynamic",
+#         "active_funding": true,
+#         "scope": "farm"
+#     },
+#     "Nalu-Wind": {
+#         "github_account": "exawind",
+#         "github_repo": "nalu-wind",
+#         "primary_use": "physics",
+#         "time_domain": "dynamic",
+#         "active_funding": true,
+#         "scope": "turbine"
+#     },
+#     "AMR-Wind": {
+#         "github_account": "exawind",
+#         "github_repo": "amr-wind",
+#         "primary_use": "physics",
+#         "time_domain": "dynamic",
+#         "active_funding": true,
+#         "scope": "farm"
+#     },
+#     "WISDEM": {
+#         "github_account": "wisdem",
+#         "github_repo": "wisdem",
+#         "primary_use": "physics",
+#         "time_domain": "dynamic",
+#         "active_funding": true,
+#         "scope": "system"
+#     }
+
+WEIS:
+    # General
+    github_account: wisdem
+    github_repo: weis
+    primary_use: design
+    active_funding: true
+
+    # Physics
+    time_domain: unsteady
+    physics_scope: turbine
+    system_type:
+    - hawt
+    system_location:
+    - any
+    loads:
+    - true
+    governing_equations:
+
+    # Distribution
+    supported_platforms:
+        - macOS
+        - Linux
+    package_manager:
+    package_manager_url:
+    installation_complexity: 5
+
+    # Documentation
+    documentation_url: https://weis.readthedocs.io/en/latest/
+    user_docs: false
+    developer_docs: false
+    api_docs: false
+    cli: false
+    installation: true
+    getting_started: false
+    examples_tutorials: true
+    readability:
+    project_coverage:
+
+    # WETO Integrations (downstream)
+    widem: direct
+    openfast: direct
+    turbsim: direct
+    rosco: direct
+    pcrunch: direction
+    pyOptSparse: direction
