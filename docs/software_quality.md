@@ -93,8 +93,8 @@ it might as well not exist.
 ## Contexts
 
 consider two kinds of "users":
-- Developers
-- Practitioners
+- Developers - write new code or modify existing code including infrastructure and documentation
+- Practitioners - execute the software either directly or as a part of another system
 
 Why we care about software quality
 - Collaboration
@@ -105,35 +105,113 @@ Why we care about software quality
 (accessibility)=
 ## Accessibility
 
-Accessibility is concerned with how users who will execute the software either directly or as
-part of another system are expected to obtain and integrate it into their processes. The product
-that is to be obtained is the executable version of the software. In the case of compiled
-programming languages, this is a binary executable or library file, while interpreted languages
-typically require distributing the source code directly.
+Accessibility is concerned with how practitioners are expected to obtain and integrate a software
+into their processes. The product that is to be obtained is the executable version of the software.
+In the case of compiled programming languages, this is a binary executable or library file,
+while interpreted languages typically require distributing the source code directly.
 
-For guidance on developer accessibility, see [](extensibility).
+For guidance on developer accessibility, see [](extendability).
 
+Summary:
+- Determine the expected or targeted user profile up front and address accessibility accordingly
+    - Domain experts will need less hand holding than graduate students or the general public
+- Automate accessibility
 
-How will developers get the required tools like dependencies or other development tools?
-Are all tools available for all supported operating systems? Does the software run on both
-personal computers and super computers?
+### Prerequisite knowledge
 
-Nuances of research software:
-- The code itself is often the "front end" so complicated interfaces can't hide behind an app
-- The infrastructure for distribution (i.e. installation) is much. more hands-on than say an app store or browser
-- Users expect the balance between stability and control to lean toward control whereas users expect commercial software to lean toward stability.
+Using a computer in a scientific context is a learned skill and requires years of practice to
+become proficient. Tools like a "terminal", "shell", or "command prompt" are not initially
+intuitive, and that these three terms are used interchangeably can lead to further confusion.
+This is an example of a barrier to entry often encountered by early-career researchers and
+experienced practitioners alike. In order to improve accessibility, it is important to
+understand the experience of users and design software to meet their needs.
 
-### Barrier to entry
-What is the barrier to entry for practitioners and developers? Are practitioners expected to have
-programming knowledge and domain-specific knowledge?
-Ideally, practitioners are expected or assumed to have a reasonable amount of domain knowledge,
-but in most cases very little computer programming knowledge is expected. The exception is in HPC
-software where the ability to configure a HPC system and understand consequences of the
-configuration is assumed.
+**BP: Identify target user profiles and anticipate their levels of understanding. Accurately
+understand the complixity of the systems used to access the software, and evaluate whether
+this matches the expected skills in target users.**
 
-How will developers get the required tools like dependencies or other development tools?
-Are all tools available for all supported operating systems?
-Does the software run on both personal computers and super computers?
+Some examples of common barriers to entry are:
+
+- Navigating a "terminal"
+- Knowledge of acryonyms, jargon, or interchangeable phrases
+    - CLI, API, IDE, etc
+    - Compile, clone, check out
+    - Terminal vs shell vs command prompt
+- Extensions: `.exe`, `.so`, `.dll`, `.dylib`
+- Installation:
+    - Package managers
+    - Downloading executable files
+    - Configuring an environment
+
+### Distribution
+
+Research computing software often depend on third-party libraries, and many of these dependencies
+are research software themselves. Therefore, the installation and environment configuration
+for this type of software can easily become complex.
+
+**BP: It is the responsibility of developers to provide a streamlined method of installation using
+common software distribution systems and automation as much as practical.**
+
+Mature package managers are a great resource since they have a distribution system already in place
+and manage dependencies between software tools.
+
+The ecosystem of open source software package managers has coalesced around a few primary tools:
+- [Python Package Index (PyPI)](https://pypi.org)
+    - Source and binary distribution package manager for Python software
+    - Platform: any
+- [Conda](https://docs.conda.io/en/latest/)
+    - Package, dependency and environment management for any language
+    - Platform: any
+- [Conda-forge](https://conda-forge.org)
+    - A community-led collection of recipes, build infrastructure and distributions for the conda package manager
+    - Platform: any
+- [Homebrew (brew)](https://brew.sh)
+    - The Missing Package Manager for macOS (or Linux)
+    - Platform: Ubiquitous for macOS, but also available for Linux
+- [Spack](https://spack.io)
+    - Spack is a package manager for supercomputers supporting any language and distributable product
+    - Platform: Ubiquitous for Linux-based supercomputers, and also available for macOS and Linux
+- [APT](https://en.wikipedia.org/wiki/APT_(software))
+    - A user interface that works with core libraries to handle the installation and removal of software on Debian, and Debian-based Linux distributions
+    - Platform: Ubiquitous for Linux for system-level or generic packages
+- [Fortran package manager (FPM)](https://fpm.fortran-lang.org/index.html)
+    - Fortran-specific executable and library package manager.
+
+The process for including a package in a package management system varies, but all are designed
+to integrate with automated systems to prepare and distribute the package automatically upon
+a given event. The practice of releasing a software package after a tagged release
+(see [](version_control)) or requisite set of changes is called "continuous integration",
+also known as "CI". Tools for this level of automatic are common, and a practical choice
+is [GitHub Actions](https://github.com/features/actions). A typical CI pipeline for a Python
+package is shown below where the square components are GitHub Actions steps.
+
+```{mermaid}
+graph LR
+
+    A(("
+    GitHub Event
+    (i.e. release)
+    "))
+    subgraph Continous Testing
+        B["Run test suite"]
+    end
+    C{"Pass?"}
+    D["Notify author"]
+    subgraph Continous Deployment
+        E["Build for conda"]
+        F["Build for PyPI"]
+        G["Publish to conda-forge"]
+        H["Publish to PyPI"]
+    end
+
+    A --> B
+    B --> C
+    C -->|No| D
+    C -->|Yes| E
+    C -->|Yes| F
+    E --> G
+    F --> H
+```
 
 (usability)=
 ## Usability
@@ -160,10 +238,17 @@ User interface
 - API's
 Documentation
 
-(extensibility)=
-## Extensibility
+Clear error messages:
+- Don't expect users to have your context! Include a stack trace in your error messages or at least
+the calling function name
+- Put yourself in the shoes of the user and anticipate needs
+    - What will you be thinking about when this error pops up?
+    - What will you want to do next?
 
-Extensibility is concerned with how the software is extended to add make improvements such as
+(extendability)=
+## Extendability
+
+Extendability is concerned with how the software is extended to add make improvements such as
 new features and bug fixes.
 
 Is the code open source?
@@ -182,7 +267,7 @@ This is closely tied to **(6) methodologies for communicating intent and verify
 
 ### Approachable style
 
-An extensible software is approachable. Convoluted code is difficult to understand quickly. Understand what it means to "grok" and strive to construct software that can be easily grokked (https://en.wikipedia.org/wiki/Grok).
+An extendable software is approachable. Convoluted code is difficult to understand quickly. Understand what it means to "grok" and strive to construct software that can be easily grokked (https://en.wikipedia.org/wiki/Grok).
 
 > *Grok* means "to understand", of course, but Dr. Mahmoud, who might be termed the leading Terran expert on Martians, explains that it also means, "to drink" and "a hundred other English words, words which we think of as antithetical concepts. 'Grok' means *all* of these. It means 'fear', it means 'love', it means 'hate' – proper hate, for by the Martian 'map' you cannot hate anything unless you grok it, understand it so thoroughly that you merge with it and it merges with you – then you can hate it. By hating yourself. But this implies that you love it, too, and cherish it and would not have it otherwise. Then you can *hate* – and (I think) Martian hate is an emotion so black that the nearest human equivalent could only be called mild distaste.
 
@@ -224,6 +309,7 @@ GitHub contains some key features for coordinating software development:
 - Pull request and code review
 - Project boards
 
+(version_control)=
 ### Version control
 
 Version control, typically with `git`, is a tool for tracking the evolution of a project change
