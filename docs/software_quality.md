@@ -183,7 +183,8 @@ a given event. The practice of releasing a software package after a tagged relea
 (see [](version_control)) or requisite set of changes is called "continuous integration",
 also known as "CI". Tools for this level of automatic are common, and a practical choice
 is [GitHub Actions](https://github.com/features/actions). A typical CI pipeline for a Python
-package is shown below where the square components are GitHub Actions steps.
+package is shown below where the square components are GitHub Actions steps. Note that this
+pipeline includes sub-system areas called "Continuous Testing" and "Continuous Deployment".
 
 ```{mermaid}
 graph LR
@@ -216,34 +217,128 @@ graph LR
 (usability)=
 ## Usability
 
-Usability is concerned with how people run the software.
+Usability is concerned with how practitioners are expected to execute the software including
+creating inputs and managing outputs. 
+
 
 Nuances of research software:
 - "Design" is typically not a consideration at all
 - It is typical to adopt "patterns", so there is very little evolution of software interface design and therefore usability
 - Research software is expected to be predictable and similar to what users already know. The challenge is to understand the existing paradigms and adopt them well.
 
-The user interface should be well defined and predictable.
-It should follow typical patterns for the environment in which it is used.
-For example, unix system have command line interface conventions such as including version
-flags `--version` and `-v` to get the version number.
-Flags typically have a long form with two dashes and short form with one dash.
-One argument per flag.
-Obvious path arguments typically are not preceded by a flag.
-For example, the path where an operation should be performed need not be preceded by
-`--path` or `-p` unless it is not clear what the path is for.
+### User interface
 
-User interface
-- Input files
-- API's
-Documentation
+The user interface (UI) is any mechanism through which users interact with the software
+typically by providing inputs and receiving outputs. Examples of UI's include:
+- Graphical user interface (GUI)
+- Web-based front ends
+- Input and output files
+- Command line interface
+- Library API's
 
-Clear error messages:
-- Don't expect users to have your context! Include a stack trace in your error messages or at least
-the calling function name
-- Put yourself in the shoes of the user and anticipate needs
-    - What will you be thinking about when this error pops up?
-    - What will you want to do next?
+WETO software UI's should be well defined and predictable.
+They should adopt the conventions that already exist in the environments and contexts
+in which they're used.
+Most importantly, all user interfaces should be well documented.
+
+
+#### Command line interface
+
+The command line interface (CLI) is one type of front-end for software.
+It is the method by which a software is executed via a computer's terminal.
+WETO software should in general adhere to the following conventions and principles for CLI's.
+However, these are guidelines and can be skipped when context is clear or another
+option improves usability.
+
+- Adopt command line syntax requirements from https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html
+    - Guideline 1: Utility names should be between two and nine characters, inclusive.
+    - Guideline 2: Utility names should include lowercase letters (the lower character classification) and digits only from the portable character set.
+    - Guideline 3: Each option name should be a single alphanumeric character (the alnum character classification) from the portable character set. The `-W` (capital-W) option shall be reserved for vendor options. Multi-digit options should not be allowed.
+    - Guideline 4: All options should be preceded by the `-`` delimiter character.
+    - Guideline 5: One or more options without option-arguments, followed by at most one option that takes an option-argument, should be accepted when grouped behind one `-` delimiter.
+    - Guideline 6: Each option and option-argument should be a separate argument, except as noted in [Utility Argument Syntax, item (2)](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html).
+    - Guideline 7: Option-arguments should not be optional.
+    - Guideline 8: When multiple option-arguments are specified to follow a single option, they should be presented as a single argument, using `<comma>` characters within that argument or `<blank>` characters within that argument to separate them.
+    - Guideline 9: All options should precede operands on the command line.
+    - Guideline 10: The first `--` argument that is not an option-argument should be accepted as a delimiter indicating the end of options. Any following arguments should be treated as operands, even if they begin with the `-` character.
+    - Guideline 11: The order of different options relative to one another should not matter, unless the options are documented as mutually-exclusive and such an option is documented to override any incompatible options preceding it. If an option that has option-arguments is repeated, the option and option-argument combinations should be interpreted in the order specified on the command line.
+    - Guideline 12: The order of operands may matter and position-related interpretations should be determined on a utility-specific basis.
+    - Guideline 13: For utilities that use operands to represent files to be opened for either reading or writing, the `-` operand should be used to mean only standard input (or standard output when it is clear from context that an output file is being specified) or a file named "-".
+    - Guideline 14: If an argument can be identified according to Guidelines 3 through 10 as an option, or as a group of options without option-arguments behind one `-` delimiter, then it should be treated as such.
+- Adopt these minimum GNU conventions
+    - A short version with one dash and a long version with two dashes
+    - `-v` / `--version` to show version information
+    - `-h` / `--help` to display help information
+    - `-i` / `--input` for input file specification
+    - `-o` / `--output` for input file specification
+    - `-V` / `--verbose` to include additional output in terminal
+    - `-q` / `--quiet` to suppress terminal output
+- Use context-specific switches
+    - Unix: `-` or `--`
+    - Python: `-` or `--`
+    - Windows command prompt: `/`
+
+#### Input and output files
+
+The ecosystem of tools for processing data files is vast and mature.
+Therefore, input and output files should adopt a common file type and syntax relevant to the
+field and context of the software itself.
+For example, large datasets generated by computational fluid dynamics software are often
+exported in [HDF5](https://www.hdfgroup.org/solutions/hdf5/) format since robust
+libraries are available to export the data and load it into post-processing tools.
+Similarly, input files should retain a ubiquitous human-readable format such as
+[YAML](https://yaml.org) as this allows users to generate input files programmatically
+using standard libraries. Input and output files required by WETO software should
+adhere to the following conventions and principles.
+
+- Simple, clear, and predictable structure
+- Expressive and concise
+- Easy to produce and consume using ubiquitous software tools
+- Minimal data consumption
+    - For large data sets, option to split into smaller files or binary format
+- Typical and predictable data types
+
+### Error messages
+
+Messaging to pracitioners from within a software can be immensely helpful.
+At the same time, the infrastructure for communicating messages can be a heavy lift.
+It is important to find a balance of appropriate levels of messaging while also ensuring that
+the messages themselves are up to date with the software features and implementations.
+Too much messaging results in information overload and critical messages can be lost in noise.
+Additionally, messaging is another develop responsibility and can be overlooked among all of the
+other responsibilities during the development cycle.
+
+Useful error messages:
+- Expect that the reader does not have the context of the author
+    - Include a stack trace in all messages
+    - At minimum, include the calling function name
+- Anticipate the needs of the reader
+    - What will they be thinking about when this error pops up?
+    - What will they need to do next?
+- Include information that will help project maintainers understand the context of the problem
+    - Include metadata where relevant; see [](metadata)
+    - Include the value of data that is found invalid
+
+
+(metadata)=
+### Metadata
+
+Tracking metadata in software projects is a simple way to provide clarity to all users.
+This greatly improves usability and has the added effect of improving the debugging process.
+This information can be provided to the user in any structured output from the software.
+For example, output data files, reports, images, etc can all include a snapshot of the metadata.
+The objective is to communicate information on the state of the software (version and runtime),
+the state of the computing environment, and any user decisions.
+
+The following fields are minimum metadata to include:
+- Version number in [semantic versioning format](https://semver.org) (MAJOR.MINOR.BUGFIX, i.e. v3.2.1)
+- Execution time
+- Compile info, if applicable
+    - Compiler vendor
+    - Compile time
+    - Compiler settings
+- System information such as OS, relevant hardware (i.e. accelerators) vendor 
+- Relevant settings enabled
 
 (extendability)=
 ## Extendability
