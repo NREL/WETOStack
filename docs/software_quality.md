@@ -87,7 +87,7 @@ Consider these best practices as general guidelines for planning research activi
 **Point out that one overarching theme is to DOCUMENT! Write, draw, model - whatever you need - to
 communicate the ideas in your head. If you aren't able to make someone else understand your idea,
 it might as well not exist.
-**An idea only exists if it has been written down.**
+**An idea only exists if it has been communicated.**
 
 
 ## Contexts
@@ -343,101 +343,284 @@ The following fields are minimum metadata to include:
 (extendability)=
 ## Extendability
 
-Extendability is concerned with how the software is extended to add make improvements such as
-new features and bug fixes.
+Extendability is concerned with how improvements such as new features, bug fixes, and general
+maintenance are added to an existing software project. This covers both the technical aspects
+as well as the management of mulitple developers and development efforts happening
+concurrently.
+
+**Don't be clever**
+**Keep it super simple (KISS)**
+
+The lifecycle of WETO software typically follows a cyclical pattern of funding, development, and
+release, as depicted below. Note that the "Maintenance" tasks are usually optional and included
+in future development efforts. Therefore, it is critical to the life of all WETO software to
+prioritize extendability so that future funding opportunities are attractive to stakeholders
+and general maintenance and infrastructure upgrades can be introduced with minimal overhead.
+
+<!-- TODO: strengthen this intro. The point is that maintenance is key to the life of WETO software.
+If it's difficult to extend, any research effort will seem very expensive. Additionally, developers
+move on to other organizations and pass their software to other developers. If it's difficult
+to extend, new developers will have a tough time or simply will move on to other tools.
+Possibly include this diagram (or a version of the funding / development cycle) below in the intro.
+-->
+
+```{mermaid}
+
+flowchart LR
+
+    a["Research
+    & development"]
+    b["Verification"]
+    c["General use"]
+    d["Optional: Maintenance"]
+
+    a --> b
+    b --> c
+    c -.-> d
+    c --> a
+    d -.-> a
+```
 
 Is the code open source?
-Are binaries available?
 If not, is there a build system with modern dependencies?
 i.e. Makefiles are outdated, use CMake
 
-
-Nuances of research software:
-- **The life and relevance of research software critically depends on new developers coming into the project**
-
-The style of the code should avoid complexity where possible and favor readability over writability.
-In other words, don't be clever.
+<!-- Nuances of research software:
+- **The life and relevance of research software critically depends on new developers coming into the project** -->
 
 This is closely tied to **(6) methodologies for communicating intent and verifying implementation**
+Generally, use ubiquitous infrastructure
+- Project managers can rely on mature third party tools to handle complex systems
+- Mature third party tools typically come with their own documentation
 
-### Approachable style
 
-An extendable software is approachable. Convoluted code is difficult to understand quickly. Understand what it means to "grok" and strive to construct software that can be easily grokked (https://en.wikipedia.org/wiki/Grok).
+### Code style
 
-> *Grok* means "to understand", of course, but Dr. Mahmoud, who might be termed the leading Terran expert on Martians, explains that it also means, "to drink" and "a hundred other English words, words which we think of as antithetical concepts. 'Grok' means *all* of these. It means 'fear', it means 'love', it means 'hate' – proper hate, for by the Martian 'map' you cannot hate anything unless you grok it, understand it so thoroughly that you merge with it and it merges with you – then you can hate it. By hating yourself. But this implies that you love it, too, and cherish it and would not have it otherwise. Then you can *hate* – and (I think) Martian hate is an emotion so black that the nearest human equivalent could only be called mild distaste.
+In software development, the word "grok" is often used (see usage in
+[Hacker News](https://hn.algolia.com/?q=grok),
+[Lobsters](https://lobste.rs/search?q=grok&what=stories&order=newest),
+[StackOverflow](https://stackoverflow.com/search?tab=newest&q=grok&searchOn=3))
+to communicate about degrees of understanding. This word is described by it's creator below.
 
-```
+> *Grok* means "to understand", of course, but Dr. Mahmoud, who might be termed the leading
+  Terran expert on Martians, explains that it also means, "to drink" and "a hundred other
+  English words, words which we think of as antithetical concepts. 'Grok' means *all* of
+  these. It means 'fear', it means 'love', it means 'hate' – proper hate, for by the Martian
+  'map' you cannot hate anything unless you grok it, understand it so thoroughly that you
+  merge with it and it merges with you – then you can hate it. By hating yourself. But this
+  implies that you love it, too, and cherish it and would not have it otherwise. Then you
+  can *hate* – and (I think) Martian hate is an emotion so black that the nearest human
+  equivalent could only be called mild distaste.
+
+  Source: https://en.wikipedia.org/wiki/Grok.
+
+That such a word exists and is widely used in software development illustrates the high value
+of clear and understandable code.
+WETO software should avoid complexity where possible and favor readability over writability.
+Strive to create software that can be easily grokked by developers who do not have the current
+context.
+
+The designers of the Python programming language consider readability as a primary priority, and
+the most famous of the many Python language-development documents is
+[PEP 8](https://peps.python.org/pep-0008/) which proposes a style guide for Python code.
+PEP 8 is summarized into 19 aphorisms (20 including one that's implied) and is refered to as
+["The Zen of Python"](https://peps.python.org/pep-0020/). Much of the WETO software portfolio is
+Python-based, so these guiding principles directly apply. However, these principles are
+programming language agnostic and eloquently describe the paradigm for developing
+extendable software.
+
+(zen_python)=
+#### The Zen of Python
+```python
 >> import this
-
-The Zen of Python, by Tim Peters
-
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than \*right\* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
 ```
 
-### Collaborative workflows
+    The Zen of Python, by Tim Peters
 
-The process for collaborating with other developers is essential to define and optimize.
-Version control must be in place, and it is best to use `git` since it is ubiquitous.
-While git is decentralized so repositories can be stored on any system, GitHub is the most
-common store for open source software.
-GitHub contains some key features for coordinating software development:
-- Issue tracking
-- Forum-style discussions
-- Pull request and code review
-- Project boards
+    Beautiful is better than ugly.
+    Explicit is better than implicit.
+    Simple is better than complex.
+    Complex is better than complicated.
+    Flat is better than nested.
+    Sparse is better than dense.
+    Readability counts.
+    Special cases aren't special enough to break the rules.
+    Although practicality beats purity.
+    Errors should never pass silently.
+    Unless explicitly silenced.
+    In the face of ambiguity, refuse the temptation to guess.
+    There should be one-- and preferably only one --obvious way to do it.
+    Although that way may not be obvious at first unless you're Dutch.
+    Now is better than never.
+    Although never is often better than \*right\* now.
+    If the implementation is hard to explain, it's a bad idea.
+    If the implementation is easy to explain, it may be a good idea.
+    Namespaces are one honking great idea -- let's do more of those!
+
 
 (version_control)=
 ### Version control
 
 Version control, typically with `git`, is a tool for tracking the evolution of a project change
-by change.
-The git history is meaningful for our future selves.
-It should provide a snapshot of thought processes and progression through work.
-Commits are often considered a way to "save" work similar to hitting the save button in a word
-processor.
-While that is one outcome, the most value is in the information implied in the connectivity of
-commits.
-That is, each commit has a parent and each parent can have multiple children.
-The exception is the first commit as it has no parent.
+by change establishing a history of changes.
+Each change is itself a version of the software, and they provide a snapshot of thought
+processes and progression of work.
+
+BP: Craft a version control history that communicates the evolution of changes of the software
+to future developers including the author of current changes.
+BP: Evolve the software in a logical, linear process with digestible change sizes.
+
+Version control with git is often a secondary consideration in the software development process.
+It can seem like simply a mechanism to "save" the state of a document.
+However, it carries far more meaning in the context of software extendability.
+Since the git system is decentralized, it allows for multiple developers to make changes to a
+project concurrently.
+Git also provides a mechanism for resolving differences so that multiple changes can be merged
+together easily.
+
+In addition to the content of changes themselves, the connectivity between changes is valuable
+over the lifetime of a project.
+The connectivity between commits is structured as a
+[directed acyclical graph (DAG)](https://en.wikipedia.org/wiki/Directed_acyclic_graph).
+Each commit has a parent and each parent can have multiple children.
 This provides a mechanism for easily and accurately rolling back to the state of the project at any
 time in history.
 
-It is reasonable to spend time crafting each commit and a sequence of commits.
-Consider practicing editing a series of commits to ensure that the progress of work is captured
-accurately.
-Most importantly, consider whether the commit history is concise and readable to people who are
-not the authors.
-Become familiar with the following actions:
-- Interactive rebase
-- Cherry-pick
-- Squash
-- Edit a commit message
+To best leverage the power of git to enable extendability, consider the following guidelines:
+- It is reasonable to spend time crafting each commit and a sequence of commits.
+- Practice editing a series of commits to ensure that the progress of work is captured accurately.
+- Consider whether the commit history is concise and readable to people who are not the authors.
+- Become familiar with the following actions:
+    - Interactive rebase
+    - Cherry-pick
+    - Squash
+    - Edit a commit message
+- Commit messages should be short, and it is a convention to limit them less than 50 characters.
+- An additional line can be included as a longer description of the commit beneath the
+    50 character line. The second line is typically limited to 70 characters, but it is
+    considered reasonable to use as much space as needed.
 
-The commit messages should be short, and it is a standard convention to limit them less than
-50 characters.
-Another line of comment can be included as a longer description of the commit.
-This is less typically limited to 70 characters, but it is considered reasonable to use many
-more characters here when needed.
-GitHub even displays these longer descriptions separately within the commit view.
-<SHOW GITHUB COMMIT VIEW>
+### Collaborative workflows with GitHub
+
+The processes through which developers interact with a software and other developers is
+an essential component of extendability.
+These processes should generally strive for efficiency while minimizing overhead.
+Automated processes are better than manual processes, and objective is better than subjective.
+The majority of collaborative software development processes occur on cloud-based resources on
+the GitHub platform.
+
+**BP: Plan and coordinate software development efforts into a collaborative workflow using GitHub**
+
+**BP: Automate code quality feedback as much as possible via GitHub Actions**
+
+GitHub contains some key features for coordinating software development:
+- Issue tracking
+- Forum-style discussions
+- Pull request and code review
+- Project boards
+- Releases
+
+GitHub and git (see [](version_control)) are tightly connected, but they are different
+systems and serve different purposes in the development process.
+Git is a version control system for tracking and merging changes to a software.
+GitHub is a platform for orchestrating and coordinating the various processes that happen
+around the development cycle.
+GitHub activities add context on top of the individual changes captured in commits.
+Whereas commits often capture low-level information, GitHub activities can map the low level
+details to high-level efforts.
+
+Become familiar with GitHub features and leverage them to plan and communicate.
+<!-- TODO Include a link to resources to learn about GitHub -->
+
+GitHub features can be used a many ways. The primary features are described below and a typical
+sequence of events across these features is described.
+
+- [Discussions](https://docs.github.com/en/discussions): This is typically the starting point
+    for any collaboration. Create a discussion topic and engage with other model stakeholders
+    to define the idea and develop a proposed implementation.
+- [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues):
+    Document the proposed solution to a problem or implementation of a new feature as outlined
+    in the corresponding Discussion. Finalize the description and outline test cases to verify
+    the idea.
+- [Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects):
+    Collect Issues, Pull Requests, and generic cards to establish a relationship across all
+    ongoing works in progress. This is typically most useful for large development efforts
+    and prioritizing work for upcoming releases.
+- [Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests):
+    Pull Requests (PR) are a request to accept a change into a branch. This typically happens
+    across forks of a repository, but it can also happen between branches of the same fork.
+    During the implementation of an Issue, open a pull request to communicate that work is
+    ongoing. This is also the venue for code reviews.
+- [Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases):
+    A number of accepted pull requests can be aggregated to comprise one release, and this is
+    listed in a project's GitHub Releases page along with release notes to describe the changes
+    and communicate relevant details.
+
+```{mermaid}
+sequenceDiagram
+    autonumber
+
+    participant Community
+    participant Developer
+    participant Maintainer
+
+    activate Community
+
+    Community -> Community: Create Discussion describing a gap or feature
+
+    activate Developer
+    activate Maintainer
+    loop Design Discussion
+        Maintainer->>Community: Feedback
+        Developer->>Community: Feedback
+        Developer->>Maintainer: Propose implementation
+    end
+    deactivate Community
+
+    Developer->Developer: Open an Issue to finalize proposal
+    Maintainer->Maintainer: Include Issue in a Project
+
+    loop Implementation & Review
+        Developer->>Maintainer: Submit a Pull Request
+        Maintainer->>Developer: Provide code review feedback
+    end
+    deactivate Developer
+
+    Maintainer->>Community: Merge Pull Request
+    deactivate Maintainer
+```
+
+Along with git, GitHub provides a helpful mechanism to capture design intent, factors that lead
+to particular decisions, and the evolution of a project for future reference.
+However, it is important carefully craft the messages to avoid washing out information
+with noise.
+The following are guidelines to consider when engaging on GitHub.
+
+- Descriptions of any activity should be well scoped and easily understandable.
+- Pictures really are worth 1,000 words. Always include a diagram, plot, screenshot, or picture
+    when it will add clarity.
+- Prefer actual text over of screenshots of text. GitHub is searchable, so text provides more
+    searchable context whereas screenshots do not. Additionally, text-based code snippets can be
+    copied easily by other users.
+- Establish a practice of assigning responsibility for each Issue and Pull Request. Without
+    a person to take ownership, these will remain unaddressed.
+
+
+### Pull Requests
+
+A pull request is a request to merge a particular set of code changes into another copy of the
+software, typically an agreed upon "main" version.
+
+Pull requests should include contextual information regarding the code change. The intention is
+to convince reviewers and maintainers that the new code is in a good state and that it's
+inclusion would be a benefit to the project. This typically involves a contextual description of
+the change and a description of why the change is valid and well tested.
+
+Futhermore, GitHub automatically contructs release notes from all of the pull requests merged
+since the previous release.
+It automatically takes the titles of each pull request to construct the release notes.
+"Update XYZ" again provides no context and more work is required to communicate what has changed
+to users and downstream dependencies.
 
 All version control messages (commits and pull requests) should communicate what the change
 accomplishes.
@@ -461,22 +644,6 @@ The first repository requires opening individual changes to understand their sco
 :alt: capabilities
 :align: center
 ```
-
-Futhermore, GitHub automatically contructs release notes from all of the pull requests merged
-since the previous release.
-It automatically takes the titles of each pull request to construct the release notes.
-"Update XYZ" again provides no context and more work is required to communicate what has changed
-to users and downstream dependencies.
-
-### Pull Requests
-
-A pull request is a request to merge a particular set of code changes into another copy of the
-software, typically an agreed upon "main" version.
-
-Pull requests should include contextual information regarding the code change. The intention is
-to convince reviewers and maintainers that the new code is in a good state and that it's
-inclusion would be a benefit to the project. This typically involves a contextual description of
-the change and a description of why the change is valid and well tested.
 
 (sustainability)=
 ## Long term sustainability
@@ -605,42 +772,6 @@ Establish a grading scheme for software projects in future years
 
 
 **Reproducibility**
-
-### Style
-Consider who we write our software for and the primary use cases
-- Other researchers
-- Model accessibility is important - we have to be able to extend the software
-
-Don't be clever, keep it super simple
-
-
-For example, consider the following code to create a 3x3 grid:
-```python
-# Update the layout to be a staggered 3x3 turbine grid
-layout_x = np.arange(3) * np.ones((3, 3)) * 700
-layout_x[1] += 250
-layout_x[2] += 500
-layout_x = layout_x.flatten()
-
-layout_y = (np.arange(0, 601, 300).reshape(-1, 1) * np.ones((3, 3))).flatten()
-```
-It is probably computationally efficient, but its also difficult to read.
-
-It could be equivalently written like this
-```python
-# Update the layout to be a staggered 3x3 turbine grid
-x_array = np.array([0, 700, 1400])
-layout_x = np.array([ x_array for i in range(3) ])
-layout_x[1] += 250
-layout_x[2] += 500
-layout_x = layout_x.flatten()
-
-layout_y = (np.arange(0, 601, 300).reshape(-1, 1) * np.ones((3, 3)))
-
-... I dont know how to really simplify it but the reshape, arange, flatten, all these things are
-convoluted and make this code look overly complex. It's too much to track in your mind just to
-create a simple 3x3 layout.
-```
 
 Talk about code reviews and what to consider when reviewing and proposing code.
 - Reviews should be verbose and to the point
