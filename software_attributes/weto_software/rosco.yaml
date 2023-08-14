@@ -1,0 +1,40 @@
+rosco:
+    # General
+    github_account: nrel
+    github_repo: rosco
+    primary_use: controls
+    active_funding: true
+
+    # Physics / Controls
+    time_domain: unsteady
+    physics_scope: turbine
+    system_type:
+    - hawt
+    system_location:
+    - any
+    loads:
+    governing_equations:
+
+    # Distribution
+    supported_platforms:
+        - any
+    package_manager:
+        - conda-forge
+    package_manager_url:
+        - https://anaconda.org/conda-forge/rosco
+    installation_complexity: 1
+
+    # Documentation
+    documentation_url: https://rosco.readthedocs.io/
+    user_docs: true
+    developer_docs: true
+    api_docs: true
+    cli: false
+    installation: true
+    getting_started: true
+    examples_tutorials: true
+    readability: 7
+    project_coverage: 8
+
+    # WETO Integrations (downstream)
+    wisdem: direct

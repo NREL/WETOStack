@@ -1,0 +1,48 @@
+OpenFAST:
+    # General
+    github_account: openfast
+    github_repo: openfast
+    primary_use: physics
+    active_funding: true
+
+    # Physics
+    time_domain: unsteady
+    physics_scope: turbine
+    system_type:
+    - hawt
+    - vawt
+    system_location:
+    - any
+    loads:
+    - true
+    governing_equations:
+    - Blade Element Momentum Theory
+    - Geomtrically Exact Beam Theory
+    - Engineering models
+
+    # Distribution
+    supported_platforms:
+        - any
+    package_manager:
+        - Homebrew
+        - conda-forge
+    package_manager_url:
+        - https://formulae.brew.sh/formula/openfast
+        - https://anaconda.org/conda-forge/openfast
+    installation_complexity: 1
+
+    # Documentation
+    documentation_url: https://openfast.readthedocs.io/
+    user_docs: true
+    developer_docs: false
+    api_docs: false
+    cli: true
+    installation: true
+    getting_started: false
+    examples_tutorials: false
+    readability: 5
+    project_coverage: 6
+
+    # WETO Integrations (downstream)
+    rosco: direct
+    turbsim: direct

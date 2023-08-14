@@ -1,0 +1,43 @@
+FLORIS:
+    # General
+    github_account: nrel
+    github_repo: floris
+    primary_use: physics
+    active_funding: true
+
+    # Physics
+    time_domain: steady
+    physics_scope:
+        - farm
+    system_type:
+        - hawt
+    system_location: any
+    loads: false
+    governing_equations:
+        - steady-state analytical fluid dynamics
+
+    # Distribution
+    supported_platforms:
+        - any
+    package_manager:
+        - PyPI
+        - conda-forge
+    package_manager_url:
+        - https://PyPI.org/project/FLORIS/
+        - https://anaconda.org/conda-forge/floris
+    installation_complexity: 1
+
+    # Documentation
+    documentation_url: https://nrel.github.io/floris/intro.html
+    user_docs: true
+    developer_docs: true
+    api_docs: true
+    cli: false
+    installation: true
+    getting_started: true
+    examples_tutorials: true
+    readability: 7
+    project_coverage: 8
+
+    # WETO Integrations (downstream)
+    openfast: indirect

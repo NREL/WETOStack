@@ -1,0 +1,45 @@
+WEIS:
+    # General
+    github_account: wisdem
+    github_repo: weis
+    primary_use: design
+    active_funding: true
+
+    # Physics
+    time_domain: unsteady
+    physics_scope: turbine
+    system_type:
+    - hawt
+    system_location:
+    - any
+    loads:
+    - true
+    governing_equations:
+
+    # Distribution
+    supported_platforms:
+        - macOS
+        - Linux
+    package_manager:
+    package_manager_url:
+    installation_complexity: 5
+
+    # Documentation
+    documentation_url: https://weis.readthedocs.io/en/latest/
+    user_docs: false
+    developer_docs: false
+    api_docs: false
+    cli: false
+    installation: true
+    getting_started: false
+    examples_tutorials: true
+    readability:
+    project_coverage:
+
+    # WETO Integrations (downstream)
+    widem: direct
+    openfast: direct
+    turbsim: direct
+    rosco: direct
+    pcrunch: direction
+    pyOptSparse: direction
