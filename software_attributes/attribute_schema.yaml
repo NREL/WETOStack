@@ -1,11 +1,34 @@
 
-primary_use: physics | cost | design
+primary_use:
+- simulation
+- controls
+- cost
+- design
 funding_status: active | inactive
+# funding_history ...
+development_status: hold | new_feature | maintenance
+programming_language: python | fortran | matlab | cpp
+license_type: any of the OSI License strings (https://opensource.org/licenses/)
+data_collection_method: modeling | laboratory | field
+last_release_date: YYYY-MM-DD
 
-# Physics domain
-scope: turbine | farm | system | atmosphere
-system_type: hawt | vawt | awes | any
-system_location: land | fixed_offshore | floating_offshore | any
+# Physics domain / controls
+# TODO: Should Controls have a section?
+scope:
+- turbine
+- farm
+- system
+- atmosphere
+system_type:
+- hawt
+- vawt
+- awes
+- any  # type-agnostic
+system_location:
+- land
+- fixed_offshore
+- floating_offshore
+- any  # location-agnostic
 time_domain: steady | dynamic
 loads: true | false
 governing_equations:
@@ -15,9 +38,20 @@ governing_equations:
   - RANS vs LES
 
 # Distribution
-supported_platforms: linux | windows | macos | HPC | any
-package_manager: i.e. homebrew | pypi | conda | conda-forge | spack_manager
-package_manager_url: https://... package manager listing page
+supported_platforms:
+- linux
+- windows
+- macos
+- HPC
+- any  # platform-agnostic
+package_manager:
+- homebrew
+- pypi
+- conda
+- conda-forge
+- spack_manager
+package_manager_url:
+- corresponding URL to `package_manager` field
 installation_complexity: 1..10
 
 # Documentation
@@ -32,9 +66,6 @@ examples_tutorials: true | false
 readability: 1..10
 project_coverage: 1..10
 
-# WETO Integrations (downstream)
-model: direct (code-code interface) | indirect (output becomes input)
-
 # Testing
 testing_framework: true | false
 continuous_testing: true | false
@@ -44,6 +75,10 @@ test_documentation: true | false
 performance_tests: true | false
 
 # Interfaces
+first_class_ui:
+- gui
+- input_files
+- web
 cli: true | false
 language_interfaces:
 - List additional language interfaces
@@ -58,3 +93,12 @@ filetypes:
 - yaml
 - hdf5
 structure_stability: stable | in development
+
+# WETO Integrations (downstream)
+project: direct | indirect  # direct: code-code integration; indirect: one uses the output of the other via output file or another workflow process
+
+# Community Health
+open_issues: 0..N
+open_pull_requests: 0..N
+average_time_to_engage: 0..N
+outside_contributors: 0..N
