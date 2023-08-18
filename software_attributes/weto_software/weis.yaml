@@ -1,0 +1,80 @@
+# General
+github_account: wisdem
+github_repo: weis
+primary_uses:
+- design
+active_funding: true
+development_status: new_features
+programming_language: python
+license_type: Apache-2.0
+data_collection_methods:
+- modeling
+last_release_date: "2023-01-12"
+
+# Modeling
+scope:
+- turbine
+system_type:
+- hawt
+system_location:
+- land
+- fixed_offshore
+- floating_offshore
+time_domain: dynamic
+loads: true
+governing_equations:
+- midfidelity engineering models
+
+# Distribution
+supported_platforms:
+    - any
+# package_manager:
+# package_manager_url:
+installation_complexity: 6
+
+# Documentation
+documentation_url: https://weis.readthedocs.io/en/latest/
+has_user_docs: false
+has_developer_docs: false
+has_api_docs: false
+has_cli_docs: false
+has_installation_docs: true
+has_getting_started_docs: false
+has_examples_tutorials: true
+has_design_intent_statement: false
+readability: 7
+project_coverage: 2
+
+# Testing
+testing_framework: true
+continuous_testing: true
+regression_test_coverage: 20
+unit_test_coverage: 20
+test_documentation: false
+performance_tests: false
+
+# Interfaces
+first_class_ui:
+- input_files
+has_cli: false
+# language_interfaces:
+feature_accessibility: 50
+
+# Input / Output
+filetypes:
+- yaml
+- custom
+file_structure_stability: semantic_versioning
+
+# WETO Integrations (downstream)
+downstream_integrations:
+-   - wisdem
+    - direct
+-   - rosco
+    - direct
+-   - openfast
+    - direct
+-   - sonata
+    - direct
+-   - numad
+    - indirect

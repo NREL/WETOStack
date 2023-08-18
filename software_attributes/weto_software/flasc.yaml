@@ -1,0 +1,38 @@
+FLASC:
+    # General
+    github_account: nrel
+    github_repo: flasc
+    primary_use: data analysis
+    active_funding: true
+
+    # Physics
+    time_domain:
+    physics_scope:
+    system_type:
+    system_location:
+    loads:
+    governing_equations:
+
+    # Distribution
+    supported_platforms:
+        - any
+    package_manager:
+        - PyPI
+    package_manager_url:
+        - https://PyPI.org/project/FlASC/
+    installation_complexity: 1
+
+    # Documentation
+    documentation_url: https://flasc.readthedocs.io/
+    user_docs: true
+    developer_docs: false
+    api_docs: false
+    cli: false
+    installation: true
+    getting_started: true
+    examples_tutorials: true
+    readability:
+    project_coverage:
+
+    # WETO Integrations (downstream)
+    floris: direct
