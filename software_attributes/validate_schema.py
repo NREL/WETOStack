@@ -8,7 +8,8 @@ draft_202012_validator = Draft202012Validator(schema)
 if __name__=="__main__":
 
     model_list = [
-        "floris"
+        "floris",
+        "weis"
     ]
 
     for model in model_list:
