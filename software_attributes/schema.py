@@ -15,15 +15,21 @@ schema = {
 
         ## General
         "github_account": {
-            "description": "The associated account on GitHub.\nIn the web address, this is the middle component: https://github.com/\<account\>/\<repo\>.",
+            "description": "The associated account on GitHub.\n"
+                "In the web address, this is the middle component: "
+                "https://github.com/\<account\>/\<repo\>.",
             "type": "string"
         },
         "github_repo": {
-            "description": "The repository name.\nIn the web address, this is the last component: https://github.com/\<account\>/\<repo\>.",
+            "description": "The repository name.\n"
+                "In the web address, this is the last component: "
+                "https://github.com/\<account\>/\<repo\>.",
             "type": "string"
         },
         "primary_uses": {
-            "description": "The primary use for this software. Though there may be many uses, choose the options that most closely match the envisioned use.",
+            "description": "The primary use for this software. "
+                "Though there may be many uses, choose the options that "
+                "most closely match the envisioned use.",
             "type": "array",
             "items": {
                 "enum": [
@@ -35,7 +41,8 @@ schema = {
             }
         },
         "active_funding": {
-            "description": "Has this project received funding to directly support software development in the current quarter?",
+            "description": "Has this project received funding to directly support "
+                "software development in the current quarter?",
             "type": "boolean"
         },
         "development_status": {
@@ -51,18 +58,20 @@ schema = {
             ]
         },
         "programming_language": {
-            "description": "The primary programming language even though many projects contain source code in a few languages.",
+            "description": "The primary programming language even though many projects "
+                "contain source code in a few languages.",
             "enum": ["python", "fortran", "matlab", "cpp"]
         },
         "license_type": {
-            "description": "Choose the corresponding license string from https://opensource.org/licenses/.",
+            "description": "Choose the corresponding license string from the "
+                "[Open Source Initiative Approved Licenses](https://opensource.org/licenses/).",
             "enum": ["Apache-2.0", "LGPL-2.1"]
         },
         "data_collection_methods": {
             "description": "\n".join([
                 "- `modeling`: Retrived from a numerical model",
-                "- `laboratory`: Data gotten from a controlled experiement including large domains such as RAAW",
-                "- `field`: Data from systems in field-operation, typically in a commercial wind farm",
+                "- `laboratory`: Data from a controlled experiment such as RAAW",
+                "- `field`: Data from systems \"in the field\", typically in a commercial setting",
             ]),
             "type": "array",
             "items": {
@@ -74,7 +83,8 @@ schema = {
             }
         },
         "last_release_date": {
-            "description": "Date of the last tagged release available on GitHub; use the following format: YYYY-MM-DD.",
+            "description": "Date of the last tagged release available on GitHub; "
+                "use the following format: YYYY-MM-DD.",
             "type": "string"
             # "type": datetime.date,
             # "pattern": "date"
@@ -89,14 +99,16 @@ schema = {
             }
         },
         "system_type": {
-            "description": "The wind energy system architectures supported by the software. Use 'any' if the software is type-agnostic.",
+            "description": "The wind energy system architectures supported by the software. "
+                "Use `any` if the software is type-agnostic.",
             "type": "array",
             "items": {
                 "enum": ["hawt", "vawt", "awes", "any"]
             }
         },
         "system_location": {
-            "description": "The location of the wind energy system support by the software. Use 'any' if the software is location-agnostic.",
+            "description": "The location of the wind energy system support by the software. "
+                "Use `any` if the software is location-agnostic.",
             "type": "array",
             "items": {
                 "enum": ["land", "fixed_offshore", "floating_offshore", "any"]
@@ -112,12 +124,19 @@ schema = {
         },
         "governing_equations": {
             "description": "\n".join([
-                "List the governing equations included in the software. These are free-form entries such as:",
-                "- Finite elements structural model",
-                "- Timoshenko vs Euler beam",
-                "- Blade element momentum theory",
-                "- RANS vs LES",
+                "List the governing equations included in the software that are "
+                "characteristic of the numerical domain."
+                "These are free-form entries, see below for examples."
             ]),
+            "examples": [
+                {
+                    "governing_equations": [
+                        "Euler bernoulli beam theory",
+                        "Blade element momentum theory",
+                        "RANS vs LES",
+                    ]
+                }
+            ],
             "type": "array",
             "items": {
                 "type": "string"
@@ -126,7 +145,8 @@ schema = {
 
         ## Distribution
         "supported_platforms": {
-            "description": "List the type of computing platforms that are supported. Use 'any' if the software is platform-agnostic.",
+            "description": "List the type of computing platforms that are supported. "
+                "Use `any` if the software is platform-agnostic.",
             "type": "array",
             "items": {
                 "enum": ["linux", "windows", "macos", "HPC", "any"]
@@ -140,8 +160,8 @@ schema = {
             }
         },
         "package_manager_url": {
-            "description": "For any package managers listed in `package_manager`, include the URL to the package listing.",
-            # Corresponding URL to `package_manager` field
+            "description": "For any package managers listed in `package_manager`, "
+                "include the URL to the package listing.",
             "type": "array",
             "items": {
                 "type": "string"
@@ -162,39 +182,47 @@ schema = {
             # "format": "hostname" ?
         },
         "has_user_docs": {
-            "description": "Does the documentation contain a section tailored to using (i.e. executing, developing inputs, understanding outputs) the software?",
+            "description": "Does the documentation contain a section tailored to using "
+                "(i.e. executing, developing inputs, understanding outputs) the software?",
             "type": "boolean"
         },
         "has_developer_docs": {
-            "description": "Does the documentation contain a section tailored to developing (i.e. extending, maintaining, testing) the software?",
+            "description": "Does the documentation contain a section tailored to developing "
+                "(i.e. extending, maintaining, testing) the software?",
             "type": "boolean"
         },
         "has_api_docs": {
-            "description": "Does the documentation contain a description of the public-facing API's?",
+            "description": "Does the documentation contain a description of the public API's?",
             "type": "boolean"
         },
         "has_cli_docs": {
-            "description": "Does the documentation contain a description of the command line interface?",
+            "description": "Does the documentation contain a description of the "
+                "command line interface?",
             "type": "boolean"
         },
         "has_installation_docs": {
-            "description": "Does the documentation contain a section describing the installation procedures?",
+            "description": "Does the documentation contain a section describing the "
+                "installation procedures?",
             "type": "boolean"
         },
         "has_getting_started_docs": {
-            "description": "Does the documentation contain a section to guide new users through the onboarding and getting started process?",
+            "description": "Does the documentation contain a section to guide new users "
+                "through the onboarding and getting started process?",
             "type": "boolean"
         },
         "has_examples_tutorials": {
-            "description": "Are examples or tutorials included with the software either through the documentation or in the repository directly?",
+            "description": "Are examples or tutorials included with the software either "
+                "through the documentation or in the repository directly?",
             "type": "boolean"
         },
         "has_design_intent_statement": {
-            "description": "Is a statement describing the holistic design intent and design considerations of the software available?",
+            "description": "Is a statement describing the holistic design intent and "
+                "design considerations of the software available?",
             "type": "boolean"
         },
         "readability": {
-            "description": "Estimate the readability of the documentation considering a user with minimal context.",
+            "description": "Estimate the readability of the documentation considering a "
+                "user with minimal context.",
             "type": "integer",
             "minimum": 1,
             "maximum": 10,
@@ -238,7 +266,8 @@ schema = {
 
         ## Interfaces
         "first_class_ui": {
-            "description": "List the user interfaces that receive primary attention from funders and developers.",
+            "description": "List the user interfaces that receive primary attention "
+                "from funders and developers.",
             "type": "array",
             "items": {
                 "enum": ["gui", "input_files", "web"]
@@ -249,7 +278,8 @@ schema = {
             "type": "boolean"
         },
         "language_interfaces": {
-            "description": "List the connections available to interface the software to other languages.",
+            "description": "List the connections available to interface the software "
+                "to other languages.",
             "type": "array",
             "items": {
                 "enum": ["python", "fortran", "matlab", "cpp"]
@@ -277,16 +307,17 @@ schema = {
                 "- `semantic_versioning`: Changes according to rules of semantic versioning"
             ]),
             "enum": [
-                "stable",               # Never or rarely changes
-                "in_development",       # Actively changing
-                "semantic_versioning"   # Changes according to rules of semantic versioning
+                "stable",
+                "in_development",
+                "semantic_versioning"
             ]
         },
 
         ## WETO Integrations (downstream)
         "downstream_integrations": {
             "description": "\n".join([
-                "List other WETO software projects associated with this one either through a direct or indirect connection.",
+                "List other WETO software projects associated with this one either "
+                "through a direct or indirect connection.",
                 " - `direct`: code-code integration",
                 " - `indirect`: one uses the output of the other via output file or another workflow process",
                 "",
@@ -371,6 +402,7 @@ if __name__ == "__main__":
         expand_buttons=True,
         show_breadcrumbs=True,
         examples_as_yaml=True,
+        collapse_long_examples=False
         # template_md_options={
         #     "badge_as_image": True,
         #     "show_heading_numbers": False
