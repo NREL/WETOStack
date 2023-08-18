@@ -397,12 +397,15 @@ if __name__ == "__main__":
 
     # Configure the docs
     config = GenerationConfiguration(
-        description_is_markdown=True,
+        minify=False,
         copy_css=True,
         expand_buttons=True,
-        show_breadcrumbs=True,
+        show_breadcrumbs=False,
+        show_toc=True,
+        collapse_long_descriptions=False,
+        collapse_long_examples=False,
+        description_is_markdown=True,
         examples_as_yaml=True,
-        collapse_long_examples=False
         # template_md_options={
         #     "badge_as_image": True,
         #     "show_heading_numbers": False
