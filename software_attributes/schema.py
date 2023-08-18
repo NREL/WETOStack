@@ -1,4 +1,11 @@
-import datetime
+
+import json
+import os
+import shutil
+# import datetime
+
+from json_schema_for_humans.generate import generate_from_filename
+from json_schema_for_humans.generation_configuration import GenerationConfiguration
 
 schema = {
     # "$schema": "https://json-schema.org/draft/2019-09/schema#",
@@ -284,3 +291,37 @@ schema = {
 #         },
 #     },
 # }
+
+
+if __name__ == "__main__":
+
+    # Export the schema defined above as a json file
+    json.dump(schema, open("schema.json", "w"), indent=4)
+
+    # Configure the docs
+    config = GenerationConfiguration(
+        description_is_markdown=True,
+        copy_css=True,
+        expand_buttons=True,
+        show_breadcrumbs=True,
+        examples_as_yaml=True,
+        # template_md_options={
+        #     "badge_as_image": True,
+        #     "show_heading_numbers": False
+        # },
+        # template_name="md_nested"
+    )
+
+    # Using the json file and config from above, create the docs web page
+    generate_from_filename("schema.json", "schema_doc.html", config=config)
+
+    # Copy html, css, and js to the docs directory
+    shutil.copy2("schema_doc.html", "../docs/")
+    shutil.copy2("schema_doc.css", "../docs/")
+    shutil.copy2("schema_doc.min.js", "../docs/")
+
+    # Clean up the current directory
+    os.remove("schema_doc.html")
+    os.remove("schema_doc.css")
+    os.remove("schema_doc.min.js")
+    os.remove("schema.json")

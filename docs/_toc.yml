@@ -9,6 +9,7 @@ parts:
     - file: software_list
     # - file: connectivity
     - file: attributes
+    - file: attributes_schema
 
   - caption: Capabilities
     chapters:
