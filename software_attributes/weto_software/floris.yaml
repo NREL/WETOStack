@@ -9,7 +9,7 @@ programming_language: python
 license_type: Apache-2.0
 data_collection_methods:
 - modeling
-last_release_date: "2023-01-12"
+last_release_date: "2023-07-27"
 
 # Modeling
 scope:
@@ -26,17 +26,17 @@ system_location:
 time_domain: steady
 loads: false
 governing_equations:
-- "steady state analytical engineering fluid dynamics"
+- steady state analytical engineering fluid dynamics
 
 # Distribution
 supported_platforms:
-    - any
+- any
 package_manager:
-    - pypi
-    - conda-forge
+- pypi
+- conda-forge
 package_manager_url:
-    - https://PyPI.org/project/FLORIS/
-    - https://anaconda.org/conda-forge/floris
+- https://PyPI.org/project/FLORIS/
+- https://anaconda.org/conda-forge/floris
 installation_complexity: 1
 
 # Documentation

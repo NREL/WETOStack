@@ -1,40 +1,76 @@
-rosco:
-    # General
-    github_account: nrel
-    github_repo: rosco
-    primary_use: controls
-    active_funding: true
+# General
+github_account: nrel
+github_repo: rosco
+primary_uses:
+- controls
+active_funding: false
+development_status: maintenance
+programming_language: python
+license_type: Apache-2.0
+data_collection_methods:
+- modeling
+last_release_date: "2023-04-11"
 
-    # Physics / Controls
-    time_domain: unsteady
-    physics_scope: turbine
-    system_type:
-    - hawt
-    system_location:
-    - any
-    loads:
-    governing_equations:
+# Modeling
+scope:
+- turbine
+system_type:
+- hawt
+system_location:
+- any
+time_domain: dynamic
+loads: false
+# governing_equations:
 
-    # Distribution
-    supported_platforms:
-        - any
-    package_manager:
-        - conda-forge
-    package_manager_url:
-        - https://anaconda.org/conda-forge/rosco
-    installation_complexity: 1
+# Distribution
+supported_platforms:
+- any
+package_manager:
+- conda-forge
+package_manager_url:
+- https://anaconda.org/conda-forge/rosco
+installation_complexity: 1
 
-    # Documentation
-    documentation_url: https://rosco.readthedocs.io/
-    user_docs: true
-    developer_docs: true
-    api_docs: true
-    cli: false
-    installation: true
-    getting_started: true
-    examples_tutorials: true
-    readability: 7
-    project_coverage: 8
+# Documentation
+documentation_url: https://rosco.readthedocs.io/
+has_user_docs: true
+has_developer_docs: false
+has_api_docs: false
+has_cli_docs: false
+has_installation_docs: true
+has_getting_started_docs: true
+has_examples_tutorials: true
+has_design_intent_statement: false
+readability: 7
+project_coverage: 8
 
-    # WETO Integrations (downstream)
-    wisdem: direct
+# Testing
+testing_framework: true
+continuous_testing: true
+regression_test_coverage: 20
+unit_test_coverage: 20
+test_documentation: false
+performance_tests: false
+
+# Interfaces
+first_class_ui:
+- input_files
+has_cli: false
+# language_interfaces:
+feature_accessibility: 100
+
+# Input / Output
+filetypes:
+- custom
+file_structure_stability: semantic_versioning
+
+# WETO Integrations (downstream)
+downstream_integrations:
+-   - wisdem
+    - indirect
+
+# # Community Health
+# open_issues: 0..N
+# open_pull_requests: 0..N
+# average_time_to_engage: 0..N
+# outside_contributors: 0..N

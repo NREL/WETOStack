@@ -1,0 +1,71 @@
+# General
+github_account: wisdem
+github_repo: wisdem
+primary_uses:
+- cost
+active_funding: false
+development_status: maintenance
+programming_language: python
+license_type: Apache-2.0
+data_collection_methods:
+- modeling
+last_release_date: "2023-06-22"
+
+# Modeling
+scope:
+- system
+system_type:
+- hawt
+system_location:
+- land
+- fixed_offshore
+- floating_offshore
+time_domain: dynamic
+loads: true
+governing_equations:
+- midfidelity engineering models
+
+# Distribution
+supported_platforms:
+    - any
+# package_manager:
+# package_manager_url:
+installation_complexity: 6
+
+# Documentation
+documentation_url: https://wisdem.readthedocs.io/en/master/
+has_user_docs: true
+has_developer_docs: true
+has_api_docs: true
+has_cli_docs: false
+has_installation_docs: true
+has_getting_started_docs: true
+has_examples_tutorials: true
+has_design_intent_statement: true
+readability: 7
+project_coverage: 7
+
+# Testing
+testing_framework: true
+continuous_testing: true
+regression_test_coverage: 20
+unit_test_coverage: 20
+test_documentation: false
+performance_tests: false
+
+# Interfaces
+first_class_ui:
+- input_files
+has_cli: false
+# language_interfaces:
+feature_accessibility: 50
+
+# Input / Output
+filetypes:
+- yaml
+file_structure_stability: semantic_versioning
+
+# WETO Integrations (downstream)
+downstream_integrations:
+-   - orbit
+    - direct

@@ -9,7 +9,10 @@ if __name__=="__main__":
 
     model_list = [
         "floris",
-        "weis"
+        "openfast",
+        "rosco",
+        "weis",
+        "wisdem",
     ]
 
     for model in model_list:
