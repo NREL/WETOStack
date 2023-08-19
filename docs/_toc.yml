@@ -7,7 +7,7 @@ parts:
   - caption: Software Suite
     chapters:
     - file: software_list
-    # - file: connectivity
+    - file: map_network
     - file: attributes
     - file: attributes_schema
 

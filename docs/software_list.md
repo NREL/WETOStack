@@ -93,7 +93,6 @@ not actively funded.
 
 - G2Aero: https://github.com/NREL/G2Aero
 - Gear-SCouP: https://github.com/NREL/GEAR-SCouP
-- HOPP: https://github.com/NREL/HOPP
 - WISDEM/dakota_driver: https://github.com/WISDEM/dakota_driver
 
 **Repository not found**
