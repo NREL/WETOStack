@@ -8,7 +8,6 @@ parts:
     chapters:
     - file: software_list
     - file: map_network
-    - file: attributes
     - file: attributes_schema
 
   - caption: Capabilities
