@@ -20,27 +20,152 @@ The objective of the workshop is to initiate the conversations around two primar
 
 ### Agenda
 
-| Start Time | End Time | Event | Speaker |
-| -------- | --------- | ---------- | --------- |
-| 8:00 | 8:30 | Coffee chat / intros |     |
-| 8:30 | 8:45 | Welcome, intro, workshop goals and rules | Rafael Mudafort |
-| 8:45 | 9:15 | DOE WETO Software Context | Ben Hallissey |
-| 9:15 | 9:50 | Breakout 1: What is the purpose of WETO Software? |  |
-| 9:50 | 10:00 | Reports | Group reporter |
-| 10:00 | 10:15 | Break	|  |
-| 10:15 | 11:15 | Portfolio Coordination Project Overview + Portfolio Overview | Technical area experts |
-| 11:15 | 11:50 | Breakout 2: Broadly, where should WETO Software be going? |  |
-| 11:50 | 12:00 | Reports | Group reporter |
-| 12:00 | 1:00 | Lunch | |
-| 1:00 | 1:40 | Best Practices Overview	| Rafael Mudafort |
-| 1:40 | 2:00 | Group feedback and discussion | All |
-| 2:00 | 2:35 | Breakout 3: What are the major paint points in our development processes? |  |
-| 2:35 | 2:45 | Reports | Group reporter |
-| 2:45 | 3:00 | Break | |
-| 3:00 | 3:30 | Breakout 4: Where to invest time and efforts in the upcoming FY's |  |
-| 3:30 | 3:40 | Reports | Group reporter |
-| 3:40 | 4:00 | Closing remarks	| Rafael Mudafort |
-| 5:00 | 8:00 | Post workshop happy hour - The Golden Mill	|   |
+```{raw} html
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333; font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:7px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333; font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:7px 5px;word-break:normal;}
+.tg .tg-vplf{background-color:#d67237;border-color:#000000;text-align:left;vertical-align:middle}
+.tg .tg-zwhy{background-color:#d67237;border-color:#000000;text-align:left;vertical-align:middle}
+.tg .tg-3mge{background-color:#f1bb7b;border-color:#000000;text-align:left;vertical-align:middle}
+.tg .tg-7tcx{background-color:#f1bb7b;border-color:#000000;text-align:left;vertical-align:middle}
+.tg .tg-1tol{border-color:#000000;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-sn7o{background-color:#f9f9f9;border-color:#000000;font-style:italic;text-align:left;vertical-align:middle}
+.tg .tg-81u1{background-color:#ffffff;border-color:#000000;text-align:left;vertical-align:middle}
+.tg .tg-pbmt{border-color:#000000;font-style:italic;text-align:left;vertical-align:middle}
+.tg .tg-fw9l{background-color:#fd6467;border-color:#000000;text-align:left;vertical-align:middle}
+.tg .tg-bpd2{background-color:#fd6467;border-color:#000000;text-align:left;vertical-align:middle}
+.tg .tg-u944{background-color:#5b1a18;border-color:#000000;color:#ffffff;text-align:left;vertical-align:middle}
+.tg .tg-vgc1{background-color:#5b1a18;border-color:#000000;color:#ffffff;text-align:left;vertical-align:middle}
+</style>
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-1tol">Start Time</th>
+    <th class="tg-1tol">End Time</th>
+    <th class="tg-1tol">Event</th>
+    <th class="tg-1tol">Speaker</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-sn7o">8:00</td>
+    <td class="tg-sn7o">8:30</td>
+    <td class="tg-sn7o">Coffee chat / intros</td>
+    <td class="tg-sn7o"></td>
+  </tr>
+  <tr>
+    <td class="tg-81u1">8:30</td>
+    <td class="tg-81u1">8:45</td>
+    <td class="tg-81u1">Welcome, intro, workshop goals and rules</td>
+    <td class="tg-81u1">Rafael Mudafort</td>
+  </tr>
+  <tr>
+    <td class="tg-3mge">8:45</td>
+    <td class="tg-3mge">9:15</td>
+    <td class="tg-3mge">DOE WETO Software Context</td>
+    <td class="tg-3mge">Ben Hallissy</td>
+  </tr>
+  <tr>
+    <td class="tg-7tcx">9:15</td>
+    <td class="tg-7tcx">9:50</td>
+    <td class="tg-7tcx">Breakout 1: What is the purpose of WETO Software?</td>
+    <td class="tg-7tcx"></td>
+  </tr>
+  <tr>
+    <td class="tg-3mge">9:50</td>
+    <td class="tg-3mge">10:00</td>
+    <td class="tg-3mge">Reports</td>
+    <td class="tg-3mge">Group reporter</td>
+  </tr>
+  <tr>
+    <td class="tg-pbmt">10:00</td>
+    <td class="tg-pbmt">10:15</td>
+    <td class="tg-pbmt">Break</td>
+    <td class="tg-pbmt"></td>
+  </tr>
+  <tr>
+    <td class="tg-fw9l">10:15</td>
+    <td class="tg-fw9l">11:15</td>
+    <td class="tg-fw9l">Portfolio Coordination Project Overview + Portfolio Overview</td>
+    <td class="tg-fw9l">Technical area experts</td>
+  </tr>
+  <tr>
+    <td class="tg-bpd2">11:15</td>
+    <td class="tg-bpd2">11:50</td>
+    <td class="tg-bpd2">Breakout 2: Broadly, where should WETO Software be going?</td>
+    <td class="tg-bpd2"></td>
+  </tr>
+  <tr>
+    <td class="tg-fw9l">11:50</td>
+    <td class="tg-fw9l">12:00</td>
+    <td class="tg-fw9l">Reports</td>
+    <td class="tg-fw9l">Group reporter</td>
+  </tr>
+  <tr>
+    <td class="tg-pbmt">12:00</td>
+    <td class="tg-pbmt">1:00</td>
+    <td class="tg-pbmt">Lunch</td>
+    <td class="tg-pbmt"></td>
+  </tr>
+  <tr>
+    <td class="tg-u944">1:00</td>
+    <td class="tg-u944">1:40</td>
+    <td class="tg-u944">Best Practices Overview</td>
+    <td class="tg-u944">Rafael Mudafort</td>
+  </tr>
+  <tr>
+    <td class="tg-vgc1">1:40</td>
+    <td class="tg-vgc1">2:00</td>
+    <td class="tg-vgc1">Group feedback and discussion</td>
+    <td class="tg-vgc1">All</td>
+  </tr>
+  <tr>
+    <td class="tg-u944">2:00</td>
+    <td class="tg-u944">2:35</td>
+    <td class="tg-u944">Breakout 3: What are the bottlenecks in our development processes?</td>
+    <td class="tg-u944"></td>
+  </tr>
+  <tr>
+    <td class="tg-vgc1">2:35</td>
+    <td class="tg-vgc1">2:45</td>
+    <td class="tg-vgc1">Reports</td>
+    <td class="tg-vgc1">Group reporter</td>
+  </tr>
+  <tr>
+    <td class="tg-sn7o">2:45</td>
+    <td class="tg-sn7o">3:00</td>
+    <td class="tg-sn7o">Break</td>
+    <td class="tg-sn7o"></td>
+  </tr>
+  <tr>
+    <td class="tg-zwhy">3:00</td>
+    <td class="tg-zwhy">3:30</td>
+    <td class="tg-zwhy">Breakout 4: Where to invest time and efforts in the upcoming FY's</td>
+    <td class="tg-zwhy"></td>
+  </tr>
+  <tr>
+    <td class="tg-vplf">3:30</td>
+    <td class="tg-vplf">3:40</td>
+    <td class="tg-vplf">Reports</td>
+    <td class="tg-vplf">Group reporter</td>
+  </tr>
+  <tr>
+    <td class="tg-zwhy">3:40</td>
+    <td class="tg-zwhy">4:00</td>
+    <td class="tg-zwhy">Closing remarks</td>
+    <td class="tg-zwhy">Rafael Mudafort</td>
+  </tr>
+  <tr>
+    <td class="tg-sn7o">5:00</td>
+    <td class="tg-sn7o">8:00</td>
+    <td class="tg-sn7o">Post workshop happy hour - The Golden Mill</td>
+    <td class="tg-sn7o"></td>
+  </tr>
+</tbody>
+</table>
+```
 
 ## Timeline
 
