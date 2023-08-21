@@ -34,6 +34,7 @@ schema = {
             "items": {
                 "enum": [
                     "simulation",
+                    "optimization",
                     "controls",
                     "cost",
                     "design"
@@ -107,7 +108,7 @@ schema = {
             }
         },
         "system_location": {
-            "description": "The location of the wind energy system support by the software. "
+            "description": "The location of the wind energy system supported by the software. "
                 "Use `any` if the software is location-agnostic.",
             "type": "array",
             "items": {
@@ -115,8 +116,12 @@ schema = {
             }
         },
         "time_domain": {
-            "description": "Does the software support time domain modeling or analysis?",
-            "enum": ["steady", "dynamic"]
+            "description": "Does the software support time domain modeling or analysis, "
+            "steady-state modeling or analysis, or both?",
+            "type": ["string", "array"],
+            "items": {
+                "enum": ["steady", "dynamic"]
+            }
         },
         "loads": {
             "description": "Does the software calculate system loads?",
@@ -169,7 +174,11 @@ schema = {
             }
         },
         "installation_complexity": {
-            "description": "Estimate the difficulty for a user with minimal context to install.",
+            "description": "\n".join([
+                "Estimate the difficulty for a user with minimal context to install.",
+                "- `1` is a downloadable executable that can be double clicked",
+                "- `10` requires compiling from source code with numerous other compiled dependencies.",
+            ]),
             "type": "integer",
             "minimum": 1,
             "maximum": 10,
@@ -297,7 +306,7 @@ schema = {
             "description": "List the filetypes used in the project including inputs and outputs.",
             "type": "array",
             "items": {
-                "enum": ["custom", "yaml", "hdf5"]
+                "enum": ["custom", "yaml", "hdf5", "csv", "numpy binary", "pvd", "xdmf"]
             }
         },
         "file_structure_stability": {

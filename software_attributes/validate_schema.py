@@ -12,6 +12,7 @@ if __name__=="__main__":
         "openfast",
         "rosco",
         "weis",
+        "windse",
         "wisdem",
     ]
 

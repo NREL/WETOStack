@@ -112,7 +112,7 @@ In the web address, this is the last component: https://github.com/&lt;account>/
     <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
 <div class="enum-value" id="primary_uses_items_enum">
             <h4>Must be one of:</h4>
-            <ul class="list-group"><li class="list-group-item enum-item">"simulation"</li><li class="list-group-item enum-item">"controls"</li><li class="list-group-item enum-item">"cost"</li><li class="list-group-item enum-item">"design"</li></ul>
+            <ul class="list-group"><li class="list-group-item enum-item">"simulation"</li><li class="list-group-item enum-item">"optimization"</li><li class="list-group-item enum-item">"controls"</li><li class="list-group-item enum-item">"cost"</li><li class="list-group-item enum-item">"design"</li></ul>
             </div>
         
 
@@ -425,7 +425,7 @@ In the web address, this is the last component: https://github.com/&lt;account>/
             <div class="card-body pl-5">
 
     <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
-<span class="description"><p>The location of the wind energy system support by the software. Use <code>any</code> if the software is location-agnostic.</p>
+<span class="description"><p>The location of the wind energy system supported by the software. Use <code>any</code> if the software is location-agnostic.</p>
 </span>
         
 
@@ -468,12 +468,9 @@ In the web address, this is the last component: https://github.com/&lt;account>/
              data-parent="#accordiontime_domain">
             <div class="card-body pl-5">
 
-    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
-<span class="description"><p>Does the software support time domain modeling or analysis?</p>
-</span><div class="enum-value" id="time_domain_enum">
-            <h4>Must be one of:</h4>
-            <ul class="list-group"><li class="list-group-item enum-item">"steady"</li><li class="list-group-item enum-item">"dynamic"</li></ul>
-            </div>
+    <span class="badge badge-dark value-type">Type: string or array of enum (of string)</span><br/>
+<span class="description"><p>Does the software support time domain modeling or analysis, steady-state modeling or analysis, or both?</p>
+</span>
         
 
         
@@ -703,7 +700,9 @@ In the web address, this is the last component: https://github.com/&lt;account>/
             <div class="card-body pl-5">
 
     <span class="badge badge-dark value-type">Type: integer</span><br/>
-<span class="description"><p>Estimate the difficulty for a user with minimal context to install.</p>
+<span class="description"><p>Estimate the difficulty for a user with minimal context to install.<br />
+- <code>1</code> is a downloadable executable that can be double clicked<br />
+- <code>10</code> requires compiling from source code with numerous other compiled dependencies.</p>
 </span>
         
 
@@ -1346,7 +1345,7 @@ In the web address, this is the last component: https://github.com/&lt;account>/
     <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
 <div class="enum-value" id="filetypes_items_enum">
             <h4>Must be one of:</h4>
-            <ul class="list-group"><li class="list-group-item enum-item">"custom"</li><li class="list-group-item enum-item">"yaml"</li><li class="list-group-item enum-item">"hdf5"</li></ul>
+            <ul class="list-group"><li class="list-group-item enum-item">"custom"</li><li class="list-group-item enum-item">"yaml"</li><li class="list-group-item enum-item">"hdf5"</li><li class="list-group-item enum-item">"csv"</li><li class="list-group-item enum-item">"numpy binary"</li><li class="list-group-item enum-item">"pvd"</li><li class="list-group-item enum-item">"xdmf"</li></ul>
             </div>
         
 
@@ -1487,6 +1486,6 @@ In the web address, this is the last component: https://github.com/&lt;account>/
 </div>
 
     <footer>
-        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2023-08-18 at 17:30:55 -0500</p>
+        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2023-08-21 at 08:26:00 -0500</p>
     </footer></body>
 </html>
