@@ -1,4 +1,4 @@
-
+(bestpractices)=
 # Best Practices and Expectations
 
 Wind energy researchers typically share one key characteristic: a passion for increasing
