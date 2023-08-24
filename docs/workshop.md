@@ -1,17 +1,24 @@
-(workshop)=
+(workshop_top)=
 # Model Owners Workshop
 
-This project will support an annual workshop to build the community of WETO software
-owners. The first workshop will be held on September 7, 2023, at NREL's Golden Campus.
-The objective of the workshop is to initiate the conversations around two primary topics:
-1. Holistically evaluating the WETO software portfolio
-2. Establishing a community-wide consensus on software quality expectations
+A component of the Holistic Modeling Portfolio Coordination Project is to coordinate and host
+an annual workshop with the purpose of strengthening the community of WETO software owners.
+**The first workshop will be help on September 7, 2023, at NREL's Golden Campus.**
 
-Being a community-focused workshop, there will be four breakout sessions where attendees will
-discuss topics as a group. The results of these discussions will be reported back to the full
-workshop, and they will also be incorporated into their associated aspects of the
-Portfolio Coordination project.
+The objective of the first workshop is to *initialize* the community.
+To that end, two primary topics will be threaded throughout the conversations:
+1. Opportunities and strategies to elevate the quality of WETO software
+2. Holistic evaluation of the existing portfolio
 
+There will be four breakout sessions where attendees will discuss topics as a group.
+Prior to the breakouts, preplanned talks from WETO and members of the Holistic Modeling project
+will seed the conversations in the following breakouts. Please see the [](workshop_agenda)
+for details.
+
+```{contents}
+```
+
+(workshop_agenda)=
 ## Agenda
 
 ```{raw} html
@@ -25,22 +32,13 @@ This breakout session follows an update from WETO on their perspective and focus
 we produce.
 The discussions should be informed by low-level experience but maintain a high-level perspective.
 The objective of this breakout session is to establish a mutual understanding of the group's
-perspective on the role and impact of WETO software.
+perspective on the role and impact of WETO software within the broad context of wind energy.
 
 Topic suggestions:
 - To create the tools to support our own research
 - To establish a mechanism to disseminate our research
 - To provide the industry with tools to design wind energy systems
 - To full industry adoption
-
-
-Third option:
-- how might we engage with independent organizations to deal with these long term maintenance burdens
-  - inter (?) foundation
-  - Apache foundation
-  - Linux foundation
-
-
 
 ## Breakout 2: In what direction should WETO software go?
 
@@ -81,3 +79,62 @@ Topic suggestions:
 - Establish a software quality czar to consult with particular groups or models
 - Focus on interoperability / model alignment
 - Establish common inputs (i.e. windIO)
+
+
+## Rules of Engagement
+
+Given the nature of a day-long meeting with lots of group discussion, it is important to
+establish rules for engagement.
+
+1. Many people are traveling to attend this workshop, and everyone is setting aside a full day.
+    To respect each other's time and effort, please keep all attention within the workshop.
+    - Laptops should remain closed. Note taking on paper is preferred.
+    - Step out of the room to use a phone including sending emails or text messages that require
+      more than a few seconds to write.
+
+2. Offer mutual respect. Each of the breakout sessions is meant to create discussion and
+    conversation. Arriving at one answer is required and in most cases not desired. The
+    objective is mutual understanding of perspectives.
+
+
+
+
+
+## Day-Of Logistics
+
+````{admonition} NREL Golden Campus Address
+:class: tip
+
+```
+National Renewable Energy Laboratory
+15013 Denver West Parkway
+Golden, CO 80401
+```
+
+-> [Google Maps link](https://goo.gl/maps/Q9fZMNxZqHjqVLcf9)
+````
+
+
+
+**Location**: The workshop will take place in the Cache La Poudre meeting room in the
+RSF building at NREL's Golden Campus. The room number is "X405" and it is on the RSF's 4th floor
+in the A wing.
+
+```{image} ./_images/rsf_4thfloor_map.png
+:alt: rsf_map
+:align: center
+:height: 400px
+```
+
+**Breakout sessions**:
+Each breakout session will have its own room.
+One person should be designated as the reporter to report back overarching themes in the
+conversation.
+Additional note takers would be helpful to capture more information.
+
+
+**Parking**
+
+**Lunch and refreshments**
+
+We will have a group lunch at the RSF cafeteria.

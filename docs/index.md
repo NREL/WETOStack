@@ -19,7 +19,7 @@ This dashboard contains the results and information related to each focus area.
 ## Model Owners Workshop
 
 The first WETO Model Owners Workshop will take place on September 7 at NREL's Golden Campus.
-The agenda is listed below, and more information is available in the [](workshop) page.
+The agenda is listed below, and more information is available in the [](workshop_top) page.
 
 ```{raw} html
 :file: workshop_agenda.html
