@@ -1,5 +1,5 @@
 (bestpractices)=
-# Best Practices and Expectations
+# Research Software Best Practices
 
 Wind energy researchers typically share one key characteristic: a passion for increasing
 wind energy in the global energy mix. The U.S. Department of Energy (DOE) supports this mission
@@ -640,7 +640,7 @@ The outcome is that readers of the commit history in the second repository can q
 commit history and understand the evolution of changes simply from the commit messages.
 The first repository requires opening individual changes to understand their scope and context.
  
-```{image} ./images/commits_compared.png
+```{image} ../_images/commits_compared.png
 :alt: capabilities
 :align: center
 ```
@@ -785,7 +785,7 @@ It should not go to 0, but the majority of involvement in software development s
 review, design, and project planning.
 
 
-## Ideas
+<!-- ## Ideas
 
 
 **Optimize for readability not writability.**
@@ -846,9 +846,9 @@ Talk about code reviews and what to consider when reviewing and proposing code.
 - Reviews should be verbose and to the point
 - Consider the big pictures: what do these changes add to the project? how is it better than before?
 - Run the code! Try to break it. Really exercise the new code. It's not enough to simply read it.
-- 
+-  -->
 
-# Notes
+<!-- ### Notes
 
 https://quarto.org/docs/gallery/
 - See the article section
@@ -865,4 +865,4 @@ It also addresses the various audiences and how to serve the developer community
 https://github.com/readme/featured/how-open-is-open-source?mc_cid=50779693b9&mc_eid=2d4b086884
 
 Documentation as a way to build community
-https://labs.quansight.org/blog/2020/03/documentation-as-a-way-to-build-community
+https://labs.quansight.org/blog/2020/03/documentation-as-a-way-to-build-community -->

@@ -2,20 +2,11 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
-parts:
-  - caption: Software Suite
-    chapters:
-    - file: software_list
-    - file: map_network
-    - file: attributes_schema
-
-  - caption: Capabilities
-    chapters:
-    - file: capabilities
-    - file: capabilities/system_design
-    - file: capabilities/aero
-
-  - caption: Software Quality
-    chapters:
-    - file: software_quality
+root: index
+chapters:
+- file: workshop
+- file: capabilities/overview
+- file: portfolio_analysis/software_list
+- file: portfolio_analysis/map_network
+- file: portfolio_analysis/attributes_schema
+- file: best_practices
