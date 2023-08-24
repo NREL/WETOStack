@@ -3,7 +3,8 @@
 
 The set of software under the WETO umbrella is listed here.
 This is intended to eventually be a complete list, but it is likely missing some projects yet.
-Please **SUGGEST AN EDIT** to correct the information here.
+Please [suggest an edit](https://github.com/rafmudaf/wetostack/edit/main/docs/portfolio_analysis/software_list.md)
+if nay information here is incorrect.
 
 This listing contains two groups of software projects:
 
