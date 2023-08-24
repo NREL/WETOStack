@@ -74,7 +74,7 @@ into the following sections:
 ```{contents}
 ```
 
-The information is aggregated from experience within WETO-supprted software development
+The information is aggregated from experience within WETO-supported software development
 groups as well as external organizations and efforts to define the craft of research software
 engineering. These best practices aim to make the collaborative development process efficient
 and effective while improving the model understanding across stakeholders. Additionally,
@@ -127,13 +127,13 @@ experienced practitioners alike. In order to improve accessibility, it is import
 understand the experience of users and design software to meet their needs.
 
 **BP: Identify target user profiles and anticipate their levels of understanding. Accurately
-understand the complixity of the systems used to access the software, and evaluate whether
+understand the complexity of the systems used to access the software, and evaluate whether
 this matches the expected skills in target users.**
 
 Some examples of common barriers to entry are:
 
 - Navigating a "terminal"
-- Knowledge of acryonyms, jargon, or interchangeable phrases
+- Knowledge of acronyms, jargon, or interchangeable phrases
     - CLI, API, IDE, etc
     - Compile, clone, check out
     - Terminal vs shell vs command prompt
@@ -193,12 +193,12 @@ graph LR
     GitHub Event
     (i.e. release)
     "))
-    subgraph Continous Testing
+    subgraph Continuous Testing
         B["Run test suite"]
     end
     C{"Pass?"}
     D["Notify author"]
-    subgraph Continous Deployment
+    subgraph Continuous Deployment
         E["Build for conda"]
         F["Build for PyPI"]
         G["Publish to conda-forge"]
@@ -300,7 +300,7 @@ adhere to the following conventions and principles.
 
 ### Error messages
 
-Messaging to pracitioners from within a software can be immensely helpful.
+Messaging to practioners from within a software can be immensely helpful.
 At the same time, the infrastructure for communicating messages can be a heavy lift.
 It is important to find a balance of appropriate levels of messaging while also ensuring that
 the messages themselves are up to date with the software features and implementations.
@@ -345,7 +345,7 @@ The following fields are minimum metadata to include:
 
 Extendability is concerned with how improvements such as new features, bug fixes, and general
 maintenance are added to an existing software project. This covers both the technical aspects
-as well as the management of mulitple developers and development efforts happening
+as well as the management of multiple developers and development efforts happening
 concurrently.
 
 **Don't be clever**
@@ -423,7 +423,7 @@ context.
 The designers of the Python programming language consider readability as a primary priority, and
 the most famous of the many Python language-development documents is
 [PEP 8](https://peps.python.org/pep-0008/) which proposes a style guide for Python code.
-PEP 8 is summarized into 19 aphorisms (20 including one that's implied) and is refered to as
+PEP 8 is summarized into 19 aphorisms (20 including one that's implied) and is referred to as
 ["The Zen of Python"](https://peps.python.org/pep-0020/). Much of the WETO software portfolio is
 Python-based, so these guiding principles directly apply. However, these principles are
 programming language agnostic and eloquently describe the paradigm for developing
@@ -616,7 +616,7 @@ to convince reviewers and maintainers that the new code is in a good state and t
 inclusion would be a benefit to the project. This typically involves a contextual description of
 the change and a description of why the change is valid and well tested.
 
-Futhermore, GitHub automatically contructs release notes from all of the pull requests merged
+Futhermore, GitHub automatically constructs release notes from all of the pull requests merged
 since the previous release.
 It automatically takes the titles of each pull request to construct the release notes.
 "Update XYZ" again provides no context and more work is required to communicate what has changed
@@ -627,7 +627,7 @@ accomplishes.
 Vague messages such as "updated solver" are distracting and lack meaning.
 Consider the following two pull request messages:
 - "Update turbine ontology"
-- "NatSpec: Fix diplicated display of the data type in NatSpec `/// @return` commens"
+- "NatSpec: Fix duplicated display of the data type in NatSpec `/// @return` comments"
 
 The first message vaguely indicates an "update" while the second clearly states what is changed.
 The first message provides n detail around what is updated or why it matters while the second
@@ -649,8 +649,8 @@ The first repository requires opening individual changes to understand their sco
 ## Long term sustainability
 
 The long term sustainability of software is directly related to the level of infrastructure and
-tooling around the code to characterise its design, behavior and performance. This infrastructure
-is typically automated through services like GitHub, and it is targetted at developers in two
+tooling around the code to characterize its design, behavior and performance. This infrastructure
+is typically automated through services like GitHub, and it is targeted at developers in two
 different categories:
 - **Maintainers** who will keep the infrastructure running, update dependency versions and API's,
     and address bugs
@@ -666,7 +666,7 @@ internally, the software can continue to function with changes that happen exter
 This can involve updates to the software to support new operating systems, virtual machines,
 runtime environments, and hardware components. A recent example is the introduction of Apple
 computers with Arm-based CPU's rather than the canonical x86 architecture. This change prompted
-a slew of upgrades to the entire ecosystem of software from compilers and interpretters to
+a slew of upgrades to the entire ecosystem of software from compilers and interpreters to
 debuggers and profilers.
 
 The extension component ensures that developers who work to add new features and improvements are
@@ -684,7 +684,7 @@ Test driven development - formalize the ideas that drive development.
 A portion of code should not be added without a formal proof of correctness and robustness.
 Consider testing like writing a report - prove to the reader that it is correct and should be accepted.
 
-Phenomenon identifcation and ranking table
+Phenomenon identification and ranking table
 - David Maniaci
 
 (communicating_design)=
@@ -724,7 +724,7 @@ While modern research typically involves using research software, it is common f
 software engineers to focus skill development on either the research domain or the aspects
 related to software engineering.
 Additionally, the research environment in academia and government research labs are structured
-to incentivise academic publication.
+to incentivize academic publication.
 Therefore, the resulting teams are often comprised of domain researchers and research software
 engineers.
 The domain researchers inform the needs of the research software and are the primary users.
@@ -834,7 +834,7 @@ How long do we expect it to be relevant?
 - This should be part of the design process
 - Periodically reconsider whether the recent work and planned work is in line with these expectations
 
-**Require each project to develop a software engineering roadmap as well as a capabilities roadmap**
+**Require each project to develop a software engineering road map as well as a capabilities road map**
 
 Establish a grading scheme for software projects in future years
 - Tie the grading scheme to the technical report so that any areas of the grades can reference back to the best practices

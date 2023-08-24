@@ -172,7 +172,7 @@ perspective on the role and impact of WETO software.
 
 Topic suggestions:
 - To create the tools to support our own research
-- To establish a mechanism to disemminate our research
+- To establish a mechanism to disseminate our research
 - To provide the industry with tools to design wind energy systems
 - To full industry adoption
 
