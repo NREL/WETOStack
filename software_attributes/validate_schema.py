@@ -18,7 +18,7 @@ if __name__=="__main__":
 
     for model in model_list:
         print(f"Validating {model}...")
-        input_file = Path("weto_software", f"{model}.yaml")
+        input_file = Path("database", f"{model}.yaml")
         with open(input_file, "r") as infile:
             input_dict = yaml.load(infile, yaml.SafeLoader)
         validate_dict = input_dict
