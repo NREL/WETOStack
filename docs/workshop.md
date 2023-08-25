@@ -98,7 +98,6 @@ Topic suggestions:
 - Focus on interoperability / model alignment
 - Establish common inputs (i.e. windIO)
 
-
 ## Rules of Engagement
 
 ````{card}
@@ -165,13 +164,22 @@ Each breakout session will have its own room.
 One person should be designated as the reporter to report back overarching themes in the
 conversation.
 Additional note takers would be helpful to capture more information.
-
-<!-- TODO: Print prompts for each breakout -->
+The results of these breakout sessions will be included in a report summarizing the workshop,
+and they will inform future portfolio coordination efforts.
 
 **Parking**
 
-Details coming Soon.
+NREL staff should park in the parking garage and visitors should park in the visitor lot
+near the East Gate entrance.
+See the map below for guidance.
 
-<!-- TODO
-Visitor's lot
-NREL staff park in the employee lot (garage). -->
+```{image} ./_images/parking_map.png
+:alt: rsf_map
+:align: center
+:height: 500px
+```
+
+```{note}
+I (Rafael) made this map based on my experience with going to this site, but I have little
+experience here so please let me know if anything is unclear.
+```
