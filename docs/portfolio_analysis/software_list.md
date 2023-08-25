@@ -43,8 +43,8 @@ These projects are actively supported and funded by WETO as of FY23.
 **Controls development**
 - FLORIS: https://github.com/nrel/floris
 - FLASC: https://github.com/nrel/flasc
-- emu: https://github.com/nrel/emu_python
-- moa: https://github.com/nrel/moa_python
+- hercules: https://github.com/nrel/hercules
+- moa_python: https://github.com/nrel/moa_python
 
 **Resources assessment**
 - DW TAP: https://github.com/NREL/dw-tap-app
