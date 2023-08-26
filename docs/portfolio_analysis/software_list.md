@@ -30,11 +30,11 @@ These projects are actively supported and funded by WETO as of FY23.
 - Nalu-Wind: https://github.com/exawind/nalu-wind
 - AMR-Wind: https://github.com/exawind/amr-wind
 - ERF: https://github.com/erf-model/ERF
-- WEIS: https://github.com/wisdem/weis
 - WindSE: https://github.com/nrel/windse
 - NuMAD: https://github.com/sandialabs/NuMAD
 
 **Design and optimization**
+- WEIS: https://github.com/wisdem/weis
 - WISDEM: https://github.com/wisdem/wisdem
 - RAFT: https://github.com/WISDEM/RAFT
 - HOPP: https://github.com/NREL/HOPP
