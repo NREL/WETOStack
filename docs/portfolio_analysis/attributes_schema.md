@@ -82,6 +82,18 @@ Then, contextual information for the data type and available options for the val
 Finally, an example is given in some cases.
 ````
 
+````{admonition} Quick tips
+:class: tip
+
+- Attributes with null values (None) must be removed or commented, such as:
+```yaml
+key1: value1
+# key2:
+key3: value3
+```
+- Boolean values are either `true` or `false`.
+- Strings do not require quotes.
+````
 
 ```{raw} html
 :file: schema_doc.html
