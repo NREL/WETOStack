@@ -61,7 +61,7 @@ schema = {
         "programming_language": {
             "description": "The primary programming language even though many projects "
                 "contain source code in a few languages.",
-            "enum": ["python", "fortran", "matlab", "cpp"]
+            "enum": ["python", "fortran", "matlab", "c++", "rust", "julia", "r"]
         },
         "license_type": {
             "description": "Choose the corresponding license string from the "
@@ -300,7 +300,7 @@ schema = {
                 "to other languages.",
             "type": "array",
             "items": {
-                "enum": ["python", "fortran", "matlab", "cpp"]
+                "enum": ["python", "fortran", "matlab", "c++", "rust", "julia", "r"]
             }
         },
         "feature_accessibility": {

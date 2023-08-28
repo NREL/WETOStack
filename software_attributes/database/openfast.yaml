@@ -72,7 +72,7 @@ first_class_ui:
 has_cli: false
 language_interfaces:
 - python
-- cpp
+- c++
 feature_accessibility: 100
 
 # Input / Output
