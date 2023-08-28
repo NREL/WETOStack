@@ -116,12 +116,21 @@ schema = {
             }
         },
         "time_domain": {
-            "description": "Does the software support time domain modeling or analysis, "
-            "steady-state modeling or analysis, or both?",
+            "description": "Does the software support time domain modeling or analysis and/or "
+            "steady-state modeling or analysis? This is an array-type field, so include two "
+            " elements if both are supported",
             "type": ["string", "array"],
             "items": {
                 "enum": ["steady", "dynamic"]
-            }
+            },
+            "examples": [
+                {
+                    "time_domain": [
+                        "steady",
+                        "dynamic",
+                    ]
+                }
+            ],
         },
         "loads": {
             "description": "Does the software calculate system loads?",
@@ -325,12 +334,17 @@ schema = {
         ## WETO Integrations (downstream)
         "downstream_integrations": {
             "description": "\n".join([
-                "List other WETO software projects associated with this one either "
+                "List other WETO software projects that this one depends on either "
                 "through a direct or indirect connection.",
                 " - `direct`: code-code integration",
                 " - `indirect`: one uses the output of the other via output file or another workflow process",
                 "",
                 "This field is a 2D list. See the example below for syntax.",
+                "",
+                "An example of a real dependency is FLORIS requires a power coefficient and "
+                "thrust coefficient look up table from a higher fidelity simulation or "
+                "field data. This often comes from OpenFAST, so that tool is an indirect "
+                "dependency of FLORIS."
             ]),
             "examples": [
                 {
@@ -426,9 +440,9 @@ if __name__ == "__main__":
     generate_from_filename("schema.json", "schema_doc.html", config=config)
 
     # Copy html, css, and js to the docs directory
-    shutil.copy2("schema_doc.html", "../docs/")
-    shutil.copy2("schema_doc.css", "../docs/")
-    shutil.copy2("schema_doc.min.js", "../docs/")
+    shutil.copy2("schema_doc.html", "../docs/portfolio_analysis")
+    shutil.copy2("schema_doc.css", "../docs/portfolio_analysis")
+    shutil.copy2("schema_doc.min.js", "../docs/portfolio_analysis")
 
     # Clean up the current directory
     os.remove("schema_doc.html")

@@ -69,6 +69,17 @@ The schema docs provide the following information:
 </div>
 ```
 
+Each attribute in blue text is a drop-down element.
+Try clicking the attribute text "system_type" above to open the element.
+
+The first line indicates the data type required for the value.
+In this case, `Type: array of enum (of string)` means the value must be an array where each
+element is a string matching one of a predefined set of options.
+
+The next line is a description of the attribute.
+
+Then, contextual information for the data type and available options for the value is provided.
+Finally, an example is given in some cases.
 ````
 
 
