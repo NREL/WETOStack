@@ -65,7 +65,7 @@ filetypes:
 file_structure_stability: semantic_versioning
 
 # WETO Integrations (downstream)
-downstream_integrations:
+dependencies:
 -   - wisdem
     - indirect
 

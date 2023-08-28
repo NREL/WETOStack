@@ -82,8 +82,7 @@ filetypes:
 file_structure_stability: in_development
 
 # WETO Integrations (downstream)
-downstream_integrations:
-# - openfast: indirect
+dependencies:
 -   - floris
     - indirect
 

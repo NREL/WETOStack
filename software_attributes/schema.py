@@ -332,7 +332,7 @@ schema = {
         },
 
         ## WETO Integrations (downstream)
-        "downstream_integrations": {
+        "dependencies": {
             "description": "\n".join([
                 "List other WETO software projects that this one depends on either "
                 "through a direct or indirect connection.",
@@ -348,7 +348,7 @@ schema = {
             ]),
             "examples": [
                 {
-                    "downstream_integrations": [
+                    "dependencies": [
                         ("openfast", "direct"),
                         ("floris", "direct"),
                         ("exawind", "indirect"),
