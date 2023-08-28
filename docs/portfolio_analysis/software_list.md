@@ -31,7 +31,7 @@ These projects are actively supported and funded by WETO as of FY23.
 - AMR-Wind: https://github.com/exawind/amr-wind
 - ERF: https://github.com/erf-model/ERF
 - WindSE: https://github.com/nrel/windse
-- NuMAD: https://github.com/sandialabs/NuMAD
+- pyNuMAD: https://github.com/sandialabs/pyNuMAD
 
 **Design and optimization**
 - WEIS: https://github.com/wisdem/weis
@@ -83,6 +83,7 @@ These projects are either funded outside of WETO, are not actively funded, or ar
 
 **High fidelity models**
 - SOWFA: https://github.com/nrel/sowfa
+- NuMAD: https://github.com/sandialabs/NuMAD
 
 **Design and optimization**
 - G2Aero: https://github.com/NREL/G2Aero

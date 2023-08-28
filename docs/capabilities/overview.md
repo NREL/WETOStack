@@ -25,7 +25,7 @@ mindmap
             ERF
             DW TAP
             RAFT
-            NuMAD
+            pyNuMAD
             MoorPy
             wtDigiTwin
             HOPP

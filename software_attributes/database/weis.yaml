@@ -76,5 +76,5 @@ downstream_integrations:
     - direct
 -   - sonata
     - direct
--   - numad
+-   - pynumad
     - indirect
