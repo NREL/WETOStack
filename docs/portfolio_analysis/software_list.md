@@ -39,6 +39,8 @@ These projects are actively supported and funded by WETO as of FY23.
 - RAFT: https://github.com/WISDEM/RAFT
 - HOPP: https://github.com/NREL/HOPP
 - WPGNN and PLayGen: https://github.com/NREL/WPGNN
+- SONATA: https://github.com/ptrbortolotti/SONATA
+- ANBA4: https://github.com/ANBA4/anba4
 
 **Controls development**
 - FLORIS: https://github.com/nrel/floris
