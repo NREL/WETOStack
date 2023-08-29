@@ -2,6 +2,8 @@
 github_account: wisdem
 github_repo: weis
 primary_uses:
+- simulation
+- optimization
 - design
 active_funding: true
 development_status: new_features
@@ -27,19 +29,22 @@ governing_equations:
 
 # Distribution
 supported_platforms:
-    - any
-# package_manager:
+    - macos
+    - linux
+    - HPC
+package_manager:
+    - conda
 # package_manager_url:
 installation_complexity: 6
 
 # Documentation
 documentation_url: https://weis.readthedocs.io/en/latest/
-has_user_docs: false
-has_developer_docs: false
+has_user_docs: true
+has_developer_docs: true
 has_api_docs: false
 has_cli_docs: false
 has_installation_docs: true
-has_getting_started_docs: false
+has_getting_started_docs: true
 has_examples_tutorials: true
 has_design_intent_statement: false
 readability: 7
@@ -74,7 +79,15 @@ dependencies:
     - direct
 -   - openfast
     - direct
--   - sonata
+-   - moorpy
     - direct
+-   - landbosse
+    - direct
+-   - orbit
+    - direct
+-   - raft
+    - direct
+-   - sonata
+    - indirect
 -   - pynumad
     - indirect

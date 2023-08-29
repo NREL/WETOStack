@@ -1,0 +1,91 @@
+# General
+github_account: ptrbortolotti
+github_repo: SONATA
+primary_uses:
+- simulation
+- optimization
+- design
+active_funding: true
+development_status: on_hold
+programming_language: python
+license_type: lgpl-3.0
+data_collection_methods:
+- modeling
+last_release_date: "2023-03-20"
+
+# Modeling
+scope:
+- turbine
+system_type:
+- hawt
+- vawt
+- awes
+system_location:
+- land
+- fixed_offshore
+- floating_offshore
+time_domain:
+- steady
+- dynamic
+loads: false
+governing_equations:
+- "Routines for 2D planar meshes for slender composite beams"
+
+# Distribution
+supported_platforms:
+    - macos
+    - linux
+# package_manager:
+# package_manager_url:
+installation_complexity: 9
+
+# Documentation
+documentation_url: none
+has_user_docs: false
+has_developer_docs: false
+has_api_docs: false
+has_cli_docs: false
+has_installation_docs: true
+has_getting_started_docs: false
+has_examples_tutorials: true
+has_design_intent_statement: false
+readability: 2
+project_coverage: 3
+
+# Testing
+testing_framework: true
+continuous_testing: true
+regression_test_coverage: 85 # TODO: Get this from codecov
+unit_test_coverage: 70 # TODO: Get this from codecov
+test_documentation: false
+performance_tests: false
+
+# Interfaces
+first_class_ui:
+- input_files
+has_cli: true
+language_interfaces:
+- python
+feature_accessibility: 100
+
+# Input / Output # TODO: should this be separated into input/output filetypes?
+filetypes:
+- custom
+file_structure_stability: stable
+
+# WETO Integrations (downstream)
+dependencies:
+-   - openfast
+    - indirect
+-   - anba4
+    - direct
+-   - wisdem
+    - indirect
+-   - weis
+    - indirect
+
+# # Community Health
+# open_issues: 0..N
+# open_pull_requests: 0..N
+# average_time_to_engage: 0..N
+# outside_contributors: 0..N
