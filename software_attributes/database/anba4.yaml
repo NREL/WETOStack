@@ -69,16 +69,15 @@ performance_tests: false
 first_class_ui:
 - input_files
 has_cli: true
-language_interfaces:
-- python
+# language_interfaces:
 feature_accessibility: 100
 
-# Input / Output # TODO: should this be separated into input/output filetypes?
+# Input / Output
 filetypes:
 - custom
 file_structure_stability: stable
 
-# WETO Integrations (downstream)
+# WETO Integrations
 dependencies:
 -   - openfast
     - indirect

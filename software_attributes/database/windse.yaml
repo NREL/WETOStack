@@ -69,7 +69,7 @@ has_cli: true
 # language_interfaces:
 feature_accessibility: 100
 
-# Input / Output # TODO: should this be separated into input/output filetypes?
+# Input / Output
 filetypes:
 - yaml
 - csv
@@ -80,7 +80,7 @@ filetypes:
 - xdmf
 file_structure_stability: in_development
 
-# WETO Integrations (downstream)
+# WETO Integrations
 dependencies:
 -   - floris
     - indirect

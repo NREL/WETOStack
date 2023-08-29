@@ -73,7 +73,7 @@ filetypes:
 - custom
 file_structure_stability: stable
 
-# WETO Integrations (downstream)
+# WETO Integrations
 dependencies:
 -   - openfast
     - indirect

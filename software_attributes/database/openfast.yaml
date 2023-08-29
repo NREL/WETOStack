@@ -79,7 +79,7 @@ filetypes:
 - custom
 file_structure_stability: semantic_versioning
 
-# WETO Integrations (downstream)
+# WETO Integrations
 dependencies:
 -   - turbsim
     - direct
