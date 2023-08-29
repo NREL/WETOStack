@@ -67,7 +67,7 @@ file_structure_stability: semantic_versioning
 # WETO Integrations (downstream)
 dependencies:
 -   - wisdem
-    - indirect
+    - direct
 
 # # Community Health
 # open_issues: 0..N

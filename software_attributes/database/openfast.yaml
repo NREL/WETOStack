@@ -30,7 +30,7 @@ loads: true
 governing_equations:
 - actuator line method
 - blade element momentum theory
-- geomtrically exact beam theory
+- geometrically exact beam theory
 - Potential-flow theory
 - Strip-theory
 
