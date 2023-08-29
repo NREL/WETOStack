@@ -11,6 +11,7 @@ if __name__=="__main__":
         "anba4",
         "floris",
         "openfast",
+        "openoa",
         "rosco",
         "sonata",
         "weis",

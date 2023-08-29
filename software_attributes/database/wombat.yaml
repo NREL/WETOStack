@@ -22,7 +22,8 @@ system_location:
 time_domain: steady
 loads: false
 tags:
-- "@Rhammond2 FIXME"
+- operations and maintenance
+- discrete event simulation
 
 # Distribution
 supported_platforms:

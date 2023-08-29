@@ -355,7 +355,16 @@ schema = {
             "description": "List the filetypes used in the project including inputs and outputs.",
             "type": "array",
             "items": {
-                "enum": ["custom", "yaml", "hdf5", "csv", "numpy binary", "pvd", "xdmf"]
+                "enum": [
+                    "csv",
+                    "custom",
+                    "hdf5",
+                    "json",
+                    "numpy binary",
+                    "pvd",
+                    "xdmf",
+                    "yaml",
+                ]
             }
         },
         "file_structure_stability": {
