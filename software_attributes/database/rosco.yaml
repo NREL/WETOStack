@@ -6,7 +6,7 @@ primary_uses:
 active_funding: false
 development_status: maintenance
 programming_language: python
-license_type: Apache-2.0
+license_type: apache-2.0
 data_collection_methods:
 - modeling
 last_release_date: "2023-04-11"
