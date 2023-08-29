@@ -8,14 +8,14 @@ draft_202012_validator = Draft202012Validator(schema)
 if __name__=="__main__":
 
     model_list = [
+        "anba4",
         "floris",
         "openfast",
         "rosco",
+        "sonata",
         "weis",
         "windse",
         "wisdem",
-        "anba4",
-        "sonata",
     ]
 
     for model in model_list:
