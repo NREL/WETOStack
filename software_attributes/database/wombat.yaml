@@ -49,8 +49,7 @@ project_coverage: 7
 # Testing
 testing_framework: true
 continuous_testing: true
-regression_test_coverage: 55
-unit_test_coverage: 55
+test_coverage: 55
 test_documentation: false
 performance_tests: false
 

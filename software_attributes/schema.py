@@ -298,14 +298,8 @@ schema = {
             "description": "Does the software have continuous testing in place?",
             "type": "boolean"
         },
-        "regression_test_coverage": {
-            "description": "The portion of the project covered by regression tests.",
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-        },
-        "unit_test_coverage": {
-            "description": "The portion of the project covered by unit tests.",
+        "test_coverage": {
+            "description": "The portion of the project covered by formal tests.",
             "type": "integer",
             "minimum": 1,
             "maximum": 100,

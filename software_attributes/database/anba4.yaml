@@ -56,8 +56,7 @@ project_coverage: 9
 # Testing
 testing_framework: true
 continuous_testing: true
-regression_test_coverage: 85 # TODO: Get this from codecov
-unit_test_coverage: 70 # TODO: Get this from codecov
+test_coverage: 84
 test_documentation: false
 performance_tests: false
 
