@@ -28,8 +28,13 @@ time_domain:
 - steady
 - dynamic
 loads: false
-governing_equations:
-- "Elastic, anisotropic, non-homogeneous, prismatic beams solved through a semi-analytical formulation"
+tags:
+- Elastic beam
+- Anisotropic beam
+- Non-homogeneous beam
+- Prismatic beams
+- Semi-analytical beam formulation
+- Finite elements
 
 # Distribution
 supported_platforms:

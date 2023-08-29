@@ -22,8 +22,8 @@ system_location:
 - floating_offshore
 time_domain: dynamic
 loads: true
-governing_equations:
-- midfidelity engineering models
+tags:
+- mid-fidelity engineering models
 
 # Distribution
 supported_platforms:

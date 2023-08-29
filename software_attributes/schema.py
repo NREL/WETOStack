@@ -174,18 +174,21 @@ schema = {
             "description": "Does the software calculate system loads?",
             "type": "boolean"
         },
-        "governing_equations": {
+        "tags": {
             "description": "\n".join([
-                "List the governing equations included in the software that are "
-                "characteristic of the numerical domain."
-                "These are free-form entries, see below for examples."
+                "List tags describing the methods and underlying equations modeled in the "
+                "software. These are free-form entries, and are not validated. "
+                "This field is not currently used, but aggregating the tags throughout "
+                "the software portfolio will allow for categorizing the tools later."
             ]),
             "examples": [
                 {
-                    "governing_equations": [
+                    "tags": [
                         "Euler bernoulli beam theory",
                         "Blade element momentum theory",
-                        "RANS vs LES",
+                        "Reynolds averaged Navier Stokes",
+                        "Large eddy simulation",
+                        "Monte carlo methods",
                     ]
                 }
             ],

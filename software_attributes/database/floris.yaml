@@ -25,8 +25,11 @@ system_location:
 - floating_offshore
 time_domain: steady
 loads: false
-governing_equations:
-- steady state analytical engineering fluid dynamics
+tags:
+- steady state
+- analytical wake model
+- gaussian wake
+- engineering model
 
 # Distribution
 supported_platforms:

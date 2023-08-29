@@ -20,7 +20,9 @@ system_location:
 - any
 time_domain: dynamic
 loads: false
-# governing_equations:
+tags:
+- Reference controller
+- Automated tuning
 
 # Distribution
 supported_platforms:

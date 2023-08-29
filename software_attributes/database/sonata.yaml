@@ -28,8 +28,9 @@ time_domain:
 - steady
 - dynamic
 loads: false
-governing_equations:
-- "Routines for 2D planar meshes for slender composite beams"
+tags:
+- 2D planar meshes
+- slender composite beams
 
 # Distribution
 supported_platforms:

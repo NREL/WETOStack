@@ -26,9 +26,9 @@ time_domain:
 - steady
 - dynamic
 loads: false
-governing_equations:
-- "steady state Reynolds-averaged Navier-Stokes (RANS) solutions"
-- "unsteady, large-eddy simulations (LES) using Navier-Stokes"
+tags:
+- steady state Reynolds-averaged Navier-Stokes (RANS)
+- unsteady, large-eddy simulations (LES) using Navier-Stokes
 
 # Distribution
 supported_platforms:

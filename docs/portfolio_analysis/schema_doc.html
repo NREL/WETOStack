@@ -514,22 +514,22 @@ In the web address, this is the last component: https://github.com/&lt;account>/
         </div>
     </div>
 </div>
-<div class="accordion" id="accordiongoverning_equations">
+<div class="accordion" id="accordiontags">
     <div class="card">
-        <div class="card-header" id="headinggoverning_equations">
+        <div class="card-header" id="headingtags">
             <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#governing_equations"
-                        aria-expanded="" aria-controls="governing_equations" onclick="setAnchor('#governing_equations')"><span class="property-name">governing_equations</span></button>
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#tags"
+                        aria-expanded="" aria-controls="tags" onclick="setAnchor('#tags')"><span class="property-name">tags</span></button>
             </h2>
         </div>
 
-        <div id="governing_equations"
-             class="collapse property-definition-div" aria-labelledby="headinggoverning_equations"
-             data-parent="#accordiongoverning_equations">
+        <div id="tags"
+             class="collapse property-definition-div" aria-labelledby="headingtags"
+             data-parent="#accordiontags">
             <div class="card-body pl-5">
 
     <span class="badge badge-dark value-type">Type: array of string</span><br/>
-<span class="description"><p>List the governing equations included in the software that are characteristic of the numerical domain.These are free-form entries, see below for examples.</p>
+<span class="description"><p>List tags describing the methods and underlying equations modeled in the software. These are free-form entries, and are not validated. This field is not currently used, but aggregating the tags throughout the software portfolio will allow for categorizing the tools later.</p>
 </span>
         
 
@@ -538,7 +538,7 @@ In the web address, this is the last component: https://github.com/&lt;account>/
 
          <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
     <div class="card">
-        <div class="card-body items-definition" id="governing_equations_items">
+        <div class="card-body items-definition" id="tags_items">
             
 
     <span class="badge badge-dark value-type">Type: string</span><br/>
@@ -552,10 +552,12 @@ In the web address, this is the last component: https://github.com/&lt;account>/
         </div>
     </div><br/>
 <div class="badge badge-secondary">Example:</div>
-<br/><div id="governing_equations_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="nt">governing_equations</span><span class="p">:</span>
+<br/><div id="tags_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="nt">tags</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Euler bernoulli beam theory</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Blade element momentum theory</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RANS vs LES</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reynolds averaged Navier Stokes</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Large eddy simulation</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Monte carlo methods</span>
 </pre></div>
 </div>
             </div>
@@ -1467,6 +1469,6 @@ In the web address, this is the last component: https://github.com/&lt;account>/
 </div>
 
     <footer>
-        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2023-08-29 at 14:36:50 -0500</p>
+        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2023-08-29 at 16:56:42 -0500</p>
     </footer></body>
 </html>
