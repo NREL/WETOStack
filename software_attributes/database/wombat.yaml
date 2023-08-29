@@ -1,0 +1,76 @@
+# General
+github_account: wisdem
+github_repo: wombat
+primary_uses:
+- cost
+active_funding: true
+development_status: new_features
+programming_language: python
+license_type: apache-2.0
+data_collection_methods:
+- field
+last_release_date: "2023-08-28"
+
+# Modeling
+scope:
+- turbine
+- farm
+system_type:
+- hawt
+system_location:
+- any
+time_domain: steady
+loads: false
+governing_equations:
+- N/A
+
+# Distribution
+supported_platforms:
+- any
+package_manager:
+- pypi
+package_manager_url:
+- https://PyPI.org/project/WOMBAT/
+installation_complexity: 1
+
+# Documentation
+documentation_url: https://WISDEM.github.io/WOMBAT
+has_user_docs: true
+has_developer_docs: true
+has_api_docs: true
+has_cli_docs: false
+has_installation_docs: true
+has_getting_started_docs: true
+has_examples_tutorials: true
+has_design_intent_statement: true
+readability: 7
+project_coverage: 7
+
+# Testing
+testing_framework: true
+continuous_testing: true
+regression_test_coverage: 55
+unit_test_coverage: 55
+test_documentation: false
+performance_tests: false
+
+# Interfaces
+first_class_ui:
+- input_files
+has_cli: false
+feature_accessibility: 100  # NOTE: the API is for running/loading, but configured through the YAML, so it gets a little weird to quantify this
+
+# Input / Output
+filetypes:
+- yaml
+- csv
+file_structure_stability: in_development
+
+# WETO Integrations (downstream)
+# dependencies:
+
+# # Community Health
+# open_issues: 0..N
+# open_pull_requests: 0..N
+# average_time_to_engage: 0..N
+# outside_contributors: 0..N

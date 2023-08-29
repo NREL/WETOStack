@@ -16,6 +16,7 @@ if __name__=="__main__":
         "weis",
         "windse",
         "wisdem",
+        "wombat",
     ]
 
     for model in model_list:
