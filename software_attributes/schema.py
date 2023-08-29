@@ -33,11 +33,12 @@ schema = {
             "type": "array",
             "items": {
                 "enum": [
-                    "simulation",
-                    "optimization",
                     "controls",
                     "cost",
-                    "design"
+                    "data_analysis",
+                    "design",
+                    "optimization",
+                    "simulation",
                 ]
             }
         },
