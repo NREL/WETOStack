@@ -316,11 +316,16 @@ schema = {
 
         ## Interfaces
         "first_class_ui": {
-            "description": "List the user interfaces that receive primary attention "
-                "from funders and developers.",
+            "description": "List the user interfaces that receive primary funding or developer "
+                "attention.",
             "type": "array",
             "items": {
-                "enum": ["gui", "input_files", "web"]
+                "enum": [
+                    "gui",
+                    "input_files",
+                    "library_interface",
+                    "web",
+                ]
             }
         },
         "has_cli": {
