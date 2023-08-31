@@ -28,6 +28,7 @@ These projects are actively supported and funded by WETO as of FY23.
 
 **High fidelity models**
 - Nalu-Wind: https://github.com/exawind/nalu-wind
+- OpenTurbine: https://github.com/exawind/openturbine
 - AMR-Wind: https://github.com/exawind/amr-wind
 - ERF: https://github.com/erf-model/ERF
 - WindSE: https://github.com/nrel/windse
