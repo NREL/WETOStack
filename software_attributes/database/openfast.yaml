@@ -72,6 +72,7 @@ has_cli: false
 language_interfaces:
 - python
 - c++
+- matlab
 feature_accessibility: 100
 
 # Input / Output
