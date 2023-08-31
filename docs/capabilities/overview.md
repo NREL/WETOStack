@@ -6,31 +6,40 @@ in wind energy system design and analysis using the WETO Software Suite.
 
 ```{mermaid}
 mindmap
-
-    A("WETO Software Portfolio");
-
-    root(A)
-        Physics Simulators
-            FLORIS
-            FLASC
-            emu
-            moa
+    root("WETO Software Portfolio")
+        ps(Physics Simulators)
             OpenFAST
-            Nalu Wind
-            AMR Wind
-            WISDEM
-            WEIS
-            WindSE
-            ROSCO
-            ERF
-            DW TAP
-            RAFT
-            pyNuMAD
             MoorPy
             wtDigiTwin
+            ANBA4
+            RAFT
+
+        hfm(High Fidelity Models)
+            AMR Wind
+            Nalu Wind
+            OpenTurbine
+            ERF
+            WindSE
+            pyNuMAD
+
+        do(Design & Optimization)
+            WEIS
+            WISDEM
             HOPP
             WPGNN and PLayGen
-        Cost Models
+            SONATA
+
+        ctrl(Controls)
+            ROSCO
+            FLORIS
+            FLASC
+            hercules
+            moa_python
+
+        ra(Resource Assessment)
+            DW TAP
+
+        cost(Cost Models)
             LandBOSSE
             HybridBOSSE
             ORBIT
@@ -38,7 +47,8 @@ mindmap
             NRWAL
             WOMBAT
             OpenOA
-        Wild Life Impact
+
+        wild(Wild Life Impact)
             SSRS
 ```
 
