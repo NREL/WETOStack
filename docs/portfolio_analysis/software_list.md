@@ -20,7 +20,7 @@ and analysis to cost modeling and supply chain analysis.
 
 These projects are actively supported and funded by WETO as of FY23.
 
-**Turbine and component models**
+**Engineering-fidelity physics models**
 - OpenFAST: https://github.com/openfast/openfast
 - MoorPy: https://github.com/nrel/moorpy
 - wtDigiTwin: https://github.com/ebranlard/wtDigiTwin

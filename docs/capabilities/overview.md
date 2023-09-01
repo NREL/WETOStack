@@ -7,7 +7,7 @@ in wind energy system design and analysis using the WETO Software Suite.
 ```{mermaid}
 mindmap
     root("WETO Software Portfolio")
-        ps(Physics Simulators)
+        ps(Engineering-fidelity Physics Models)
             OpenFAST
             MoorPy
             wtDigiTwin
