@@ -22,14 +22,15 @@ These projects are actively supported and funded by WETO as of FY23.
 
 **Turbine and component models**
 - OpenFAST: https://github.com/openfast/openfast
-- ROSCO: https://github.com/NREL/ROSCO
 - MoorPy: https://github.com/nrel/moorpy
 - wtDigiTwin: https://github.com/ebranlard/wtDigiTwin
+- RAFT: https://github.com/WISDEM/RAFT
+- ANBA4: https://github.com/ANBA4/anba4
 
 **High fidelity models**
+- AMR-Wind: https://github.com/exawind/amr-wind
 - Nalu-Wind: https://github.com/exawind/nalu-wind
 - OpenTurbine: https://github.com/exawind/openturbine
-- AMR-Wind: https://github.com/exawind/amr-wind
 - ERF: https://github.com/erf-model/ERF
 - WindSE: https://github.com/nrel/windse
 - pyNuMAD: https://github.com/sandialabs/pyNuMAD
@@ -37,13 +38,12 @@ These projects are actively supported and funded by WETO as of FY23.
 **Design and optimization**
 - WEIS: https://github.com/wisdem/weis
 - WISDEM: https://github.com/wisdem/wisdem
-- RAFT: https://github.com/WISDEM/RAFT
 - HOPP: https://github.com/NREL/HOPP
 - WPGNN and PLayGen: https://github.com/NREL/WPGNN
 - SONATA: https://github.com/ptrbortolotti/SONATA
-- ANBA4: https://github.com/ANBA4/anba4
 
 **Controls development**
+- ROSCO: https://github.com/NREL/ROSCO
 - FLORIS: https://github.com/nrel/floris
 - FLASC: https://github.com/nrel/flasc
 - hercules: https://github.com/nrel/hercules
