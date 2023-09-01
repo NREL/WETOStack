@@ -4,18 +4,18 @@ github_repo: openfast
 primary_uses:
 - simulation
 - controls
-active_funding: true
-development_status: new_features
+active_funding: TODO
+development_status: TODO
 programming_language: fortran
 license_type: apache-2.0
 data_collection_methods:
 - modeling
-last_release_date: "2023-05-16"
+last_release_date: TODO
 
 # Modeling
 scope:
-- turbine
-- system
+- farm
+- atmosphere
 system_type:
 - hawt
 - vawt
@@ -24,13 +24,9 @@ system_location:
 - fixed_offshore
 - floating_offshore
 time_domain: dynamic
-loads: true
+loads: false
 tags:
-- actuator line method
-- blade element momentum theory
-- geometrically exact beam theory
-- Potential-flow theory
-- Strip-theory
+- TODO
 
 # Distribution
 supported_platforms:
@@ -68,9 +64,7 @@ first_class_ui:
 - input_files
 has_cli: true
 language_interfaces:
-- python
-- c++
-- matlab
+- TODO: I believe there's no other language interfaces to FAST.Farm specifically. If so, comment this field
 feature_accessibility: 100
 
 # Input / Output
@@ -80,10 +74,8 @@ file_structure_stability: semantic_versioning
 
 # WETO Integrations
 dependencies:
--   - turbsim
+-   - openfast
     - direct
--   - rosco
-    - indirect
 
 # # Community Health
 # open_issues: 0..N

@@ -9,6 +9,7 @@ mindmap
     root("WETO Software Portfolio")
         ps(Engineering-fidelity Physics Models)
             OpenFAST
+            FAST.Farm
             MoorPy
             wtDigiTwin
             ANBA4
