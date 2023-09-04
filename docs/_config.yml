@@ -1,9 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: WETO Software
+title: WETO Software Stack
 author: Rafael Mudafort
-logo: _images/logo.png
+logo: _images/logo.gif
 copyright: '2023'
 only_build_toc_files: true
 
