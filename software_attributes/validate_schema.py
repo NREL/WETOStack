@@ -12,6 +12,7 @@ if __name__=="__main__":
         "floris",
         "openfast",
         "openoa",
+        "pynumad",
         "rosco",
         "sonata",
         "weis",

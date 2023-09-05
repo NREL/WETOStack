@@ -1,0 +1,83 @@
+# General
+github_account: sandialabs
+github_repo: pynumad
+primary_uses:
+- design
+- optimization
+active_funding: true
+development_status: new_features
+programming_language: python
+license_type: bsd-3-clause
+data_collection_methods:
+- modeling
+- laboratory
+last_release_date: "2023-09-XX"
+
+# Modeling
+scope:
+- turbine
+system_type:
+- hawt
+system_location:
+- any
+time_domain: 
+- steady
+- dynamic
+loads: true
+tags:
+- Elasticity theory
+- Euler bernoulli beam theory
+- Timoshenko beam theory
+- Classical laminated plate theory
+- First-order shear-deformation plate theory
+
+# Distribution
+supported_platforms:
+- windows
+- macos
+- linux
+# package_manager:
+# package_manager_url:
+installation_complexity: 4
+
+# Documentation
+documentation_url: https://sandialabs.github.io/pyNuMAD/
+has_user_docs: true
+has_developer_docs: true
+has_api_docs: true
+has_cli_docs: false
+has_installation_docs: true
+has_getting_started_docs: true
+has_examples_tutorials: true
+has_design_intent_statement: true
+readability: 7
+project_coverage: 6
+
+# Testing
+testing_framework: true
+continuous_testing: true
+test_coverage: 70
+test_documentation: false
+performance_tests: false
+
+# Interfaces
+first_class_ui:
+- input_files
+has_cli: false
+# language_interfaces:
+feature_accessibility: 100
+
+# Input / Output
+filetypes:
+- yaml
+- csv
+file_structure_stability: in_development
+dependencies:
+- - openfast
+  - indirect
+
+# # Community Health
+# open_issues: 0..N
+# open_pull_requests: 0..N
+# average_time_to_engage: 0..N
+# outside_contributors: 0..N
