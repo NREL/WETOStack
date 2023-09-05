@@ -1,31 +1,30 @@
 # General
 github_account: exawind
-github_repo: nalu-wind
+github_repo: openturbine
 primary_uses:
 - simulation
 active_funding: true
 development_status: new_features
 programming_language: c++
-# license_type: TODO
+license_type: mit
 data_collection_methods:
 - modeling
-last_release_date: "2021-03-21"
+last_release_date: TODO
 
 # Modeling
 scope:
-- atmosphere
+- turbine
 system_type:
-- any
+- hawt
 system_location:
 - any
 time_domain: dynamic
 loads: true
 tags:
-- large eddy simulation
-- unstructured
-- massively parallel
-- incompressible flow
-- blade resolved simulation
+- geometrically exact beam theory
+- nonlinear finite elements
+- GPU
+- CUDA
 
 # Distribution
 supported_platforms:
@@ -34,45 +33,45 @@ supported_platforms:
 # - TODO
 # package_manager_url:
 # - TODO
-installation_complexity: 6
+installation_complexity: 4
 
 # Documentation
-documentation_url: https://nalu-wind.readthedocs.io
-has_user_docs: true
+documentation_url: https://exawind.github.io/openturbine/
+has_user_docs: false
 has_developer_docs: true
-has_api_docs: true
-has_cli_docs: true
+has_api_docs: false
+has_cli_docs: false
 has_installation_docs: true
-has_getting_started_docs: true
-has_examples_tutorials: true
-# has_design_intent_statement: TODO
-# readability: TODO
-# project_coverage: TODO
+has_getting_started_docs: false
+has_examples_tutorials: false
+has_design_intent_statement: true
+readability: 6
+project_coverage: 1
 
 # Testing
 testing_framework: true
 continuous_testing: true
-# test_coverage: TODO
-test_documentation: true
-# performance_tests: TODO
+test_coverage: 40
+test_documentation: false
+performance_tests: false
 
 # Interfaces
-first_class_ui:
-- input_files
-has_cli: true
+# first_class_ui:
+# - TODO
+# has_cli: TODO
 # language_interfaces:
 # - TODO
 # feature_accessibility: TODO
 
 # Input / Output
-filetypes:
-- yaml
+# filetypes:
+# - TODO
 # file_structure_stability: TODO
 
 # WETO Integrations
-dependencies:
--   - openfast
-    - direct
+# dependencies:
+# -   - TODO
+#     - TODO
 
 # # Community Health
 # open_issues: 0..N

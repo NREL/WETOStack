@@ -8,6 +8,7 @@ draft_202012_validator = Draft202012Validator(schema)
 if __name__=="__main__":
 
     model_list = [
+        "amr-wind",
         "anba4",
         "fastfarm",
         "flasc",
@@ -15,8 +16,10 @@ if __name__=="__main__":
         "hercules",
         "hopp",
         "moa_python",
+        "nalu-wind",
         "openfast",
         "openoa",
+        "openturbine",
         "pynumad",
         "rosco",
         "sonata",
