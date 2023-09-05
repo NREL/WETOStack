@@ -10,6 +10,7 @@ if __name__=="__main__":
     model_list = [
         "anba4",
         "floris",
+        "flasc",
         "openfast",
         "openoa",
         "pynumad",
