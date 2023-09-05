@@ -1,0 +1,94 @@
+# General
+github_account: nrel
+github_repo: hopp
+primary_uses:
+- controls
+- cost
+- design
+- optimization
+- simulation
+active_funding: true
+development_status: new_features
+programming_language: python
+license_type: bsd-3-clause
+data_collection_methods:
+- modeling
+last_release_date: "2021-04-30"
+
+# Modeling
+scope:
+- farm
+- system
+system_type:
+- any
+system_location:
+- any
+time_domain: dynamic
+# loads: TODO
+tags:
+- hybrid optimization performance platform
+- hybrid energy system design
+- renewable energy policy analysis
+- system sizing
+- system cost
+
+# Distribution
+supported_platforms:
+- any
+package_manager:
+- pypi
+package_manager_url:
+- https://PyPI.org/project/HOPP/
+installation_complexity: 2
+
+# Documentation
+documentation_url: https://hopp.readthedocs.io/en/latest/
+has_user_docs: true
+has_developer_docs: false
+has_api_docs: false
+has_cli_docs: false
+has_installation_docs: true
+has_getting_started_docs: false
+has_examples_tutorials: false
+has_design_intent_statement: false
+readability: 5
+project_coverage: 5
+
+# Testing
+testing_framework: true
+continuous_testing: true
+test_coverage: 50
+test_documentation: false
+performance_tests: false
+
+# Interfaces
+first_class_ui:
+- input_files
+has_cli: false
+# language_interfaces:
+# - TODO
+feature_accessibility: 40
+
+# Input / Output
+filetypes:
+- yaml
+file_structure_stability: in_development
+
+# WETO Integrations
+dependencies:
+-   - floris
+    - direct
+-   - hybridbosse
+    - direct
+-   - orbit
+    - indirect
+# -   - rev
+#     - direct
+# -   - sam
+#     - direct
+
+# # Community Health
+# open_issues: 0..N
+# open_pull_requests: 0..N
+# average_time_to_engage: 0..N
+# outside_contributors: 0..N

@@ -12,6 +12,7 @@ if __name__=="__main__":
         "fastfarm",
         "floris",
         "flasc",
+        "hopp",
         "openfast",
         "openoa",
         "pynumad",
