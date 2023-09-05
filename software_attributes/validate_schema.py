@@ -10,6 +10,7 @@ if __name__=="__main__":
     model_list = [
         "amr-wind",
         "anba4",
+        "erf",
         "fastfarm",
         "flasc",
         "floris",
