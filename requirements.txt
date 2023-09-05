@@ -1,3 +1,4 @@
 jsonschema
 json-schema-for-humans
 pyyaml
+squarify

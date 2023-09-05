@@ -89,7 +89,3 @@ dependencies:
     - direct
 -   - raft
     - direct
-#-   - sonata
-#    - indirect
-#-   - pynumad
-#    - indirect

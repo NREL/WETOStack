@@ -67,7 +67,7 @@ filetypes:
 
 # WETO Integrations
 dependencies:
--   - widem
+-   - wisdem
     - direct
 -   - moorpy
     - direct
