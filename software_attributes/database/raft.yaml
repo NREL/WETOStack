@@ -1,0 +1,83 @@
+# General
+github_account: wisdem
+github_repo: raft
+primary_uses:
+- simulation
+# active_funding: TODO
+# development_status: TODO
+programming_language: python
+license_type: apache-2.0
+data_collection_methods:
+- modeling
+last_release_date: "2021-11-10"
+
+# Modeling
+scope:
+- turbine
+system_type:
+- hawt
+system_location:
+- floating_offshore
+time_domain: dynamic
+# loads: TODO
+# tags:
+# - TODO
+
+# Distribution
+supported_platforms:
+- any
+# package_manager:
+# - TODO
+# package_manager_url:
+# - TODO
+# installation_complexity: TODO
+
+# Documentation
+documentation_url: https://openraft.readthedocs.io/en/latest/
+has_user_docs: true
+has_developer_docs: false
+has_api_docs: false
+has_cli_docs: false
+has_installation_docs: true
+has_getting_started_docs: true
+has_examples_tutorials: true
+has_design_intent_statement: false
+# readability: TODO
+# project_coverage: TODO
+
+# Testing
+testing_framework: false
+continuous_testing: false
+# test_coverage: TODO
+test_documentation: false
+performance_tests: false
+
+# Interfaces
+first_class_ui:
+- input_files
+has_cli: false
+# language_interfaces:
+# - TODO
+# feature_accessibility: TODO
+
+# Input / Output
+filetypes:
+- yaml
+# file_structure_stability: TODO
+
+# WETO Integrations
+dependencies:
+-   - widem
+    - direct
+-   - moorpy
+    - direct
+# -   - ccblade
+#     - direct
+# -   - pyhams
+#     - direct
+
+# # Community Health
+# open_issues: 0..N
+# open_pull_requests: 0..N
+# average_time_to_engage: 0..N
+# outside_contributors: 0..N
