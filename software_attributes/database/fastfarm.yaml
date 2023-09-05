@@ -4,13 +4,13 @@ github_repo: openfast
 primary_uses:
 - simulation
 - controls
-active_funding: TODO
-development_status: TODO
+# active_funding: TODO
+# development_status: TODO
 programming_language: fortran
 license_type: apache-2.0
 data_collection_methods:
 - modeling
-last_release_date: TODO
+last_release_date: "2023-05-16"
 
 # Modeling
 scope:
@@ -63,8 +63,8 @@ performance_tests: false
 first_class_ui:
 - input_files
 has_cli: true
-language_interfaces:
-- TODO: I believe there's no other language interfaces to FAST.Farm specifically. If so, comment this field
+# language_interfaces:
+# - TODO: I believe there's no other language interfaces to FAST.Farm specifically. If so, comment this field
 feature_accessibility: 100
 
 # Input / Output
