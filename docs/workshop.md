@@ -46,11 +46,11 @@ The discussions should be informed by low-level experience but maintain a high-l
 The objective of this breakout session is to establish a mutual understanding of the group's
 perspective on the role and impact of WETO software within the broad context of wind energy.
 
-Topic suggestions:
+Topic suggestions - The purpose of WETO software is:
 - To create the tools to support our own research
 - To establish a mechanism to disseminate our research
+- To enable additional research in academia and industry
 - To provide the industry with tools to design wind energy systems
-- To full industry adoption
 
 <!-- Third option:
 - how might we engage with independent organizations to deal with these long term maintenance burdens
@@ -58,18 +58,20 @@ Topic suggestions:
   - Apache foundation
   - Linux foundation -->
 
-## Breakout 2: In what direction should WETO software go?
+## Breakout 2: Broadly, in what direction should WETO software go?
 
 This breakout session follows an overview of the current WETO software portfolio including
-descriptions of the domain areas covered and state of maturity.
+descriptions of the domain areas covered and states of maturity.
 Building on the discussions in [Breakout 1](breakout1) and the portfolio overview, this session
 focuses on defining the forward-looking technical and domain-specific topics that WETO software
 should pursue.
-The objective is to align the community's expectations around critical future considerations.
+The objective is to align the community's expectations around a future technical and programmatic
+vision.
 
 Topic suggestions:
 - Integration to other ecosystems (AI/ML, optimizations)
 - WETO software interoperability
+- Professionalization / commercialization through industry partnership
 
 ## Breakout 3: What are the major bottlenecks in our development processes?
 
@@ -113,8 +115,8 @@ Please keep all attention within the workshop.
 ````{card} 
 Discuss rather than debate
 ^^^
-Each breakout sessions is intended meant to create discussion and conversation.
-Arriving at one answer is not required and in most cases not desired.
+Each breakout session is meant to create discussion and conversation.
+Arriving at one answer is not required and, in most cases, not desired.
 The objective is mutual understanding of perspectives.
 ````
 
