@@ -5,7 +5,7 @@
 The set of software under the WETO umbrella is listed here.
 This is intended to eventually be a complete list, but it is likely missing some projects yet.
 Please [suggest an edit](https://github.com/rafmudaf/wetostack/edit/main/docs/portfolio_analysis/software_list.md)
-if nay information here is incorrect.
+if any information here is incorrect.
 
 This listing contains two groups of software projects:
 
@@ -76,6 +76,9 @@ These projects are either funded outside of WETO, are not actively funded, or ar
 - MAFRIT: https://github.com/NREL/MAFRIT
 - pBEAM: https://github.com/WISDEM/pBEAM
 - PyFrame3DD: https://github.com/WISDEM/pyFrame3DD
+- CACTUS: https://github.com/sandialabs/CACTUS
+- WEC-Sim/MOST: https://github.com/WEC-Sim/WEC-Sim and http://www.morenergylab.polito.it/most/
+- OWENS: https://www.nrel.gov/docs/fy23osti/83748.pdf
 
 *Deprecated or no longer supported:*
 - ADAMS2AD: The MSC.ADAMS-to-AeroDyn (ADAMS2AD) interface is a software package for simulating the coupled dynamic response of horizontal-axis wind turbines.
