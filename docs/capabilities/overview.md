@@ -27,7 +27,6 @@ mindmap
             WEIS
             WISDEM
             HOPP
-            WPGNN and PLayGen
             SONATA
 
         ctrl(Controls)
