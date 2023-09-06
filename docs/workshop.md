@@ -10,17 +10,16 @@ To that end, two primary topics will be threaded throughout the conversations:
 1. Opportunities and strategies to elevate the quality of WETO software
 2. Holistic evaluation of the existing portfolio
 
-There will be four breakout sessions where attendees will discuss topics as a group.
-Prior to the breakouts, preplanned talks from WETO and members of the Holistic Modeling project
-will seed the conversations in the breakouts. Please see the [](workshop_agenda) and
-[](logistics) for details.
+There will be two full-workshop discussions and two breakout sessions of smaller groups.
+Prior to each discussion, preplanned talks from WETO and members of the Holistic Modeling project
+will seed the conversations. Please see the [](workshop_agenda) and [](logistics) for details.
 
 **All attendees are asked to complete the following tasks prior to the workshop:**
 - Review the [](portfolio_listing) to ensure that all WETO-supported software within your field
   of expertise is listed.
 - Create a pull request to https://github.com/rafmudaf/WETOStack with an attributes description
   for your software projects following the guidance in [](schema).
-- Review the [](workshop_agenda) and [breakout session topics](breakout1).
+- Review the [](workshop_agenda) and [Discussion topics](discussion1).
 
 `````{admonition} Contact
 :class: tip
@@ -37,13 +36,13 @@ Please contact Rafael Mudafort (rafael.mudafort@nrel.gov) with any questions.
 :file: workshop_agenda.html
 ```
 
-(breakout1)=
-## Breakout 1: What is the purpose of WETO Software?
+(discussion1)=
+## Discussion 1: What is the purpose of WETO Software?
 
-This breakout session follows an update from WETO on their perspective and focus on the software
+This session follows an update from WETO on their perspective and focus on the software
 we produce.
 The discussions should be informed by low-level experience but maintain a high-level perspective.
-The objective of this breakout session is to establish a mutual understanding of the group's
+The objective of this discussion is to establish a mutual understanding of the group's
 perspective on the role and impact of WETO software within the broad context of wind energy.
 
 Topic suggestions - The purpose of WETO software is:
@@ -58,11 +57,11 @@ Topic suggestions - The purpose of WETO software is:
   - Apache foundation
   - Linux foundation -->
 
-## Breakout 2: Broadly, in what direction should WETO software go?
+## Discussion 2: Broadly, in what direction should WETO software go?
 
-This breakout session follows an overview of the current WETO software portfolio including
+This breakout follows an overview of the current WETO software portfolio including
 descriptions of the domain areas covered and states of maturity.
-Building on the discussions in [Breakout 1](breakout1) and the portfolio overview, this session
+Building on the discussions in [Discussion 1](discussion1) and the portfolio overview, this session
 focuses on defining the forward-looking technical and domain-specific topics that WETO software
 should pursue.
 The objective is to align the community's expectations around a future technical and programmatic
@@ -73,13 +72,13 @@ Topic suggestions:
 - WETO software interoperability
 - Professionalization / commercialization through industry partnership
 
-## Breakout 3: What are the major bottlenecks in our development processes?
+## Discussion 3: What are the major bottlenecks in our development processes?
 
-This breakout session follows an overview of [Best Practices](bestpractices) described
+This breakout follows an overview of [Best Practices](bestpractices) described
 within the Portfolio Coordination project.
 The objective is to identify the key bottlenecks in our current workflows with particular
 attention to things that prevent WETO software from achieving the impacts identified
-in [Breakout 1](breakout1).
+in [Discussion 1](discussion1).
 The discussions here will be incorporated into the best practices technical report.
 
 Topic suggestions:
@@ -88,10 +87,10 @@ Topic suggestions:
 - Personnel barriers - do we have staff with the relevant experience?
 - What's missing in the proposed best practices?
 
-## Breakout 4: Where to invest time and efforts in the upcoming FY's
+## Discussion 4: Where to invest time and efforts in the upcoming FY's
 
 The Portfolio Coordination project will be active through FY25.
-The final breakout session is an opportunity for workshop attendees to inform the direction
+The final discussion is an opportunity for workshop attendees to inform the direction
 of future efforts around software quality including within the scope of the
 Portfolio Coordination project.
 
@@ -115,7 +114,7 @@ Please keep all attention within the workshop.
 ````{card} 
 Discuss rather than debate
 ^^^
-Each breakout session is meant to create discussion and conversation.
+Each session is meant to create discussion and conversation.
 Arriving at one answer is not required and, in most cases, not desired.
 The objective is mutual understanding of perspectives.
 ````
