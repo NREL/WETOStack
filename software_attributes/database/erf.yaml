@@ -15,16 +15,23 @@ last_release_date: "2023-06-30"
 scope:
 - atmosphere
 # system_type:
-# system_location:
+system_location:
+- any
 time_domain: dynamic
 loads: false
-# tags:
-# - TODO
+tags:
+- adaptive mesh refinement
+- massively parallel
+- block-structured adaptive-mesh
+- moist compressible flow
+- precipitation
+- microphysics scheme
+- planetary boundary layer scheme
+- real meteorological data initial/boundary conditions
 
 # Distribution
 supported_platforms:
-- macos
-- linux
+- any
 # package_manager:
 # - TODO
 # package_manager_url:
@@ -32,17 +39,17 @@ supported_platforms:
 # installation_complexity: TODO
 
 # Documentation
-documentation_url: https://erf.readthedocs.io/en/latest/
+documentation_url: https://erf.readthedocs.io
 has_user_docs: true
-# has_developer_docs: TODO
-# has_api_docs: TODO
+has_developer_docs: true
+has_api_docs: true
 # has_cli_docs: TODO
 has_installation_docs: true
 has_getting_started_docs: true
 # has_examples_tutorials: TODO
-# has_design_intent_statement: TODO
+has_design_intent_statement: true
 # readability: TODO
-# project_coverage: TODO
+project_coverage: 9
 
 # Testing
 testing_framework: true
@@ -54,7 +61,7 @@ continuous_testing: true
 # Interfaces
 first_class_ui:
 - input_files
-has_cli: false
+# has_cli: TODO
 # language_interfaces:
 # - TODO
 # feature_accessibility: TODO
@@ -62,12 +69,12 @@ has_cli: false
 # Input / Output
 filetypes:
 - custom
-# file_structure_stability: TODO
+file_structure_stability: stable
 
 # WETO Integrations
-# dependencies:
-# -   - TODO
-#     - TODO
+dependencies:
+- - amr-wind
+  - indirect
 
 # # Community Health
 # open_issues: 0..N
