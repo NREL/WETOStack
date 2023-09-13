@@ -154,18 +154,19 @@ schema = {
             }
         },
         "time_domain": {
-            "description": "Does the software support time domain modeling or analysis and/or "
-            "steady-state modeling or analysis? This is an array-type field, so include two "
-            " elements if both are supported",
+            "description": "Does the software support modeling or analysis in a dynamic "
+            "time domain, steady-state, and/or the frequency domain? "
+            "This is an array-type field, so include multiple elements, as needed.",
             "type": ["string", "array"],
             "items": {
-                "enum": ["steady", "dynamic"]
+                "enum": ["steady", "dynamic", "frequency"]
             },
             "examples": [
                 {
                     "time_domain": [
                         "steady",
                         "dynamic",
+                        "frequency",
                     ]
                 }
             ],

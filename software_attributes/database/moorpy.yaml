@@ -3,8 +3,8 @@ github_account: nrel
 github_repo: moorpy
 primary_uses:
 - simulation
-# active_funding: TODO
-# development_status: TODO
+active_funding: true
+development_status: new_features
 programming_language: python
 license_type: bsd-3-clause
 data_collection_methods:
@@ -17,11 +17,9 @@ scope:
 system_type:
 - any
 system_location:
-- fixed_offshore
 - floating_offshore
 time_domain:
-- steady
-- dynamic
+- frequency
 loads: true
 # tags:
 # - TODO
@@ -49,7 +47,7 @@ readability: 8
 # project_coverage: TODO
 
 # Testing
-testing_framework: false
+testing_framework: true
 continuous_testing: true
 # test_coverage: TODO
 test_documentation: false
@@ -58,6 +56,7 @@ performance_tests: false
 # Interfaces
 first_class_ui:
 - input_files
+- library_interface
 has_cli: false
 # language_interfaces:
 # - TODO
@@ -66,6 +65,7 @@ has_cli: false
 # Input / Output
 filetypes:
 - custom
+- yaml
 # file_structure_stability: TODO
 
 # WETO Integrations
