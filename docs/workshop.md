@@ -17,6 +17,14 @@ Contact Rafael Mudafort (rafael.mudafort@nrel.gov) with any questions.
 (workshop_2023)=
 ## 2023 Workshop
 
+### Summary of Proceedings
+
+TODO: Include a summary of the workshop proceedings here.
+
+
+
+
+### Announcement
 A component of the Holistic Modeling Portfolio Coordination Project is to coordinate and host
 an annual workshop with the purpose of strengthening the community of WETO software owners.
 **The first workshop will be help on September 7, 2023, at NREL's Golden Campus.**
@@ -46,14 +54,14 @@ Please contact Rafael Mudafort (rafael.mudafort@nrel.gov) with any questions.
 ```
 
 (workshop_agenda)=
-## Agenda
+### Agenda
 
 ```{raw} html
 :file: workshop_agenda.html
 ```
 
 (discussion1)=
-## Discussion 1: What is the purpose of WETO Software?
+### Discussion 1: What is the purpose of WETO Software?
 
 This session follows an update from WETO on their perspective and focus on the software
 we produce.
@@ -73,7 +81,7 @@ Topic suggestions - The purpose of WETO software is:
   - Apache foundation
   - Linux foundation -->
 
-## Discussion 2: Broadly, in what direction should WETO software go?
+### Discussion 2: Broadly, in what direction should WETO software go?
 
 This breakout follows an overview of the current WETO software portfolio including
 descriptions of the domain areas covered and states of maturity.
@@ -88,7 +96,7 @@ Topic suggestions:
 - WETO software interoperability
 - Professionalization / commercialization through industry partnership
 
-## Discussion 3: What are the major bottlenecks in our development processes?
+### Discussion 3: What are the major bottlenecks in our development processes?
 
 This breakout follows an overview of [Best Practices](bestpractices) described
 within the Portfolio Coordination project.
@@ -103,7 +111,7 @@ Topic suggestions:
 - Personnel barriers - do we have staff with the relevant experience?
 - What's missing in the proposed best practices?
 
-## Discussion 4: Where to invest time and efforts in the upcoming FY's
+### Discussion 4: Where to invest time and efforts in the upcoming FY's
 
 The Portfolio Coordination project will be active through FY25.
 The final discussion is an opportunity for workshop attendees to inform the direction
@@ -115,7 +123,7 @@ Topic suggestions:
 - Focus on interoperability / model alignment
 - Establish common inputs (i.e. windIO)
 
-## Rules of Engagement
+### Rules of Engagement
 
 ````{card}
 Respect the group's time and attention
@@ -136,7 +144,7 @@ The objective is mutual understanding of perspectives.
 ````
 
 (logistics)=
-## Day-Of Logistics
+### Day-Of Logistics
 
 ````{admonition} NREL Golden Campus Address
 :class: tip
@@ -200,3 +208,7 @@ See the map below for guidance.
 I (Rafael) made this map based on my experience with going to this site, but I have little
 experience here so please let me know if anything is unclear.
 ```
+
+### Workshop Notes and Materials
+
+TODO: Include raw notes, either documents hosted in the repository or text directly, here.
