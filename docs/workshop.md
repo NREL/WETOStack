@@ -1,5 +1,21 @@
 (workshop_top)=
-# Model Owners Workshop
+# Software Portfolio Workshop
+
+The Holistic Modeling Portfolio Coordination Project is a three-year project with a goal of
+building the community of WETO software stakeholders. One aspect of this project is an annual
+workshop among various WETO software stakeholders.
+The first workshop was held on September 7, 2023, at NREL's Golden Campus, and it was primarily
+focused on model owners - people directly responsible for funding, planning, and developing
+this collection of software. The announcement, a summary report, and notes from this event
+are available in [](workshop_2023).
+
+**The 2024 workshop is tentatively scheduled for June 2024**, and it will incorporate the
+perspective of consumers of WETO software including practitioners using these tools in their
+work and developers extending or incorporating these projects into other software.
+Contact Rafael Mudafort (rafael.mudafort@nrel.gov) with any questions.
+
+(workshop_2023)=
+## 2023 Workshop
 
 A component of the Holistic Modeling Portfolio Coordination Project is to coordinate and host
 an annual workshop with the purpose of strengthening the community of WETO software owners.
