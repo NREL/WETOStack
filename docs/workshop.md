@@ -19,9 +19,7 @@ Contact Rafael Mudafort (rafael.mudafort@nrel.gov) with any questions.
 
 ### Summary of Proceedings
 
-TODO: Include a summary of the workshop proceedings here.
-
-
+Please see [](workshop_report_top) for a summary of the presentations and discussions from the workshop.
 
 
 ### Announcement
