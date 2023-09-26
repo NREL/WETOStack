@@ -139,6 +139,7 @@ The attendees of the workshop were:
   + Ashesh Sharma, NREL
   + Chris Bay, NREL
   + Dan Zalkind, NREL
+  + Dmitry Duplyakin, NREL
   + Eliot Quon, NREL
   + Emmanuel Branlard, NREL
   + Ernesto Camarena, SNL
@@ -156,5 +157,3 @@ The attendees of the workshop were:
   + Pietro Bortolotti, NREL
   + Rafael Mudafort, NREL
   + Rob Hammond, NREL
-  + Some other Golden Guy, NREL
-
