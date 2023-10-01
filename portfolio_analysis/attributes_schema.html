@@ -1,0 +1,2050 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Attribute Schema &#8212; WETO Software Stack</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-XK6LTW8XM7"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-XK6LTW8XM7');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'portfolio_analysis/attributes_schema';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Research Software Best Practices" href="../best_practices.html" />
+    <link rel="prev" title="Depedency Analysis" href="map_network.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.gif" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.gif" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    WETO Software Stack
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../workshop.html">Software Portfolio Workshop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workshop_report.html">2023 Workshop Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../capabilities/overview.html">Portfolio Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software_list.html">Portfolio Listing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map_network.html">Depedency Analysis</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Attribute Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../best_practices.html">Research Software Best Practices</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/rafmudaf/wetostack" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/rafmudaf/wetostack/edit/main/docs/portfolio_analysis/attributes_schema.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/rafmudaf/wetostack/issues/new?title=Issue%20on%20page%20%2Fportfolio_analysis/attributes_schema.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/portfolio_analysis/attributes_schema.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Attribute Schema</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="attribute-schema">
+<span id="schema"></span><h1>Attribute Schema<a class="headerlink" href="#attribute-schema" title="Permalink to this heading">#</a></h1>
+<p>The Portfolio Coordination project is constructing a database of all WETO software to facilitate
+the portfolio-wide analysis.
+Initially, only actively-funded software is included, but it will expand to all software under WETO.
+The database consists of attributes of each software project expressed in a YAML file
+in the <a class="github reference external" href="https://github.com/rafmudaf/wetostack">rafmudaf/wetostack</a> repository.
+The attributes should conform to the JSON schema (YAML is a superset of JSON) described in
+the documentation below.
+See the <a class="reference external" href="https://github.com/rafmudaf/WETOStack/blob/main/software_attributes/database/floris.yaml">FLORIS entry</a>
+for an example.</p>
+<p>To add or update a project entry, submit a pull request to this repository modifying an
+existing project file or creating a new one.
+All entries should be in the
+<a class="reference external" href="https://github.com/rafmudaf/WETOStack/tree/main/software_attributes/database">./software_attributes/database</a>
+directory.
+A <a class="reference external" href="https://github.com/rafmudaf/WETOStack/blob/main/software_attributes/validate_schema.py">validation script</a>
+is available, and it is run automatically upon creation and update of the pull request.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">How to read the schema docs</p>
+<p>The schema docs provide the following information:</p>
+<ul class="simple">
+<li><p>The list of required fields</p></li>
+<li><p>A short description, where necessary</p></li>
+<li><p>Value data types</p></li>
+<li><p>Set of valid values</p></li>
+<li><p>An example, where necessary</p></li>
+</ul>
+<div class="accordion" id="accordionsystem_type">
+    <div class="card">
+        <div class="card-header" id="headingsystem_type">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#system_type"
+                        aria-expanded="" aria-controls="system_type" onclick="setAnchor('#system_type')"><span class="property-name">system_type</span></button>
+            </h2>
+        </div>
+
+        <div id="system_type"
+             class="collapse property-definition-div" aria-labelledby="headingsystem_type"
+             data-parent="#accordionsystem_type">
+            <div class="card-body pl-5">
+                <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
+                <span class="description">
+                    <p>The wind energy system architectures supported by the software. Use <code>any</code> if the software is type-agnostic.</p>
+                </span>
+                <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+                <div class="card">
+                    <div class="card-body items-definition" id="system_type_items">
+                        <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+                        <div class="enum-value" id="system_type_items_enum">
+                            <h4>Must be one of:</h4>
+                            <ul class="list-group">
+                                <li class="list-group-item enum-item">"hawt"</li>
+                                <li class="list-group-item enum-item">"vawt"</li>
+                                <li class="list-group-item enum-item">"awes"</li>
+                                <li class="list-group-item enum-item">"any"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><p>Each attribute in blue text is a drop-down element.
+Try clicking the attribute text “system_type” above to open the element.</p>
+<p>The first line indicates the data type required for the value.
+In this case, <code class="docutils literal notranslate"><span class="pre">Type:</span> <span class="pre">array</span> <span class="pre">of</span> <span class="pre">enum</span> <span class="pre">(of</span> <span class="pre">string)</span></code> means the value must be an array where each
+element is a string matching one of a predefined set of options.</p>
+<p>The next line is a description of the attribute.</p>
+<p>Then, contextual information for the data type and available options for the value is provided.
+Finally, an example is given in some cases.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Quick tips</p>
+<ul class="simple">
+<li><p>Attributes with null values (None) must be removed or commented, such as:</p></li>
+</ul>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">key1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value1</span>
+<span class="c1"># key2:</span>
+<span class="nt">key3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value3</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Boolean values are either <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p>Strings do not require quotes.</p></li>
+</ul>
+</div>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,800">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="schema_doc.css">
+    <script src="https://use.fontawesome.com/facf9fa52c.js"></script>
+    <script src="schema_doc.min.js"></script>
+    <meta charset="utf-8"/>
+    <title>Schema Docs</title>
+</head>
+<body onload="anchorOnLoad();" id="root"><div class="text-right">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
+        </div>
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+ <span class="badge badge-info no-additional">No Additional Properties</span>
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordiongithub_account">
+    <div class="card">
+        <div class="card-header" id="headinggithub_account">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#github_account"
+                        aria-expanded="" aria-controls="github_account" onclick="setAnchor('#github_account')"><span class="property-name">github_account</span></button>
+            </h2>
+        </div>
+
+        <div id="github_account"
+             class="collapse property-definition-div" aria-labelledby="headinggithub_account"
+             data-parent="#accordiongithub_account">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The associated account on GitHub.<br />
+In the web address, this is the middle component: https://github.com/&lt;account>/&lt;repo>.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiongithub_repo">
+    <div class="card">
+        <div class="card-header" id="headinggithub_repo">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#github_repo"
+                        aria-expanded="" aria-controls="github_repo" onclick="setAnchor('#github_repo')"><span class="property-name">github_repo</span></button>
+            </h2>
+        </div>
+
+        <div id="github_repo"
+             class="collapse property-definition-div" aria-labelledby="headinggithub_repo"
+             data-parent="#accordiongithub_repo">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The repository name.<br />
+In the web address, this is the last component: https://github.com/&lt;account>/&lt;repo>.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionprimary_uses">
+    <div class="card">
+        <div class="card-header" id="headingprimary_uses">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#primary_uses"
+                        aria-expanded="" aria-controls="primary_uses" onclick="setAnchor('#primary_uses')"><span class="property-name">primary_uses</span></button>
+            </h2>
+        </div>
+
+        <div id="primary_uses"
+             class="collapse property-definition-div" aria-labelledby="headingprimary_uses"
+             data-parent="#accordionprimary_uses">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
+<span class="description"><p>The primary use for this software. Though there may be many uses, choose the options that most closely match the envisioned use.</p>
+</span>
+        
+
+        
+        
+
+         <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="primary_uses_items">
+            
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<div class="enum-value" id="primary_uses_items_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"controls"</li><li class="list-group-item enum-item">"cost"</li><li class="list-group-item enum-item">"data_analysis"</li><li class="list-group-item enum-item">"design"</li><li class="list-group-item enum-item">"optimization"</li><li class="list-group-item enum-item">"simulation"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionactive_funding">
+    <div class="card">
+        <div class="card-header" id="headingactive_funding">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#active_funding"
+                        aria-expanded="" aria-controls="active_funding" onclick="setAnchor('#active_funding')"><span class="property-name">active_funding</span></button>
+            </h2>
+        </div>
+
+        <div id="active_funding"
+             class="collapse property-definition-div" aria-labelledby="headingactive_funding"
+             data-parent="#accordionactive_funding">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Has this project received funding to directly support software development in the current quarter?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiondevelopment_status">
+    <div class="card">
+        <div class="card-header" id="headingdevelopment_status">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#development_status"
+                        aria-expanded="" aria-controls="development_status" onclick="setAnchor('#development_status')"><span class="property-name">development_status</span></button>
+            </h2>
+        </div>
+
+        <div id="development_status"
+             class="collapse property-definition-div" aria-labelledby="headingdevelopment_status"
+             data-parent="#accordiondevelopment_status">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<span class="description"><ul>
+<li><code>on_hold</code>: No active development or maintanence</li>
+<li><code>maintenance</code>:  Maintenance activites only including bug fixes</li>
+<li><code>new_features</code>: Actively planning and developing new features</li>
+</ul>
+</span><div class="enum-value" id="development_status_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"on_hold"</li><li class="list-group-item enum-item">"maintenance"</li><li class="list-group-item enum-item">"new_features"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionprogramming_language">
+    <div class="card">
+        <div class="card-header" id="headingprogramming_language">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#programming_language"
+                        aria-expanded="" aria-controls="programming_language" onclick="setAnchor('#programming_language')"><span class="property-name">programming_language</span></button>
+            </h2>
+        </div>
+
+        <div id="programming_language"
+             class="collapse property-definition-div" aria-labelledby="headingprogramming_language"
+             data-parent="#accordionprogramming_language">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<span class="description"><p>The primary programming language even though many projects contain source code in a few languages.</p>
+</span><div class="enum-value" id="programming_language_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"python"</li><li class="list-group-item enum-item">"fortran"</li><li class="list-group-item enum-item">"matlab"</li><li class="list-group-item enum-item">"c++"</li><li class="list-group-item enum-item">"rust"</li><li class="list-group-item enum-item">"julia"</li><li class="list-group-item enum-item">"r"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionlicense_type">
+    <div class="card">
+        <div class="card-header" id="headinglicense_type">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#license_type"
+                        aria-expanded="" aria-controls="license_type" onclick="setAnchor('#license_type')"><span class="property-name">license_type</span></button>
+            </h2>
+        </div>
+
+        <div id="license_type"
+             class="collapse property-definition-div" aria-labelledby="headinglicense_type"
+             data-parent="#accordionlicense_type">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<span class="description"><p>Choose the corresponding license string from <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#searching-github-by-license-type">this list of license types</a>.</p>
+</span><div class="enum-value" id="license_type_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"afl-3.0"</li><li class="list-group-item enum-item">"apache-2.0"</li><li class="list-group-item enum-item">"artistic-2.0"</li><li class="list-group-item enum-item">"bsl-1.0"</li><li class="list-group-item enum-item">"bsd-2-clause"</li><li class="list-group-item enum-item">"bsd-3-clause"</li><li class="list-group-item enum-item">"bsd-3-clause-clear"</li><li class="list-group-item enum-item">"bsd-4-clause"</li><li class="list-group-item enum-item">"0bsd"</li><li class="list-group-item enum-item">"cc"</li><li class="list-group-item enum-item">"cc0-1.0"</li><li class="list-group-item enum-item">"cc-by-4.0"</li><li class="list-group-item enum-item">"cc-by-sa-4.0"</li><li class="list-group-item enum-item">"wtfpl"</li><li class="list-group-item enum-item">"ecl-2.0"</li><li class="list-group-item enum-item">"epl-1.0"</li><li class="list-group-item enum-item">"epl-2.0"</li><li class="list-group-item enum-item">"eupl-1.1"</li><li class="list-group-item enum-item">"agpl-3.0"</li><li class="list-group-item enum-item">"gpl"</li><li class="list-group-item enum-item">"gpl-2.0"</li><li class="list-group-item enum-item">"gpl-3.0"</li><li class="list-group-item enum-item">"lgpl"</li><li class="list-group-item enum-item">"lgpl-2.1"</li><li class="list-group-item enum-item">"lgpl-3.0"</li><li class="list-group-item enum-item">"isc"</li><li class="list-group-item enum-item">"lppl-1.3c"</li><li class="list-group-item enum-item">"ms-pl"</li><li class="list-group-item enum-item">"mit"</li><li class="list-group-item enum-item">"mpl-2.0"</li><li class="list-group-item enum-item">"osl-3.0"</li><li class="list-group-item enum-item">"postgresql"</li><li class="list-group-item enum-item">"ofl-1.1"</li><li class="list-group-item enum-item">"ncsa"</li><li class="list-group-item enum-item">"unlicense"</li><li class="list-group-item enum-item">"zlib"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiondata_collection_methods">
+    <div class="card">
+        <div class="card-header" id="headingdata_collection_methods">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#data_collection_methods"
+                        aria-expanded="" aria-controls="data_collection_methods" onclick="setAnchor('#data_collection_methods')"><span class="property-name">data_collection_methods</span></button>
+            </h2>
+        </div>
+
+        <div id="data_collection_methods"
+             class="collapse property-definition-div" aria-labelledby="headingdata_collection_methods"
+             data-parent="#accordiondata_collection_methods">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
+<span class="description"><ul>
+<li><code>modeling</code>: Retrived from a numerical model</li>
+<li><code>laboratory</code>: Data from a controlled experiment such as RAAW</li>
+<li><code>field</code>: Data from systems "in the field", typically in a commercial setting</li>
+</ul>
+</span>
+        
+
+        
+        
+
+         <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="data_collection_methods_items">
+            
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<div class="enum-value" id="data_collection_methods_items_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"modeling"</li><li class="list-group-item enum-item">"laboratory"</li><li class="list-group-item enum-item">"field"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionlast_release_date">
+    <div class="card">
+        <div class="card-header" id="headinglast_release_date">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#last_release_date"
+                        aria-expanded="" aria-controls="last_release_date" onclick="setAnchor('#last_release_date')"><span class="property-name">last_release_date</span></button>
+            </h2>
+        </div>
+
+        <div id="last_release_date"
+             class="collapse property-definition-div" aria-labelledby="headinglast_release_date"
+             data-parent="#accordionlast_release_date">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Date of the last tagged release available on GitHub; use the following format: YYYY-MM-DD.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionscope">
+    <div class="card">
+        <div class="card-header" id="headingscope">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#scope"
+                        aria-expanded="" aria-controls="scope" onclick="setAnchor('#scope')"><span class="property-name">scope</span></button>
+            </h2>
+        </div>
+
+        <div id="scope"
+             class="collapse property-definition-div" aria-labelledby="headingscope"
+             data-parent="#accordionscope">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
+<span class="description"><p>The wind energy system scope of the software.</p>
+</span>
+        
+
+        
+        
+
+         <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="scope_items">
+            
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<div class="enum-value" id="scope_items_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"turbine"</li><li class="list-group-item enum-item">"farm"</li><li class="list-group-item enum-item">"system"</li><li class="list-group-item enum-item">"atmosphere"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionsystem_type">
+    <div class="card">
+        <div class="card-header" id="headingsystem_type">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#system_type"
+                        aria-expanded="" aria-controls="system_type" onclick="setAnchor('#system_type')"><span class="property-name">system_type</span></button>
+            </h2>
+        </div>
+
+        <div id="system_type"
+             class="collapse property-definition-div" aria-labelledby="headingsystem_type"
+             data-parent="#accordionsystem_type">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
+<span class="description"><p>The wind energy system architectures supported by the software. Use <code>any</code> if the software is type-agnostic.</p>
+</span>
+        
+
+        
+        
+
+         <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="system_type_items">
+            
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<div class="enum-value" id="system_type_items_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"hawt"</li><li class="list-group-item enum-item">"vawt"</li><li class="list-group-item enum-item">"awes"</li><li class="list-group-item enum-item">"any"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionsystem_location">
+    <div class="card">
+        <div class="card-header" id="headingsystem_location">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#system_location"
+                        aria-expanded="" aria-controls="system_location" onclick="setAnchor('#system_location')"><span class="property-name">system_location</span></button>
+            </h2>
+        </div>
+
+        <div id="system_location"
+             class="collapse property-definition-div" aria-labelledby="headingsystem_location"
+             data-parent="#accordionsystem_location">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
+<span class="description"><p>The location of the wind energy system supported by the software. Use <code>any</code> if the software is location-agnostic.</p>
+</span>
+        
+
+        
+        
+
+         <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="system_location_items">
+            
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<div class="enum-value" id="system_location_items_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"land"</li><li class="list-group-item enum-item">"fixed_offshore"</li><li class="list-group-item enum-item">"floating_offshore"</li><li class="list-group-item enum-item">"any"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiontime_domain">
+    <div class="card">
+        <div class="card-header" id="headingtime_domain">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#time_domain"
+                        aria-expanded="" aria-controls="time_domain" onclick="setAnchor('#time_domain')"><span class="property-name">time_domain</span></button>
+            </h2>
+        </div>
+
+        <div id="time_domain"
+             class="collapse property-definition-div" aria-labelledby="headingtime_domain"
+             data-parent="#accordiontime_domain">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string or array of enum (of string)</span><br/>
+<span class="description"><p>Does the software support modeling or analysis in a dynamic time domain, steady-state, and/or the frequency domain? This is an array-type field, so include multiple elements, as needed.</p>
+</span>
+        
+
+        
+        
+
+        <br/>
+<div class="badge badge-secondary">Example:</div>
+<br/><div id="time_domain_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="nt">time_domain</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">steady</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dynamic</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">frequency</span>
+</pre></div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionloads">
+    <div class="card">
+        <div class="card-header" id="headingloads">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#loads"
+                        aria-expanded="" aria-controls="loads" onclick="setAnchor('#loads')"><span class="property-name">loads</span></button>
+            </h2>
+        </div>
+
+        <div id="loads"
+             class="collapse property-definition-div" aria-labelledby="headingloads"
+             data-parent="#accordionloads">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Does the software calculate system loads?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiontags">
+    <div class="card">
+        <div class="card-header" id="headingtags">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#tags"
+                        aria-expanded="" aria-controls="tags" onclick="setAnchor('#tags')"><span class="property-name">tags</span></button>
+            </h2>
+        </div>
+
+        <div id="tags"
+             class="collapse property-definition-div" aria-labelledby="headingtags"
+             data-parent="#accordiontags">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>List tags describing the methods and underlying equations modeled in the software. These are free-form entries, and are not validated. This field is not currently used, but aggregating the tags throughout the software portfolio will allow for categorizing the tools later.</p>
+</span>
+        
+
+        
+        
+
+         <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="tags_items">
+            
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+
+        
+
+        
+        
+
+        
+        </div>
+    </div><br/>
+<div class="badge badge-secondary">Example:</div>
+<br/><div id="tags_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="nt">tags</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Euler bernoulli beam theory</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Blade element momentum theory</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reynolds averaged Navier Stokes</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Large eddy simulation</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Monte carlo methods</span>
+</pre></div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionsupported_platforms">
+    <div class="card">
+        <div class="card-header" id="headingsupported_platforms">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#supported_platforms"
+                        aria-expanded="" aria-controls="supported_platforms" onclick="setAnchor('#supported_platforms')"><span class="property-name">supported_platforms</span></button>
+            </h2>
+        </div>
+
+        <div id="supported_platforms"
+             class="collapse property-definition-div" aria-labelledby="headingsupported_platforms"
+             data-parent="#accordionsupported_platforms">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
+<span class="description"><p>List the type of computing platforms that are supported. Use <code>any</code> if the software is platform-agnostic.</p>
+</span>
+        
+
+        
+        
+
+         <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="supported_platforms_items">
+            
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<div class="enum-value" id="supported_platforms_items_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"linux"</li><li class="list-group-item enum-item">"windows"</li><li class="list-group-item enum-item">"macos"</li><li class="list-group-item enum-item">"HPC"</li><li class="list-group-item enum-item">"any"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionpackage_manager">
+    <div class="card">
+        <div class="card-header" id="headingpackage_manager">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#package_manager"
+                        aria-expanded="" aria-controls="package_manager" onclick="setAnchor('#package_manager')"><span class="property-name">package_manager</span></button>
+            </h2>
+        </div>
+
+        <div id="package_manager"
+             class="collapse property-definition-div" aria-labelledby="headingpackage_manager"
+             data-parent="#accordionpackage_manager">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
+<span class="description"><p>List the package managers leveraged to distribute the software.</p>
+</span>
+        
+
+        
+        
+
+         <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="package_manager_items">
+            
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<div class="enum-value" id="package_manager_items_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"homebrew"</li><li class="list-group-item enum-item">"pypi"</li><li class="list-group-item enum-item">"conda"</li><li class="list-group-item enum-item">"conda-forge"</li><li class="list-group-item enum-item">"spack_manager"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionpackage_manager_url">
+    <div class="card">
+        <div class="card-header" id="headingpackage_manager_url">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#package_manager_url"
+                        aria-expanded="" aria-controls="package_manager_url" onclick="setAnchor('#package_manager_url')"><span class="property-name">package_manager_url</span></button>
+            </h2>
+        </div>
+
+        <div id="package_manager_url"
+             class="collapse property-definition-div" aria-labelledby="headingpackage_manager_url"
+             data-parent="#accordionpackage_manager_url">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>For any package managers listed in <code>package_manager</code>, include the URL to the package listing.</p>
+</span>
+        
+
+        
+        
+
+         <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="package_manager_url_items">
+            
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordioninstallation_complexity">
+    <div class="card">
+        <div class="card-header" id="headinginstallation_complexity">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#installation_complexity"
+                        aria-expanded="" aria-controls="installation_complexity" onclick="setAnchor('#installation_complexity')"><span class="property-name">installation_complexity</span></button>
+            </h2>
+        </div>
+
+        <div id="installation_complexity"
+             class="collapse property-definition-div" aria-labelledby="headinginstallation_complexity"
+             data-parent="#accordioninstallation_complexity">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: integer</span><br/>
+<span class="description"><p>Estimate the difficulty for a user with minimal context to install.<br />
+- <code>1</code> is a downloadable executable that can be double clicked<br />
+- <code>10</code> requires compiling from source code with numerous other compiled dependencies.</p>
+</span>
+        
+
+        
+        <p><span class="badge badge-light restriction numeric-restriction" id="installation_complexity_number">Value must be greater or equal to <code>1</code> and lesser or equal to <code>10</code></span></p>
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiondocumentation_url">
+    <div class="card">
+        <div class="card-header" id="headingdocumentation_url">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#documentation_url"
+                        aria-expanded="" aria-controls="documentation_url" onclick="setAnchor('#documentation_url')"><span class="property-name">documentation_url</span></button>
+            </h2>
+        </div>
+
+        <div id="documentation_url"
+             class="collapse property-definition-div" aria-labelledby="headingdocumentation_url"
+             data-parent="#accordiondocumentation_url">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Provide the URL to the project's online documentation.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionhas_user_docs">
+    <div class="card">
+        <div class="card-header" id="headinghas_user_docs">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#has_user_docs"
+                        aria-expanded="" aria-controls="has_user_docs" onclick="setAnchor('#has_user_docs')"><span class="property-name">has_user_docs</span></button>
+            </h2>
+        </div>
+
+        <div id="has_user_docs"
+             class="collapse property-definition-div" aria-labelledby="headinghas_user_docs"
+             data-parent="#accordionhas_user_docs">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Does the documentation contain a section tailored to using (i.e. executing, developing inputs, understanding outputs) the software?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionhas_developer_docs">
+    <div class="card">
+        <div class="card-header" id="headinghas_developer_docs">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#has_developer_docs"
+                        aria-expanded="" aria-controls="has_developer_docs" onclick="setAnchor('#has_developer_docs')"><span class="property-name">has_developer_docs</span></button>
+            </h2>
+        </div>
+
+        <div id="has_developer_docs"
+             class="collapse property-definition-div" aria-labelledby="headinghas_developer_docs"
+             data-parent="#accordionhas_developer_docs">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Does the documentation contain a section tailored to developing (i.e. extending, maintaining, testing) the software?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionhas_api_docs">
+    <div class="card">
+        <div class="card-header" id="headinghas_api_docs">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#has_api_docs"
+                        aria-expanded="" aria-controls="has_api_docs" onclick="setAnchor('#has_api_docs')"><span class="property-name">has_api_docs</span></button>
+            </h2>
+        </div>
+
+        <div id="has_api_docs"
+             class="collapse property-definition-div" aria-labelledby="headinghas_api_docs"
+             data-parent="#accordionhas_api_docs">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Does the documentation contain a description of the public API's?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionhas_cli_docs">
+    <div class="card">
+        <div class="card-header" id="headinghas_cli_docs">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#has_cli_docs"
+                        aria-expanded="" aria-controls="has_cli_docs" onclick="setAnchor('#has_cli_docs')"><span class="property-name">has_cli_docs</span></button>
+            </h2>
+        </div>
+
+        <div id="has_cli_docs"
+             class="collapse property-definition-div" aria-labelledby="headinghas_cli_docs"
+             data-parent="#accordionhas_cli_docs">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Does the documentation contain a description of the command line interface?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionhas_installation_docs">
+    <div class="card">
+        <div class="card-header" id="headinghas_installation_docs">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#has_installation_docs"
+                        aria-expanded="" aria-controls="has_installation_docs" onclick="setAnchor('#has_installation_docs')"><span class="property-name">has_installation_docs</span></button>
+            </h2>
+        </div>
+
+        <div id="has_installation_docs"
+             class="collapse property-definition-div" aria-labelledby="headinghas_installation_docs"
+             data-parent="#accordionhas_installation_docs">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Does the documentation contain a section describing the installation procedures?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionhas_getting_started_docs">
+    <div class="card">
+        <div class="card-header" id="headinghas_getting_started_docs">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#has_getting_started_docs"
+                        aria-expanded="" aria-controls="has_getting_started_docs" onclick="setAnchor('#has_getting_started_docs')"><span class="property-name">has_getting_started_docs</span></button>
+            </h2>
+        </div>
+
+        <div id="has_getting_started_docs"
+             class="collapse property-definition-div" aria-labelledby="headinghas_getting_started_docs"
+             data-parent="#accordionhas_getting_started_docs">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Does the documentation contain a section to guide new users through the onboarding and getting started process?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionhas_examples_tutorials">
+    <div class="card">
+        <div class="card-header" id="headinghas_examples_tutorials">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#has_examples_tutorials"
+                        aria-expanded="" aria-controls="has_examples_tutorials" onclick="setAnchor('#has_examples_tutorials')"><span class="property-name">has_examples_tutorials</span></button>
+            </h2>
+        </div>
+
+        <div id="has_examples_tutorials"
+             class="collapse property-definition-div" aria-labelledby="headinghas_examples_tutorials"
+             data-parent="#accordionhas_examples_tutorials">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Are examples or tutorials included with the software either through the documentation or in the repository directly?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionhas_design_intent_statement">
+    <div class="card">
+        <div class="card-header" id="headinghas_design_intent_statement">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#has_design_intent_statement"
+                        aria-expanded="" aria-controls="has_design_intent_statement" onclick="setAnchor('#has_design_intent_statement')"><span class="property-name">has_design_intent_statement</span></button>
+            </h2>
+        </div>
+
+        <div id="has_design_intent_statement"
+             class="collapse property-definition-div" aria-labelledby="headinghas_design_intent_statement"
+             data-parent="#accordionhas_design_intent_statement">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Is a statement describing the holistic design intent and design considerations of the software available?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionreadability">
+    <div class="card">
+        <div class="card-header" id="headingreadability">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#readability"
+                        aria-expanded="" aria-controls="readability" onclick="setAnchor('#readability')"><span class="property-name">readability</span></button>
+            </h2>
+        </div>
+
+        <div id="readability"
+             class="collapse property-definition-div" aria-labelledby="headingreadability"
+             data-parent="#accordionreadability">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: integer</span><br/>
+<span class="description"><p>Estimate the readability of the documentation considering a user with minimal context.</p>
+</span>
+        
+
+        
+        <p><span class="badge badge-light restriction numeric-restriction" id="readability_number">Value must be greater or equal to <code>1</code> and lesser or equal to <code>10</code></span></p>
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionproject_coverage">
+    <div class="card">
+        <div class="card-header" id="headingproject_coverage">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#project_coverage"
+                        aria-expanded="" aria-controls="project_coverage" onclick="setAnchor('#project_coverage')"><span class="property-name">project_coverage</span></button>
+            </h2>
+        </div>
+
+        <div id="project_coverage"
+             class="collapse property-definition-div" aria-labelledby="headingproject_coverage"
+             data-parent="#accordionproject_coverage">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: integer</span><br/>
+<span class="description"><p>Estimate the portion of the project covered by the documentation.</p>
+</span>
+        
+
+        
+        <p><span class="badge badge-light restriction numeric-restriction" id="project_coverage_number">Value must be greater or equal to <code>1</code> and lesser or equal to <code>10</code></span></p>
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiontesting_framework">
+    <div class="card">
+        <div class="card-header" id="headingtesting_framework">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#testing_framework"
+                        aria-expanded="" aria-controls="testing_framework" onclick="setAnchor('#testing_framework')"><span class="property-name">testing_framework</span></button>
+            </h2>
+        </div>
+
+        <div id="testing_framework"
+             class="collapse property-definition-div" aria-labelledby="headingtesting_framework"
+             data-parent="#accordiontesting_framework">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Does the software leverage a testing framework?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordioncontinuous_testing">
+    <div class="card">
+        <div class="card-header" id="headingcontinuous_testing">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#continuous_testing"
+                        aria-expanded="" aria-controls="continuous_testing" onclick="setAnchor('#continuous_testing')"><span class="property-name">continuous_testing</span></button>
+            </h2>
+        </div>
+
+        <div id="continuous_testing"
+             class="collapse property-definition-div" aria-labelledby="headingcontinuous_testing"
+             data-parent="#accordioncontinuous_testing">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Does the software have continuous testing in place?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiontest_coverage">
+    <div class="card">
+        <div class="card-header" id="headingtest_coverage">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#test_coverage"
+                        aria-expanded="" aria-controls="test_coverage" onclick="setAnchor('#test_coverage')"><span class="property-name">test_coverage</span></button>
+            </h2>
+        </div>
+
+        <div id="test_coverage"
+             class="collapse property-definition-div" aria-labelledby="headingtest_coverage"
+             data-parent="#accordiontest_coverage">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: integer</span><br/>
+<span class="description"><p>The portion of the project covered by formal tests.</p>
+</span>
+        
+
+        
+        <p><span class="badge badge-light restriction numeric-restriction" id="test_coverage_number">Value must be greater or equal to <code>1</code> and lesser or equal to <code>100</code></span></p>
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiontest_documentation">
+    <div class="card">
+        <div class="card-header" id="headingtest_documentation">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#test_documentation"
+                        aria-expanded="" aria-controls="test_documentation" onclick="setAnchor('#test_documentation')"><span class="property-name">test_documentation</span></button>
+            </h2>
+        </div>
+
+        <div id="test_documentation"
+             class="collapse property-definition-div" aria-labelledby="headingtest_documentation"
+             data-parent="#accordiontest_documentation">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Is documentation for the tests available?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionperformance_tests">
+    <div class="card">
+        <div class="card-header" id="headingperformance_tests">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#performance_tests"
+                        aria-expanded="" aria-controls="performance_tests" onclick="setAnchor('#performance_tests')"><span class="property-name">performance_tests</span></button>
+            </h2>
+        </div>
+
+        <div id="performance_tests"
+             class="collapse property-definition-div" aria-labelledby="headingperformance_tests"
+             data-parent="#accordionperformance_tests">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Are performance tests available?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionfirst_class_ui">
+    <div class="card">
+        <div class="card-header" id="headingfirst_class_ui">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#first_class_ui"
+                        aria-expanded="" aria-controls="first_class_ui" onclick="setAnchor('#first_class_ui')"><span class="property-name">first_class_ui</span></button>
+            </h2>
+        </div>
+
+        <div id="first_class_ui"
+             class="collapse property-definition-div" aria-labelledby="headingfirst_class_ui"
+             data-parent="#accordionfirst_class_ui">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
+<span class="description"><p>List the user interfaces that receive primary funding or developer attention.</p>
+</span>
+        
+
+        
+        
+
+         <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="first_class_ui_items">
+            
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<div class="enum-value" id="first_class_ui_items_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"gui"</li><li class="list-group-item enum-item">"input_files"</li><li class="list-group-item enum-item">"library_interface"</li><li class="list-group-item enum-item">"web"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionhas_cli">
+    <div class="card">
+        <div class="card-header" id="headinghas_cli">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#has_cli"
+                        aria-expanded="" aria-controls="has_cli" onclick="setAnchor('#has_cli')"><span class="property-name">has_cli</span></button>
+            </h2>
+        </div>
+
+        <div id="has_cli"
+             class="collapse property-definition-div" aria-labelledby="headinghas_cli"
+             data-parent="#accordionhas_cli">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Is a command line interface available?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionlanguage_interfaces">
+    <div class="card">
+        <div class="card-header" id="headinglanguage_interfaces">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#language_interfaces"
+                        aria-expanded="" aria-controls="language_interfaces" onclick="setAnchor('#language_interfaces')"><span class="property-name">language_interfaces</span></button>
+            </h2>
+        </div>
+
+        <div id="language_interfaces"
+             class="collapse property-definition-div" aria-labelledby="headinglanguage_interfaces"
+             data-parent="#accordionlanguage_interfaces">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
+<span class="description"><p>List the connections available to interface the software to other languages.</p>
+</span>
+        
+
+        
+        
+
+         <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="language_interfaces_items">
+            
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<div class="enum-value" id="language_interfaces_items_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"python"</li><li class="list-group-item enum-item">"fortran"</li><li class="list-group-item enum-item">"matlab"</li><li class="list-group-item enum-item">"c++"</li><li class="list-group-item enum-item">"rust"</li><li class="list-group-item enum-item">"julia"</li><li class="list-group-item enum-item">"r"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionfeature_accessibility">
+    <div class="card">
+        <div class="card-header" id="headingfeature_accessibility">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#feature_accessibility"
+                        aria-expanded="" aria-controls="feature_accessibility" onclick="setAnchor('#feature_accessibility')"><span class="property-name">feature_accessibility</span></button>
+            </h2>
+        </div>
+
+        <div id="feature_accessibility"
+             class="collapse property-definition-div" aria-labelledby="headingfeature_accessibility"
+             data-parent="#accordionfeature_accessibility">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: integer</span><br/>
+<span class="description"><p>How much of the project is reachable through a public API?</p>
+</span>
+        
+
+        
+        <p><span class="badge badge-light restriction numeric-restriction" id="feature_accessibility_number">Value must be greater or equal to <code>1</code> and lesser or equal to <code>100</code></span></p>
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionfiletypes">
+    <div class="card">
+        <div class="card-header" id="headingfiletypes">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#filetypes"
+                        aria-expanded="" aria-controls="filetypes" onclick="setAnchor('#filetypes')"><span class="property-name">filetypes</span></button>
+            </h2>
+        </div>
+
+        <div id="filetypes"
+             class="collapse property-definition-div" aria-labelledby="headingfiletypes"
+             data-parent="#accordionfiletypes">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
+<span class="description"><p>List the filetypes used in the project including inputs and outputs.</p>
+</span>
+        
+
+        
+        
+
+         <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="filetypes_items">
+            
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<div class="enum-value" id="filetypes_items_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"csv"</li><li class="list-group-item enum-item">"custom"</li><li class="list-group-item enum-item">"hdf5"</li><li class="list-group-item enum-item">"json"</li><li class="list-group-item enum-item">"numpy binary"</li><li class="list-group-item enum-item">"pvd"</li><li class="list-group-item enum-item">"xdmf"</li><li class="list-group-item enum-item">"yaml"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionfile_structure_stability">
+    <div class="card">
+        <div class="card-header" id="headingfile_structure_stability">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#file_structure_stability"
+                        aria-expanded="" aria-controls="file_structure_stability" onclick="setAnchor('#file_structure_stability')"><span class="property-name">file_structure_stability</span></button>
+            </h2>
+        </div>
+
+        <div id="file_structure_stability"
+             class="collapse property-definition-div" aria-labelledby="headingfile_structure_stability"
+             data-parent="#accordionfile_structure_stability">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<span class="description"><ul>
+<li><code>stable</code>: Never or rarely changes</li>
+<li><code>in_development</code>: Actively changing</li>
+<li><code>semantic_versioning</code>: Changes according to rules of semantic versioning</li>
+</ul>
+</span><div class="enum-value" id="file_structure_stability_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"stable"</li><li class="list-group-item enum-item">"in_development"</li><li class="list-group-item enum-item">"semantic_versioning"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiondependencies">
+    <div class="card">
+        <div class="card-header" id="headingdependencies">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#dependencies"
+                        aria-expanded="" aria-controls="dependencies" onclick="setAnchor('#dependencies')"><span class="property-name">dependencies</span></button>
+            </h2>
+        </div>
+
+        <div id="dependencies"
+             class="collapse property-definition-div" aria-labelledby="headingdependencies"
+             data-parent="#accordiondependencies">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of array</span><br/>
+<span class="description"><p>List other WETO software projects that this one depends on either through a direct or indirect connection.<br />
+ - <code>direct</code>: code-code integration<br />
+ - <code>indirect</code>: one uses the output of the other via output file or another workflow process</p>
+
+<p>This field is a 2D list. See the example below for syntax.</p>
+
+<p>An example of a real dependency is FLORIS requires a power coefficient and thrust coefficient look up table from a higher fidelity simulation or field data. This often comes from OpenFAST, so that tool is an indirect dependency of FLORIS.</p>
+</span>
+        
+
+        
+        
+
+         <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="dependencies_items">
+            
+
+    <span class="badge badge-dark value-type">Type: array</span><br/>
+
+        
+
+        
+        
+
+         <span class="badge badge-info no-additional">No Additional Items</span><h4>Tuple Validation</h4>
+    
+    <h5>Item at 1 must be:</h5>
+    <div class="card">
+        <div class="card-body items-definition" id="dependencies_items_items_i0">
+            
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+    
+    <h5>Item at 2 must be:</h5>
+    <div class="card">
+        <div class="card-body items-definition" id="dependencies_items_items_i1">
+            
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<div class="enum-value" id="dependencies_items_items_i1_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"direct"</li><li class="list-group-item enum-item">"indirect"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+    
+        </div>
+    </div><br/>
+<div class="badge badge-secondary">Example:</div>
+<br/><div id="dependencies_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="nt">dependencies</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">openfast</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">direct</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">floris</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">direct</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exawind</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">indirect</span>
+</pre></div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2023-09-13 at 12:32:24 -0500</p>
+    </footer></body>
+</html></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./portfolio_analysis"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="map_network.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Depedency Analysis</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../best_practices.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Research Software Best Practices</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rafael Mudafort
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
