@@ -231,55 +231,31 @@ Offload as many manual processes as possible and practical to the continuous int
 \end{itemize}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \chapter{Accessibility}
+\label{sec:accessibility}
+
 Accessibility is concerned with how practitioners are expected to obtain and integrate a software
 into their processes. The product that is to be obtained is the executable version of the software.
 In the case of compiled programming languages, this is a binary executable or library file,
 while interpreted languages typically require distributing the source code directly.
 
-For guidance on developer accessibility, see \ref{sec:extendability}.
+For guidance on developer accessibility, see \nameref{sec:extendability}.
 
-Summary:
-\begin{itemize}
-\item Determine the expected or targeted user profile up front and address accessibility accordingly
-\begin{itemize}
-\item Domain experts will need less hand holding than graduate students or the general public
-
-\end{itemize}
-
-\item Automate accessibility
-
-\end{itemize}
-
+The technical approaches to address accessibility depend on the targeted users.
+To identify methods for improving accessibility, first identify the expected users and
+anticipate their barriers to entry.
+Then, create processes and technical solutions to minimize these barriers.
+Finally, automated the processes so that accessibility is implicit to the process rather than
+dependent on developers remembering to meet these needs.
 
 \section{Prerequisite knowledge}
+
 Using a computer in a scientific context is a learned skill and requires years of practice to
-become proficient. Tools like a "terminal", "shell", or "command prompt" are not initially
+become proficient. Tools like a "terminal", "shell", or "command prompt" are not universally
 intuitive, and that these three terms are used interchangeably can lead to further confusion.
 This is an example of a barrier to entry often encountered by early-career researchers and
 experienced practitioners alike. In order to improve accessibility, it is important to
 understand the experience of users and design software to meet their needs.
-
-\textbf{BP: Identify target user profiles and anticipate their levels of understanding. Accurately
-understand the complexity of the systems used to access the software, and evaluate whether
-this matches the expected skills in target users.}
 
 Some examples of common barriers to entry are:
 \begin{itemize}
@@ -309,72 +285,67 @@ Some examples of common barriers to entry are:
 
 \end{itemize}
 
+Identify target user profiles including their levels of experience of understanding in
+computing environments.
+Then, design the research software so that it matches the expected level of expertise in
+users.
+Note that this is often an iterative process, and technical solutions are not always needed
+to address barriers to entry.
+Explanatory documentation is a major resource in addressing ambiguity or inexperience in
+a particular technology.
+Leverage existing tutorials were necessary; for example, a high-level overview of methods
+to use a terminal in the context of a specific software project along with an accompanying
+link to a deep dive into terminal training can be very helpful.
 
 \section{Distribution}
+
 Research computing software often depend on third-party libraries, and many of these dependencies
 are research software themselves. Therefore, the installation and environment configuration
 for this type of software can easily become complex.
-
-\textbf{BP: It is the responsibility of developers to provide a streamlined method of installation using
-common software distribution systems and automation as much as practical.}
-
 Mature package managers are a great resource since they have a distribution system already in place
 and manage dependencies between software tools.
-
 The ecosystem of open source software package managers has coalesced around a few primary tools:
 \begin{itemize}
+
 \item \href{https://pypi.org}{Python Package Index (PyPI)}
 \begin{itemize}
 \item Source and binary distribution package manager for Python software
-
 \item Platform: any
-
 \end{itemize}
 
 \item \href{https://docs.conda.io/en/latest/}{Conda}
 \begin{itemize}
 \item Package, dependency and environment management for any language
-
 \item Platform: any
-
 \end{itemize}
 
 \item \href{https://conda-forge.org}{Conda-forge}
 \begin{itemize}
 \item A community-led collection of recipes, build infrastructure and distributions for the conda package manager
-
 \item Platform: any
-
 \end{itemize}
 
 \item \href{https://brew.sh}{Homebrew (brew)}
 \begin{itemize}
 \item The Missing Package Manager for macOS (or Linux)
-
 \item Platform: Ubiquitous for macOS, but also available for Linux
-
 \end{itemize}
 
 \item \href{https://spack.io}{Spack}
 \begin{itemize}
 \item Spack is a package manager for supercomputers supporting any language and distributable product
-
 \item Platform: Ubiquitous for Linux-based supercomputers, and also available for macOS and Linux
-
 \end{itemize}
 
 \item \href{https://en.wikipedia.org/wiki/APT\_(software)}{APT}
 \begin{itemize}
 \item A user interface that works with core libraries to handle the installation and removal of software on Debian, and Debian-based Linux distributions
-
 \item Platform: Ubiquitous for Linux for system-level or generic packages
-
 \end{itemize}
 
 \item \href{https://fpm.fortran-lang.org/index.html}{Fortran package manager (FPM)}
 \begin{itemize}
 \item Fortran-specific executable and library package manager.
-
 \end{itemize}
 
 \end{itemize}
@@ -382,11 +353,10 @@ The ecosystem of open source software package managers has coalesced around a fe
 The process for including a package in a package management system varies, but all are designed
 to integrate with automated systems to prepare and distribute the package automatically upon
 a given event. The practice of releasing a software package after a tagged release
-(see \ref{sec:version_control}) or requisite set of changes is called "continuous integration",
-also known as "CI". Tools for this level of automatic are common, and a practical choice
-is \href{https://github.com/features/actions}{GitHub Actions}. A typical CI pipeline for a Python
-package is shown below where the square components are GitHub Actions steps. Note that this
-pipeline includes sub-system areas called "Continuous Testing" and "Continuous Deployment".
+(see \nameref{sec:version_control}) or requisite set of changes is called "continuous distribution",
+a component of "continuous integration". See \nameref{continuous} for details.
+Tools for this level of automation are ubiquitous, and a practical choice
+is GitHub Actions (see \nameref{sec:github}).
 
 \begin{figure}[htbp] \begin{center}
 \includegraphics[width=0.7\textwidth]{mermaid-ece5068b3a6eb10d6392a7ca035a7cc4736d3183.png}
