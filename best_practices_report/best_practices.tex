@@ -354,7 +354,7 @@ The process for including a package in a package management system varies, but a
 to integrate with automated systems to prepare and distribute the package automatically upon
 a given event. The practice of releasing a software package after a tagged release
 (see \nameref{sec:version_control}) or requisite set of changes is called "continuous distribution",
-a component of "continuous integration". See \nameref{continuous} for details.
+a component of "continuous integration". See \nameref{sec:continuous} for details.
 Tools for this level of automation are ubiquitous, and a practical choice
 is GitHub Actions (see \nameref{sec:github}).
 
@@ -571,7 +571,8 @@ and general maintenance and infrastructure upgrades can be introduced with minim
 \end{center}
 \end{figure}
 
-This topic is closely tied to \nameref{communicating_design}, and the objective is to ensure that
+% This topic is closely tied to \nameref{communicating_design}, and the objective is to ensure that
+This topic is closely tied to the need for communicating elements of design, and the objective is to ensure that
 developers can easily approach the project with minimal overhead required to align their
 computing environment, scope the work, implement the changes, and verify the results.
 
@@ -795,7 +796,7 @@ considered reasonable to use as much space as needed.
 
 
 \section{Collaborative workflows with GitHub}
-
+\label{sec:github}
 
 The processes through which developers interact with a software and other developers is
 an essential component of extendability.
@@ -805,7 +806,7 @@ The majority of collaborative software development processes occur on the
 \href{https://github.com}{GitHub} platform and automated processes leverage GitHub's free
 cloud-based resources.
 
-GitHub and git (see \nameref{version_control}) are tightly connected, but they are different
+GitHub and git (see \nameref{sec:version_control}) are tightly connected, but they are different
 systems and serve different purposes in the development process.
 Git is a version control system for tracking and merging changes to a software.
 GitHub is a platform for orchestrating and coordinating the various processes that happen
@@ -903,12 +904,12 @@ The former does not maintain the commit history of the working branch while the 
 The squash-and-merge approach is often preferred by project maintainers due to it's simplicity,
 and in this case the title of the pull request becomes the commit message.
 Since merging the pull request directly affects the commit history of the destination branch,
-the review and merge process should also follow the \nameref{version_control} guidelines.
+the review and merge process should also follow the \nameref{sec:version_control} guidelines.
 Finally, the release process through GitHub Releases can automatically construct
 release notes from the title of all pull requests merged since the previous release.
 
 While the details of workflows around defining, designing, and implementing new development
-efforts should be identified explicitly following the guidance in \nameref{github}, pull requests,
+efforts should be identified explicitly following the guidance in \nameref{sec:github}, pull requests,
 in practice, are often a good place to iterate collaboratively on the design and implementation
 details.
 Pull request reviews should have the following characteristics:
