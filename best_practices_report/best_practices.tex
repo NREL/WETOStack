@@ -162,19 +162,72 @@ of WETO software can trust these tools and accurately understand the risks to wo
 
 
 
+\chapter{Summary of best practices}
 
+\nameref{sec:accessibility}
 \begin{itemize}
+\item Determine the barriers to entry for expected users and address accessibility accordingly.
+Automate accessibility methods and processes so that it is implicit in the software
+development process.
 
+\item Prerequisite knowledge - Identify target user profiles and anticipate their levels of understanding.
+Accurately understand the complexity of the systems used to access the software, and evaluate
+whether this matches the expected skills in target users.
+Note that technical solutions can be augmented with documentation to address gaps in prerequisite
+knowledge.
 
+\item Distribution - Provide a streamlined method of installation using common software distribution systems.
 \end{itemize}
 
+\nameref{sec:usability}
 \begin{itemize}
+\item User interface - UIs should be predictable, and adopt existing conventions for the contexts
+in which they exist.
 
+\item Command line interface - If a CLI exists, it should be meaningful, predictable, and well documented.
+Refer to contextual guidelines and conventions for flags, syntax, and functionality.
+At a minimum, provide documentation via the help flag, and extended documentation alongside
+examples and tutorials is helpful.
 
+\item Input and output files - Use a common file structure relevant to the type of data produced from a software,
+and leverage the existing ecosystem of tools to pre and post-process input and output files.
 
+\item Error messages - Identify an error messaging system that enables communicating to users without encumbering
+the development process.
+Provide useful errors that include data, provide guidance for moving forward, and help maintainers
+identify potential bugs.
 
+\item Metadata - Providing metadata to users requires minimal effort for developers, and it enables users to more
+effectively share and compare data and get help. At a minimum, display version numbers, critical
+settings, and dependency info.
 \end{itemize}
 
+\nameref{sec:extendability}
+\begin{itemize}
+\item How easily a project can be extended is critical to it's viability as a long term
+DOE-funded project.
+Prioritize simplicity in architecture, dependencies, and toolchains.
+Create a development environment balancing modern needs with stability.
+\item Code style - Strive to write code that external developers can easily read and comprehend with minimal
+preexisting context.
+\item Architecture and design - Adopt an explicit design process where the major ideas are made chosen prior to writing any code.
+\item Software design process - Create a parti and list performance requirements for each level of fidelity in the software.
+Establish methods to validate the design and implementation given knowledge of how a software
+is ultimately used.
+\item Design patterns - Study existing design patterns, and adopt a few, as needed.
+Refer to existing materials especially relevant to research software architecture.
+\item Version control - Craft a version control history that communicates the evolution of changes of the software
+to future developers including the author of current changes.
+Evolve the software in a logical, linear process with digestible, easily reviewable changes.
+\item Collaborative workflows with GitHub - Treat GitHub as the home page of a software project, and develop the planning and coordination
+activities as a first-order communication, signalling, and organizational mechanism for the
+community of users.
+\item Pull Requests - All components of a pull request should be considered documentation for future reference
+and an aspect of version control.
+PR reviews should be verbose, thorough, positive, and referential to guiding documents.
+\item Continuous integration: automating tests, compliance, and delivery - Codify software quality by establishing automated systems to check and provide feedback
+within the development process.
+Offload as many manual processes as possible and practical to the continuous integration system.
 \end{itemize}
 
 
