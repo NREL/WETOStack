@@ -382,7 +382,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-summary">Best Practices Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-best-practices">Summary of best practices</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessibility">Accessibility</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisite-knowledge">Prerequisite knowledge</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution">Distribution</a></li>
@@ -510,7 +510,7 @@ of WETO software can trust these tools and accurately understand the risks to wo
 <ul class="simple">
 <li><p><a class="reference internal" href="#research-software-best-practices" id="id6">Research Software Best Practices</a></p>
 <ul>
-<li><p><a class="reference internal" href="#best-practices-summary" id="id7">Best Practices Summary</a></p></li>
+<li><p><a class="reference internal" href="#summary-of-best-practices" id="id7">Summary of best practices</a></p></li>
 <li><p><a class="reference internal" href="#accessibility" id="id8">Accessibility</a></p>
 <ul>
 <li><p><a class="reference internal" href="#prerequisite-knowledge" id="id9">Prerequisite knowledge</a></p></li>
@@ -560,8 +560,8 @@ of WETO software can trust these tools and accurately understand the risks to wo
 </nav>
 <!-- These are aspects of research software that are critical to robustness, adoption, and ultimate impact.
 Consider these best practices as general guidelines for planning research activities that include the development of software. -->
-<section id="best-practices-summary">
-<h2><a class="toc-backref" href="#id7" role="doc-backlink">Best Practices Summary</a><a class="headerlink" href="#best-practices-summary" title="Permalink to this heading">#</a></h2>
+<section id="summary-of-best-practices">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Summary of best practices</a><a class="headerlink" href="#summary-of-best-practices" title="Permalink to this heading">#</a></h2>
 <p><a class="reference internal" href="#accessibility"><span class="std std-ref">Accessibility</span></a></p>
 <ul class="simple">
 <li><p>Determine the barriers to entry for expected users and address accessibility accordingly.
@@ -676,10 +676,10 @@ link to a deep dive into terminal training can be very helpful.</p>
 <h3><a class="toc-backref" href="#id10" role="doc-backlink">Distribution</a><a class="headerlink" href="#distribution" title="Permalink to this heading">#</a></h3>
 <p>Research computing software often depend on third-party libraries, and many of these dependencies
 are research software themselves. Therefore, the installation and environment configuration
-for this type of software can easily become complex.</p>
-<p>Mature package managers are a great resource since they have a distribution system already in place
-and manage dependencies between software tools.</p>
-<p>The ecosystem of open source software package managers has coalesced around a few primary tools:</p>
+for this type of software can easily become complex.
+Mature package managers are a great resource since they have a distribution system already in place
+and manage dependencies between software tools.
+The ecosystem of open source software package managers has coalesced around a few primary tools:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://pypi.org">Python Package Index (PyPI)</a></p>
 <ul>
@@ -727,7 +727,7 @@ and manage dependencies between software tools.</p>
 to integrate with automated systems to prepare and distribute the package automatically upon
 a given event. The practice of releasing a software package after a tagged release
 (see <a class="reference internal" href="#version-control"><span class="std std-ref">Version control</span></a>) or requisite set of changes is called “continuous distribution”,
-a component of “continuous integration. See <a class="reference internal" href="#continuous"><span class="std std-ref">Continuous integration: automating tests, compliance, and delivery</span></a> for details.
+a component of “continuous integration”. See <a class="reference internal" href="#continuous"><span class="std std-ref">Continuous integration: automating tests, compliance, and delivery</span></a> for details.
 Tools for this level of automation are ubiquitous, and a practical choice
 is GitHub Actions (see <a class="reference internal" href="#github"><span class="std std-ref">Collaborative workflows with GitHub</span></a>).</p>
 </section>
@@ -941,7 +941,8 @@ Possibly include this diagram (or a version of the funding / development cycle) 
     c -.-&gt; d
     c --&gt; a
     d -.-&gt; a
-        </div><p>This topic is closely tied to <span class="xref myst"></span>, and the objective is to ensure that
+        </div><!-- This topic is closely tied to [](communicating_design), and the objective is to ensure that -->
+<p>This topic is closely tied to the need for communicating elements of design, and the objective is to ensure that
 developers can easily approach the project with minimal overhead required to align their
 computing environment, scope the work, implement the changes, and verify the results.</p>
 <p>A guiding principle on extendability is to use ubiquitous infrastructure.
@@ -961,7 +962,8 @@ modern tooling, modern developer expectations, and stability.</p>
 <a class="reference external" href="https://hn.algolia.com/?q=grok">Hacker News</a>,
 <a class="reference external" href="https://lobste.rs/search?q=grok&amp;what=stories&amp;order=newest">Lobsters</a>,
 <a class="reference external" href="https://stackoverflow.com/search?tab=newest&amp;q=grok&amp;searchOn=3">StackOverflow</a>)
-to communicate about degrees of understanding. This word is described by it’s creator below.</p>
+to communicate about degrees of understanding. This word is described by it’s creator below
+(Source: <a class="reference external" href="https://en.wikipedia.org/wiki/Grok">Wikipedia</a>).</p>
 <blockquote>
 <div><p><em>Grok</em> means “to understand”, of course, but Dr. Mahmoud, who might be termed the leading
 Terran expert on Martians, explains that it also means, “to drink” and “a hundred other
@@ -973,7 +975,6 @@ implies that you love it, too, and cherish it and would not have it otherwise. T
 can <em>hate</em> – and (I think) Martian hate is an emotion so black that the nearest human
 equivalent could only be called mild distaste.</p>
 </div></blockquote>
-<p>Source: <a class="reference external" href="https://en.wikipedia.org/wiki/Grok">https://en.wikipedia.org/wiki/Grok</a>.</p>
 <p>That such a word exists and is widely used in software development illustrates the high value
 of clear and understandable code.
 WETO software should avoid complexity where possible and favor readability over writability.
@@ -1062,7 +1063,7 @@ simple diagram</p></li>
 <li><p>A list of requirements that the parti and it’s implementation should satisfy</p></li>
 </ol>
 <p>The <em>parti</em> is the abstract objective and the list of requirements are the criteria
-to verify that the implementation satisfies the <em>parti</em>.
+to verify that the implementation satisfies the parti.
 In other words, these are the tests for the design.
 Upon establishing this information, it should be codified into a design document and style
 guide that are made publicly available to all developers such as in online documentation.</p>
@@ -1435,11 +1436,11 @@ adoption, and WETO software will suffer in all of the areas listed.
 For the sake of the WETO software portfolio and the researchers working in these groups,
 it is important to directly consider the needs and expectations of the people
 responsible for designing and implementing research software projects.</p>
-<p>The term research software engineer (RSE) is defined as:</p>
+<p>The term research software engineer (RSE) is defined by the
+<a class="reference external" href="https://society-rse.org/about/">UK-RSE Society</a> as:</p>
 <blockquote>
 <div><p>A Research Software Engineer (RSE) combines professional software engineering expertise with
-an intimate understanding of research.
-<a class="reference external" href="https://society-rse.org/about/">https://society-rse.org/about/</a></p>
+an intimate understanding of research.</p>
 </div></blockquote>
 <p>While all modern research typically involves using research software, it is common for researchers
 to focus skill development on either the research domain or the computational considerations
@@ -1886,7 +1887,7 @@ Submit to Journal of Open Source Software (JOSS) --></section>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-summary">Best Practices Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-best-practices">Summary of best practices</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessibility">Accessibility</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisite-knowledge">Prerequisite knowledge</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution">Distribution</a></li>
