@@ -1019,99 +1019,100 @@ components are GitHub Actions steps.
     \counterwithin{figure}{chapter}
     \counterwithin{table}{chapter}
 
-    \appchapter{The engineer behind the research software}
+    \appchapter{RSE: The engineers behind research software}
     \label{app:A}
-Research software exists in a unique environment.
-The breadth of experience in users and developers is more narrow than in other types of software,
-and the funding mechanisms are often tied to results from using the software rather than
-to the software tools themselves.
+
+Research software exists in a unique environment where the majority of users and developers
+share expertise within a specific field, and funding mechanisms are often tied to results
+from using the software rather than to the software itself.
 Because of these nuances of the research software environment, the incentives to create high
-quality software are often lacking, and this can leave software developers with the difficult
-choice of choosing to prioritize with their work or career but not both.
-Therefore, it is important to directly consider the needs and expectations of the people
+quality software are often misaligned with the career incentives for the engineers
+creating the software.
+Without the appropriate incentives, the best practices listed in this report will never gain
+adoption, and WETO software will suffer in all of the areas listed.
+For the sake of the WETO software portfolio and the researchers working in these groups,
+it is important to directly consider the needs and expectations of the people
 responsible for designing and implementing research software projects.
 
-The term research software engineer (RSE) is defined as:
-\begin{quote}
+The term research software engineer (RSE) is defined by the
+\href{https://society-rse.org/about/}{UK-RSE Society} as:
 
+\begin{quote}
 A Research Software Engineer (RSE) combines professional software engineering expertise with
 an intimate understanding of research.
-\url{https://society-rse.org/about/}
 \end{quote}
 
-While modern research typically involves using research software, it is common for research
-software engineers to focus skill development on either the research domain or the aspects
-related to software engineering.
-Additionally, the research environment in academia and government research labs are structured
-to incentivize academic publication.
-Therefore, the resulting teams are often comprised of domain researchers and research software
-engineers.
+While all modern research typically involves using research software, it is common for researchers
+to focus skill development on either the research domain or the computational considerations
+involved in implementing the research in software.
+The research environments in academia and government labs are often structured to incentivize
+academic publication, so the resulting teams are commonly made up of mostly domain researchers
+and a minority of research software engineers.
 The domain researchers inform the needs of the research software and are the primary users.
-The RSE’s design and develop the software systems as well as manage various IT responsibilities
+The RSE's design and develop the software systems as well as manage various IT responsibilities
 for the group such as creating computer-based workflows, managing data, constructing web-based
 research artifacts, and training colleagues on best practices in research computing.
 
-In this context, note the difference between computer science and software engineering:
+In this context, note the difference between computer science and software engineering (both
+descriptions taken from Wikipedia):
 \begin{itemize}
-\item \textbf{Computer science} is the study of computation, information, and automation.
-Computer science spans theoretical disciplines (such as algorithms, theory of computation,
-and information theory) to applied disciplines (including the design and implementation of
-hardware and software).
-\url{https://en.wikipedia.org/wiki/Computer\_science}
-
-\item \textbf{Software engineering} is an engineering-based approach to software development. A software
-engineer is a person who applies the engineering design process to design, develop, maintain,
-test, and evaluate computer software. The term programmer is sometimes used as a synonym,
-but may emphasize software implementation over design and can also lack connotations of
-engineering education or skills.
-
-Engineering techniques are used to inform the software development process, which involves the
-definition, implementation, assessment, measurement, management, change, and improvement of
-the software life cycle process itself.
-
-\url{https://en.wikipedia.org/wiki/Software\_engineering}
-
+\item \href{https://en.wikipedia.org/wiki/Computer_science}{Computer science} is the study of
+    computation, information, and automation.
+    Computer science spans theoretical disciplines (such as algorithms, theory of computation,
+    and information theory) to applied disciplines (including the design and implementation of
+    hardware and software).
+    
+\item \href{https://en.wikipedia.org/wiki/Software_engineering}{Software engineering} is an
+    engineering-based approach to software development. A software
+    engineer is a person who applies the engineering design process to design, develop, maintain,
+    test, and evaluate computer software. The term programmer is sometimes used as a synonym,
+    but may emphasize software implementation over design and can also lack connotations of
+    engineering education or skills.
+    Engineering techniques are used to inform the software development process, which involves the
+    definition, implementation, assessment, measurement, management, change, and improvement of
+    the software life cycle process itself.
 \end{itemize}
 
-Treat a RSE as an engineer
-\begin{itemize}
-\item \textbf{Many have engineering or science degrees and treat their work as engineering.}
-Don’t refer to them as "programmers" doing "programming".
+\section{RSE value recognition}
+Writing code and designing software systems are entirely different things, and the latter
+must be recognized relative to the value that it adds to the research process.
+Software design and software architecture are complicated topics covered in
+\href{https://www.amazon.com/s?k=software+design&i=stripbooks&crid=2L9GNOIMWHMFD&sprefix=software+design%2Cstripbooks%2C166&ref=nb_sb_noss_2}{text books},
+\href{https://web.stanford.edu/~ouster/cs190-winter23/}{courses at top universities}, and
+\href{https://www.researchgate.net/search.Search.html?query=software+architecture&type=publication&subfilter%5BpublicationType%5D=article%2Fbook&subfilter%5BstartYear%5D=2022}{academic publications}.
+The process of creating a software system given various requirements is a \textit{design process}.
+It involves stating requirements, iterative design, and validation and verification of the design.
+It can take years to fully accomplish a design objective, and at the same time the landscape of
+computers and software development is constantly changing.
+Additionally, software is rarely created by one person, so RSE's have to manage multiple
+contributors making changes simultaneously while also striving to meet the needs of the project.
+Therefore, consider it a best practice within the context of WETO software to recognize
+the contributions and value of RSE's within the labs.
+Avoid trivializing software design as "programming", and consider that many RSE's have engineering
+or science degrees and treat their work as engineering or science.
 
-\item \textbf{Writing code and designing software systems are entirely different things, and the latter must be recognized relative to the value that it adds.}
-Software design and software architecture are very complicated, and the process of developing
-a design given various requirements is a design process. It involves stating requirements,
-iterative design, and validation and verification of the design. It often takes years to fully
-accomplish an objective and at the same time the landscape of computers and software
-development is changing. Additionally, software is rarely created by one person, so the RSE
-has to deal with managing multiple people making changes simultaneously while also trying to
-meet the needs of the project.
-
-\end{itemize}
-
+\section{Career growth and trajectory}
 In addition to acknowledgement of work and value added, it is important to provide meaningful
-career guidance to RSE’s to serve both the personal goals of associated staff and ensure
-that the projects have well-rounded contributors. RSE’s should have some level of domain
+career guidance to RSE's to both serve their personal goals and ensure
+that the projects have well-rounded contributors. RSE's should have some level of domain
 experience; that is to say that they should \textit{use} as well as \textit{develop} their software.
-RSE’s should know the context in which their software exists.
+RSE's should know the context in which their software exists.
 They should be experts in the implementation and very good in the usage.
-A typical career trajectory within the national lab environment look something like this:
+A characteristic career trajectory within the national lab environment may take the following path:
+
 \begin{itemize}
-\item Year 1: Implementing models and developing tests and documentation
-
-\item Year 2: Second author on analyses, improved modeling, informing AOP, and writing developer-specific documentation
-
-\item Year 3: Lead author on analysis work, guiding the direction for future development projects, writing AOP, writing user-specific documentation
-
-\item Year 4: Proposing new work and seeking funding to expand the software project
-
+\item Year 1: Implement models, develop tests and documentation
+\item Year 2: Co-author analyses, improve modeling, inform AOP
+\item Year 3: Lead author analyses, guide future development efforts, writing AOP
+\item Year 4: Proposing new work, seeking funding to expand the software project
+\item Year 5: Inform center-wide software culture and practices
 \end{itemize}
 
-In general, the amount of code written by a developer should peak around year 2 or 3 and
-then start to drop.
-It should not go to 0, but the majority of involvement in software development should be code
-review, design, and project planning.
-
+In general, the amount of code written by a RSE should peak around year 2 or 3 and
+then taper off. The responsibility for creating software should not be entirely removed, but
+the majority of involvement in software development should be code review, design, and
+project planning. As in any career advising, the details should be a discussion between RSE, their
+direct manager, and the center or lab leadership.
 
 
 \end{appendices}
