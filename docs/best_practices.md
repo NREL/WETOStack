@@ -70,152 +70,76 @@ and long term maintenance of their software. Additionally, the answer provide co
 planners to understand why particular decisions were made and discern the consequences of
 changing course.
 
-The best practices outlined in this report are concerned with software quality and are organized
-into the following sections:
-```{contents}
-```
-
-The information is aggregated from experience within WETO-supported software development
-groups as well as external organizations and efforts to define the craft of research software
-engineering. These best practices aim to make the collaborative development process efficient
-and effective while improving the model understanding across stakeholders. Additionally,
+The information in this report is aggregated from experience within WETO-supported software
+development groups as well as external organizations and efforts to define the craft of
+research software engineering. These best practices aim to make the 
+collaborative development process efficient and effective while improving the model
+understanding across stakeholders. Additionally,
 the general adoption of a common framework for software quality ensures that the end users
 of WETO software can trust these tools and accurately understand the risks to workflow integration.
+
+```{contents}
+```
 
 <!-- These are aspects of research software that are critical to robustness, adoption, and ultimate impact.
 Consider these best practices as general guidelines for planning research activities that include the development of software. -->
 
-## WETO Software Manifesto, in short
+## Best Practices Summary
 
-The purpose of each software project, the reason for it's existence and idealized impact, will
-be unique to the project based on it's stakeholders, funding mechanisms, and topic area.
-A common thread across all projects, though, is to apply principles of Design in planning
-development efforts.
-It is often useful to consider varying fidelities of time such as short term feature
-implementations as well as long term strategic targets.
-A key component of design thinking is to identify the question or need that a software project
-and the activities in developing it will answer or resolve.
-As a framework for identifying these targets, ask the following questions of a project:
-- What is its purpose?
-- Who will use it?
-- How will they use it?
-- For how long should it be active or relevant?
-- What is the intended impact?
+[](accessibility)
+- Determine the barriers to entry for expected users and address accessibility accordingly.
+Automate accessibility methods and processes so that it is implicit in the software
+development process.
+- Prerequisite knowledge - Identify target user profiles and anticipate their levels of understanding.
+Accurately understand the complexity of the systems used to access the software, and evaluate
+whether this matches the expected skills in target users.
+Note that technical solutions can be augmented with documentation to address gaps in prerequisite
+knowledge.
+- Distribution - Provide a streamlined method of installation using common software distribution systems.
 
-In all development activities, the user should be considered.
-After all, the current developers will also be end-users at some time in the future.
-People outside the current development process, including active developers at another time,
-will not have the current context.
-All code, algorithms, procedures, documentation, and associated work should maintain this
-perspective.
-Include details so that a newcomer can reasonably understand the meaning and impact of any
-part of the project - and beware of underestimating what is reasonable or overestimating
-human memory or ability to read the docs.
+[](usability)
+- User interface - UIs should be predictable, and adopt existing conventions for the contexts
+in which they exist.
+- Command line interface - If a CLI exists, it should be meaningful, predictable, and well documented.
+Refer to contextual guidelines and conventions for flags, syntax, and functionality.
+At a minimum, provide documentation via the help flag, and extended documentation alongside
+examples and tutorials is helpful.
+- Input and output files - Use a common file structure relevant to the type of data produced from a software,
+and leverage the existing ecosystem of tools to pre and post-process input and output files.
+- Error messages - Identify an error messaging system that enables communicating to users without encumbering
+the development process.
+Provide useful errors that include data, provide guidance for moving forward, and help maintainers
+identify potential bugs.
+- Metadata - Providing metadata to users requires minimal effort for developers, and it enables users to more
+effectively share and compare data and get help. At a minimum, display version numbers, critical
+settings, and dependency info.
 
----
+[](extendability)
 
-You idea is irrelevant until someone else can accurately communicate it back to you.
-Consider your future self - how will your decisions now impact your work in one year, two years, ten years?
-Research software should be predictable and easy
-- Nothing clever
-- Use ubiquitous tools
-- Basically, prevent users from having to go down rabbit holes to understand some nuance of your code
-Study and adopt the [Zen of Python](zen_python). Consider them the Zen of WETO Software Development.
-
-
-Who are the stakeholders?
-- Supporters: Funders and programmatic leaders (PI's)
-- Two kinds of users:
-    1. Practitioners who run the software and evaluate results
-    2. Developers who extend or integrate the software into other systems
-
-How will stakeholders interact with the software?
-- Supporters need text-based and graphical information
-- Address the anticipated needs of the target users
-- Make installation as absolutely easy as possible; automate distribution and installation and
-    focus time on documentation for getting users started
-
-How will practitioners "level up"?
-- Design software behavior and interfaces to be consistent and predictable
-- Provide quality error messages with contextually relevant information
-
-How will developers extend the software without breaking it?
-- Design the architecture so that new features can be clearly scoped within the context of
-    the larger framework
-- Use simple code style (syntax) unless obfuscation is absolutely critical
-    - Choose common libraries with healthy developer ecosystems
-    - Use version control to manage concurrent work
-    - Leverage GitHub features like Pull Requests and Issues to document issues, propose
-        solutions and requirements, and provide code review feedback
-    - 
-
-**Point out that one overarching theme is to DOCUMENT! Write, draw, model - whatever you need - to
-communicate the ideas in your head. If you aren't able to make someone else understand your idea,
-it might as well not exist.
-**An idea only exists if it has been communicated.**
-
-Additional considerations specific to research software:
-- Dont be clever
-    - Ubiquity is essential in research software. Use common standards and conventions.
-    - Many developers are not specialists in software development. Consider them as first-order
-    users and meet their needs. Obfuscated meaning through syntactic sugar degrades the
-    extendability of the software, in general. See the next line.
-- Keep it super simple (KISS)
-
-Software projects exist in varying levels of maturity.
-These best practices should be applied in proportion to the maturity of the project.
-
-consider two kinds of "users":
-- Developers - write new code or modify existing code including infrastructure and documentation
-- Practitioners - execute the software either directly or as a part of another system
-
-Why we care about software quality
-- Collaboration
-- Workflows
-- Accessibility
-
-
-## Call To Action
-
-Develop a style guide
-- One for syntax and code style
-- Another for architecture and design style
-- This is most relevant for long term software projects, but it can be useful to articulate
-    these ideas even for yourself. As in, in the course of developing various projects, iterate
-    on your own personal style guide.
-- Start with [pep8](https://pep8.org) and customize for yourself and your projects
-
-Automate the following:
-- Testing: run the full test suite for every commit in less than 30 minutes
-- Performance profiling: include a statistical measure of performance for each commit
-- Code coverage: report code coverage to a coverage dashboard service (codecov, coveralls)
-- Distribution: build and distribute to all package managers for every release
-- Documentation Hosting: use a service to compile documentation from markup files (md, rst, etc)
-    using a mature framework (jekyll, jupyter-book, etc)
-
-Adopt a framework for testing:
-- pytest for Python
-- google test for C++
-
-Adopt a framework for constructing documentation:
-- Jekyll
-- Jupyter-book
-- Sphinx
-And host it using a typical service
-- GitHub Actions
-- readthedocs
-
-Develop a culture of discussing the features in the software outside of the context of the software, first.
-Then, relate it to the software.
-A common method for this is a design document where new work is described, scoped, prototyped,
-and validated using plain language, graphics, and math.
-
-Write a design document:
-- Identify target users
-- Describe broad themes in the design - What are the objectives of the software architecture?
-- Prototype intended uses like a storyboard
-
-Submit to Journal of Open Source Software (JOSS)
+- How easily a project can be extended is critical to it's viability as a long term
+DOE-funded project.
+Prioritize simplicity in architecture, dependencies, and toolchains.
+Create a development environment balancing modern needs with stability.
+- Code style - Strive to write code that external developers can easily read and comprehend with minimal
+preexisting context.
+- Architecture and design - Adopt an explicit design process where the major ideas are made chosen prior to writing any code.
+- Software design process - Create a parti and list performance requirements for each level of fidelity in the software.
+Establish methods to validate the design and implementation given knowledge of how a software
+is ultimately used.
+- Design patterns - Study existing design patterns, and adopt a few, as needed.
+Refer to existing materials especially relevant to research software architecture.
+- Version control - Craft a version control history that communicates the evolution of changes of the software
+to future developers including the author of current changes.
+Evolve the software in a logical, linear process with digestible, easily reviewable changes.
+- Collaborative workflows with GitHub - Treat GitHub as the home page of a software project, and develop the planning and coordination
+activities as a first-order communication, signalling, and organizational mechanism for the
+community of users.
+- Pull Requests - All components of a pull request should be considered documentation for future reference
+and an aspect of version control.
+PR reviews should be verbose, thorough, positive, and referential to guiding documents.
+- Continuous integration: automating tests, compliance, and delivery - Codify software quality by establishing automated systems to check and provide feedback
+within the development process.
+Offload as many manual processes as possible and practical to the continuous integration system.
 
 (accessibility)=
 ## Accessibility
@@ -227,23 +151,21 @@ while interpreted languages typically require distributing the source code direc
 
 For guidance on developer accessibility, see [](extendability).
 
-Summary:
-- Determine the expected or targeted user profile up front and address accessibility accordingly
-    - Domain experts will need less hand holding than graduate students or the general public
-- Automate accessibility
+The technical approaches to address accessibility depend on the targeted users.
+To identify methods for improving accessibility, first identify the expected users and
+anticipate their barriers to entry.
+Then, create processes and technical solutions to minimize these barriers.
+Finally, automated the processes so that accessibility is implicit to the process rather than
+dependent on developers remembering to meet these needs.
 
 ### Prerequisite knowledge
 
 Using a computer in a scientific context is a learned skill and requires years of practice to
-become proficient. Tools like a "terminal", "shell", or "command prompt" are not initially
+become proficient. Tools like a "terminal", "shell", or "command prompt" are not universally
 intuitive, and that these three terms are used interchangeably can lead to further confusion.
 This is an example of a barrier to entry often encountered by early-career researchers and
 experienced practitioners alike. In order to improve accessibility, it is important to
 understand the experience of users and design software to meet their needs.
-
-**BP: Identify target user profiles and anticipate their levels of understanding. Accurately
-understand the complexity of the systems used to access the software, and evaluate whether
-this matches the expected skills in target users.**
 
 Some examples of common barriers to entry are:
 
@@ -258,14 +180,23 @@ Some examples of common barriers to entry are:
     - Downloading executable files
     - Configuring an environment
 
+Identify target user profiles including their levels of experience of understanding in
+computing environments.
+Then, design the research software so that it matches the expected level of expertise in
+users.
+Note that this is often an iterative process, and technical solutions are not always needed
+to address barriers to entry.
+Explanatory documentation is a major resource in addressing ambiguity or inexperience in
+a particular technology.
+Leverage existing tutorials were necessary; for example, a high-level overview of methods
+to use a terminal in the context of a specific software project along with an accompanying
+link to a deep dive into terminal training can be very helpful.
+
 ### Distribution
 
 Research computing software often depend on third-party libraries, and many of these dependencies
 are research software themselves. Therefore, the installation and environment configuration
 for this type of software can easily become complex.
-
-**BP: It is the responsibility of developers to provide a streamlined method of installation using
-common software distribution systems and automation as much as practical.**
 
 Mature package managers are a great resource since they have a distribution system already in place
 and manage dependencies between software tools.
@@ -295,51 +226,25 @@ The ecosystem of open source software package managers has coalesced around a fe
 The process for including a package in a package management system varies, but all are designed
 to integrate with automated systems to prepare and distribute the package automatically upon
 a given event. The practice of releasing a software package after a tagged release
-(see [](version_control)) or requisite set of changes is called "continuous integration",
-also known as "CI". Tools for this level of automatic are common, and a practical choice
-is [GitHub Actions](https://github.com/features/actions). A typical CI pipeline for a Python
-package is shown below where the square components are GitHub Actions steps. Note that this
-pipeline includes sub-system areas called "Continuous Testing" and "Continuous Deployment".
-
-```{mermaid}
-graph LR
-
-    A(("
-    GitHub Event
-    (i.e. release)
-    "))
-    subgraph Continuous Testing
-        B["Run test suite"]
-    end
-    C{"Pass?"}
-    D["Notify author"]
-    subgraph Continuous Deployment
-        E["Build for conda"]
-        F["Build for PyPI"]
-        G["Publish to conda-forge"]
-        H["Publish to PyPI"]
-    end
-
-    A --> B
-    B --> C
-    C -->|No| D
-    C -->|Yes| E
-    C -->|Yes| F
-    E --> G
-    F --> H
-```
+(see [](version_control)) or requisite set of changes is called "continuous distribution",
+a component of "continuous integration. See [](continuous) for details.
+Tools for this level of automation are ubiquitous, and a practical choice
+is GitHub Actions (see [](github)).
 
 (usability)=
 ## Usability
 
 Usability is concerned with how practitioners are expected to execute the software including
-creating inputs and managing outputs. 
-
-
-Nuances of research software:
-- "Design" is typically not a consideration at all
-- It is typical to adopt "patterns", so there is very little evolution of software interface design and therefore usability
-- Research software is expected to be predictable and similar to what users already know. The challenge is to understand the existing paradigms and adopt them well.
+creating inputs and managing outputs.
+While the content and promise of a particular software will bring users to it in the first
+place, the ease of usability is responsible for keeping them engaged with the software.
+In this context, consider any user interfaces including messaging back to the user through
+errors as the "touch points" that should be optimized.
+Developers should recall their own experience in using software including outside
+of the research environment.
+Contemporary software consumers have short attention spans and will generally choose
+the path of least resistance to accomplish a task even at the cost of access to a more
+advanced feature.
 
 ### User interface
 
@@ -355,7 +260,6 @@ WETO software UI's should be well defined and predictable.
 They should adopt the conventions that already exist in the environments and contexts
 in which they're used.
 Most importantly, all user interfaces should be well documented.
-
 
 #### Command line interface
 
@@ -393,6 +297,12 @@ option improves usability.
     - Python: `-` or `--`
     - Windows command prompt: `/`
 
+Command line interfaces should include documentation via the `--help` / `-h` flag.
+For Python software, using the standard [argparse](https://docs.python.org/3/library/argparse.html)
+library creates a help prompt automatically.
+Extended CLI documentation alongside tutorials and explanations of the software is helpful to
+attach meaning to the functionality available via the CLI.
+
 #### Input and output files
 
 The ecosystem of tools for processing data files is vast and mature.
@@ -404,7 +314,7 @@ libraries are available to export the data and load it into post-processing tool
 Similarly, input files should retain a ubiquitous human-readable format such as
 [YAML](https://yaml.org) as this allows users to generate input files programmatically
 using standard libraries. Input and output files required by WETO software should
-adhere to the following conventions and principles.
+adhere to the following conventions and principles:
 
 - Simple, clear, and predictable structure
 - Expressive and concise
@@ -413,14 +323,31 @@ adhere to the following conventions and principles.
     - For large data sets, option to split into smaller files or binary format
 - Typical and predictable data types
 
+File types with common libraries for popular language ecosystems are:
+- [JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) - JavaScript
+    Object Notation; a very common data structure used throughout the web and in various
+    computing environments
+- [YAML](https://yaml.org) - YAML Aint Markup Language; not entirely but basically a
+    human-readable version of JSON
+- [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) - Comma separated values
+- [VTK](https://examples.vtk.org/site/VTKFileFormats/) - Visualization Tool Kit; a variety of
+    file types and readers for different types of data
+- [HDF5](https://portal.hdfgroup.org/display/HDF5/HDF5) - Hierarchical Data Format; used for large,
+    complex, heterogeneous data sets; HDF includes libraries for reading and writing HDF files
+- [Plot3D](https://github.com/nasa/Plot3D_utilities) - Data type for 3D structured grid data
+- [CGNS](https://cgns.github.io/WhatIsCGNS.html) - CFD General Notation System
+- [Markdown](https://www.markdownguide.org/getting-started/) - A markup language for text documents
+- [reStructured Text](https://docutils.sourceforge.io/rst.html) - A markup language for text
+    documents
+
 ### Error messages
 
-Messaging to practioners from within a software can be immensely helpful.
+Messaging to practitioners from within a software can be immensely helpful.
 At the same time, the infrastructure for communicating messages can be a heavy lift.
 It is important to find a balance of appropriate levels of messaging while also ensuring that
 the messages themselves are up to date with the software features and implementations.
 Too much messaging results in information overload and critical messages can be lost in noise.
-Additionally, messaging is another develop responsibility and can be overlooked among all of the
+Additionally, messaging is another developer responsibility and can be overlooked among all of the
 other responsibilities during the development cycle.
 
 Useful error messages:
@@ -433,7 +360,6 @@ Useful error messages:
 - Include information that will help project maintainers understand the context of the problem
     - Include metadata where relevant; see [](metadata)
     - Include the value of data that is found invalid
-
 
 (metadata)=
 ### Metadata
@@ -463,10 +389,11 @@ maintenance are added to an existing software project. This covers both the tech
 as well as the management of multiple developers and development efforts happening
 concurrently.
 
-The lifecycle of WETO software typically follows a cyclical pattern of funding, development, and
-release, as depicted below. Note that the "Maintenance" tasks are usually optional and included
+The lifecycle of WETO software projects typically follows a pattern of funding,
+development, and release resulting in a recurring development workflow depicted below.
+The "Maintenance" tasks are usually optional and implicitly embedded
 in future development efforts. Therefore, it is critical to the life of all WETO software to
-prioritize extendability so that future funding opportunities are attractive to stakeholders
+prioritize extendability so that future funding opportunities are attractive to stakeholders,
 and general maintenance and infrastructure upgrades can be introduced with minimal overhead.
 
 <!-- TODO: strengthen this intro. The point is that maintenance is key to the life of WETO software.
@@ -493,18 +420,21 @@ flowchart LR
     d -.-> a
 ```
 
-Is the code open source?
-If not, is there a build system with modern dependencies?
-i.e. Makefiles are outdated, use CMake
+This topic is closely tied to [](communicating_design), and the objective is to ensure that
+developers can easily approach the project with minimal overhead required to align their
+computing environment, scope the work, implement the changes, and verify the results.
 
-<!-- Nuances of research software:
-- **The life and relevance of research software critically depends on new developers coming into the project** -->
-
-This is closely tied to **(6) methodologies for communicating intent and verifying implementation**
-Generally, use ubiquitous infrastructure
-- Project managers can rely on mature third party tools to handle complex systems
-- Mature third party tools typically come with their own documentation
-
+A guiding principle on extendability is to use ubiquitous infrastructure.
+Mature and ubiquitous tools and libraries come with formal and community-based documentation,
+ecosystems of tools such as IDE extensions, and institutional or cultural knowledge of
+their use and nuances that can be difficult and time consuming to create for specialized
+infrastructure.
+Common build systems such as CMake with the GNU or LLVM toolchains should be used instead of
+the newest projects.
+Popular programming languages (Python, C++, Fortran) are more approachable than specialized
+languages (Rust, Julia, Elixir), and enable a wider developer base.
+Software project managers should strive to create a development environment balancing the need for
+modern tooling, modern developer expectations, and stability.
 
 ### Code style
 
@@ -530,7 +460,8 @@ That such a word exists and is widely used in software development illustrates t
 of clear and understandable code.
 WETO software should avoid complexity where possible and favor readability over writability.
 Strive to create software that can be easily grokked by developers who do not have the current
-context.
+context, and remember that often these developers are domain experts rather than
+computer scientists.
 
 The designers of the Python programming language consider readability as a primary priority, and
 the most famous of the many Python language-development documents is
@@ -540,6 +471,25 @@ PEP 8 is summarized into 19 aphorisms (20 including one that's implied) and is r
 Python-based, so these guiding principles directly apply. However, these principles are
 programming language agnostic and eloquently describe the paradigm for developing
 extendable software.
+
+<!-- Consider the readability of the following code snippets. Each line within a block accomplishes
+an equivalent task, but each uses a different level of obfuscation.
+
+```python
+# Get the shape of a Numpy array
+array = np.array(...)
+
+array.shape()
+np.shape(array)
+```
+
+```python
+
+```
+
+```python
+
+``` -->
 
 (zen_python)=
 #### The Zen of Python
@@ -569,29 +519,101 @@ extendable software.
     If the implementation is easy to explain, it may be a good idea.
     Namespaces are one honking great idea -- let's do more of those!
 
+### Architecture and design
+
+```{epigraph}
+If you think good architecture is expensive, try bad architecture.
+
+-- Brian Foote and Joseph Yoder, Clean Architecture: A Craftsman's Guide to Software Structure and Design
+```
+
+In the development of any complex system, the design and it's implementation are either
+explicit or implicit.
+Explicit design involves identifying relationships between modules, composition of data
+structures, and flow of data prior to writing code, whereas an implicit design evolves during the
+process of writing new code.
+In open source software, an explicit design process is critical to allowing the project
+to grow beyond a single developer, and the consequence of an implicit design process
+is the common case of technical debt.
+
+#### Software design process
+Primarily, an explicit design process involves identifying the fundamental principles
+of a particular design - how it is expected to function in various aspects.
+This process should result in two statements:
+1. The [parti](https://en.wikipedia.org/wiki/Parti_(architecture)), a description of the
+    fundamental, driving design intent as a brief text (one or two sentences) or a
+    simple diagram
+2. A list of requirements that the parti and it's implementation should satisfy
+
+The *parti* is the abstract objective and the list of requirements are the criteria
+to verify that the implementation satisfies the *parti*.
+In other words, these are the tests for the design.
+Upon establishing this information, it should be codified into a design document and style
+guide that are made publicly available to all developers such as in online documentation.
+
+There are various levels of fidelity to consider when designing a software system:
+- Level 0: Syntax and code style
+- Level 1: Function scope, function signatures
+- Level 2: Module composition
+- Level 3: System composition
+
+Each should be addressed individually but referring to each other. For example, having a major
+design driver to limit complexity at Level 3 can be negated if complexity is allowed
+at Level 0. However, the definition of complexity at these levels are entirely different and
+should be directly defined.
+
+```{epigraph}
+Architecture is a hypothesis that needs to be proven by implementation and measurement
+
+-- Tom Gilb, Clean Architecture: A Craftsman's Guide to Software Structure and Design
+```
+
+While having an explicit design process is important, it is not required to stick to a chosen
+design at all cost.
+Throughout the development of a software, the architecture and design should be regularly
+revisited and reevaluated given the new knowledge acquired during implementation.
+How a software is ultimately used and the problems faced cannot be known at design time,
+so developing a process for design validation is required.
+
+#### Design patterns
+The software engineering community has created a wide range of
+[design patterns](https://en.wikipedia.org/wiki/Software_design_pattern#Classification_and_list)
+to address specific design problems.
+These are often used as a reference for creating a specific architectural design,
+and they often focus on fidelity levels 1 and 2.
+Multiple design patterns can even be pieced together to create a high-level monolithic architecture.
+The benefits of adopting an existing design pattern are:
+- The methods to describe the design pattern to new developers are already established
+- Teams can work with the architecture in the abstract to develop their concrete customized
+    implementation
+- Ecosystems of third-party tools exist to leverage some of the common design patterns
+- Some patterns can be easily replaced by others *in situ*
+
+While software architecture and software design patterns are entire fields of knowledge,
+many resources exist to teach common methods.
+A few in depth references specifically relevant to WETO-supported research software are:
+- Uncle Bob's [Clean Architecture: A Craftsman's Guide to Software Structure and Design](https://books.google.com/books/about/Clean_Architecture.html?id=uGE1DwAAQBAJ&source=kp_book_description)
+- [IDEAS-ECP HPC Best Practices Webinar: Software Design Patterns in Research Software with Examples from OpenFOAM](https://www.youtube.com/watch?v=UWmkj-9SdAI)
+- Architecture of Open Source Applications [Volume 1](https://aosabook.org/en/#aosa1) and [Volume 2](https://aosabook.org/en/#aosa2)
 
 (version_control)=
 ### Version control
 
-Version control, typically with `git`, is a tool for tracking the evolution of a project change
-by change establishing a history of changes.
-Each change is itself a version of the software, and they provide a snapshot of thought
-processes and progression of work.
+Version control, typically with [git](https://git-scm.com), is a tool for tracking the
+evolution of a project change by change establishing a history of changes.
+Each change, called a "commit", is itself a version of the software, and, collectively,
+the changes provide a snapshot of thought processes and progression of work.
 
-BP: Craft a version control history that communicates the evolution of changes of the software
-to future developers including the author of current changes.
-BP: Evolve the software in a logical, linear process with digestible change sizes.
-
-Version control with git is often a secondary consideration in the software development process.
-It can seem like simply a mechanism to "save" the state of a document.
+Version control with git can seem like simply a mechanism to "save" the state of a document,
+and it is easy to relegate this process to a secondary concern in the development process.
 However, it carries far more meaning in the context of software extendability.
-Since the git system is decentralized, it allows for multiple developers to make changes to a
+Since the git system is decentralized, it allows multiple developers to make changes to a
 project concurrently.
 Git also provides a mechanism for resolving differences so that multiple changes can be merged
 together easily.
 
-In addition to the content of changes themselves, the connectivity between changes is valuable
-over the lifetime of a project.
+In addition to the content of changes themselves, the connectivity between changes over the
+lifetime of a project is meaningful.
 The connectivity between commits is structured as a
 [directed acyclical graph (DAG)](https://en.wikipedia.org/wiki/Directed_acyclic_graph).
 Each commit has a parent and each parent can have multiple children.
@@ -600,6 +622,10 @@ time in history.
 
 To best leverage the power of git to enable extendability, consider the following guidelines:
 - It is reasonable to spend time crafting each commit and a sequence of commits.
+- Each commit should optimize for readability in both the content of the changes and the message
+    - Keep changes within an easily communicated scope
+    - Avoid the temptation to mix formatting changes with algorithmic changes
+    - More smaller commits are generally better than fewer large commits
 - Practice editing a series of commits to ensure that the progress of work is captured accurately.
 - Consider whether the commit history is concise and readable to people who are not the authors.
 - Become familiar with the following actions:
@@ -612,25 +638,32 @@ To best leverage the power of git to enable extendability, consider the followin
     50 character line. The second line is typically limited to 70 characters, but it is
     considered reasonable to use as much space as needed.
 
+<!--
+TODO
+Add examples of good and bad commit messages
+
+Update README
+Update README
+Update README
+Update README
+
+Update solver
+
+End of day updates
+
+Fix bug
+-->
+
+(github)=
 ### Collaborative workflows with GitHub
 
 The processes through which developers interact with a software and other developers is
 an essential component of extendability.
 These processes should generally strive for efficiency while minimizing overhead.
 Automated processes are better than manual processes, and objective is better than subjective.
-The majority of collaborative software development processes occur on cloud-based resources on
-the GitHub platform.
-
-**BP: Plan and coordinate software development efforts into a collaborative workflow using GitHub**
-
-**BP: Automate code quality feedback as much as possible via GitHub Actions**
-
-GitHub contains some key features for coordinating software development:
-- Issue tracking
-- Forum-style discussions
-- Pull request and code review
-- Project boards
-- Releases
+The majority of collaborative software development processes occur on the
+[GitHub](https://github.com) platform and automated processes leverage GitHub's free
+cloud-based resources.
 
 GitHub and git (see [](version_control)) are tightly connected, but they are different
 systems and serve different purposes in the development process.
@@ -640,13 +673,16 @@ around the development cycle.
 GitHub activities add context on top of the individual changes captured in commits.
 Whereas commits often capture low-level information, GitHub activities can map the low level
 details to high-level efforts.
+GitHub provides extensive [training material](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources)
+for git as well as GitHub features.
 
-Become familiar with GitHub features and leverage them to plan and communicate.
-<!-- TODO Include a link to resources to learn about GitHub -->
+The primary GitHub features are described below, and a typical sequence of events across these
+features is diagramed.
 
-GitHub features can be used a many ways. The primary features are described below and a typical
-sequence of events across these features is described.
-
+- [Actions](https://github.com/features/actions): This is a full-featured cloud computing
+    environment that is typically used for automating software quality processes such as
+    running tests, compiling software for release and distribution, and compiling and deploying
+    online documentation.
 - [Discussions](https://docs.github.com/en/discussions): This is typically the starting point
     for any collaboration. Create a discussion topic and engage with other model stakeholders
     to define the idea and develop a proposed implementation.
@@ -702,135 +738,193 @@ sequenceDiagram
     deactivate Maintainer
 ```
 
-Along with git, GitHub provides a helpful mechanism to capture design intent, factors that lead
-to particular decisions, and the evolution of a project for future reference.
-However, it is important carefully craft the messages to avoid washing out information
-with noise.
-The following are guidelines to consider when engaging on GitHub.
+The combination of git and GitHub provides a powerful mechanism to capture design intent,
+factors that lead to particular decisions, and the evolution of a project for future reference.
+It is important carefully craft the messages to avoid washing out information with noise.
+Consider the following guidelines when engaging on GitHub.
 
 - Descriptions of any activity should be well scoped and easily understandable.
-- Pictures really are worth 1,000 words. Always include a diagram, plot, screenshot, or picture
+- Pictures really are worth 1,000 words. Include a diagram, plot, screenshot, or picture
     when it will add clarity.
 - Prefer actual text over of screenshots of text. GitHub is searchable, so text provides more
-    searchable context whereas screenshots do not. Additionally, text-based code snippets can be
+    searchable content whereas screenshots do not. Additionally, text-based code snippets can be
     copied easily by other users.
-- Establish a practice of assigning responsibility for each Issue and Pull Request. Without
-    a person to take ownership, these will remain unaddressed.
-
+- Establish a practice of assigning responsibility to a core team member for each Issue and
+    Pull Request to avoid ambiguity about how these will be addressed.
 
 (pullrequests)=
 ### Pull Requests
 
-A pull request is a request to merge a particular set of code changes into another copy of the
-software, typically an agreed upon "main" version.
+A pull request, or "PR", is a request to merge a particular set of code changes into another
+instance of the software, typically an agreed upon "main" version.
+Pull request descriptions should include contextual information regarding the code change.
+The objective is to convince reviewers and maintainers that the new code is in a good state,
+and that it's inclusion would be a benefit to the project. This typically involves a contextual
+description of the change, an explanation of why the change is valid, and an overview of the
+tests added to the test suite to demonstrate and exercise the new code.
 
-Pull requests should include contextual information regarding the code change. The intention is
-to convince reviewers and maintainers that the new code is in a good state and that it's
-inclusion would be a benefit to the project. This typically involves a contextual description of
-the change and a description of why the change is valid and well tested.
+The size and scope of a pull request should be chosen so that it is both easy to explain and
+easy to review.
+It is common to create many pull requests in the development of a single
+feature as this process enables periodically syncing forks or branches and supports
+milestones or periodic check-ins throughout development.
+The primary objective is to optimize for readability in the pull request description as well as
+the code changes themselves.
 
-Futhermore, GitHub automatically constructs release notes from all of the pull requests merged
-since the previous release.
-It automatically takes the titles of each pull request to construct the release notes.
-"Update XYZ" again provides no context and more work is required to communicate what has changed
-to users and downstream dependencies.
+Consider pull requests titles and descriptions as documentation that will be relevant to
+future developers.
+When a pull request is merged, it can either be combined into one commit (squash and merge)
+in the destination branch or included through a merge-commit.
+The former does not maintain the commit history of the working branch while the latter does.
+The squash-and-merge approach is often preferred by project maintainers due to it's simplicity,
+and in this case the title of the pull request becomes the commit message.
+Since merging the pull request directly affects the commit history of the destination branch,
+the review and merge process should also follow the [](version_control) guidelines.
+Finally, the release process through GitHub Releases can automatically construct
+release notes from the title of all pull requests merged since the previous release.
 
-All version control messages (commits and pull requests) should communicate what the change
-accomplishes.
-Vague messages such as "updated solver" are distracting and lack meaning.
+While the details of workflows around defining, designing, and implementing new development
+efforts should be identified explicitly following the guidance in [](github), pull requests,
+in practice, are often a good place to iterate collaboratively on the design and implementation
+details.
+Pull request reviews should have the following characteristics:
+- Be very verbose with efficient but specific and complete feedback
+- Be constructive rather than destructive; blame (negative) is nearly always irrelevant,
+    and credit (positive) is nearly always appreciated
+- Call out good ideas as well as bad ideas
+- Include snippets of code to exercise portions of the changes
+- Include plots or graphics showing the impact of the changes
+- Refer to precedent or contextual conventions
+- Refer to design documentation and style guides
 
+The [GitHub Pull Request Review documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request)
+provides a detailed guide on using the various features to suggest and integrate
+code review feedback.
 
+(continuous)=
+### Continuous integration: automating tests, compliance, and delivery
+The term "continuous integration", or "CI", is often used to refer to any of the many
+automated systems that support software quality.
+In it's essence, continuous integration refers to the practice of deploying a change in
+the code directly into the production or released version.
+This practice is enabled by constructing a system of quality check infrastructure that gives
+maintainers the confidence to accept a change and release immediately.
+The "continuous" aspect refers to the automated nature of the quality check systems.
+Ideally, full continuous integration requires that all characteristics and potential
+impacts of a code change are tested and validated automatically and without human
+input, such as:
+- Requiring that new code is covered by unit tests, integration tests, and regression tests
+- Checking that impacts to computational cost (speed) are within a threshold
+- Checking that memory impacts are within a threshold
+- Validating documentation changes and functionality
+- Linting for code syntax
 
+It can be helpful to break the topic of CI into three general areas:
+- Continuous testing (CT)
+- Continuous compliance (CC)
+- Continuous delivery (CD)
 
-### Automated Quality Checks - Continuous-N
+Continuous testing is established by adopting a testing framework and ensuring that all
+new code is well tested. While automatically testing the *quality* of test may be impractical,
+it is simple and helpful to automatically check the *quantity* of tests to ensure that new
+code is covered.
+For the same of a user-friendly CT pipeline, consider grouping tests into categories
+that can be run in parallel by the automated system.
+Also, minimize the time required to execute the test suite so that developers get
+the automated feedback as soon as possible.
 
-Continuous Integration can be mean many things:
-- Continuous building
-- Continuous testing
-- Continuous distribution
-- Continuous integration (into the repository)
+Continuous compliance is related to automatically checking for code style, complexity,
+existence of docstrings or other types of documentation, and any other requirements
+that describe aspects of the code itself.
+A common method is to use a linter for the programming language used.
+Most linters are high configurable so it can be tailored to the needs and style of
+the development team.
+This step typically happens very quickly, so execution time is usually not a concern.
 
+Continuous delivery handles how the software is exported to users for consumption.
+For web-based software, this involves deploying to a server, whereas modeling and analysis
+libraries are typically delivered via package managers or compiled binaries.
+The "continuous" aspect of CD refers to the practice of automatically pushing the
+"released" product upon any change to the primary branch or via a periodic semi-automated
+release process.
 
-(stability)=
-## Code Stability
+All aspects of CI contribute to the quality of a software project, and a full ecosystem
+of open source, freely available infrastructure is available to address them all.
+Ultimately, though, the true beneficiary of CI pipelines are the developers and maintainers
+since major portions of quality enforcement and distribution are automated.
+Without this infrastructure, code reviews can be prohibitively time consuming and error prone,
+and the release process can take hours or days.
+By committing to the initial investment and regular maintenance, computers handle
+these detailed and repetitive tasks.
 
-The considerations given to long term stability of a software project directly correlate to the
-lifespan and ultimate impact of the project.
-When a software project has a stable code, all users can have consistent expectations
-and the [extendability](extendability) is greatly improved.
-In this context, stability means changing the source code in intentional and controlled ways
-so that all users are able to adopt the changes with minimal effort.
-Establishing code stability typically involves creating infrastructure to address needs around
-dependency management, testing, profiling, and documentation.
+Given the inherent challenges in managing groups of people with various software
+development styles and opinions, establishing the automated systems described here
+can help to align expectations around minimum standards for acceptance of code while
+reducing the burden on a project's "benevolent dictator" or gatekeeper.
+It is recommended to establish these processes at the onset of a software project, and
+continuously adjust as needed.
 
-Code stability is most practically address through automated processes.
-This infrastructure is typically automated through services like GitHub,
-and it is targeted at developers in two categories:
-- **Maintainers** who will keep the infrastructure running, update dependency versions and API's,
-    and address bugs
-- **Extenders** who will periodically return to the software to add new features
+For reference, a typical CI pipeline for a Python package is shown below where the square
+components are GitHub Actions steps.
 
-Nuances of research software:
-- The landscape is broad and the associated ecosystem changes very quickly but adoption is very slow
-- iOS for example runs on a small set of well-known hardware
-- Research funding cycles do not include maintenance
+```{mermaid}
+graph LR
 
-The maintenance component of sustainability deals with ensuring that, even with no changes
-internally, the software can continue to function with changes that happen externally.
-This can involve updates to the software to support new operating systems, virtual machines,
-runtime environments, and hardware components.
-A recent example is the introduction of Apple computers with Arm-based CPU's rather than the
-canonical Intel x86 architecture.
-This change resulted in unusable ecosystems of software including compilers, interpreters,
-debuggers, and profilers that required upgrades to support the new systems.
+    A(("
+    GitHub Event
+    (i.e. release)
+    "))
+    subgraph Continuous Testing
+        B["Run test suite"]
+    end
+    subgraph Continuous Compliance
+        C["Run linters"]
+        D["Run performance and memory checks"]
+        E["Check for docstrings"]
+    end
+    F{"Pass?"}
+    G["Notify author"]
+    subgraph Continuous Deployment
+        H["Build for conda"]
+        I["Build for PyPI"]
+        J["Build documentation"]
+        K["Publish to conda-forge"]
+        L["Publish to PyPI"]
+        M["Deploy documentation"]
+    end
 
-The extension component ensures that developers who work to add new features and improvements are
-able to determine whether their change had the intended effect and no side effects.
+    A --> B
+    A --> C
+    A --> D
+    A --> E
 
-(accuracy)=
-## Accuracy
-
-Validation - Are you building the right thing?
-Verification - Are you building the thing right?
-
-- Barry Boehm, Software Engineering Economics, 1981
-
-Test driven development - formalize the ideas that drive development.
-A portion of code should not be added without a formal proof of correctness and robustness.
-Consider testing like writing a report - prove to the reader that it is correct and should be accepted.
-
-Phenomenon identification and ranking table
-- David Maniaci
-
-(communicating_design)=
-## Methodologies for communicating intent and verifying implementation
-
-To understand how a change fits into the big picture, it is required to have a sense for the picture from the start.
-Develop diagrams for code architecture and regularly check and update them as the architecture changes.
-
-Types of diagrams:
-
-- State / flow diagrams
-- Class hierarchy
-- Data construction and operation - Show a representative problem describing how operations happen on data in various contexts (serial vs parallel, cpu vs gpu)
-
-Identify and communicate the *parti*.
-
-TODO: add descriptions and examples of UML
-TODO: Describe communicating design intent
-
+    B --> F
+    C --> F
+    D --> F
+    E --> F
+    
+    F -->|No| G
+    F -->|Yes| H
+    F -->|Yes| I
+    F -->|Yes| J
+    H --> K
+    I --> L
+    J --> M
+```
 
 (rse)=
-## Appendix - The engineer behind the research software
+## Appendix - RSE: The engineers behind research software
 
-Research software exists in a unique environment.
-The breadth of experience in users and developers is more narrow than in other types of software,
-and the funding mechanisms are often tied to results from using the software rather than
-to the software tools themselves.
+Research software exists in a unique environment where the majority of users and developers
+share expertise within a specific field, and funding mechanisms are often tied to results
+from using the software rather than to the software itself.
 Because of these nuances of the research software environment, the incentives to create high
-quality software are often lacking, and this can leave software developers with the difficult
-choice of choosing to prioritize with their work or career but not both.
-Therefore, it is important to directly consider the needs and expectations of the people
+quality software are often misaligned with the career incentives for the engineers
+creating the software.
+Without the appropriate incentives, the best practices listed in this report will never gain
+adoption, and WETO software will suffer in all of the areas listed.
+For the sake of the WETO software portfolio and the researchers working in these groups,
+it is important to directly consider the needs and expectations of the people
 responsible for designing and implementing research software projects.
 
 The term research software engineer (RSE) is defined as:
@@ -838,66 +932,74 @@ The term research software engineer (RSE) is defined as:
   an intimate understanding of research.
   https://society-rse.org/about/
 
-While modern research typically involves using research software, it is common for research
-software engineers to focus skill development on either the research domain or the aspects
-related to software engineering.
-Additionally, the research environment in academia and government research labs are structured
-to incentivize academic publication.
-Therefore, the resulting teams are often comprised of domain researchers and research software
-engineers.
+While all modern research typically involves using research software, it is common for researchers
+to focus skill development on either the research domain or the computational considerations
+involved in implementing the research in software.
+The research environments in academia and government labs are often structured to incentivize
+academic publication, so the resulting teams are commonly made up of mostly domain researchers
+and a minority of research software engineers.
 The domain researchers inform the needs of the research software and are the primary users.
 The RSE's design and develop the software systems as well as manage various IT responsibilities
 for the group such as creating computer-based workflows, managing data, constructing web-based
 research artifacts, and training colleagues on best practices in research computing.
 
-
-In this context, note the difference between computer science and software engineering:
-- **Computer science** is the study of computation, information, and automation.
+In this context, note the difference between computer science and software engineering (both
+descriptions taken from Wikipedia):
+- [Computer science](https://en.wikipedia.org/wiki/Computer_science) is the study of
+    computation, information, and automation.
     Computer science spans theoretical disciplines (such as algorithms, theory of computation,
     and information theory) to applied disciplines (including the design and implementation of
     hardware and software).
-    https://en.wikipedia.org/wiki/Computer_science
-- **Software engineering** is an engineering-based approach to software development. A software
+    
+- [Software engineering](https://en.wikipedia.org/wiki/Software_engineering) is an
+    engineering-based approach to software development. A software
     engineer is a person who applies the engineering design process to design, develop, maintain,
     test, and evaluate computer software. The term programmer is sometimes used as a synonym,
     but may emphasize software implementation over design and can also lack connotations of
     engineering education or skills.
-
     Engineering techniques are used to inform the software development process, which involves the
     definition, implementation, assessment, measurement, management, change, and improvement of
     the software life cycle process itself.
 
-    https://en.wikipedia.org/wiki/Software_engineering
+### RSE value recognition
+Writing code and designing software systems are entirely different things, and the latter
+must be recognized relative to the value that it adds to the research process.
+Software design and software architecture are complicated topics covered in
+[text books](https://www.amazon.com/s?k=software+design&i=stripbooks&crid=2L9GNOIMWHMFD&sprefix=software+design%2Cstripbooks%2C166&ref=nb_sb_noss_2),
+[courses at top universities](https://web.stanford.edu/~ouster/cs190-winter23/),
+and [academic publications](https://www.researchgate.net/search.Search.html?query=software+architecture&type=publication&subfilter%5BpublicationType%5D=article%2Fbook&subfilter%5BstartYear%5D=2022).
+The process of creating a software system given various requirements is a *design process*.
+It involves stating requirements, iterative design, and validation and verification of the design.
+It can take years to fully accomplish a design objective, and at the same time the landscape of
+computers and software development is constantly changing.
+Additionally, software is rarely created by one person, so RSE's have to manage multiple
+contributors making changes simultaneously while also striving to meet the needs of the project.
+Therefore, consider it a best practice within the context of WETO software to recognize
+the contributions and value of RSE's within the labs.
+Avoid trivializing software design as "programming", and consider that many RSE's have engineering
+or science degrees and treat their work as engineering or science.
 
-Treat a RSE as an engineer
-- **Many have engineering or science degrees and treat their work as engineering.**
-    Don't refer to them as "programmers" doing "programming".
-- **Writing code and designing software systems are entirely different things, and the latter must be recognized relative to the value that it adds.**
-    Software design and software architecture are very complicated, and the process of developing
-    a design given various requirements is a design process. It involves stating requirements,
-    iterative design, and validation and verification of the design. It often takes years to fully
-    accomplish an objective and at the same time the landscape of computers and software
-    development is changing. Additionally, software is rarely created by one person, so the RSE
-    has to deal with managing multiple people making changes simultaneously while also trying to
-    meet the needs of the project.
-
+### Career growth and trajectory
 In addition to acknowledgement of work and value added, it is important to provide meaningful
-career guidance to RSE's to serve both the personal goals of associated staff and ensure
+career guidance to RSE's to both serve their personal goals and ensure
 that the projects have well-rounded contributors. RSE's should have some level of domain
 experience; that is to say that they should *use* as well as *develop* their software.
 RSE's should know the context in which their software exists.
 They should be experts in the implementation and very good in the usage.
-A typical career trajectory within the national lab environment look something like this:
+A characteristic career trajectory within the national lab environment may take the following path:
 
-- Year 1: Implementing models and developing tests and documentation
-- Year 2: Second author on analyses, improved modeling, informing AOP, and writing developer-specific documentation
-- Year 3: Lead author on analysis work, guiding the direction for future development projects, writing AOP, writing user-specific documentation
-- Year 4: Proposing new work and seeking funding to expand the software project
+- Year 1: Implement models, develop tests and documentation
+- Year 2: Co-author analyses, improve modeling, inform AOP
+- Year 3: Lead author analyses, guide future development efforts, writing AOP
+- Year 4: Proposing new work, seeking funding to expand the software project
+- Year 5: Inform center-wide software culture and practices
 
-In general, the amount of code written by a developer should peak around year 2 or 3 and
-then start to drop.
-It should not go to 0, but the majority of involvement in software development should be code
-review, design, and project planning.
+In general, the amount of code written by a RSE should peak around year 2 or 3 and
+then taper off. The responsibility for creating software should not be entirely removed, but
+the majority of involvement in software development should be code review, design, and
+project planning. As in any career advising, the details should be a discussion between RSE, their
+direct manager, and the center or lab leadership.
+
 
 
 <!--
@@ -951,9 +1053,6 @@ How long do we expect it to be relevant?
 
 **Require each project to develop a software engineering road map as well as a capabilities road map**
 
-Establish a grading scheme for software projects in future years
-- Tie the grading scheme to the technical report so that any areas of the grades can reference back to the best practices
-
 
 **Documentation** Describe the diataxis framework
 
@@ -965,10 +1064,7 @@ Talk about code reviews and what to consider when reviewing and proposing code.
 - Consider the big pictures: what do these changes add to the project? how is it better than before?
 - Run the code! Try to break it. Really exercise the new code. It's not enough to simply read it.
 -  
--->
 
-### Architecture
-Support modularity
 
 Design in such a way to allow for future flexibility
 - Think about systems in discrete chunks rather than monoliths
@@ -995,6 +1091,7 @@ Design for usability
     of being null or the value itself. If this input enables / disables a feature, this should
     be made abundantly clear to the user.
 
+-->
 
 <!--
 # Notes
@@ -1016,3 +1113,229 @@ https://github.com/readme/featured/how-open-is-open-source?mc_cid=50779693b9&mc_
 Documentation as a way to build community
 https://labs.quansight.org/blog/2020/03/documentation-as-a-way-to-build-community
 -->
+
+
+
+<!-- (communicating_design)=
+## Methodologies for communicating intent and verifying implementation
+
+To understand how a change fits into the big picture, it is required to have a sense for the picture from the start.
+Develop diagrams for code architecture and regularly check and update them as the architecture changes.
+
+Types of diagrams:
+
+- State / flow diagrams
+- Class hierarchy
+- Data construction and operation - Show a representative problem describing how operations happen on data in various contexts (serial vs parallel, cpu vs gpu)
+
+Identify and communicate the *parti*.
+
+TODO: add descriptions and examples of UML
+TODO: Describe communicating design intent -->
+
+
+<!-- (accuracy)=
+## Accuracy
+
+Validation - Are you building the right thing?
+Verification - Are you building the thing right?
+
+- Barry Boehm, Software Engineering Economics, 1981
+
+Test driven development - formalize the ideas that drive development.
+A portion of code should not be added without a formal proof of correctness and robustness.
+Consider testing like writing a report - prove to the reader that it is correct and should be accepted.
+
+Phenomenon identification and ranking table
+- David Maniaci -->
+
+
+<!-- (stability)=
+## Code Stability
+
+The considerations given to long term stability of a software project directly correlate to the
+lifespan and ultimate impact of the project.
+When a software project has a stable code, all users can have consistent expectations
+and the [extendability](extendability) is greatly improved.
+In this context, stability means changing the source code in intentional and controlled ways
+so that all users are able to adopt the changes with minimal effort.
+Establishing code stability typically involves creating infrastructure to address needs around
+dependency management, testing, profiling, and documentation.
+
+Code stability is most practically address through automated processes.
+This infrastructure is typically automated through services like GitHub,
+and it is targeted at developers in two categories:
+- **Maintainers** who will keep the infrastructure running, update dependency versions and API's,
+    and address bugs
+- **Extenders** who will periodically return to the software to add new features
+
+Nuances of research software:
+- The landscape is broad and the associated ecosystem changes very quickly but adoption is very slow
+- iOS for example runs on a small set of well-known hardware
+- Research funding cycles do not include maintenance
+
+The maintenance component of sustainability deals with ensuring that, even with no changes
+internally, the software can continue to function with changes that happen externally.
+This can involve updates to the software to support new operating systems, virtual machines,
+runtime environments, and hardware components.
+A recent example is the introduction of Apple computers with Arm-based CPU's rather than the
+canonical Intel x86 architecture.
+This change resulted in unusable ecosystems of software including compilers, interpreters,
+debuggers, and profilers that required upgrades to support the new systems.
+
+The extension component ensures that developers who work to add new features and improvements are
+able to determine whether their change had the intended effect and no side effects.
+ -->
+
+
+
+<!-- ## WETO Software Manifesto, in short
+
+NOTE: All these things should help the process of creating software, not hinder it.
+Find the balance of providing value while also enabling development work to continue
+moving forward.
+
+
+The purpose of each software project, the reason for it's existence and idealized impact, will
+be unique to the project based on it's stakeholders, funding mechanisms, and topic area.
+A common thread across all projects, though, is to apply principles of Design, such as
+[Design Thinking](https://designthinking.ideo.com), in planning development efforts.
+It is often useful to consider varying fidelities of time such as short term feature
+implementations as well as long term strategic targets.
+A particularly relevant component of design thinking is to identify the question or need that
+a software project and the activities in developing it will answer or resolve.
+As a framework for identifying these targets, ask the following questions of a project:
+- What is its purpose?
+- Who will use it?
+- How will they use it?
+- For how long should it be active or relevant?
+- What is the intended impact?
+
+In all development activities, the user should be considered.
+After all, the current developers will also be end-users at some time in the future.
+People outside the current development process, including active developers at another time,
+will not have the current context.
+All code, algorithms, procedures, documentation, and associated work should maintain this
+perspective.
+Include details so that a newcomer can reasonably understand the meaning and impact of any
+part of the project - and beware of underestimating what is reasonable or overestimating
+human memory or ability to read the docs.
+Consider an idea incomplete until someone else can accurately communicate it back.
+
+Generally, research software should be predictable and easy.
+- Don't be clever
+- Use ubiquitous tools
+- Basically, prevent users from having to go down rabbit holes to understand some nuance of your code
+A 
+Study and adopt the [Zen of Python](zen_python). Consider them the Zen of WETO Software Development.
+
+
+Who are the stakeholders?
+- Supporters: Funders and programmatic leaders (PI's)
+- Two kinds of users:
+    1. Practitioners who run the software and evaluate results
+    2. Developers who extend or integrate the software into other systems
+
+How will stakeholders interact with the software?
+- Supporters need text-based and graphical information
+- Address the anticipated needs of the target users
+- Make installation as absolutely easy as possible; automate distribution and installation and
+    focus time on documentation for getting users started
+
+How will practitioners "level up"?
+- Design software behavior and interfaces to be consistent and predictable
+- Provide quality error messages with contextually relevant information
+
+How will developers extend the software without breaking it?
+- Design the architecture so that new features can be clearly scoped within the context of
+    the larger framework
+- Use simple code style (syntax) unless obfuscation is absolutely critical
+    - Choose common libraries with healthy developer ecosystems
+    - Use version control to manage concurrent work
+    - Leverage GitHub features like Pull Requests and Issues to document issues, propose
+        solutions and requirements, and provide code review feedback
+    - 
+
+**Point out that one overarching theme is to DOCUMENT! Write, draw, model - whatever you need - to
+communicate the ideas in your head. If you aren't able to make someone else understand your idea,
+it might as well not exist.
+
+Additional considerations specific to research software:
+- Dont be clever
+    - Ubiquity is essential in research software. Use common standards and conventions.
+    - Many developers are not specialists in software development. Consider them as first-order
+    users and meet their needs. Obfuscated meaning through syntactic sugar degrades the
+    extendability of the software, in general. See the next line.
+- Keep it super simple (KISS)
+
+Software projects exist in varying levels of maturity.
+These best practices should be applied in proportion to the maturity of the project.
+
+consider two kinds of "users":
+- Developers - write new code or modify existing code including infrastructure and documentation
+- Practitioners - execute the software either directly or as a part of another system
+
+Why we care about software quality
+- Collaboration
+- Workflows
+- Accessibility -->
+
+
+
+
+<!-- ## Call To Action
+
+Research software, in general and especially under WETO support, exists in a continuum of
+funding levels, researcher / developer resources, and research need, and there's always
+a tension between creating high quality, robust software and accomplishing the needs
+of the research project.
+While it can be tempting to choose an all-or-none approach to software quality, it is
+more practical to find the balance that accomplishes the needs of the project itself.
+**The absolute first step in developing WETO-supported research software should always
+be identifying and communicating (i.e. writing in a GitHub Discussion, README file, or 
+online documentation) the target level of maturity and professionalism in a particular
+software project.**
+This section should serve as a checklist of low barrier to entry software quality
+infrastructure and processes that can be adopted in most projects.
+
+Automate the following:
+- Testing: run the full test suite for every commit in less than 30 minutes
+- Performance profiling: include a statistical measure of performance for each commit
+- Code coverage: report code coverage to a coverage dashboard service (codecov, coveralls)
+- Distribution: build and distribute to all package managers for every release
+- Documentation Hosting: use a service to compile documentation from markup files (md, rst, etc)
+    using a mature framework (jekyll, jupyter-book, etc)
+
+Adopt a framework for testing:
+- pytest for Python
+- google test for C++
+
+
+Develop a style guide
+- One for syntax and code style
+- Another for architecture and design style
+- This is most relevant for long term software projects, but it can be useful to articulate
+    these ideas even for yourself. As in, in the course of developing various projects, iterate
+    on your own personal style guide.
+- Start with [pep8](https://pep8.org) and customize for yourself and your projects
+
+
+Adopt a framework for constructing documentation:
+- Jekyll
+- Jupyter-book
+- Sphinx
+And host it using a typical service
+- GitHub Actions
+- readthedocs
+
+Develop a culture of discussing the features in the software outside of the context of the software, first.
+Then, relate it to the software.
+A common method for this is a design document where new work is described, scoped, prototyped,
+and validated using plain language, graphics, and math.
+
+Write a design document:
+- Identify target users
+- Describe broad themes in the design - What are the objectives of the software architecture?
+- Prototype intended uses like a storyboard
+
+Submit to Journal of Open Source Software (JOSS) -->
