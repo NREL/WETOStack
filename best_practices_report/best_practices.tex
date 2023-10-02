@@ -162,217 +162,37 @@ of WETO software can trust these tools and accurately understand the risks to wo
 
 
 
-\chapter{WETO Software Manifesto, in short}
-The purpose of each software project, the reason for it’s existence and idealized impact, will
-be unique to the project based on it’s stakeholders, funding mechanisms, and topic area.
-A common thread across all projects, though, is to apply principles of Design in planning
-development efforts.
-It is often useful to consider varying fidelities of time such as short term feature
-implementations as well as long term strategic targets.
-A key component of design thinking is to identify the question or need that a software project
-and the activities in developing it will answer or resolve.
-As a framework for identifying these targets, ask the following questions of a project:
+
 \begin{itemize}
-\item What is its purpose?
 
-\item Who will use it?
-
-\item How will they use it?
-
-\item For how long should it be active or relevant?
-
-\item What is the intended impact?
 
 \end{itemize}
 
-In all development activities, the user should be considered.
-After all, the current developers will also be end-users at some time in the future.
-People outside the current development process, including active developers at another time,
-will not have the current context.
-All code, algorithms, procedures, documentation, and associated work should maintain this
-perspective.
-Include details so that a newcomer can reasonably understand the meaning and impact of any
-part of the project - and beware of underestimating what is reasonable or overestimating
-human memory or ability to read the docs.
-
-
-Your idea is irrelevant until someone else can accurately communicate it back to you.
-Consider your future self - how will your decisions now impact your work in one year, two years, ten years?
-Research software should be predictable and easy
 \begin{itemize}
-\item Nothing clever
 
-\item Use ubiquitous tools
 
-\item Basically, prevent users from having to go down rabbit holes to understand some nuance of your code
-Study and adopt the \ref{sec:zen}. Consider them the Zen of WETO Software Development.
+
 
 \end{itemize}
-
-Who are the stakeholders?
-\begin{itemize}
-\item Supporters: Funders and programmatic leaders (PI’s)
-
-\item Two kinds of users:
-\begin{enumerate}
-\item Practitioners who run the software and evaluate results
-
-\item Developers who extend or integrate the software into other systems
-
-\end{enumerate}
-
-\end{itemize}
-
-How will stakeholders interact with the software?
-\begin{itemize}
-\item Supporters need text-based and graphical information
-
-\item Address the anticipated needs of the target users
-
-\item Make installation as absolutely easy as possible; automate distribution and installation and
-focus time on documentation for getting users started
-
-\end{itemize}
-
-How will practitioners "level up"?
-\begin{itemize}
-\item Design software behavior and interfaces to be consistent and predictable
-
-\item Provide quality error messages with contextually relevant information
-
-\end{itemize}
-
-How will developers extend the software without breaking it?
-\begin{itemize}
-\item Design the architecture so that new features can be clearly scoped within the context of
-the larger framework
-
-\item Use simple code style (syntax) unless obfuscation is absolutely critical
-\begin{itemize}
-\item Choose common libraries with healthy developer ecosystems
-
-\item Use version control to manage concurrent work
-
-\item Leverage GitHub features like Pull Requests and Issues to document issues, propose
-solutions and requirements, and provide code review feedback
-
-\item \end{itemize}
-
-\end{itemize}
-
-**Point out that one overarching theme is to DOCUMENT! Write, draw, model - whatever you need - to
-communicate the ideas in your head. If you aren’t able to make someone else understand your idea,
-it might as well not exist.
-\textbf{An idea only exists if it has been communicated.}
-
-Additional considerations specific to research software:
-\begin{itemize}
-\item Dont be clever
-\begin{itemize}
-\item Ubiquity is essential in research software. Use common standards and conventions.
-
-\item Many developers are not specialists in software development. Consider them as first-order
-users and meet their needs. Obfuscated meaning through syntactic sugar degrades the
-extendability of the software, in general. See the next line.
-
-\end{itemize}
-
-\item Keep it super simple (KISS)
-
-\end{itemize}
-
-Software projects exist in varying levels of maturity.
-These best practices should be applied in proportion to the maturity of the project.
-
-consider two kinds of "users":
-\begin{itemize}
-\item Developers - write new code or modify existing code including infrastructure and documentation
-
-\item Practitioners - execute the software either directly or as a part of another system
-
-\end{itemize}
-
-Why we care about software quality
-\begin{itemize}
-\item Collaboration
-
-\item Workflows
-
-\item Accessibility
 
 \end{itemize}
 
 
-\chapter{Call To Action}
-\label{\detokenize{best_practices:call-to-action}}
-Develop a style guide
-\begin{itemize}
-\item One for syntax and code style
 
-\item Another for architecture and design style
 
-\item This is most relevant for long term software projects, but it can be useful to articulate
-these ideas even for yourself. As in, in the course of developing various projects, iterate
-on your own personal style guide.
 
-\item Start with \href{https://pep8.org}{pep8} and customize for yourself and your projects
 
-\end{itemize}
 
-Automate the following:
-\begin{itemize}
-\item Testing: run the full test suite for every commit in less than 30 minutes
 
-\item Performance profiling: include a statistical measure of performance for each commit
 
-\item Code coverage: report code coverage to a coverage dashboard service (codecov, coveralls)
 
-\item Distribution: build and distribute to all package managers for every release
 
-\item Documentation Hosting: use a service to compile documentation from markup files (md, rst, etc)
-using a mature framework (jekyll, jupyter-book, etc)
 
-\end{itemize}
 
-Adopt a framework for testing:
-\begin{itemize}
-\item pytest for Python
 
-\item google test for C++
 
-\end{itemize}
 
-Adopt a framework for constructing documentation:
-\begin{itemize}
-\item Jekyll
 
-\item Jupyter-book
-
-\item Sphinx
-And host it using a typical service
-
-\item GitHub Actions
-
-\item readthedocs
-
-\end{itemize}
-
-Develop a culture of discussing the features in the software outside of the context of the software, first.
-Then, relate it to the software.
-A common method for this is a design document where new work is described, scoped, prototyped,
-and validated using plain language, graphics, and math.
-
-Write a design document:
-\begin{itemize}
-\item Identify target users
-
-\item Describe broad themes in the design - What are the objectives of the software architecture?
-
-\item Prototype intended uses like a storyboard
-
-\end{itemize}
-
-Submit to Journal of Open Source Software (JOSS)
 
 
 \chapter{Accessibility}
@@ -1009,93 +829,6 @@ Continuous Integration can be mean many things:
 \item Continuous integration (into the repository)
 
 \end{itemize}
-
-
-\chapter{Code Stability}
-The considerations given to long term stability of a software project directly correlate to the
-lifespan and ultimate impact of the project.
-When a software project has a stable code, all users can have consistent expectations
-and the \ref{sec:extendability} is greatly improved.
-In this context, stability means changing the source code in intentional and controlled ways
-so that all users are able to adopt the changes with minimal effort.
-Establishing code stability typically involves creating infrastructure to address needs around
-dependency management, testing, profiling, and documentation.
-
-Code stability is most practically address through automated processes.
-This infrastructure is typically automated through services like GitHub,
-and it is targeted at developers in two categories:
-\begin{itemize}
-\item \textbf{Maintainers} who will keep the infrastructure running, update dependency versions and API’s,
-and address bugs
-
-\item \textbf{Extenders} who will periodically return to the software to add new features
-
-\end{itemize}
-
-Nuances of research software:
-- The landscape is broad and the associated ecosystem changes very quickly but adoption is very slow
-- iOS for example runs on a small set of well-known hardware
-\begin{itemize}
-\item Research funding cycles do not include maintenance
-
-\end{itemize}
-
-The maintenance component of sustainability deals with ensuring that, even with no changes
-internally, the software can continue to function with changes that happen externally.
-This can involve updates to the software to support new operating systems, virtual machines,
-runtime environments, and hardware components.
-A recent example is the introduction of Apple computers with Arm-based CPU’s rather than the
-canonical Intel x86 architecture.
-This change resulted in unusable ecosystems of software including compilers, interpreters,
-debuggers, and profilers that required upgrades to support the new systems.
-
-The extension component ensures that developers who work to add new features and improvements are
-able to determine whether their change had the intended effect and no side effects.
-
-
-\chapter{Accuracy}
-Validation - Are you building the right thing?
-Verification - Are you building the thing right?
-\begin{itemize}
-\item Barry Boehm, Software Engineering Economics, 1981
-
-\end{itemize}
-
-Test driven development - formalize the ideas that drive development.
-A portion of code should not be added without a formal proof of correctness and robustness.
-Consider testing like writing a report - prove to the reader that it is correct and should be accepted.
-
-Phenomenon identification and ranking table
-\begin{itemize}
-\item David Maniaci
-
-\end{itemize}
-
-
-\chapter{Methodologies for communicating intent and verifying implementation}
-To understand how a change fits into the big picture, it is required to have a sense for the picture from the start.
-Develop diagrams for code architecture and regularly check and update them as the architecture changes.
-
-Types of diagrams:
-\begin{itemize}
-\item State / flow diagrams
-
-\item Class hierarchy
-
-\item Data construction and operation - Show a representative problem describing how operations happen on data in various contexts (serial vs parallel, cpu vs gpu)
-
-\end{itemize}
-
-Identify and communicate the \textit{parti}.
-
-TODO: add descriptions and examples of UML
-TODO: Describe communicating design intent
-
-
-
-
-
-
 
 
 
