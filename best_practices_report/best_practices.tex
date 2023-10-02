@@ -358,11 +358,6 @@ a component of "continuous integration". See \nameref{continuous} for details.
 Tools for this level of automation are ubiquitous, and a practical choice
 is GitHub Actions (see \nameref{sec:github}).
 
-\begin{figure}[htbp] \begin{center}
-\includegraphics[width=0.7\textwidth]{mermaid-ece5068b3a6eb10d6392a7ca035a7cc4736d3183.png}
-\caption{TODO}
-\label{fig:fig1} \end{center} \end{figure}
-
 
 \chapter{Usability}
 \label{sec:usability}
@@ -561,10 +556,11 @@ maintenance are added to an existing software project. This covers both the tech
 as well as the management of multiple developers and development efforts happening
 concurrently.
 
-The lifecycle of WETO software typically follows a cyclical pattern of funding, development, and
-release, as depicted below. Note that the "Maintenance" tasks are usually optional and included
+The lifecycle of WETO software projects typically follows a pattern of funding,
+development, and release resulting in a recurring development workflow depicted below.
+The "Maintenance" tasks are usually optional and implicitly embedded
 in future development efforts. Therefore, it is critical to the life of all WETO software to
-prioritize extendability so that future funding opportunities are attractive to stakeholders
+prioritize extendability so that future funding opportunities are attractive to stakeholders,
 and general maintenance and infrastructure upgrades can be introduced with minimal overhead.
 
 \begin{figure}[htbp] \begin{center}
@@ -572,28 +568,29 @@ and general maintenance and infrastructure upgrades can be introduced with minim
 \caption{TODO}
 \label{fig:fig2} \end{center} \end{figure}
 
-Is the code open source?
-If not, is there a build system with modern dependencies?
-i.e. Makefiles are outdated, use CMake
+This topic is closely tied to \nameref{communicating_design}, and the objective is to ensure that
+developers can easily approach the project with minimal overhead required to align their
+computing environment, scope the work, implement the changes, and verify the results.
 
-
-
-This is closely tied to \textbf{(6) methodologies for communicating intent and verifying implementation}
-Generally, use ubiquitous infrastructure
-\begin{itemize}
-\item Project managers can rely on mature third party tools to handle complex systems
-
-\item Mature third party tools typically come with their own documentation
-
-\end{itemize}
-
+A guiding principle on extendability is to use ubiquitous infrastructure.
+Mature and ubiquitous tools and libraries come with formal and community-based documentation,
+ecosystems of tools such as IDE extensions, and institutional or cultural knowledge of
+their use and nuances that can be difficult and time consuming to create for specialized
+infrastructure.
+Common build systems such as CMake with the GNU or LLVM toolchains should be used instead of
+the newest projects.
+Popular programming languages (Python, C++, Fortran) are more approachable than specialized
+languages (Rust, Julia, Elixir), and enable a wider developer base.
+Software project managers should strive to create a development environment balancing the need for
+modern tooling, modern developer expectations, and stability.
 
 \section{Code style}
 In software development, the word "grok" is often used (see usage in
 \href{https://hn.algolia.com/?q=grok}{Hacker News},
 \href{https://lobste.rs/search?q=grok\&what=stories\&order=newest}{Lobsters},
 \href{https://stackoverflow.com/search?tab=newest\&q=grok\&searchOn=3}{StackOverflow})
-to communicate about degrees of understanding. This word is described by it’s creator below.
+to communicate about degrees of understanding. This word is described by it’s creator below
+(Source: \href{https://en.wikipedia.org/wiki/Grok}{Wikipedia}).
 \begin{quote}
 
 \textit{Grok} means "to understand", of course, but Dr. Mahmoud, who might be termed the leading
@@ -607,13 +604,12 @@ can \textit{hate} – and (I think) Martian hate is an emotion so black that the
 equivalent could only be called mild distaste.
 \end{quote}
 
-Source: \url{https://en.wikipedia.org/wiki/Grok}.
-
 That such a word exists and is widely used in software development illustrates the high value
 of clear and understandable code.
 WETO software should avoid complexity where possible and favor readability over writability.
 Strive to create software that can be easily grokked by developers who do not have the current
-context.
+context, and remember that often these developers are domain experts rather than
+computer scientists.
 
 The designers of the Python programming language consider readability as a primary priority, and
 the most famous of the many Python language-development documents is
@@ -656,29 +652,113 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 \end{lstlisting}
 
+\section{Architecture and design}
+
+\begin{quote}
+    If you think good architecture is expensive, try bad architecture.
+
+    -- Brian Foote and Joseph Yoder, Clean Architecture: A Craftsman's Guide to Software Structure and Design
+\end{quote}
+
+In the development of any complex system, the design and it's implementation are either
+explicit or implicit.
+Explicit design involves identifying relationships between modules, composition of data
+structures, and flow of data prior to writing code, whereas an implicit design evolves during the
+process of writing new code.
+In open source software, an explicit design process is critical to allowing the project
+to grow beyond a single developer, and the consequence of an implicit design process
+is the common case of technical debt.
+
+\subsection{Software design process}
+
+Primarily, an explicit design process involves identifying the fundamental principles
+of a particular design - how it is expected to function in various aspects.
+This process should result in two statements:
+
+\begin{enumerate}
+\item The \href{https://en.wikipedia.org/wiki/Parti_(architecture)}{parti}, a description of the
+    fundamental, driving design intent as a brief text (one or two sentences) or a
+    simple diagram
+\item A list of requirements that the parti and it's implementation should satisfy
+\end{enumerate}
+
+The \textit{parti} is the abstract objective and the list of requirements are the criteria
+to verify that the implementation satisfies the parti.
+In other words, these are the tests for the design.
+Upon establishing this information, it should be codified into a design document and style
+guide that are made publicly available to all developers such as in online documentation.
+
+There are various levels of fidelity to consider when designing a software system:
+\begin{itemize}
+\item Level 0: Syntax and code style
+\item Level 1: Function scope, function signatures
+\item Level 2: Module composition
+\item Level 3: System composition
+\end{itemize}
+
+Each should be addressed individually but referring to each other. For example, having a major
+design driver to limit complexity at Level 3 can be negated if complexity is allowed
+at Level 0. However, the definition of complexity at these levels are entirely different and
+should be directly defined.
+
+\begin{quote}
+    Architecture is a hypothesis that needs to be proven by implementation and measurement
+
+    -- Tom Gilb, Clean Architecture: A Craftsman's Guide to Software Structure and Design
+\end{quote}
+
+While having an explicit design process is important, it is not required to stick to a chosen
+design at all cost.
+Throughout the development of a software, the architecture and design should be regularly
+revisited and reevaluated given the new knowledge acquired during implementation.
+How a software is ultimately used and the problems faced cannot be known at design time,
+so developing a process for design validation is required.
+
+\subsection{Design patterns}
+The software engineering community has created a wide range of
+\href{https://en.wikipedia.org/wiki/Software_design_pattern#Classification_and_list}{design patterns}
+to address specific design problems.
+These are often used as a reference for creating a specific architectural design,
+and they often focus on fidelity levels 1 and 2.
+Multiple design patterns can even be pieced together to create a high-level monolithic architecture.
+The benefits of adopting an existing design pattern are:
+\begin{itemize}
+    
+    \item The methods to describe the design pattern to new developers are already established
+    \item Teams can work with the architecture in the abstract to develop their concrete customized
+        implementation
+    \item Ecosystems of third-party tools exist to leverage some of the common design patterns
+    \item Some patterns can be easily replaced by others \textit{in situ}
+\end{itemize}
+
+While software architecture and software design patterns are entire fields of knowledge,
+many resources exist to teach common methods.
+A few in depth references specifically relevant to WETO-supported research software are:
+\begin{itemize}    
+\item Uncle Bob's \href{https://books.google.com/books/about/Clean_Architecture.html?id=uGE1DwAAQBAJ&source=kp_book_description}{Clean Architecture: A Craftsman's Guide to Software Structure and Design}
+\item \href{https://www.youtube.com/watch?v=UWmkj-9SdAI}{IDEAS-ECP HPC Best Practices Webinar: Software Design Patterns in Research Software with Examples from OpenFOAM}
+\item Architecture of Open Source Applications \href{https://aosabook.org/en/#aosa1}{Volume 1} and \href{https://aosabook.org/en/#aosa2}{Volume 2}
+\end{itemize}
+
 
 \section{Version control}
 \label{sec:version_control}
 
-Version control, typically with \lstinline{git}, is a tool for tracking the evolution of a project change
-by change establishing a history of changes.
-Each change is itself a version of the software, and they provide a snapshot of thought
-processes and progression of work.
+Version control, typically with \href{https://git-scm.com}{git}, is a tool for tracking the
+evolution of a project change by change establishing a history of changes.
+Each change, called a "commit", is itself a version of the software, and, collectively,
+the changes provide a snapshot of thought processes and progression of work.
 
-BP: Craft a version control history that communicates the evolution of changes of the software
-to future developers including the author of current changes.
-BP: Evolve the software in a logical, linear process with digestible change sizes.
-
-Version control with git is often a secondary consideration in the software development process.
-It can seem like simply a mechanism to "save" the state of a document.
+Version control with git can seem like simply a mechanism to "save" the state of a document,
+and it is easy to relegate this process to a secondary concern in the development process.
 However, it carries far more meaning in the context of software extendability.
-Since the git system is decentralized, it allows for multiple developers to make changes to a
+Since the git system is decentralized, it allows multiple developers to make changes to a
 project concurrently.
 Git also provides a mechanism for resolving differences so that multiple changes can be merged
 together easily.
 
-In addition to the content of changes themselves, the connectivity between changes is valuable
-over the lifetime of a project.
+In addition to the content of changes themselves, the connectivity between changes over the
+lifetime of a project is meaningful.
 The connectivity between commits is structured as a
 \href{https://en.wikipedia.org/wiki/Directed\_acyclic\_graph}{directed acyclical graph (DAG)}.
 Each commit has a parent and each parent can have multiple children.
@@ -688,25 +768,22 @@ time in history.
 To best leverage the power of git to enable extendability, consider the following guidelines:
 \begin{itemize}
 \item It is reasonable to spend time crafting each commit and a sequence of commits.
-
+\item Each commit should optimize for readability in both the content of the changes and the message
+\begin{itemize}
+    \item Keep changes within an easily communicated scope
+    \item Avoid the temptation to mix formatting changes with algorithmic changes
+    \item More smaller commits are generally better than fewer large commits
+\end{itemize}
 \item Practice editing a series of commits to ensure that the progress of work is captured accurately.
-
 \item Consider whether the commit history is concise and readable to people who are not the authors.
-
 \item Become familiar with the following actions:
 \begin{itemize}
-\item Interactive rebase
-
-\item Cherry-pick
-
-\item Squash
-
-\item Edit a commit message
-
+    \item Interactive rebase
+    \item Cherry-pick
+    \item Squash
+    \item Edit a commit message
 \end{itemize}
-
 \item Commit messages should be short, and it is a convention to limit them less than 50 characters.
-
 \item An additional line can be included as a longer description of the commit beneath the
 50 character line. The second line is typically limited to 70 characters, but it is
 considered reasonable to use as much space as needed.
@@ -715,32 +792,17 @@ considered reasonable to use as much space as needed.
 
 
 \section{Collaborative workflows with GitHub}
+
+
 The processes through which developers interact with a software and other developers is
 an essential component of extendability.
 These processes should generally strive for efficiency while minimizing overhead.
 Automated processes are better than manual processes, and objective is better than subjective.
-The majority of collaborative software development processes occur on cloud-based resources on
-the GitHub platform.
+The majority of collaborative software development processes occur on the
+\href{https://github.com}{GitHub} platform and automated processes leverage GitHub's free
+cloud-based resources.
 
-\textbf{BP: Plan and coordinate software development efforts into a collaborative workflow using GitHub}
-
-\textbf{BP: Automate code quality feedback as much as possible via GitHub Actions}
-
-GitHub contains some key features for coordinating software development:
-\begin{itemize}
-\item Issue tracking
-
-\item Forum-style discussions
-
-\item Pull request and code review
-
-\item Project boards
-
-\item Releases
-
-\end{itemize}
-
-GitHub and git (see \ref{sec:version_control}) are tightly connected, but they are different
+GitHub and git (see \nameref{version_control}) are tightly connected, but they are different
 systems and serve different purposes in the development process.
 Git is a version control system for tracking and merging changes to a software.
 GitHub is a platform for orchestrating and coordinating the various processes that happen
@@ -748,14 +810,18 @@ around the development cycle.
 GitHub activities add context on top of the individual changes captured in commits.
 Whereas commits often capture low-level information, GitHub activities can map the low level
 details to high-level efforts.
+GitHub provides extensive \href{https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources}{training material}
+for git as well as GitHub features.
 
-Become familiar with GitHub features and leverage them to plan and communicate.
+The primary GitHub features are described below, and a typical sequence of events across these
+features is diagramed.
 
-
-
-GitHub features can be used a many ways. The primary features are described below and a typical
-sequence of events across these features is described.
 \begin{itemize}
+\item \href{https://github.com/features/actions}{Actions}: This is a full-featured cloud computing
+environment that is typically used for automating software quality processes such as
+running tests, compiling software for release and distribution, and compiling and deploying
+online documentation.
+
 \item \href{https://docs.github.com/en/discussions}{Discussions}: This is typically the starting point
 for any collaboration. Create a discussion topic and engage with other model stakeholders
 to define the idea and develop a proposed implementation.
@@ -788,61 +854,154 @@ and communicate relevant details.
 \caption{TODO}
 \label{fig:fig3} \end{center} \end{figure}
 
-Along with git, GitHub provides a helpful mechanism to capture design intent, factors that lead
-to particular decisions, and the evolution of a project for future reference.
-However, it is important carefully craft the messages to avoid washing out information
-with noise.
-The following are guidelines to consider when engaging on GitHub.
+The combination of git and GitHub provides a powerful mechanism to capture design intent,
+factors that lead to particular decisions, and the evolution of a project for future reference.
+It is important carefully craft the messages to avoid washing out information with noise.
+Consider the following guidelines when engaging on GitHub.
+
 \begin{itemize}
 \item Descriptions of any activity should be well scoped and easily understandable.
-
-\item Pictures really are worth 1,000 words. Always include a diagram, plot, screenshot, or picture
+\item Pictures really are worth 1,000 words. Include a diagram, plot, screenshot, or picture
 when it will add clarity.
-
 \item Prefer actual text over of screenshots of text. GitHub is searchable, so text provides more
-searchable context whereas screenshots do not. Additionally, text-based code snippets can be
+searchable content whereas screenshots do not. Additionally, text-based code snippets can be
 copied easily by other users.
-
-\item Establish a practice of assigning responsibility for each Issue and Pull Request. Without
-a person to take ownership, these will remain unaddressed.
+\item Establish a practice of assigning responsibility to a core team member for each Issue and
+Pull Request to avoid ambiguity about how these will be addressed.
 
 \end{itemize}
 
 
 \section{Pull Requests}
-A pull request is a request to merge a particular set of code changes into another copy of the
-software, typically an agreed upon "main" version.
+A pull request, or "PR", is a request to merge a particular set of code changes into another
+instance of the software, typically an agreed upon "main" version.
+Pull request descriptions should include contextual information regarding the code change.
+The objective is to convince reviewers and maintainers that the new code is in a good state,
+and that it's inclusion would be a benefit to the project. This typically involves a contextual
+description of the change, an explanation of why the change is valid, and an overview of the
+tests added to the test suite to demonstrate and exercise the new code.
 
-Pull requests should include contextual information regarding the code change. The intention is
-to convince reviewers and maintainers that the new code is in a good state and that it’s
-inclusion would be a benefit to the project. This typically involves a contextual description of
-the change and a description of why the change is valid and well tested.
+The size and scope of a pull request should be chosen so that it is both easy to explain and
+easy to review.
+It is common to create many pull requests in the development of a single
+feature as this process enables periodically syncing forks or branches and supports
+milestones or periodic check-ins throughout development.
+The primary objective is to optimize for readability in the pull request description as well as
+the code changes themselves.
 
-Futhermore, GitHub automatically constructs release notes from all of the pull requests merged
-since the previous release.
-It automatically takes the titles of each pull request to construct the release notes.
-"Update XYZ" again provides no context and more work is required to communicate what has changed
-to users and downstream dependencies.
+Consider pull requests titles and descriptions as documentation that will be relevant to
+future developers.
+When a pull request is merged, it can either be combined into one commit (squash and merge)
+in the destination branch or included through a merge-commit.
+The former does not maintain the commit history of the working branch while the latter does.
+The squash-and-merge approach is often preferred by project maintainers due to it's simplicity,
+and in this case the title of the pull request becomes the commit message.
+Since merging the pull request directly affects the commit history of the destination branch,
+the review and merge process should also follow the \nameref{version_control} guidelines.
+Finally, the release process through GitHub Releases can automatically construct
+release notes from the title of all pull requests merged since the previous release.
 
-All version control messages (commits and pull requests) should communicate what the change
-accomplishes.
-Vague messages such as "updated solver" are distracting and lack meaning.
+While the details of workflows around defining, designing, and implementing new development
+efforts should be identified explicitly following the guidance in \nameref{github}, pull requests,
+in practice, are often a good place to iterate collaboratively on the design and implementation
+details.
+Pull request reviews should have the following characteristics:
+- Be very verbose with efficient but specific and complete feedback
+- Be constructive rather than destructive; blame (negative) is nearly always irrelevant,
+    and credit (positive) is nearly always appreciated
+- Call out good ideas as well as bad ideas
+- Include snippets of code to exercise portions of the changes
+- Include plots or graphics showing the impact of the changes
+- Refer to precedent or contextual conventions
+- Refer to design documentation and style guides
+
+The \href{https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request}{GitHub Pull Request Review documentation}
+provides a detailed guide on using the various features to suggest and integrate
+code review feedback.
 
 
-\section{Automated Quality Checks - Continuous-N}
-Continuous Integration can be mean many things:
+\section{Continuous integration: automating tests, compliance, and delivery}
+\label{sec:continuous}
+
+The term "continuous integration", or "CI", is often used to refer to any of the many
+automated systems that support software quality.
+In it's essence, continuous integration refers to the practice of deploying a change in
+the code directly into the production or released version.
+This practice is enabled by constructing a system of quality check infrastructure that gives
+maintainers the confidence to accept a change and release immediately.
+The "continuous" aspect refers to the automated nature of the quality check systems.
+Ideally, full continuous integration requires that all characteristics and potential
+impacts of a code change are tested and validated automatically and without human
+input, such as:
 \begin{itemize}
-\item Continuous building
-
-\item Continuous testing
-
-\item Continuous distribution
-
-\item Continuous integration (into the repository)
-
+\item Requiring that new code is covered by unit tests, integration tests, and regression tests
+\item Checking that impacts to computational cost (speed) are within a threshold
+\item Checking that memory impacts are within a threshold
+\item Validating documentation changes and functionality
+\item Linting for code syntax
 \end{itemize}
 
+It can be helpful to break the topic of CI into three general areas:
+\begin{itemize}
+\item Continuous testing (CT)
+\item Continuous compliance (CC)
+\item Continuous delivery (CD)
+\end{itemize}
 
+Continuous testing is established by adopting a testing framework and ensuring that all
+new code is well tested. While automatically testing the \textit{quality} of test may be impractical,
+it is simple and helpful to automatically check the \textit{quantity} of tests to ensure that new
+code is covered.
+For the same of a user-friendly CT pipeline, consider grouping tests into categories
+that can be run in parallel by the automated system.
+Also, minimize the time required to execute the test suite so that developers get
+the automated feedback as soon as possible.
+
+Continuous compliance is related to automatically checking for code style, complexity,
+existence of docstrings or other types of documentation, and any other requirements
+that describe aspects of the code itself.
+A common method is to use a linter for the programming language used.
+Most linters are high configurable so it can be tailored to the needs and style of
+the development team.
+This step typically happens very quickly, so execution time is usually not a concern.
+
+Continuous delivery handles how the software is exported to users for consumption.
+For web-based software, this involves deploying to a server, whereas modeling and analysis
+libraries are typically delivered via package managers or compiled binaries.
+The "continuous" aspect of CD refers to the practice of automatically pushing the
+"released" product upon any change to the primary branch or via a periodic semi-automated
+release process.
+
+All aspects of CI contribute to the quality of a software project, and a full ecosystem
+of open source, freely available infrastructure is available to address them all.
+Ultimately, though, the true beneficiary of CI pipelines are the developers and maintainers
+since major portions of quality enforcement and distribution are automated.
+Without this infrastructure, code reviews can be prohibitively time consuming and error prone,
+and the release process can take hours or days.
+By committing to the initial investment and regular maintenance, computers handle
+these detailed and repetitive tasks.
+
+Given the inherent challenges in managing groups of people with various software
+development styles and opinions, establishing the automated systems described here
+can help to align expectations around minimum standards for acceptance of code while
+reducing the burden on a project's "benevolent dictator" or gatekeeper.
+It is recommended to establish these processes at the onset of a software project, and
+continuously adjust as needed.
+
+For reference, a typical CI pipeline for a Python package is shown below where the square
+components are GitHub Actions steps.
+
+
+
+% \begin{figure}[htbp] \begin{center}
+% \includegraphics[width=0.7\textwidth]{mermaid-ece5068b3a6eb10d6392a7ca035a7cc4736d3183.png}
+% \caption{TODO}
+% \label{fig:fig1} \end{center} \end{figure}
+
+% \begin{figure}[htbp] \begin{center}
+%     \includegraphics[width=0.8\textwidth]{mermaid-bfcb6a9556227d6b8158e111ddd0f37e43e4f635.png}
+%     \caption{TODO}
+%     \label{fig:fig3} \end{center} \end{figure}
 
 
 %%%%%%%%%%%%%%%%%%
@@ -954,58 +1113,6 @@ It should not go to 0, but the majority of involvement in software development s
 review, design, and project planning.
 
 
-
-
-\section{Architecture}
-Support modularity
-
-Design in such a way to allow for future flexibility
-\begin{itemize}
-\item Think about systems in discrete chunks rather than monoliths
-
-\item Consider how the system will scale in scope and in problem size
-
-\end{itemize}
-
-Design for usability
-\begin{itemize}
-\item Trap errors before they manifest into larger problems that are difficult to debug through
-validation of input files and function inputs
-
-\item Adopt a logging framework
-\begin{itemize}
-\item Funnel messages to a particular place (terminal, file, nowhere) very easily
-
-\item Format messages to call out particular pieces of information
-
-\item Always include context!
-\begin{itemize}
-\item Users and developers will not know what you mean by "Invalid value"
-unless they also have some context. Try this: "Invalid value in
-ClassName.well\_named\_function(); wind speed must be positive".
-
-\end{itemize}
-
-\end{itemize}
-
-\item Avoid information overload. It’s too easy to ignore messages from a tool when there are
-too many words. Respect the user’s attention, only give messages that are absolutely critical.
-
-\item Assume warnings will not be read-trap errors and inconsistencies instead.
-
-\item Avoid making decisions on behalf of the user
-\begin{itemize}
-\item It’s fine to provide default values, but its generally better to raise an error
-when an invalid input is given.
-
-\item It may be tempting to use default values for new inputs to avoid breaking API’s, but
-remember that this adds complexity for the user. These inputs now have the possibility
-of being null or the value itself. If this input enables / disables a feature, this should
-be made abundantly clear to the user.
-
-\end{itemize}
-
-\end{itemize}
 
 \end{appendices}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
