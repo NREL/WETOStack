@@ -365,36 +365,35 @@ is GitHub Actions (see \nameref{sec:github}).
 
 
 \chapter{Usability}
+\label{sec:usability}
 Usability is concerned with how practitioners are expected to execute the software including
 creating inputs and managing outputs.
-
-Nuances of research software:
-- "Design" is typically not a consideration at all
-- It is typical to adopt "patterns", so there is very little evolution of software interface design and therefore usability
-- Research software is expected to be predictable and similar to what users already know. The challenge is to understand the existing paradigms and adopt them well.
-
+While the content and promise of a particular software will bring users to it in the first
+place, the ease of usability is responsible for keeping them engaged with the software.
+In this context, consider any user interfaces including messaging back to the user through
+errors as the "touch points" that should be optimized.
+Developers should recall their own experience in using software including outside
+of the research environment.
+Contemporary software consumers have short attention spans and will generally choose
+the path of least resistance to accomplish a task even at the cost of access to a more
+advanced feature.
 
 \section{User interface}
 The user interface (UI) is any mechanism through which users interact with the software
-typically by providing inputs and receiving outputs. Examples of UI’s include:
+typically by providing inputs and receiving outputs. Examples of UI's include:
+
 \begin{itemize}
 \item Graphical user interface (GUI)
-
 \item Web-based front ends
-
 \item Input and output files
-
 \item Command line interface
-
-\item Library API’s
-
+\item Library API's
 \end{itemize}
 
-WETO software UI’s should be well defined and predictable.
+WETO software UI's should be well defined and predictable.
 They should adopt the conventions that already exist in the environments and contexts
-in which they’re used.
+in which they're used.
 Most importantly, all user interfaces should be well documented.
-
 
 \subsection{Command line interface}
 The command line interface (CLI) is one type of front-end for software.
@@ -402,69 +401,51 @@ It is the method by which a software is executed via a computer’s terminal.
 WETO software should in general adhere to the following conventions and principles for CLI’s.
 However, these are guidelines and can be skipped when context is clear or another
 option improves usability.
+
 \begin{itemize}
 \item Adopt command line syntax requirements from \url{https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1\_chap12.html}
 \begin{itemize}
 \item Guideline 1: Utility names should be between two and nine characters, inclusive.
-
 \item Guideline 2: Utility names should include lowercase letters (the lower character classification) and digits only from the portable character set.
-
 \item Guideline 3: Each option name should be a single alphanumeric character (the alnum character classification) from the portable character set. The \lstinline{-W} (capital-W) option shall be reserved for vendor options. Multi-digit options should not be allowed.
-
 \item Guideline 4: All options should be preceded by the `-`` delimiter character.
-
 \item Guideline 5: One or more options without option-arguments, followed by at most one option that takes an option-argument, should be accepted when grouped behind one \lstinline{-} delimiter.
-
 \item Guideline 6: Each option and option-argument should be a separate argument, except as noted in \href{https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1\_chap12.html}{Utility Argument Syntax, item (2)}.
-
 \item Guideline 7: Option-arguments should not be optional.
-
 \item Guideline 8: When multiple option-arguments are specified to follow a single option, they should be presented as a single argument, using \lstinline{<comma>} characters within that argument or \lstinline{<blank>} characters within that argument to separate them.
-
 \item Guideline 9: All options should precede operands on the command line.
-
 \item Guideline 10: The first \lstinline{--} argument that is not an option-argument should be accepted as a delimiter indicating the end of options. Any following arguments should be treated as operands, even if they begin with the \lstinline{-} character.
-
 \item Guideline 11: The order of different options relative to one another should not matter, unless the options are documented as mutually-exclusive and such an option is documented to override any incompatible options preceding it. If an option that has option-arguments is repeated, the option and option-argument combinations should be interpreted in the order specified on the command line.
-
 \item Guideline 12: The order of operands may matter and position-related interpretations should be determined on a utility-specific basis.
-
 \item Guideline 13: For utilities that use operands to represent files to be opened for either reading or writing, the \lstinline{-} operand should be used to mean only standard input (or standard output when it is clear from context that an output file is being specified) or a file named "-".
-
 \item Guideline 14: If an argument can be identified according to Guidelines 3 through 10 as an option, or as a group of options without option-arguments behind one \lstinline{-} delimiter, then it should be treated as such.
-
 \end{itemize}
 
 \item Adopt these minimum GNU conventions
 \begin{itemize}
 \item A short version with one dash and a long version with two dashes
-
 \item \lstinline{-v} / \lstinline{--version} to show version information
-
 \item \lstinline{-h} / \lstinline{--help} to display help information
-
 \item \lstinline{-i} / \lstinline{--input} for input file specification
-
 \item \lstinline{-o} / \lstinline{--output} for input file specification
-
 \item \lstinline{-V} / \lstinline{--verbose} to include additional output in terminal
-
 \item \lstinline{-q} / \lstinline{--quiet} to suppress terminal output
-
 \end{itemize}
 
 \item Use context-specific switches
 \begin{itemize}
 \item Unix: \lstinline{-} or \lstinline{--}
-
 \item Python: \lstinline{-} or \lstinline{--}
-
 \item Windows command prompt: \lstinline{/}
-
 \end{itemize}
 
 \end{itemize}
 
+Command line interfaces should include documentation via the \lstinline{--help} / \lstinline{-h} flag.
+For Python software, using the standard \href{https://docs.python.org/3/library/argparse.html}{argparse}
+library creates a help prompt automatically.
+Extended CLI documentation alongside tutorials and explanations of the software is helpful to
+attach meaning to the functionality available via the CLI.
 
 \subsection{Input and output files}
 The ecosystem of tools for processing data files is vast and mature.
@@ -476,58 +457,71 @@ libraries are available to export the data and load it into post-processing tool
 Similarly, input files should retain a ubiquitous human-readable format such as
 \href{https://yaml.org}{YAML} as this allows users to generate input files programmatically
 using standard libraries. Input and output files required by WETO software should
-adhere to the following conventions and principles.
+adhere to the following conventions and principles:
+
 \begin{itemize}
 \item Simple, clear, and predictable structure
-
 \item Expressive and concise
-
 \item Easy to produce and consume using ubiquitous software tools
 
 \item Minimal data consumption
 \begin{itemize}
-\item For large data sets, option to split into smaller files or binary format
-
+    \item For large data sets, option to split into smaller files or binary format
 \end{itemize}
 
 \item Typical and predictable data types
+\begin{itemize}
+\item For large data sets, option to split into smaller files or binary format
+\end{itemize}
 
 \end{itemize}
 
+File types with common libraries for popular language ecosystems are:
+\begin{itemize}
+\item \href{https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON}{JSON} - JavaScript
+    Object Notation; a very common data structure used throughout the web and in various
+    computing environments
+\item \href{https://yaml.org}{YAML} - YAML Aint Markup Language; not entirely but basically a
+    human-readable version of JSON
+\item \href{https://en.wikipedia.org/wiki/Comma-separated_values}{CSV} - Comma separated values
+\item \href{https://examples.vtk.org/site/VTKFileFormats/}{VTK} - Visualization Tool Kit; a variety of
+    file types and readers for different types of data
+\item \href{https://portal.hdfgroup.org/display/HDF5/HDF5}{HDF5} - Hierarchical Data Format; used for large,
+    complex, heterogeneous data sets; HDF includes libraries for reading and writing HDF files
+\item \href{https://github.com/nasa/Plot3D_utilities}{Plot3D} - Data type for 3D structured grid data
+\item \href{https://cgns.github.io/WhatIsCGNS.html}{CGNS} - CFD General Notation System
+\item \href{https://www.markdownguide.org/getting-started/}{Markdown} - A markup language for text documents
+\item \href{https://docutils.sourceforge.io/rst.html}{reStructured Text} - A markup language for text
+    documents
+\end{itemize}
 
 \section{Error messages}
-Messaging to practioners from within a software can be immensely helpful.
+Messaging to practitioners from within a software can be immensely helpful.
 At the same time, the infrastructure for communicating messages can be a heavy lift.
 It is important to find a balance of appropriate levels of messaging while also ensuring that
 the messages themselves are up to date with the software features and implementations.
 Too much messaging results in information overload and critical messages can be lost in noise.
-Additionally, messaging is another develop responsibility and can be overlooked among all of the
+Additionally, messaging is another developer responsibility and can be overlooked among all of the
 other responsibilities during the development cycle.
 
-Useful error messages:
 \begin{itemize}
+
 \item Expect that the reader does not have the context of the author
 \begin{itemize}
 \item Include a stack trace in all messages
-
 \item At minimum, include the calling function name
-
 \end{itemize}
 
 \item Anticipate the needs of the reader
 \begin{itemize}
 \item What will they be thinking about when this error pops up?
-
 \item What will they need to do next?
-
 \end{itemize}
 
 \item Include information that will help project maintainers understand the context of the problem
 \begin{itemize}
-\item Include metadata where relevant; see \ref{sec:metadata}
-
+\item Include metadata where relevant; see \nameref{sec:metadata}
 \item Include the value of data that is found invalid
-
 \end{itemize}
 
 \end{itemize}
@@ -545,21 +539,16 @@ the state of the computing environment, and any user decisions.
 The following fields are minimum metadata to include:
 \begin{itemize}
 \item Version number in \href{https://semver.org}{semantic versioning format} (MAJOR.MINOR.BUGFIX, i.e. v3.2.1)
-
 \item Execution time
 
 \item Compile info, if applicable
 \begin{itemize}
 \item Compiler vendor
-
 \item Compile time
-
 \item Compiler settings
-
 \end{itemize}
 
 \item System information such as OS, relevant hardware (i.e. accelerators) vendor
-
 \item Relevant settings enabled
 
 \end{itemize}
