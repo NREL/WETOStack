@@ -557,16 +557,19 @@ as well as the management of multiple developers and development efforts happeni
 concurrently.
 
 The lifecycle of WETO software projects typically follows a pattern of funding,
-development, and release resulting in a recurring development workflow depicted below.
+development, and release resulting in a recurring development workflow depicted in Figure \ref{fig:dev_lifecycle}.
 The "Maintenance" tasks are usually optional and implicitly embedded
 in future development efforts. Therefore, it is critical to the life of all WETO software to
 prioritize extendability so that future funding opportunities are attractive to stakeholders,
 and general maintenance and infrastructure upgrades can be introduced with minimal overhead.
 
-\begin{figure}[htbp] \begin{center}
+\begin{figure}[htbp]
+\begin{center}
 \includegraphics[width=0.7\textwidth]{mermaid-d1bafe392e85b8f467e3d93074dc8d7b7c45dfd0.png}
-\caption{TODO}
-\label{fig:fig2} \end{center} \end{figure}
+\caption{A representation of the typical lifecycle of software extension tasks within the research environment.}
+\label{fig:dev_lifecycle}
+\end{center}
+\end{figure}
 
 This topic is closely tied to \nameref{communicating_design}, and the objective is to ensure that
 developers can easily approach the project with minimal overhead required to align their
@@ -814,7 +817,7 @@ GitHub provides extensive \href{https://docs.github.com/en/get-started/quickstar
 for git as well as GitHub features.
 
 The primary GitHub features are described below, and a typical sequence of events across these
-features is diagramed.
+features is diagramed in Figure \ref{fig:dev_sequence}.
 
 \begin{itemize}
 \item \href{https://github.com/features/actions}{Actions}: This is a full-featured cloud computing
@@ -849,10 +852,13 @@ and communicate relevant details.
 
 \end{itemize}
 
-\begin{figure}[htbp] \begin{center}
+\begin{figure}[htbp]
+\begin{center}
 \includegraphics[width=0.8\textwidth]{mermaid-bfcb6a9556227d6b8158e111ddd0f37e43e4f635.png}
-\caption{TODO}
-\label{fig:fig3} \end{center} \end{figure}
+\caption{A representative workflow among all actors in a software development workflow leveraging GitHub features.}
+\label{fig:dev_sequence}
+\end{center}
+\end{figure}
 
 The combination of git and GitHub provides a powerful mechanism to capture design intent,
 factors that lead to particular decisions, and the evolution of a project for future reference.
@@ -988,20 +994,16 @@ reducing the burden on a project's "benevolent dictator" or gatekeeper.
 It is recommended to establish these processes at the onset of a software project, and
 continuously adjust as needed.
 
-For reference, a typical CI pipeline for a Python package is shown below where the square
+For reference, a typical CI pipeline for a Python package is shown in Figure \ref{fig:ci_pipeline} below where the square
 components are GitHub Actions steps.
 
-
-
-% \begin{figure}[htbp] \begin{center}
-% \includegraphics[width=0.7\textwidth]{mermaid-ece5068b3a6eb10d6392a7ca035a7cc4736d3183.png}
-% \caption{TODO}
-% \label{fig:fig1} \end{center} \end{figure}
-
-% \begin{figure}[htbp] \begin{center}
-%     \includegraphics[width=0.8\textwidth]{mermaid-bfcb6a9556227d6b8158e111ddd0f37e43e4f635.png}
-%     \caption{TODO}
-%     \label{fig:fig3} \end{center} \end{figure}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{mermaid-diagram-2023-10-02-133543.png}
+\caption{A typical continuous integration (CI) pipeline using GitHub features including distinct steps for testing, compliance checking, and deployment.}
+\label{fig:ci_pipeline}
+\end{center}
+\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%
