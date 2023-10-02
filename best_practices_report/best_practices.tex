@@ -1,0 +1,1319 @@
+\documentclass[]{nrel} 
+%%%%%  Package options place in square brackets
+% singleAppendix -- format TOC and appendix chapters without lettering
+% draft -- add watermark "draft"
+% confidential -- change footer to state contents are confidential
+
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%\lstdefinestyle{mystyle}{
+%    backgroundcolor=\color{backcolour},   
+%    commentstyle=\color{codegreen},
+%    keywordstyle=\color{magenta},
+%    numberstyle=\tiny\color{codegray},
+%    stringstyle=\color{codepurple},
+%    basicstyle=\ttfamily\footnotesize,
+%    breakatwhitespace=false,         
+%    breaklines=true,                 
+%    captionpos=b,                    
+%    keepspaces=true,                 
+%    numbers=left,                    
+%    numbersep=5pt,                  
+%    showspaces=false,                
+%    showstringspaces=false,
+%    showtabs=false,                  
+%    tabsize=2
+%}
+
+%\lstset{style=mystyle}
+
+% -----------------------------------
+% DOCUMENT PROPERTIES
+% -----------------------------------
+\title{Research Software Best Practices}
+
+\author{Rafael Mudafort} %<--------- Your name here
+%\author{Author two} %<--------- Coauthor's name here
+\affil{National Renewable Energy Laboratory}
+%%%%% %<--------- If including authors from multiple institutions, the affiliation number each author needs to be 
+% \author[1]{Author one}  %<--------- other NREL authors
+% \affil[1]{National Renewable Energy Laboratory}
+% \author[2]{Author two} %<--------- External collaborator
+% \affil[2]{Another affiliation} %<--------- External collaborator affil
+
+\fancypagestyle{plain}{}
+%\addbibresource{refs.bib}  %<--------- add bibliographic items to this file
+\setcounter{tocdepth}{2}
+% -------------------------------------
+% DOCUMENT STARTS HERE
+% -------------------------------------
+\begin{document}
+
+
+\frontmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{Acknowledgments}
+% <text>
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% \chapter{Acronyms} %<--------- Uncomment this section if adding acronyms
+% \acro{DOE}{Department of Energy}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Executive Summary}
+% <text>
+
+Wind energy researchers typically share one key characteristic: a passion for increasing
+wind energy in the global energy mix. The U.S. Department of Energy (DOE) supports this mission
+in a number of ways including allocating funding directly to various aspects of wind energy
+research through the
+\href{https://www.energy.gov/eere/office-energy-efficiency-renewable-energy}{Office of Energy Efficiency and Renewable Energy (EERE)}
+via the
+\href{https://www.energy.gov/eere/wind/wind-energy-technologies-office}{Wind Energy Technologies Office (WETO)}.
+While the traditional output of research is academic publication, software development efforts
+are increasingly a major focus. Software tools in the research environment allow researchers to
+describe an idea and quickly increase the scope and scale as they study it further.
+As a product of research, these tools represent a direct pipeline from researcher to industry
+practitioners since they are the implementation of ideas described in academic publications.
+Given this vital role in wind energy research and
+commercial development, the broad research software portfolio supported by WETO must maintain a
+minimum level of quality to support the wind energy field in the growing transition to
+renewable energy. \textbf{This report outlines a series of best practices to be adopted by all
+WETO-supported software projects, as well as expectations that the communities interacting with
+these projects should have of the developers and tools themselves.}
+
+Wind energy research software has a unique standing in the field of scientific software. The
+stakeholders are varied with a subset being:
+
+
+\begin{itemize}
+\item DOE EERE leadership
+
+\item DOE WETO leadership and program managers
+
+\item National lab leadership
+
+\item Associated project principle investigators
+
+\item Research software engineers
+
+\item Wind energy researchers in academia
+(including graduate students, post docs, and national lab staff)
+
+\item Industry researchers and practitioners
+
+\item Commercial software developers
+
+\item The general public interested in wind energy
+
+\end{itemize}
+
+These software are typically the end-user of other generic software libraries, so
+the funding cycles are often tied to applied research rather than the development of the
+software itself. Since the developers are also wind energy researchers, these tools are
+typically designed in a way that closely resembles the application in which they’re used.
+Additionally, the expertise and incentives for the developers have a high variability, and
+often neither are aligned with software engineering or computer science.
+
+Given the unique environment in which wind energy research software is produced and consumed,
+it is critical for model owners to understand the context of their software. A framework
+for developing this understanding is to answer the following questions of a given software project:
+\begin{itemize}
+\item What is it’s purpose?
+
+\item What is it’s role in the field of wind energy?
+
+\item What is the profile of the expected users?
+
+\item For how long will it be relevant?
+
+\item What is the expected impact?
+
+\end{itemize}
+
+These questions allow model owners to identify the appropriate methods for the design, development,
+and long term maintenance of their software. Additionally, the answer provide context for future
+planners to understand why particular decisions were made and discern the consequences of
+changing course.
+
+The information is aggregated from experience within WETO-supported software development
+groups as well as external organizations and efforts to define the craft of research software
+engineering. These best practices aim to make the collaborative development process efficient
+and effective while improving the model understanding across stakeholders. Additionally,
+the general adoption of a common framework for software quality ensures that the end users
+of WETO software can trust these tools and accurately understand the risks to workflow integration.
+
+
+\clearpage
+\tableofcontents
+\listoffigures
+%\listoftables
+
+\mainmatter
+\pagestyle{fancy}
+
+
+
+
+\chapter{WETO Software Manifesto, in short}
+The purpose of each software project, the reason for it’s existence and idealized impact, will
+be unique to the project based on it’s stakeholders, funding mechanisms, and topic area.
+A common thread across all projects, though, is to apply principles of Design in planning
+development efforts.
+It is often useful to consider varying fidelities of time such as short term feature
+implementations as well as long term strategic targets.
+A key component of design thinking is to identify the question or need that a software project
+and the activities in developing it will answer or resolve.
+As a framework for identifying these targets, ask the following questions of a project:
+\begin{itemize}
+\item What is its purpose?
+
+\item Who will use it?
+
+\item How will they use it?
+
+\item For how long should it be active or relevant?
+
+\item What is the intended impact?
+
+\end{itemize}
+
+In all development activities, the user should be considered.
+After all, the current developers will also be end-users at some time in the future.
+People outside the current development process, including active developers at another time,
+will not have the current context.
+All code, algorithms, procedures, documentation, and associated work should maintain this
+perspective.
+Include details so that a newcomer can reasonably understand the meaning and impact of any
+part of the project - and beware of underestimating what is reasonable or overestimating
+human memory or ability to read the docs.
+
+
+Your idea is irrelevant until someone else can accurately communicate it back to you.
+Consider your future self - how will your decisions now impact your work in one year, two years, ten years?
+Research software should be predictable and easy
+\begin{itemize}
+\item Nothing clever
+
+\item Use ubiquitous tools
+
+\item Basically, prevent users from having to go down rabbit holes to understand some nuance of your code
+Study and adopt the \ref{sec:zen}. Consider them the Zen of WETO Software Development.
+
+\end{itemize}
+
+Who are the stakeholders?
+\begin{itemize}
+\item Supporters: Funders and programmatic leaders (PI’s)
+
+\item Two kinds of users:
+\begin{enumerate}
+\item Practitioners who run the software and evaluate results
+
+\item Developers who extend or integrate the software into other systems
+
+\end{enumerate}
+
+\end{itemize}
+
+How will stakeholders interact with the software?
+\begin{itemize}
+\item Supporters need text-based and graphical information
+
+\item Address the anticipated needs of the target users
+
+\item Make installation as absolutely easy as possible; automate distribution and installation and
+focus time on documentation for getting users started
+
+\end{itemize}
+
+How will practitioners "level up"?
+\begin{itemize}
+\item Design software behavior and interfaces to be consistent and predictable
+
+\item Provide quality error messages with contextually relevant information
+
+\end{itemize}
+
+How will developers extend the software without breaking it?
+\begin{itemize}
+\item Design the architecture so that new features can be clearly scoped within the context of
+the larger framework
+
+\item Use simple code style (syntax) unless obfuscation is absolutely critical
+\begin{itemize}
+\item Choose common libraries with healthy developer ecosystems
+
+\item Use version control to manage concurrent work
+
+\item Leverage GitHub features like Pull Requests and Issues to document issues, propose
+solutions and requirements, and provide code review feedback
+
+\item \end{itemize}
+
+\end{itemize}
+
+**Point out that one overarching theme is to DOCUMENT! Write, draw, model - whatever you need - to
+communicate the ideas in your head. If you aren’t able to make someone else understand your idea,
+it might as well not exist.
+\textbf{An idea only exists if it has been communicated.}
+
+Additional considerations specific to research software:
+\begin{itemize}
+\item Dont be clever
+\begin{itemize}
+\item Ubiquity is essential in research software. Use common standards and conventions.
+
+\item Many developers are not specialists in software development. Consider them as first-order
+users and meet their needs. Obfuscated meaning through syntactic sugar degrades the
+extendability of the software, in general. See the next line.
+
+\end{itemize}
+
+\item Keep it super simple (KISS)
+
+\end{itemize}
+
+Software projects exist in varying levels of maturity.
+These best practices should be applied in proportion to the maturity of the project.
+
+consider two kinds of "users":
+\begin{itemize}
+\item Developers - write new code or modify existing code including infrastructure and documentation
+
+\item Practitioners - execute the software either directly or as a part of another system
+
+\end{itemize}
+
+Why we care about software quality
+\begin{itemize}
+\item Collaboration
+
+\item Workflows
+
+\item Accessibility
+
+\end{itemize}
+
+
+\chapter{Call To Action}
+\label{\detokenize{best_practices:call-to-action}}
+Develop a style guide
+\begin{itemize}
+\item One for syntax and code style
+
+\item Another for architecture and design style
+
+\item This is most relevant for long term software projects, but it can be useful to articulate
+these ideas even for yourself. As in, in the course of developing various projects, iterate
+on your own personal style guide.
+
+\item Start with \href{https://pep8.org}{pep8} and customize for yourself and your projects
+
+\end{itemize}
+
+Automate the following:
+\begin{itemize}
+\item Testing: run the full test suite for every commit in less than 30 minutes
+
+\item Performance profiling: include a statistical measure of performance for each commit
+
+\item Code coverage: report code coverage to a coverage dashboard service (codecov, coveralls)
+
+\item Distribution: build and distribute to all package managers for every release
+
+\item Documentation Hosting: use a service to compile documentation from markup files (md, rst, etc)
+using a mature framework (jekyll, jupyter-book, etc)
+
+\end{itemize}
+
+Adopt a framework for testing:
+\begin{itemize}
+\item pytest for Python
+
+\item google test for C++
+
+\end{itemize}
+
+Adopt a framework for constructing documentation:
+\begin{itemize}
+\item Jekyll
+
+\item Jupyter-book
+
+\item Sphinx
+And host it using a typical service
+
+\item GitHub Actions
+
+\item readthedocs
+
+\end{itemize}
+
+Develop a culture of discussing the features in the software outside of the context of the software, first.
+Then, relate it to the software.
+A common method for this is a design document where new work is described, scoped, prototyped,
+and validated using plain language, graphics, and math.
+
+Write a design document:
+\begin{itemize}
+\item Identify target users
+
+\item Describe broad themes in the design - What are the objectives of the software architecture?
+
+\item Prototype intended uses like a storyboard
+
+\end{itemize}
+
+Submit to Journal of Open Source Software (JOSS)
+
+
+\chapter{Accessibility}
+Accessibility is concerned with how practitioners are expected to obtain and integrate a software
+into their processes. The product that is to be obtained is the executable version of the software.
+In the case of compiled programming languages, this is a binary executable or library file,
+while interpreted languages typically require distributing the source code directly.
+
+For guidance on developer accessibility, see \ref{sec:extendability}.
+
+Summary:
+\begin{itemize}
+\item Determine the expected or targeted user profile up front and address accessibility accordingly
+\begin{itemize}
+\item Domain experts will need less hand holding than graduate students or the general public
+
+\end{itemize}
+
+\item Automate accessibility
+
+\end{itemize}
+
+
+\section{Prerequisite knowledge}
+Using a computer in a scientific context is a learned skill and requires years of practice to
+become proficient. Tools like a "terminal", "shell", or "command prompt" are not initially
+intuitive, and that these three terms are used interchangeably can lead to further confusion.
+This is an example of a barrier to entry often encountered by early-career researchers and
+experienced practitioners alike. In order to improve accessibility, it is important to
+understand the experience of users and design software to meet their needs.
+
+\textbf{BP: Identify target user profiles and anticipate their levels of understanding. Accurately
+understand the complexity of the systems used to access the software, and evaluate whether
+this matches the expected skills in target users.}
+
+Some examples of common barriers to entry are:
+\begin{itemize}
+\item Navigating a "terminal"
+
+\item Knowledge of acronyms, jargon, or interchangeable phrases
+\begin{itemize}
+\item CLI, API, IDE, etc
+
+\item Compile, clone, check out
+
+\item Terminal vs shell vs command prompt
+
+\end{itemize}
+
+\item Extensions: \lstinline{.exe}, \lstinline{.so}, \lstinline{.dll}, \lstinline{.dylib}
+
+\item Installation:
+\begin{itemize}
+\item Package managers
+
+\item Downloading executable files
+
+\item Configuring an environment
+
+\end{itemize}
+
+\end{itemize}
+
+
+\section{Distribution}
+Research computing software often depend on third-party libraries, and many of these dependencies
+are research software themselves. Therefore, the installation and environment configuration
+for this type of software can easily become complex.
+
+\textbf{BP: It is the responsibility of developers to provide a streamlined method of installation using
+common software distribution systems and automation as much as practical.}
+
+Mature package managers are a great resource since they have a distribution system already in place
+and manage dependencies between software tools.
+
+The ecosystem of open source software package managers has coalesced around a few primary tools:
+\begin{itemize}
+\item \href{https://pypi.org}{Python Package Index (PyPI)}
+\begin{itemize}
+\item Source and binary distribution package manager for Python software
+
+\item Platform: any
+
+\end{itemize}
+
+\item \href{https://docs.conda.io/en/latest/}{Conda}
+\begin{itemize}
+\item Package, dependency and environment management for any language
+
+\item Platform: any
+
+\end{itemize}
+
+\item \href{https://conda-forge.org}{Conda-forge}
+\begin{itemize}
+\item A community-led collection of recipes, build infrastructure and distributions for the conda package manager
+
+\item Platform: any
+
+\end{itemize}
+
+\item \href{https://brew.sh}{Homebrew (brew)}
+\begin{itemize}
+\item The Missing Package Manager for macOS (or Linux)
+
+\item Platform: Ubiquitous for macOS, but also available for Linux
+
+\end{itemize}
+
+\item \href{https://spack.io}{Spack}
+\begin{itemize}
+\item Spack is a package manager for supercomputers supporting any language and distributable product
+
+\item Platform: Ubiquitous for Linux-based supercomputers, and also available for macOS and Linux
+
+\end{itemize}
+
+\item \href{https://en.wikipedia.org/wiki/APT\_(software)}{APT}
+\begin{itemize}
+\item A user interface that works with core libraries to handle the installation and removal of software on Debian, and Debian-based Linux distributions
+
+\item Platform: Ubiquitous for Linux for system-level or generic packages
+
+\end{itemize}
+
+\item \href{https://fpm.fortran-lang.org/index.html}{Fortran package manager (FPM)}
+\begin{itemize}
+\item Fortran-specific executable and library package manager.
+
+\end{itemize}
+
+\end{itemize}
+
+The process for including a package in a package management system varies, but all are designed
+to integrate with automated systems to prepare and distribute the package automatically upon
+a given event. The practice of releasing a software package after a tagged release
+(see \ref{sec:version_control}) or requisite set of changes is called "continuous integration",
+also known as "CI". Tools for this level of automatic are common, and a practical choice
+is \href{https://github.com/features/actions}{GitHub Actions}. A typical CI pipeline for a Python
+package is shown below where the square components are GitHub Actions steps. Note that this
+pipeline includes sub-system areas called "Continuous Testing" and "Continuous Deployment".
+
+\begin{figure}[htbp] \begin{center}
+\includegraphics[width=0.7\textwidth]{mermaid-ece5068b3a6eb10d6392a7ca035a7cc4736d3183.png}
+\caption{TODO}
+\label{fig:fig1} \end{center} \end{figure}
+
+
+\chapter{Usability}
+Usability is concerned with how practitioners are expected to execute the software including
+creating inputs and managing outputs.
+
+Nuances of research software:
+- "Design" is typically not a consideration at all
+- It is typical to adopt "patterns", so there is very little evolution of software interface design and therefore usability
+- Research software is expected to be predictable and similar to what users already know. The challenge is to understand the existing paradigms and adopt them well.
+
+
+\section{User interface}
+The user interface (UI) is any mechanism through which users interact with the software
+typically by providing inputs and receiving outputs. Examples of UI’s include:
+\begin{itemize}
+\item Graphical user interface (GUI)
+
+\item Web-based front ends
+
+\item Input and output files
+
+\item Command line interface
+
+\item Library API’s
+
+\end{itemize}
+
+WETO software UI’s should be well defined and predictable.
+They should adopt the conventions that already exist in the environments and contexts
+in which they’re used.
+Most importantly, all user interfaces should be well documented.
+
+
+\subsection{Command line interface}
+The command line interface (CLI) is one type of front-end for software.
+It is the method by which a software is executed via a computer’s terminal.
+WETO software should in general adhere to the following conventions and principles for CLI’s.
+However, these are guidelines and can be skipped when context is clear or another
+option improves usability.
+\begin{itemize}
+\item Adopt command line syntax requirements from \url{https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1\_chap12.html}
+\begin{itemize}
+\item Guideline 1: Utility names should be between two and nine characters, inclusive.
+
+\item Guideline 2: Utility names should include lowercase letters (the lower character classification) and digits only from the portable character set.
+
+\item Guideline 3: Each option name should be a single alphanumeric character (the alnum character classification) from the portable character set. The \lstinline{-W} (capital-W) option shall be reserved for vendor options. Multi-digit options should not be allowed.
+
+\item Guideline 4: All options should be preceded by the `-`` delimiter character.
+
+\item Guideline 5: One or more options without option-arguments, followed by at most one option that takes an option-argument, should be accepted when grouped behind one \lstinline{-} delimiter.
+
+\item Guideline 6: Each option and option-argument should be a separate argument, except as noted in \href{https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1\_chap12.html}{Utility Argument Syntax, item (2)}.
+
+\item Guideline 7: Option-arguments should not be optional.
+
+\item Guideline 8: When multiple option-arguments are specified to follow a single option, they should be presented as a single argument, using \lstinline{<comma>} characters within that argument or \lstinline{<blank>} characters within that argument to separate them.
+
+\item Guideline 9: All options should precede operands on the command line.
+
+\item Guideline 10: The first \lstinline{--} argument that is not an option-argument should be accepted as a delimiter indicating the end of options. Any following arguments should be treated as operands, even if they begin with the \lstinline{-} character.
+
+\item Guideline 11: The order of different options relative to one another should not matter, unless the options are documented as mutually-exclusive and such an option is documented to override any incompatible options preceding it. If an option that has option-arguments is repeated, the option and option-argument combinations should be interpreted in the order specified on the command line.
+
+\item Guideline 12: The order of operands may matter and position-related interpretations should be determined on a utility-specific basis.
+
+\item Guideline 13: For utilities that use operands to represent files to be opened for either reading or writing, the \lstinline{-} operand should be used to mean only standard input (or standard output when it is clear from context that an output file is being specified) or a file named "-".
+
+\item Guideline 14: If an argument can be identified according to Guidelines 3 through 10 as an option, or as a group of options without option-arguments behind one \lstinline{-} delimiter, then it should be treated as such.
+
+\end{itemize}
+
+\item Adopt these minimum GNU conventions
+\begin{itemize}
+\item A short version with one dash and a long version with two dashes
+
+\item \lstinline{-v} / \lstinline{--version} to show version information
+
+\item \lstinline{-h} / \lstinline{--help} to display help information
+
+\item \lstinline{-i} / \lstinline{--input} for input file specification
+
+\item \lstinline{-o} / \lstinline{--output} for input file specification
+
+\item \lstinline{-V} / \lstinline{--verbose} to include additional output in terminal
+
+\item \lstinline{-q} / \lstinline{--quiet} to suppress terminal output
+
+\end{itemize}
+
+\item Use context-specific switches
+\begin{itemize}
+\item Unix: \lstinline{-} or \lstinline{--}
+
+\item Python: \lstinline{-} or \lstinline{--}
+
+\item Windows command prompt: \lstinline{/}
+
+\end{itemize}
+
+\end{itemize}
+
+
+\subsection{Input and output files}
+The ecosystem of tools for processing data files is vast and mature.
+Therefore, input and output files should adopt a common file type and syntax relevant to the
+field and context of the software itself.
+For example, large datasets generated by computational fluid dynamics software are often
+exported in \href{https://www.hdfgroup.org/solutions/hdf5/}{HDF5} format since robust
+libraries are available to export the data and load it into post-processing tools.
+Similarly, input files should retain a ubiquitous human-readable format such as
+\href{https://yaml.org}{YAML} as this allows users to generate input files programmatically
+using standard libraries. Input and output files required by WETO software should
+adhere to the following conventions and principles.
+\begin{itemize}
+\item Simple, clear, and predictable structure
+
+\item Expressive and concise
+
+\item Easy to produce and consume using ubiquitous software tools
+
+\item Minimal data consumption
+\begin{itemize}
+\item For large data sets, option to split into smaller files or binary format
+
+\end{itemize}
+
+\item Typical and predictable data types
+
+\end{itemize}
+
+
+\section{Error messages}
+Messaging to practioners from within a software can be immensely helpful.
+At the same time, the infrastructure for communicating messages can be a heavy lift.
+It is important to find a balance of appropriate levels of messaging while also ensuring that
+the messages themselves are up to date with the software features and implementations.
+Too much messaging results in information overload and critical messages can be lost in noise.
+Additionally, messaging is another develop responsibility and can be overlooked among all of the
+other responsibilities during the development cycle.
+
+Useful error messages:
+\begin{itemize}
+\item Expect that the reader does not have the context of the author
+\begin{itemize}
+\item Include a stack trace in all messages
+
+\item At minimum, include the calling function name
+
+\end{itemize}
+
+\item Anticipate the needs of the reader
+\begin{itemize}
+\item What will they be thinking about when this error pops up?
+
+\item What will they need to do next?
+
+\end{itemize}
+
+\item Include information that will help project maintainers understand the context of the problem
+\begin{itemize}
+\item Include metadata where relevant; see \ref{sec:metadata}
+
+\item Include the value of data that is found invalid
+
+\end{itemize}
+
+\end{itemize}
+
+
+\section{Metadata}
+\label{sec:metadata}
+Tracking metadata in software projects is a simple way to provide clarity to all users.
+This greatly improves usability and has the added effect of improving the debugging process.
+This information can be provided to the user in any structured output from the software.
+For example, output data files, reports, images, etc can all include a snapshot of the metadata.
+The objective is to communicate information on the state of the software (version and runtime),
+the state of the computing environment, and any user decisions.
+
+The following fields are minimum metadata to include:
+\begin{itemize}
+\item Version number in \href{https://semver.org}{semantic versioning format} (MAJOR.MINOR.BUGFIX, i.e. v3.2.1)
+
+\item Execution time
+
+\item Compile info, if applicable
+\begin{itemize}
+\item Compiler vendor
+
+\item Compile time
+
+\item Compiler settings
+
+\end{itemize}
+
+\item System information such as OS, relevant hardware (i.e. accelerators) vendor
+
+\item Relevant settings enabled
+
+\end{itemize}
+
+
+\chapter{Extendability}
+\label{sec:extendability}
+Extendability is concerned with how improvements such as new features, bug fixes, and general
+maintenance are added to an existing software project. This covers both the technical aspects
+as well as the management of multiple developers and development efforts happening
+concurrently.
+
+The lifecycle of WETO software typically follows a cyclical pattern of funding, development, and
+release, as depicted below. Note that the "Maintenance" tasks are usually optional and included
+in future development efforts. Therefore, it is critical to the life of all WETO software to
+prioritize extendability so that future funding opportunities are attractive to stakeholders
+and general maintenance and infrastructure upgrades can be introduced with minimal overhead.
+
+\begin{figure}[htbp] \begin{center}
+\includegraphics[width=0.7\textwidth]{mermaid-d1bafe392e85b8f467e3d93074dc8d7b7c45dfd0.png}
+\caption{TODO}
+\label{fig:fig2} \end{center} \end{figure}
+
+Is the code open source?
+If not, is there a build system with modern dependencies?
+i.e. Makefiles are outdated, use CMake
+
+
+
+This is closely tied to \textbf{(6) methodologies for communicating intent and verifying implementation}
+Generally, use ubiquitous infrastructure
+\begin{itemize}
+\item Project managers can rely on mature third party tools to handle complex systems
+
+\item Mature third party tools typically come with their own documentation
+
+\end{itemize}
+
+
+\section{Code style}
+In software development, the word "grok" is often used (see usage in
+\href{https://hn.algolia.com/?q=grok}{Hacker News},
+\href{https://lobste.rs/search?q=grok\&what=stories\&order=newest}{Lobsters},
+\href{https://stackoverflow.com/search?tab=newest\&q=grok\&searchOn=3}{StackOverflow})
+to communicate about degrees of understanding. This word is described by it’s creator below.
+\begin{quote}
+
+\textit{Grok} means "to understand", of course, but Dr. Mahmoud, who might be termed the leading
+Terran expert on Martians, explains that it also means, "to drink" and "a hundred other
+English words, words which we think of as antithetical concepts. ‘Grok’ means \textit{all} of
+these. It means ‘fear’, it means ‘love’, it means ‘hate’ – proper hate, for by the Martian
+‘map’ you cannot hate anything unless you grok it, understand it so thoroughly that you
+merge with it and it merges with you – then you can hate it. By hating yourself. But this
+implies that you love it, too, and cherish it and would not have it otherwise. Then you
+can \textit{hate} – and (I think) Martian hate is an emotion so black that the nearest human
+equivalent could only be called mild distaste.
+\end{quote}
+
+Source: \url{https://en.wikipedia.org/wiki/Grok}.
+
+That such a word exists and is widely used in software development illustrates the high value
+of clear and understandable code.
+WETO software should avoid complexity where possible and favor readability over writability.
+Strive to create software that can be easily grokked by developers who do not have the current
+context.
+
+The designers of the Python programming language consider readability as a primary priority, and
+the most famous of the many Python language-development documents is
+\href{https://peps.python.org/pep-0008/}{PEP 8} which proposes a style guide for Python code.
+PEP 8 is summarized into 19 aphorisms (20 including one that’s implied) and is referred to as
+\href{https://peps.python.org/pep-0020/}{"The Zen of Python"}. Much of the WETO software portfolio is
+Python-based, so these guiding principles directly apply. However, these principles are
+programming language agnostic and eloquently describe the paradigm for developing
+extendable software.
+
+
+\subsection{The Zen of Python}
+\label{sec:zen}
+
+\begin{lstlisting}[language=Python]
+import this
+\end{lstlisting}
+
+\begin{lstlisting}
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one -- and preferably only one -- obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+\end{lstlisting}
+
+
+\section{Version control}
+\label{sec:version_control}
+
+Version control, typically with \lstinline{git}, is a tool for tracking the evolution of a project change
+by change establishing a history of changes.
+Each change is itself a version of the software, and they provide a snapshot of thought
+processes and progression of work.
+
+BP: Craft a version control history that communicates the evolution of changes of the software
+to future developers including the author of current changes.
+BP: Evolve the software in a logical, linear process with digestible change sizes.
+
+Version control with git is often a secondary consideration in the software development process.
+It can seem like simply a mechanism to "save" the state of a document.
+However, it carries far more meaning in the context of software extendability.
+Since the git system is decentralized, it allows for multiple developers to make changes to a
+project concurrently.
+Git also provides a mechanism for resolving differences so that multiple changes can be merged
+together easily.
+
+In addition to the content of changes themselves, the connectivity between changes is valuable
+over the lifetime of a project.
+The connectivity between commits is structured as a
+\href{https://en.wikipedia.org/wiki/Directed\_acyclic\_graph}{directed acyclical graph (DAG)}.
+Each commit has a parent and each parent can have multiple children.
+This provides a mechanism for easily and accurately rolling back to the state of the project at any
+time in history.
+
+To best leverage the power of git to enable extendability, consider the following guidelines:
+\begin{itemize}
+\item It is reasonable to spend time crafting each commit and a sequence of commits.
+
+\item Practice editing a series of commits to ensure that the progress of work is captured accurately.
+
+\item Consider whether the commit history is concise and readable to people who are not the authors.
+
+\item Become familiar with the following actions:
+\begin{itemize}
+\item Interactive rebase
+
+\item Cherry-pick
+
+\item Squash
+
+\item Edit a commit message
+
+\end{itemize}
+
+\item Commit messages should be short, and it is a convention to limit them less than 50 characters.
+
+\item An additional line can be included as a longer description of the commit beneath the
+50 character line. The second line is typically limited to 70 characters, but it is
+considered reasonable to use as much space as needed.
+
+\end{itemize}
+
+
+\section{Collaborative workflows with GitHub}
+The processes through which developers interact with a software and other developers is
+an essential component of extendability.
+These processes should generally strive for efficiency while minimizing overhead.
+Automated processes are better than manual processes, and objective is better than subjective.
+The majority of collaborative software development processes occur on cloud-based resources on
+the GitHub platform.
+
+\textbf{BP: Plan and coordinate software development efforts into a collaborative workflow using GitHub}
+
+\textbf{BP: Automate code quality feedback as much as possible via GitHub Actions}
+
+GitHub contains some key features for coordinating software development:
+\begin{itemize}
+\item Issue tracking
+
+\item Forum-style discussions
+
+\item Pull request and code review
+
+\item Project boards
+
+\item Releases
+
+\end{itemize}
+
+GitHub and git (see \ref{sec:version_control}) are tightly connected, but they are different
+systems and serve different purposes in the development process.
+Git is a version control system for tracking and merging changes to a software.
+GitHub is a platform for orchestrating and coordinating the various processes that happen
+around the development cycle.
+GitHub activities add context on top of the individual changes captured in commits.
+Whereas commits often capture low-level information, GitHub activities can map the low level
+details to high-level efforts.
+
+Become familiar with GitHub features and leverage them to plan and communicate.
+
+
+
+GitHub features can be used a many ways. The primary features are described below and a typical
+sequence of events across these features is described.
+\begin{itemize}
+\item \href{https://docs.github.com/en/discussions}{Discussions}: This is typically the starting point
+for any collaboration. Create a discussion topic and engage with other model stakeholders
+to define the idea and develop a proposed implementation.
+
+\item \href{https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues}{Issues}:
+Document the proposed solution to a problem or implementation of a new feature as outlined
+in the corresponding Discussion. Finalize the description and outline test cases to verify
+the idea.
+
+\item \href{https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects}{Projects}:
+Collect Issues, Pull Requests, and generic cards to establish a relationship across all
+ongoing works in progress. This is typically most useful for large development efforts
+and prioritizing work for upcoming releases.
+
+\item \href{https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests}{Pull Requests}:
+Pull Requests (PR) are a request to accept a change into a branch. This typically happens
+across forks of a repository, but it can also happen between branches of the same fork.
+During the implementation of an Issue, open a pull request to communicate that work is
+ongoing. This is also the venue for code reviews.
+
+\item \href{https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases}{Releases}:
+A number of accepted pull requests can be aggregated to comprise one release, and this is
+listed in a project’s GitHub Releases page along with release notes to describe the changes
+and communicate relevant details.
+
+\end{itemize}
+
+\begin{figure}[htbp] \begin{center}
+\includegraphics[width=0.8\textwidth]{mermaid-bfcb6a9556227d6b8158e111ddd0f37e43e4f635.png}
+\caption{TODO}
+\label{fig:fig3} \end{center} \end{figure}
+
+Along with git, GitHub provides a helpful mechanism to capture design intent, factors that lead
+to particular decisions, and the evolution of a project for future reference.
+However, it is important carefully craft the messages to avoid washing out information
+with noise.
+The following are guidelines to consider when engaging on GitHub.
+\begin{itemize}
+\item Descriptions of any activity should be well scoped and easily understandable.
+
+\item Pictures really are worth 1,000 words. Always include a diagram, plot, screenshot, or picture
+when it will add clarity.
+
+\item Prefer actual text over of screenshots of text. GitHub is searchable, so text provides more
+searchable context whereas screenshots do not. Additionally, text-based code snippets can be
+copied easily by other users.
+
+\item Establish a practice of assigning responsibility for each Issue and Pull Request. Without
+a person to take ownership, these will remain unaddressed.
+
+\end{itemize}
+
+
+\section{Pull Requests}
+A pull request is a request to merge a particular set of code changes into another copy of the
+software, typically an agreed upon "main" version.
+
+Pull requests should include contextual information regarding the code change. The intention is
+to convince reviewers and maintainers that the new code is in a good state and that it’s
+inclusion would be a benefit to the project. This typically involves a contextual description of
+the change and a description of why the change is valid and well tested.
+
+Futhermore, GitHub automatically constructs release notes from all of the pull requests merged
+since the previous release.
+It automatically takes the titles of each pull request to construct the release notes.
+"Update XYZ" again provides no context and more work is required to communicate what has changed
+to users and downstream dependencies.
+
+All version control messages (commits and pull requests) should communicate what the change
+accomplishes.
+Vague messages such as "updated solver" are distracting and lack meaning.
+
+
+\section{Automated Quality Checks - Continuous-N}
+Continuous Integration can be mean many things:
+\begin{itemize}
+\item Continuous building
+
+\item Continuous testing
+
+\item Continuous distribution
+
+\item Continuous integration (into the repository)
+
+\end{itemize}
+
+
+\chapter{Code Stability}
+The considerations given to long term stability of a software project directly correlate to the
+lifespan and ultimate impact of the project.
+When a software project has a stable code, all users can have consistent expectations
+and the \ref{sec:extendability} is greatly improved.
+In this context, stability means changing the source code in intentional and controlled ways
+so that all users are able to adopt the changes with minimal effort.
+Establishing code stability typically involves creating infrastructure to address needs around
+dependency management, testing, profiling, and documentation.
+
+Code stability is most practically address through automated processes.
+This infrastructure is typically automated through services like GitHub,
+and it is targeted at developers in two categories:
+\begin{itemize}
+\item \textbf{Maintainers} who will keep the infrastructure running, update dependency versions and API’s,
+and address bugs
+
+\item \textbf{Extenders} who will periodically return to the software to add new features
+
+\end{itemize}
+
+Nuances of research software:
+- The landscape is broad and the associated ecosystem changes very quickly but adoption is very slow
+- iOS for example runs on a small set of well-known hardware
+\begin{itemize}
+\item Research funding cycles do not include maintenance
+
+\end{itemize}
+
+The maintenance component of sustainability deals with ensuring that, even with no changes
+internally, the software can continue to function with changes that happen externally.
+This can involve updates to the software to support new operating systems, virtual machines,
+runtime environments, and hardware components.
+A recent example is the introduction of Apple computers with Arm-based CPU’s rather than the
+canonical Intel x86 architecture.
+This change resulted in unusable ecosystems of software including compilers, interpreters,
+debuggers, and profilers that required upgrades to support the new systems.
+
+The extension component ensures that developers who work to add new features and improvements are
+able to determine whether their change had the intended effect and no side effects.
+
+
+\chapter{Accuracy}
+Validation - Are you building the right thing?
+Verification - Are you building the thing right?
+\begin{itemize}
+\item Barry Boehm, Software Engineering Economics, 1981
+
+\end{itemize}
+
+Test driven development - formalize the ideas that drive development.
+A portion of code should not be added without a formal proof of correctness and robustness.
+Consider testing like writing a report - prove to the reader that it is correct and should be accepted.
+
+Phenomenon identification and ranking table
+\begin{itemize}
+\item David Maniaci
+
+\end{itemize}
+
+
+\chapter{Methodologies for communicating intent and verifying implementation}
+To understand how a change fits into the big picture, it is required to have a sense for the picture from the start.
+Develop diagrams for code architecture and regularly check and update them as the architecture changes.
+
+Types of diagrams:
+\begin{itemize}
+\item State / flow diagrams
+
+\item Class hierarchy
+
+\item Data construction and operation - Show a representative problem describing how operations happen on data in various contexts (serial vs parallel, cpu vs gpu)
+
+\end{itemize}
+
+Identify and communicate the \textit{parti}.
+
+TODO: add descriptions and examples of UML
+TODO: Describe communicating design intent
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+% bibliography
+%\cleardoublepage
+%\label{sec:Bib}
+%\nocite{*} %<--------- This command prints all entries in the bib file. Remove to cite only references cited in the report
+%\printbibliography[heading=bibintoc, title={References}]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{appendices} %<--------- All chapters after this will be labeled as appendices
+    
+    % Reset the figure and table numbering to be A.1, etc.
+    \counterwithin{figure}{chapter}
+    \counterwithin{table}{chapter}
+
+    \appchapter{The engineer behind the research software}
+    \label{app:A}
+Research software exists in a unique environment.
+The breadth of experience in users and developers is more narrow than in other types of software,
+and the funding mechanisms are often tied to results from using the software rather than
+to the software tools themselves.
+Because of these nuances of the research software environment, the incentives to create high
+quality software are often lacking, and this can leave software developers with the difficult
+choice of choosing to prioritize with their work or career but not both.
+Therefore, it is important to directly consider the needs and expectations of the people
+responsible for designing and implementing research software projects.
+
+The term research software engineer (RSE) is defined as:
+\begin{quote}
+
+A Research Software Engineer (RSE) combines professional software engineering expertise with
+an intimate understanding of research.
+\url{https://society-rse.org/about/}
+\end{quote}
+
+While modern research typically involves using research software, it is common for research
+software engineers to focus skill development on either the research domain or the aspects
+related to software engineering.
+Additionally, the research environment in academia and government research labs are structured
+to incentivize academic publication.
+Therefore, the resulting teams are often comprised of domain researchers and research software
+engineers.
+The domain researchers inform the needs of the research software and are the primary users.
+The RSE’s design and develop the software systems as well as manage various IT responsibilities
+for the group such as creating computer-based workflows, managing data, constructing web-based
+research artifacts, and training colleagues on best practices in research computing.
+
+In this context, note the difference between computer science and software engineering:
+\begin{itemize}
+\item \textbf{Computer science} is the study of computation, information, and automation.
+Computer science spans theoretical disciplines (such as algorithms, theory of computation,
+and information theory) to applied disciplines (including the design and implementation of
+hardware and software).
+\url{https://en.wikipedia.org/wiki/Computer\_science}
+
+\item \textbf{Software engineering} is an engineering-based approach to software development. A software
+engineer is a person who applies the engineering design process to design, develop, maintain,
+test, and evaluate computer software. The term programmer is sometimes used as a synonym,
+but may emphasize software implementation over design and can also lack connotations of
+engineering education or skills.
+
+Engineering techniques are used to inform the software development process, which involves the
+definition, implementation, assessment, measurement, management, change, and improvement of
+the software life cycle process itself.
+
+\url{https://en.wikipedia.org/wiki/Software\_engineering}
+
+\end{itemize}
+
+Treat a RSE as an engineer
+\begin{itemize}
+\item \textbf{Many have engineering or science degrees and treat their work as engineering.}
+Don’t refer to them as "programmers" doing "programming".
+
+\item \textbf{Writing code and designing software systems are entirely different things, and the latter must be recognized relative to the value that it adds.}
+Software design and software architecture are very complicated, and the process of developing
+a design given various requirements is a design process. It involves stating requirements,
+iterative design, and validation and verification of the design. It often takes years to fully
+accomplish an objective and at the same time the landscape of computers and software
+development is changing. Additionally, software is rarely created by one person, so the RSE
+has to deal with managing multiple people making changes simultaneously while also trying to
+meet the needs of the project.
+
+\end{itemize}
+
+In addition to acknowledgement of work and value added, it is important to provide meaningful
+career guidance to RSE’s to serve both the personal goals of associated staff and ensure
+that the projects have well-rounded contributors. RSE’s should have some level of domain
+experience; that is to say that they should \textit{use} as well as \textit{develop} their software.
+RSE’s should know the context in which their software exists.
+They should be experts in the implementation and very good in the usage.
+A typical career trajectory within the national lab environment look something like this:
+\begin{itemize}
+\item Year 1: Implementing models and developing tests and documentation
+
+\item Year 2: Second author on analyses, improved modeling, informing AOP, and writing developer-specific documentation
+
+\item Year 3: Lead author on analysis work, guiding the direction for future development projects, writing AOP, writing user-specific documentation
+
+\item Year 4: Proposing new work and seeking funding to expand the software project
+
+\end{itemize}
+
+In general, the amount of code written by a developer should peak around year 2 or 3 and
+then start to drop.
+It should not go to 0, but the majority of involvement in software development should be code
+review, design, and project planning.
+
+
+
+
+\section{Architecture}
+Support modularity
+
+Design in such a way to allow for future flexibility
+\begin{itemize}
+\item Think about systems in discrete chunks rather than monoliths
+
+\item Consider how the system will scale in scope and in problem size
+
+\end{itemize}
+
+Design for usability
+\begin{itemize}
+\item Trap errors before they manifest into larger problems that are difficult to debug through
+validation of input files and function inputs
+
+\item Adopt a logging framework
+\begin{itemize}
+\item Funnel messages to a particular place (terminal, file, nowhere) very easily
+
+\item Format messages to call out particular pieces of information
+
+\item Always include context!
+\begin{itemize}
+\item Users and developers will not know what you mean by "Invalid value"
+unless they also have some context. Try this: "Invalid value in
+ClassName.well\_named\_function(); wind speed must be positive".
+
+\end{itemize}
+
+\end{itemize}
+
+\item Avoid information overload. It’s too easy to ignore messages from a tool when there are
+too many words. Respect the user’s attention, only give messages that are absolutely critical.
+
+\item Assume warnings will not be read-trap errors and inconsistencies instead.
+
+\item Avoid making decisions on behalf of the user
+\begin{itemize}
+\item It’s fine to provide default values, but its generally better to raise an error
+when an invalid input is given.
+
+\item It may be tempting to use default values for new inputs to avoid breaking API’s, but
+remember that this adds complexity for the user. These inputs now have the possibility
+of being null or the value itself. If this input enables / disables a feature, this should
+be made abundantly clear to the user.
+
+\end{itemize}
+
+\end{itemize}
+
+\end{appendices}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% Example figure, list, and table environments %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% %%% Example figure
+% \begin{figure}[h] %<--------- placement options are (h)ere, (t)op, (b)ottom, (p)age. More than one option may be supplied.
+%   \centering
+%   \includegraphics[width=\columnwidth]{example-image-a} %<--------- path to graphics. Usually figures/<name of figure>
+%   \caption[Optional short caption for LOF]{Actual caption for figure}
+%   \label{fig:fig1}
+% \end{figure}
+
+% %%% Example subfigure
+% \begin{figure}[h]
+%   \centering
+%   \begin{subfigure}[b]{0.48\columnwidth}
+%     \includegraphics[width=\columnwidth]{example-image-b}
+%     \caption{}
+%     \label{fig:}
+%   \end{subfigure}
+%   \hfill
+%   \begin{subfigure}[b]{0.48\columnwidth}
+%     \includegraphics[width=\columnwidth]{example-image-c}
+%     \caption{}
+%     \label{fig:}
+%   \end{subfigure}
+%   \caption}
+%   \label{fig:}
+% \end{figure}
+
+% %%% Example list
+% \begin{itemize}
+%   \item item 1
+%   \item item 2
+% \end{itemize}
+
+% %%% Example table
+% \begin{table}
+%     \caption[Optional short table caption for LOT]{Actual table caption}
+%     \label{tab:tab1}
+%     \centering
+%       \begin{tabular}{ccc}
+%         \hline
+%         a & b & c\\
+%         d & e & f \\
+%       \end{tabular}
+% \end{table}
+
