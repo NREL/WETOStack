@@ -84,7 +84,7 @@ of WETO software can trust these tools and accurately understand the risks to wo
 <!-- These are aspects of research software that are critical to robustness, adoption, and ultimate impact.
 Consider these best practices as general guidelines for planning research activities that include the development of software. -->
 
-## Best Practices Summary
+## Summary of best practices
 
 [](accessibility)
 - Determine the barriers to entry for expected users and address accessibility accordingly.
@@ -197,10 +197,8 @@ link to a deep dive into terminal training can be very helpful.
 Research computing software often depend on third-party libraries, and many of these dependencies
 are research software themselves. Therefore, the installation and environment configuration
 for this type of software can easily become complex.
-
 Mature package managers are a great resource since they have a distribution system already in place
 and manage dependencies between software tools.
-
 The ecosystem of open source software package managers has coalesced around a few primary tools:
 - [Python Package Index (PyPI)](https://pypi.org)
     - Source and binary distribution package manager for Python software
@@ -227,7 +225,7 @@ The process for including a package in a package management system varies, but a
 to integrate with automated systems to prepare and distribute the package automatically upon
 a given event. The practice of releasing a software package after a tagged release
 (see [](version_control)) or requisite set of changes is called "continuous distribution",
-a component of "continuous integration. See [](continuous) for details.
+a component of "continuous integration". See [](continuous) for details.
 Tools for this level of automation are ubiquitous, and a practical choice
 is GitHub Actions (see [](github)).
 
@@ -420,7 +418,8 @@ flowchart LR
     d -.-> a
 ```
 
-This topic is closely tied to [](communicating_design), and the objective is to ensure that
+<!-- This topic is closely tied to [](communicating_design), and the objective is to ensure that -->
+This topic is closely tied to the need for communicating elements of design, and the objective is to ensure that
 developers can easily approach the project with minimal overhead required to align their
 computing environment, scope the work, implement the changes, and verify the results.
 
@@ -442,7 +441,8 @@ In software development, the word "grok" is often used (see usage in
 [Hacker News](https://hn.algolia.com/?q=grok),
 [Lobsters](https://lobste.rs/search?q=grok&what=stories&order=newest),
 [StackOverflow](https://stackoverflow.com/search?tab=newest&q=grok&searchOn=3))
-to communicate about degrees of understanding. This word is described by it's creator below.
+to communicate about degrees of understanding. This word is described by it's creator below
+(Source: [Wikipedia](https://en.wikipedia.org/wiki/Grok)).
 
 > *Grok* means "to understand", of course, but Dr. Mahmoud, who might be termed the leading
   Terran expert on Martians, explains that it also means, "to drink" and "a hundred other
@@ -453,8 +453,6 @@ to communicate about degrees of understanding. This word is described by it's cr
   implies that you love it, too, and cherish it and would not have it otherwise. Then you
   can *hate* – and (I think) Martian hate is an emotion so black that the nearest human
   equivalent could only be called mild distaste.
-
-  Source: https://en.wikipedia.org/wiki/Grok.
 
 That such a word exists and is widely used in software development illustrates the high value
 of clear and understandable code.
@@ -546,7 +544,7 @@ This process should result in two statements:
 2. A list of requirements that the parti and it's implementation should satisfy
 
 The *parti* is the abstract objective and the list of requirements are the criteria
-to verify that the implementation satisfies the *parti*.
+to verify that the implementation satisfies the parti.
 In other words, these are the tests for the design.
 Upon establishing this information, it should be codified into a design document and style
 guide that are made publicly available to all developers such as in online documentation.
@@ -927,10 +925,10 @@ For the sake of the WETO software portfolio and the researchers working in these
 it is important to directly consider the needs and expectations of the people
 responsible for designing and implementing research software projects.
 
-The term research software engineer (RSE) is defined as:
+The term research software engineer (RSE) is defined by the
+[UK-RSE Society](https://society-rse.org/about/) as:
 > A Research Software Engineer (RSE) combines professional software engineering expertise with
   an intimate understanding of research.
-  https://society-rse.org/about/
 
 While all modern research typically involves using research software, it is common for researchers
 to focus skill development on either the research domain or the computational considerations
