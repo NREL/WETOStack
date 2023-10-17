@@ -40,3 +40,6 @@ sphinx:
   mermaid_version: 10.1.0
   extra_extensions:
     - 'sphinxcontrib.mermaid'
+  config:
+    html_context:
+      default_mode: light
