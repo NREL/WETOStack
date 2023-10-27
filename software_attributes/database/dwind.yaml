@@ -1,9 +1,8 @@
 # General
 github_account: NREL
-github_repo: dw-tap
+github_repo: dwind
 primary_uses:
 - data_analysis
-- optimization
 active_funding: true
 development_status: new_features
 programming_language: python
@@ -11,12 +10,12 @@ license_type: gpl-3.0
 
 # Technology
 data_collection_methods:
-- field
 - modeling
 last_release_date: "2023-09-05"
 scope:
 - turbine
 - farm
+- system
 system_type:
 - any
 system_location:
@@ -25,30 +24,29 @@ time_domain: dynamic
 loads: false
 tags:
 - distributed wind
-- obstacle modeling
-- atmospheric modeling
-- resource estimation
-- turbing siting
+- distributed futures
+- technical potential
+- annualized energy productivity
 
 # Distribution
 supported_platforms:
     - any
 # package_manager:
 # package_manager_url:
-installation_complexity: 5
+installation_complexity: 8
 
 # Documentation
-documentation_url: https://dw-tap.nrel.gov
-has_user_docs: true
-has_developer_docs: true
-has_api_docs: true
+#documentation_url:
+has_user_docs: false
+has_developer_docs: false
+has_api_docs: false
 has_cli_docs: false
 has_installation_docs: true
 has_getting_started_docs: false
 has_examples_tutorials: false
 has_design_intent_statement: false
-readability: 4
-project_coverage: 5
+readability: 2
+project_coverage: 2
 
 # Testing
 testing_framework: false
@@ -63,16 +61,20 @@ first_class_ui:
 has_cli: false
 language_interfaces:
 - python
-feature_accessibility: 20
+#feature_accessibility:
 
 # Input / Output
 filetypes:
-- json
-- csv
 - custom
 file_structure_stability: in_development
 
 # WETO Integrations
 dependencies:
+-   - rev
+    - direct
+-   - pysam
+    - direct
 -   - rex
+    - direct
+-   - dgen
     - direct

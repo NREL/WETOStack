@@ -30,6 +30,23 @@ if __name__=="__main__":
         "windse",
         "wisdem",
         "wombat",
+        # "coral",
+        # "dgen",
+        "dw_tap",
+        "dwind",
+        # "empty",
+        # "hybridbosse",
+        # "landbosse",
+        # "nrwal",
+        # "orbit",
+        # "pysam",
+        # "rev",
+        # "rex",
+        # "sowfa",
+        # "ssrs",
+        # "wpgnn_playgen",
+        # "wtdigitwin",
+        "wtk"
     ]
 
     for model in model_list:

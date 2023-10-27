@@ -306,7 +306,7 @@ schema = {
         "test_coverage": {
             "description": "The portion of the project covered by formal tests.",
             "type": "integer",
-            "minimum": 1,
+            "minimum": 0,
             "maximum": 100,
         },
         "test_documentation": {
