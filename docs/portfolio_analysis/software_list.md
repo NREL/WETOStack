@@ -5,7 +5,7 @@
 The set of software under the WETO umbrella is listed here.
 This is intended to eventually be a complete list, but it is likely missing some projects yet.
 Please [suggest an edit](https://github.com/rafmudaf/wetostack/edit/main/docs/portfolio_analysis/software_list.md)
-if nay information here is incorrect.
+if any information here is incorrect.
 
 This listing contains two groups of software projects:
 
@@ -40,7 +40,6 @@ These projects are actively supported and funded by WETO as of FY23.
 - WEIS: https://github.com/wisdem/weis
 - WISDEM: https://github.com/wisdem/wisdem
 - HOPP: https://github.com/NREL/HOPP
-- WPGNN and PLayGen: https://github.com/NREL/WPGNN
 - SONATA: https://github.com/ptrbortolotti/SONATA
 
 **Controls development**
@@ -62,7 +61,7 @@ These projects are actively supported and funded by WETO as of FY23.
 - WOMBAT: https://github.com/WISDEM/WOMBAT
 - OpenOA: https://github.com/nrel/openoa
 
-**Wild Life Impact**
+**Wildlife Impact**
 - SSRS: https://github.com/NREL/SSRS
 
 
@@ -76,6 +75,9 @@ These projects are either funded outside of WETO, are not actively funded, or ar
 - MAFRIT: https://github.com/NREL/MAFRIT
 - pBEAM: https://github.com/WISDEM/pBEAM
 - PyFrame3DD: https://github.com/WISDEM/pyFrame3DD
+- CACTUS: https://github.com/sandialabs/CACTUS
+- WEC-Sim/MOST: https://github.com/WEC-Sim/WEC-Sim and http://www.morenergylab.polito.it/most/
+- OWENS: https://www.nrel.gov/docs/fy23osti/83748.pdf
 
 *Deprecated or no longer supported:*
 - ADAMS2AD: The MSC.ADAMS-to-AeroDyn (ADAMS2AD) interface is a software package for simulating the coupled dynamic response of horizontal-axis wind turbines.
@@ -87,10 +89,15 @@ These projects are either funded outside of WETO, are not actively funded, or ar
 - SOWFA: https://github.com/nrel/sowfa
 - NuMAD: https://github.com/sandialabs/NuMAD
 
+**Numerical weather prediction**
+- WRF: https://github.com/wrf-model/WRF
+- MMC-WRF: https://github.com/a2e-mmc/WRF
+
 **Design and optimization**
 - G2Aero: https://github.com/NREL/G2Aero
 - Gear-SCouP: https://github.com/NREL/GEAR-SCouP
 - WISDEM/dakota_driver: https://github.com/WISDEM/dakota_driver
+- WPGNN and PLayGen: https://github.com/NREL/WPGNN
 
 *Deprecated or no longer supported:*
 - HARP_Opt: Horizontal Axis Rotor Performance Optimization (HARP_Opt) utilizes a multiple-objective genetic algorithm and blade-element momentum theory flow model to design horizontal-axis wind and hydrokinetic turbine rotors.
@@ -122,6 +129,7 @@ These projects are either funded outside of WETO, are not actively funded, or ar
 - python-toolbox: https://github.com/openfast/python_toolbox
 - matlab-toolbox: https://github.com/openfast/matlab_toolbox
 - weio: https://github.com/ebranlard/weio
+- windtools: https://github.com/NREL/windtools
 
 **Deprecated or no longer supported**
 

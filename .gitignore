@@ -2,3 +2,21 @@
 _build/
 __pycache__/
 .vscode
+*~
+
+# latex build files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.xml
+*.gz
+*.lof
+*.out
+*.bib
+*.toc
+*.upa
+*.upb

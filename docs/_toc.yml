@@ -5,6 +5,7 @@ format: jb-book
 root: index
 chapters:
 - file: workshop
+- file: workshop_report
 - file: capabilities/overview
 - file: portfolio_analysis/software_list
 - file: portfolio_analysis/map_network

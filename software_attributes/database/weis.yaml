@@ -2,6 +2,7 @@
 github_account: wisdem
 github_repo: weis
 primary_uses:
+- controls
 - simulation
 - optimization
 - design
@@ -27,6 +28,7 @@ loads: true
 tags:
 - mid-fidelity engineering models
 - multidisciplinary design optimization
+- controls co-design
 
 # Distribution
 supported_platforms:
@@ -41,7 +43,7 @@ installation_complexity: 6
 # Documentation
 documentation_url: https://weis.readthedocs.io/en/latest/
 has_user_docs: true
-has_developer_docs: true
+has_developer_docs: false
 has_api_docs: false
 has_cli_docs: false
 has_installation_docs: true
@@ -87,7 +89,3 @@ dependencies:
     - direct
 -   - raft
     - direct
--   - sonata
-    - indirect
--   - pynumad
-    - indirect

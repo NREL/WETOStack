@@ -17,10 +17,11 @@ This dashboard contains the results and information related to each focus area.
 ```{tableofcontents}
 ```
 
-## Model Owners Workshop
+## WETO Software Portfolio Workshop
 
-The first WETO Model Owners Workshop will take place on September 7 at NREL's Golden Campus.
-The agenda is listed below, and more information is available in the [](workshop_top) page.
+The first WETO Software Portfolio Workshop was held on September 7, 2023, at NREL's Golden Campus.
+The agenda is listed below, and more information including a summary of proceedings
+is available in the [](workshop_2023) page.
 
 ```{raw} html
 :file: workshop_agenda.html

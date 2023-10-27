@@ -1,4 +1,4 @@
-
+(portfolio_overview_top)=
 # Portfolio Overview
 
 This dashboard outlines typical workflows and capabilities involved
@@ -27,7 +27,6 @@ mindmap
             WEIS
             WISDEM
             HOPP
-            WPGNN and PLayGen
             SONATA
 
         ctrl(Controls)

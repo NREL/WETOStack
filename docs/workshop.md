@@ -1,6 +1,28 @@
 (workshop_top)=
-# Model Owners Workshop
+# Software Portfolio Workshop
 
+The Holistic Modeling Portfolio Coordination Project is a three-year project with a goal of
+building the community of WETO software stakeholders. One aspect of this project is an annual
+workshop among various WETO software stakeholders.
+The first workshop was held on September 7, 2023, at NREL's Golden Campus, and it was primarily
+focused on model owners - people directly responsible for funding, planning, and developing
+this collection of software. The announcement, a summary report, and notes from this event
+are available in [](workshop_2023).
+
+**The 2024 workshop is tentatively scheduled for June 2024**, and it will incorporate the
+perspective of consumers of WETO software including practitioners using these tools in their
+work and developers extending or incorporating these projects into other software.
+Contact Rafael Mudafort (rafael.mudafort@nrel.gov) with any questions.
+
+(workshop_2023)=
+## 2023 Workshop
+
+### Summary of Proceedings
+
+Please see [](workshop_report_top) for a summary of the presentations and discussions from the workshop.
+
+
+### Announcement
 A component of the Holistic Modeling Portfolio Coordination Project is to coordinate and host
 an annual workshop with the purpose of strengthening the community of WETO software owners.
 **The first workshop will be help on September 7, 2023, at NREL's Golden Campus.**
@@ -10,17 +32,16 @@ To that end, two primary topics will be threaded throughout the conversations:
 1. Opportunities and strategies to elevate the quality of WETO software
 2. Holistic evaluation of the existing portfolio
 
-There will be four breakout sessions where attendees will discuss topics as a group.
-Prior to the breakouts, preplanned talks from WETO and members of the Holistic Modeling project
-will seed the conversations in the breakouts. Please see the [](workshop_agenda) and
-[](logistics) for details.
+There will be two full-workshop discussions and two breakout sessions of smaller groups.
+Prior to each discussion, preplanned talks from WETO and members of the Holistic Modeling project
+will seed the conversations. Please see the [](workshop_agenda) and [](logistics) for details.
 
 **All attendees are asked to complete the following tasks prior to the workshop:**
 - Review the [](portfolio_listing) to ensure that all WETO-supported software within your field
   of expertise is listed.
 - Create a pull request to https://github.com/rafmudaf/WETOStack with an attributes description
   for your software projects following the guidance in [](schema).
-- Review the [](workshop_agenda) and [breakout session topics](breakout1).
+- Review the [](workshop_agenda) and [Discussion topics](discussion1).
 
 `````{admonition} Contact
 :class: tip
@@ -31,26 +52,26 @@ Please contact Rafael Mudafort (rafael.mudafort@nrel.gov) with any questions.
 ```
 
 (workshop_agenda)=
-## Agenda
+### Agenda
 
 ```{raw} html
 :file: workshop_agenda.html
 ```
 
-(breakout1)=
-## Breakout 1: What is the purpose of WETO Software?
+(discussion1)=
+### Discussion 1: What is the purpose of WETO Software?
 
-This breakout session follows an update from WETO on their perspective and focus on the software
+This session follows an update from WETO on their perspective and focus on the software
 we produce.
 The discussions should be informed by low-level experience but maintain a high-level perspective.
-The objective of this breakout session is to establish a mutual understanding of the group's
+The objective of this discussion is to establish a mutual understanding of the group's
 perspective on the role and impact of WETO software within the broad context of wind energy.
 
-Topic suggestions:
+Topic suggestions - The purpose of WETO software is:
 - To create the tools to support our own research
 - To establish a mechanism to disseminate our research
+- To enable additional research in academia and industry
 - To provide the industry with tools to design wind energy systems
-- To full industry adoption
 
 <!-- Third option:
 - how might we engage with independent organizations to deal with these long term maintenance burdens
@@ -58,26 +79,28 @@ Topic suggestions:
   - Apache foundation
   - Linux foundation -->
 
-## Breakout 2: In what direction should WETO software go?
+### Discussion 2: Broadly, in what direction should WETO software go?
 
-This breakout session follows an overview of the current WETO software portfolio including
-descriptions of the domain areas covered and state of maturity.
-Building on the discussions in [Breakout 1](breakout1) and the portfolio overview, this session
+This breakout follows an overview of the current WETO software portfolio including
+descriptions of the domain areas covered and states of maturity.
+Building on the discussions in [Discussion 1](discussion1) and the portfolio overview, this session
 focuses on defining the forward-looking technical and domain-specific topics that WETO software
 should pursue.
-The objective is to align the community's expectations around critical future considerations.
+The objective is to align the community's expectations around a future technical and programmatic
+vision.
 
 Topic suggestions:
 - Integration to other ecosystems (AI/ML, optimizations)
 - WETO software interoperability
+- Professionalization / commercialization through industry partnership
 
-## Breakout 3: What are the major bottlenecks in our development processes?
+### Discussion 3: What are the major bottlenecks in our development processes?
 
-This breakout session follows an overview of [Best Practices](bestpractices) described
+This breakout follows an overview of [Best Practices](bestpractices) described
 within the Portfolio Coordination project.
 The objective is to identify the key bottlenecks in our current workflows with particular
 attention to things that prevent WETO software from achieving the impacts identified
-in [Breakout 1](breakout1).
+in [Discussion 1](discussion1).
 The discussions here will be incorporated into the best practices technical report.
 
 Topic suggestions:
@@ -86,10 +109,10 @@ Topic suggestions:
 - Personnel barriers - do we have staff with the relevant experience?
 - What's missing in the proposed best practices?
 
-## Breakout 4: Where to invest time and efforts in the upcoming FY's
+### Discussion 4: Where to invest time and efforts in the upcoming FY's
 
 The Portfolio Coordination project will be active through FY25.
-The final breakout session is an opportunity for workshop attendees to inform the direction
+The final discussion is an opportunity for workshop attendees to inform the direction
 of future efforts around software quality including within the scope of the
 Portfolio Coordination project.
 
@@ -98,7 +121,7 @@ Topic suggestions:
 - Focus on interoperability / model alignment
 - Establish common inputs (i.e. windIO)
 
-## Rules of Engagement
+### Rules of Engagement
 
 ````{card}
 Respect the group's time and attention
@@ -113,13 +136,13 @@ Please keep all attention within the workshop.
 ````{card} 
 Discuss rather than debate
 ^^^
-Each breakout sessions is intended meant to create discussion and conversation.
-Arriving at one answer is not required and in most cases not desired.
+Each session is meant to create discussion and conversation.
+Arriving at one answer is not required and, in most cases, not desired.
 The objective is mutual understanding of perspectives.
 ````
 
 (logistics)=
-## Day-Of Logistics
+### Day-Of Logistics
 
 ````{admonition} NREL Golden Campus Address
 :class: tip
@@ -183,3 +206,7 @@ See the map below for guidance.
 I (Rafael) made this map based on my experience with going to this site, but I have little
 experience here so please let me know if anything is unclear.
 ```
+
+### Workshop Notes and Materials
+
+TODO: Include raw notes, either documents hosted in the repository or text directly, here.

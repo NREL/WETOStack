@@ -1,71 +1,71 @@
 # General
-github_account: nrel
-github_repo: moorpy
+github_account: exawind
+github_repo: openturbine
 primary_uses:
 - simulation
 active_funding: true
 development_status: new_features
-programming_language: python
-license_type: bsd-3-clause
+programming_language: c++
+license_type: mit
 data_collection_methods:
 - modeling
-last_release_date: "2023-05-10"
+last_release_date: TODO
 
 # Modeling
 scope:
-- system
+- turbine
 system_type:
-- any
+- hawt
 system_location:
-- floating_offshore
-time_domain:
-- frequency
+- any
+time_domain: dynamic
 loads: true
-# tags:
-# - TODO
+tags:
+- geometrically exact beam theory
+- nonlinear finite elements
+- GPU
+- CUDA
 
 # Distribution
 supported_platforms:
 - any
-package_manager:
-- pypi
-package_manager_url:
-- https://pypi.org/project/MoorPy/
-installation_complexity: 1
+# package_manager:
+# - TODO
+# package_manager_url:
+# - TODO
+installation_complexity: 4
 
 # Documentation
-documentation_url: https://moorpy.readthedocs.io
-has_user_docs: true
+documentation_url: https://exawind.github.io/openturbine/
+has_user_docs: false
 has_developer_docs: true
-has_api_docs: true
+has_api_docs: false
 has_cli_docs: false
 has_installation_docs: true
-has_getting_started_docs: true
-has_examples_tutorials: true
-has_design_intent_statement: false
-readability: 8
-# project_coverage: TODO
+has_getting_started_docs: false
+has_examples_tutorials: false
+has_design_intent_statement: true
+readability: 6
+project_coverage: 1
 
 # Testing
 testing_framework: true
 continuous_testing: true
-# test_coverage: TODO
+test_coverage: 40
 test_documentation: false
 performance_tests: false
 
 # Interfaces
-first_class_ui:
-- input_files
-- library_interface
-has_cli: false
+# first_class_ui:
+# - TODO
+# has_cli: TODO
 # language_interfaces:
 # - TODO
 # feature_accessibility: TODO
 
 # Input / Output
-filetypes:
-- custom
-- yaml
+# filetypes:
+# - TODO
 # file_structure_stability: TODO
 
 # WETO Integrations

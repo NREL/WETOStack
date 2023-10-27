@@ -2,8 +2,10 @@
 github_account: wisdem
 github_repo: wisdem
 primary_uses:
+- design
+- optimization
 - cost
-active_funding: false
+active_funding: true
 development_status: maintenance
 programming_language: python
 license_type: apache-2.0
@@ -20,10 +22,11 @@ system_location:
 - land
 - fixed_offshore
 - floating_offshore
-time_domain: dynamic
+time_domain: steady
 loads: true
 tags:
-- mid-fidelity engineering models
+- low-fidelity conceptual models
+- multidisciplinary design optimization
 
 # Distribution
 supported_platforms:
@@ -35,8 +38,8 @@ installation_complexity: 6
 # Documentation
 documentation_url: https://wisdem.readthedocs.io/en/master/
 has_user_docs: true
-has_developer_docs: true
-has_api_docs: true
+has_developer_docs: false
+has_api_docs: false
 has_cli_docs: false
 has_installation_docs: true
 has_getting_started_docs: true
@@ -67,4 +70,6 @@ file_structure_stability: semantic_versioning
 # WETO Integrations
 dependencies:
 -   - orbit
+    - direct
+-   - landbosse
     - direct

@@ -1,0 +1,81 @@
+# General
+github_account: exawind
+github_repo: nalu-wind
+primary_uses:
+- simulation
+active_funding: true
+development_status: new_features
+programming_language: c++
+# license_type: TODO
+data_collection_methods:
+- modeling
+last_release_date: "2021-03-21"
+
+# Modeling
+scope:
+- atmosphere
+system_type:
+- any
+system_location:
+- any
+time_domain: dynamic
+loads: true
+tags:
+- large eddy simulation
+- unstructured
+- massively parallel
+- incompressible flow
+- blade resolved simulation
+
+# Distribution
+supported_platforms:
+- any
+# package_manager:
+# - TODO
+# package_manager_url:
+# - TODO
+installation_complexity: 6
+
+# Documentation
+documentation_url: https://nalu-wind.readthedocs.io
+has_user_docs: true
+has_developer_docs: true
+has_api_docs: true
+has_cli_docs: true
+has_installation_docs: true
+has_getting_started_docs: true
+has_examples_tutorials: true
+# has_design_intent_statement: TODO
+# readability: TODO
+# project_coverage: TODO
+
+# Testing
+testing_framework: true
+continuous_testing: true
+# test_coverage: TODO
+test_documentation: true
+# performance_tests: TODO
+
+# Interfaces
+first_class_ui:
+- input_files
+has_cli: true
+# language_interfaces:
+# - TODO
+# feature_accessibility: TODO
+
+# Input / Output
+filetypes:
+- yaml
+# file_structure_stability: TODO
+
+# WETO Integrations
+dependencies:
+-   - openfast
+    - direct
+
+# # Community Health
+# open_issues: 0..N
+# open_pull_requests: 0..N
+# average_time_to_engage: 0..N
+# outside_contributors: 0..N
