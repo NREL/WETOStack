@@ -4,8 +4,8 @@ github_repo: openfast
 primary_uses:
 - simulation
 - controls
-# active_funding: TODO
-# development_status: TODO
+active_funding: true
+development_status: new_features
 programming_language: fortran
 license_type: apache-2.0
 data_collection_methods:
@@ -15,18 +15,22 @@ last_release_date: "2023-05-16"
 # Modeling
 scope:
 - farm
+- turbine
 - atmosphere
+- system
 system_type:
 - hawt
-- vawt
 system_location:
 - land
 - fixed_offshore
 - floating_offshore
 time_domain: dynamic
-loads: false
+loads: true
 tags:
-- TODO
+- dynamic wake meandering
+- polar wake
+- curled wake
+- wake-added turbulence
 
 # Distribution
 supported_platforms:
@@ -64,7 +68,7 @@ first_class_ui:
 - input_files
 has_cli: true
 # language_interfaces:
-# - TODO: I believe there's no other language interfaces to FAST.Farm specifically. If so, comment this field
+# - none
 feature_accessibility: 100
 
 # Input / Output

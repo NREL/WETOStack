@@ -26,11 +26,21 @@ system_location:
 time_domain: dynamic
 loads: true
 tags:
+- modularization framework
+- nonlinear
 - actuator line method
 - blade element momentum theory
+- free vortex-wake
+- unsteady airfoil aerodynamics
 - geometrically exact beam theory
+- multi-body
+- modal dynamics
+- finite element method
+- Craig-Bampton reduction
 - Potential-flow theory
 - Strip-theory
+- operating-point determination
+- linearization
 
 # Distribution
 supported_platforms:
@@ -51,7 +61,7 @@ has_api_docs: true
 has_cli_docs: true
 has_installation_docs: true
 has_getting_started_docs: false
-has_examples_tutorials: false
+has_examples_tutorials: true
 has_design_intent_statement: true
 readability: 5
 project_coverage: 5
