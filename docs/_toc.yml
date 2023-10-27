@@ -3,11 +3,22 @@
 
 format: jb-book
 root: index
-chapters:
-- file: workshop
-- file: workshop_report
-- file: capabilities/overview
-- file: portfolio_analysis/software_list
-- file: portfolio_analysis/map_network
-- file: portfolio_analysis/attributes_schema
-- file: best_practices
+parts:
+- caption: Workshop
+  chapters:
+  # - file: workshop
+  #   sections:
+  #   - file: workshop_report
+  - file: workshop/workshop
+  - file: workshop/workshop_report
+
+- caption: Portfolio Analysis
+  chapters:
+  - file: capabilities/overview
+  - file: portfolio_analysis/software_list
+  - file: portfolio_analysis/map_network
+  - file: portfolio_analysis/attributes_schema
+
+- caption: Software Development Best Practices
+  chapters:
+  - file: best_practices

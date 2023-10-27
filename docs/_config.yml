@@ -34,7 +34,7 @@ html:
   use_repository_button: true
   use_issues_button: true
   google_analytics_id: G-XK6LTW8XM7
-  home_page_in_navbar: true
+  home_page_in_navbar: false
 
 sphinx:
   mermaid_version: 10.1.0

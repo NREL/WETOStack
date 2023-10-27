@@ -1,5 +1,5 @@
 (workshop_top)=
-# Software Portfolio Workshop
+# 2023 Software Portfolio Workshop
 
 The Holistic Modeling Portfolio Coordination Project is a three-year project with a goal of
 building the community of WETO software stakeholders. One aspect of this project is an annual
@@ -37,7 +37,7 @@ Prior to each discussion, preplanned talks from WETO and members of the Holistic
 will seed the conversations. Please see the [](workshop_agenda) and [](logistics) for details.
 
 **All attendees are asked to complete the following tasks prior to the workshop:**
-- Review the [](portfolio_listing) to ensure that all WETO-supported software within your field
+- Review the [](software_listing) to ensure that all WETO-supported software within your field
   of expertise is listed.
 - Create a pull request to https://github.com/rafmudaf/WETOStack with an attributes description
   for your software projects following the guidance in [](schema).
@@ -169,7 +169,7 @@ The workshop will take place in the Cache La Poudre meeting room in the
 RSF building at NREL's Golden Campus. The room number is "X405" and it is on the RSF's 4th floor
 in the A wing.
 
-```{image} ./_images/rsf_4thfloor_map.png
+```{image} ../_images/rsf_4thfloor_map.png
 :alt: rsf_map
 :align: center
 :height: 400px
@@ -196,7 +196,7 @@ NREL staff should park in the parking garage and visitors should park in the vis
 near the East Gate entrance.
 See the map below for guidance.
 
-```{image} ./_images/parking_map.png
+```{image} ../_images/parking_map.png
 :alt: rsf_map
 :align: center
 :height: 500px

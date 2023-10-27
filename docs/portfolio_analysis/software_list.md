@@ -1,6 +1,6 @@
 
-(portfolio_listing)=
-# Portfolio Listing
+(software_listing)=
+# Software Listing
 
 The set of software under the WETO umbrella is listed here.
 This is intended to eventually be a complete list, but it is likely missing some projects yet.
