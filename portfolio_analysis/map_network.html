@@ -407,6 +407,8 @@ to construct their inputs. These are connected through workflows rather than cod
 <span class="n">models</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s2">&quot;amr-wind&quot;</span><span class="p">,</span>
     <span class="s2">&quot;anba4&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;dw_tap&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;dwind&quot;</span><span class="p">,</span>
     <span class="s2">&quot;erf&quot;</span><span class="p">,</span>
     <span class="s2">&quot;fastfarm&quot;</span><span class="p">,</span>
     <span class="s2">&quot;flasc&quot;</span><span class="p">,</span>
@@ -427,6 +429,23 @@ to construct their inputs. These are connected through workflows rather than cod
     <span class="s2">&quot;windse&quot;</span><span class="p">,</span>
     <span class="s2">&quot;wisdem&quot;</span><span class="p">,</span>
     <span class="s2">&quot;wombat&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;wtk&quot;</span><span class="p">,</span>
+
+    <span class="c1"># Partially or not at all completed in the database</span>
+    <span class="c1"># &quot;coral&quot;,</span>
+    <span class="s2">&quot;dgen&quot;</span><span class="p">,</span>
+    <span class="c1"># &quot;empty&quot;,</span>
+    <span class="s2">&quot;hybridbosse&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;landbosse&quot;</span><span class="p">,</span>
+    <span class="c1"># &quot;nrwal&quot;,</span>
+    <span class="s2">&quot;orbit&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pysam&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rev&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rex&quot;</span><span class="p">,</span>
+    <span class="c1"># &quot;sowfa&quot;,</span>
+    <span class="c1"># &quot;ssrs&quot;,</span>
+    <span class="c1"># &quot;wpgnn_playgen&quot;,</span>
+    <span class="c1"># &quot;wtdigitwin&quot;,</span>
 <span class="p">]</span>
 
 <span class="n">model_attributes_map</span> <span class="o">=</span> <span class="p">{</span>
@@ -447,12 +466,12 @@ to construct their inputs. These are connected through workflows rather than cod
 <span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="s2">&quot;amr-wind&quot;</span><span class="p">,</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="s2">&quot;anba4&quot;</span><span class="p">,</span>
    <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span>     <span class="s2">&quot;wombat&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="n">model_attributes_map</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span>     <span class="n">model</span><span class="p">:</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;software_attributes&quot;</span><span class="p">,</span> <span class="s2">&quot;database&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2">.yaml&quot;</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">32</span>     <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span>
-<span class="g g-Whitespace">     </span><span class="mi">33</span> <span class="p">}</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span>     <span class="c1"># &quot;wtdigitwin&quot;,</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="n">model_attributes_map</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span>     <span class="n">model</span><span class="p">:</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;software_attributes&quot;</span><span class="p">,</span> <span class="s2">&quot;database&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2">.yaml&quot;</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span> <span class="p">}</span>
 
 <span class="ne">ModuleNotFoundError</span>: No module named &#39;networkx&#39;
 </pre></div>
@@ -577,7 +596,7 @@ to construct their inputs. These are connected through workflows rather than cod
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/6fc59ded44cfc6f90f2aaaf74c9e63efaa44093ee08026c709839b60f5624f7d.png" src="../_images/6fc59ded44cfc6f90f2aaaf74c9e63efaa44093ee08026c709839b60f5624f7d.png" />
+<img alt="../_images/0ae1d51db42b6f2a3ec27ffd0cbc350e33685bf823e1409f07c2695e500b7637.png" src="../_images/0ae1d51db42b6f2a3ec27ffd0cbc350e33685bf823e1409f07c2695e500b7637.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -606,7 +625,7 @@ to construct their inputs. These are connected through workflows rather than cod
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 100.0, 0.0, 100.0)
 </pre></div>
 </div>
-<img alt="../_images/e0edf395edfaa48d4e5bc939a6d430113280729b1ac75f4cff8f16fcb92a93ad.png" src="../_images/e0edf395edfaa48d4e5bc939a6d430113280729b1ac75f4cff8f16fcb92a93ad.png" />
+<img alt="../_images/73062fdd47c042fff63b6c3bbfffd02e690eb865702ad90419ddd8f90c933b70.png" src="../_images/73062fdd47c042fff63b6c3bbfffd02e690eb865702ad90419ddd8f90c933b70.png" />
 </div>
 </div>
 </section>
