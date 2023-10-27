@@ -80,8 +80,6 @@ file_structure_stability: semantic_versioning
 
 # WETO Integrations
 dependencies:
--   - turbsim
-    - direct
 -   - rosco
     - indirect
 
