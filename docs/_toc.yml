@@ -15,6 +15,9 @@ parts:
 - caption: Portfolio Analysis
   chapters:
   - file: capabilities/overview
+    sections:
+    - file: capabilities/aero
+    - file: capabilities/system_design
   - file: portfolio_analysis/software_list
   - file: portfolio_analysis/map_network
   - file: portfolio_analysis/attributes_schema

@@ -1,4 +1,4 @@
-(aero)=
+(aero_capability)=
 # Wind Turbine and Wind Farm Aerodynamics
 
 The detailed design of wind turbine components and wind farms is detailed
@@ -22,8 +22,8 @@ flowchart TD
     E["FLORIS
     Analytical, steady state"]
 
-    A --- B
-    B --- C
-    C --- D
-    D --- E
+    A --> B
+    B --> C
+    C --> D
+    D --> E
 ```

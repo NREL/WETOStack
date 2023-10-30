@@ -1,4 +1,4 @@
-(portfolio_overview_top)=
+(portfolio_overview)=
 # Portfolio Overview
 
 This dashboard outlines typical workflows and capabilities involved
@@ -93,7 +93,7 @@ controller, but the performance can be much greater than a decoupled design.
 ````
 
 ````{card}
-[](system_design)
+[](system_design_capability)
 ^^^
 System design involves the high-level preliminary design of the power
 generation systems and their connection to the grid. Additionally, cost
@@ -102,7 +102,7 @@ of energy.
 ````
 
 ````{card}
-[](aero)
+[](aero_capability)
 ^^^
 The detailed design of wind turbine components and wind farms is detailed
 here. This process typically involves modeling system components at varying

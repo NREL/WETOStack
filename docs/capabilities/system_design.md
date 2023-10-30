@@ -1,5 +1,5 @@
 
-(system_design)=
+(system_design_capability)=
 # System Design
 
 System design involves the high-level preliminary design of the power
