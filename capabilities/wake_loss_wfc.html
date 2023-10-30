@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Portfolio Overview &#8212; WETO Software Stack</title>
+    <title>Wake Loss and Wind Farm Controls. &#8212; WETO Software Stack</title>
   
   
   
@@ -70,11 +70,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'capabilities/overview';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'capabilities/wake_loss_wfc';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Wind Turbine and Wind Farm Aerodynamics" href="aero.html" />
-    <link rel="prev" title="2023 Workshop Report" href="../workshop/workshop_report.html" />
+    <link rel="next" title="Software Listing" href="../portfolio_analysis/software_list.html" />
+    <link rel="prev" title="System Design" href="system_design.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -162,10 +162,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Portfolio Analysis</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Portfolio Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="overview.html">Portfolio Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="aero.html">Wind Turbine and Wind Farm Aerodynamics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="system_design.html">System Design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wake_loss_wfc.html">Wake Loss and Wind Farm Controls.</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Wake Loss and Wind Farm Controls.</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../portfolio_analysis/software_list.html">Software Listing</a></li>
@@ -246,7 +246,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/rafmudaf/wetostack/edit/main/docs/capabilities/overview.md" target="_blank"
+      <li><a href="https://github.com/rafmudaf/wetostack/edit/main/docs/capabilities/wake_loss_wfc.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -263,7 +263,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/rafmudaf/wetostack/issues/new?title=Issue%20on%20page%20%2Fcapabilities/overview.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/rafmudaf/wetostack/issues/new?title=Issue%20on%20page%20%2Fcapabilities/wake_loss_wfc.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +293,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/capabilities/overview.md" target="_blank"
+      <li><a href="../_sources/capabilities/wake_loss_wfc.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -375,7 +375,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Portfolio Overview</h1>
+    <h1>Wake Loss and Wind Farm Controls.</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -385,8 +385,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wireframe-prototype">Wireframe prototype</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-capabilities">Defining Capabilities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-stack">Software Stack</a></li>
 </ul>
             </nav>
         </div>
@@ -398,34 +397,39 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="portfolio-overview">
-<span id="id1"></span><h1>Portfolio Overview<a class="headerlink" href="#portfolio-overview" title="Permalink to this heading">#</a></h1>
-<p>This dashboard outlines typical workflows and capabilities involved
-in wind energy system design and analysis using the WETO Software Suite.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="wake-loss-and-wind-farm-controls">
+<span id="wake-loss-wfc-capability"></span><h1>Wake Loss and Wind Farm Controls.<a class="headerlink" href="#wake-loss-and-wind-farm-controls" title="Permalink to this heading">#</a></h1>
+<p>Characterizing and quantifying wind farm wake losses requires modeling
+the atmospheric conditions, turbine performance, and the impact on
+wind turbine wakes throughout a wind farm.
+This type of modeling can be computationally expensive, so this topic
+benefits from a hierarchy of models with varying levels of fidelity.
+High fidelity models employing computational fluid dynamics couple with
+turbine models of varying levels of fidelity to simulate the wake.
+Mid-fidelity models employ engineering models of the wake such as
+free vortex wake models, and they also couple with different fidelities
+of turbine models.
+At the lowest fidelity, analytical steady-state wake models provide a
+statistical representation of the wake while allowing for rapid
+simulations. Analytical models typically represent the turbine as
+a solid obstruction in the flow field.</p>
+<p>This topic has high crossover with <a class="reference internal" href="aero.html#aero-capability"><span class="std std-ref">Wind Turbine and Wind Farm Aerodynamics</span></a>.
+See that topic area for more information.</p>
+<section id="software-stack">
+<h2>Software Stack<a class="headerlink" href="#software-stack" title="Permalink to this heading">#</a></h2>
 <div class="mermaid">
             mindmap
-    root(&quot;WETO Software Portfolio&quot;)
+    root(&quot;Wake Loss Modeling&quot;)
         ps(Engineering-fidelity Physics Models)
             OpenFAST
             FAST.Farm
-            MoorPy
-            wtDigiTwin
-            ANBA4
-            RAFT
 
         hfm(High Fidelity Models)
             AMR Wind
             Nalu Wind
-            OpenTurbine
-            ERF
             WindSE
-            pyNuMAD
 
-        do(Design &amp; Optimization)
-            WEIS
-            WISDEM
-            HOPP
-            SONATA
+        do(&quot; &quot;)
 
         ctrl(Controls)
             ROSCO
@@ -434,125 +438,40 @@ in wind energy system design and analysis using the WETO Software Suite.</p>
             hercules
             moa_python
 
-        ra(Resource Assessment)
-            DW TAP
+        ra(&quot; &quot;)
 
-        cost(Cost Models)
-            LandBOSSE
-            HybridBOSSE
-            ORBIT
-            CORAL
-            NRWAL
-            WOMBAT
-            OpenOA
+        cost(&quot; &quot;)
 
-        wild(Wild Life Impact)
-            SSRS
-        </div><div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-header docutils">
-<p class="sd-card-text">Plant Performance</p>
-</div>
-<div class="sd-card-body docutils">
-<p class="sd-card-text">Plant performance analysis involves the simulation of power production
-for the collection of wind turbines in a wind farm given the atmospheric
-conditions over a period of time. The result is typically represented
-as Annual Energy Production (AEP) in Megawatthours (MWh), Gigawatthours (GWh),
-or Terrawatthours (TWh).</p>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-header docutils">
-<p class="sd-card-text"><a class="reference internal" href="wake_loss_wfc.html#wake-loss-wfc-capability"><span class="std std-ref">Wake Loss and Wind Farm Controls.</span></a></p>
-</div>
-<div class="sd-card-body docutils">
-<p class="sd-card-text">Wake loss modeling is the study of turbine-turbine interactions via wind turbine
-wakes. Typically, the interaction mechanism is energy loss due to a shadow in the
-wind speed behind a wind turbine, but other mechanisms such as influence on
-turbulence are also considered.
-Wind farm controls is often studied in conjunction with wake loss modeling
-as a mechanism for reducing wake losses.</p>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-header docutils">
-<p class="sd-card-text">Rotor Optimization</p>
-</div>
-<div class="sd-card-body docutils">
-<p class="sd-card-text">Rotor optimization focuses on the iterative design of the rotor components
-such as blades and control systems. This process typically involves modeling
-the aerodynamic loads and subsequent elastic response of the blade. This
-aero-elastic model is used within an optimization algorithm to arrive at
-rotor designs that meet a set of requirements.</p>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-header docutils">
-<p class="sd-card-text">Control Co-Design</p>
-</div>
-<div class="sd-card-body docutils">
-<p class="sd-card-text">Control co-design is a method for advanced system designs that incorporate
-control systems into the structural and aerodynamic designs. The hardware
-and software systems are designed in a coupled sense rather than individually.
-The result is a blade that may only be operable or optimal with a specific
-controller, but the performance can be much greater than a decoupled design.</p>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-header docutils">
-<p class="sd-card-text"><a class="reference internal" href="system_design.html#system-design-capability"><span class="std std-ref">System Design</span></a></p>
-</div>
-<div class="sd-card-body docutils">
-<p class="sd-card-text">System design involves the high-level preliminary design of the power
-generation systems and their connection to the grid. Additionally, cost
-models are incorporated here to identify an initial estimate of the cost
-of energy.</p>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-header docutils">
-<p class="sd-card-text"><a class="reference internal" href="aero.html#aero-capability"><span class="std std-ref">Wind Turbine and Wind Farm Aerodynamics</span></a></p>
-</div>
-<div class="sd-card-body docutils">
-<p class="sd-card-text">The detailed design of wind turbine components and wind farms is detailed
-here. This process typically involves modeling system components at varying
-levels of fidelity while moving through the design space.</p>
-</div>
-</div>
-<section id="wireframe-prototype">
-<h2>Wireframe prototype<a class="headerlink" href="#wireframe-prototype" title="Permalink to this heading">#</a></h2>
-<p>The capabilities dashboard will contain a list of high level capabilities made up of components
-of the WETO software stack. It will describe each capability as they relate to the software
-used to complete it. This should not be a tutorial on doing each of these things, but it should
-give an idea of the tools that are required to do it. It will give an intuition on which
-models are related, interconnected, and perform certain tasks.</p>
-<img alt="capabilities" class="align-center" src="../_images/capabilities_listing_design.png" />
+        wild(&quot; &quot;)
+
+        om(&quot; &quot;)
+        </div><p>At the core, <strong>OpenFAST</strong> provides turbine models of varying levels of fidelity
+making it a good central point for wind turbine wake modeling.
+It allows for controlling the wind turbine via a controller external to the
+software, so active control can be modeled, as well.
+Further, <strong>ROSCO</strong> provides a tool suite to automatically tune the controller
+parameters for a given turbine model.</p>
+<p>In the high-fidelity regime, <strong>AMR-Wind</strong> and <strong>Nalu-Wind</strong> provide large eddy simulation
+models that can be coupled with OpenFAST.
+These can resolve the wake in great detail including tip vortices, wake mixing,
+and turbulence effects.
+Additionally, dynamic wake effects can be accurately captured.
+<strong>WindSE</strong> is a RANS model that includes it’s own turbine model.
+<strong>Hercules</strong> is a wind farm emulator that allows for wind farm developers and operators
+to investigate the potential impact of wind farm controls techniques.</p>
+<p>In the mid-fidelity regime, <strong>FAST.Farm</strong> provides a free vortex wake model
+that can be coupled with OpenFAST.
+This model provides a computationally efficient method for simulating
+the performance of wind turbine blades with high flexibility that fall
+outside the scope of the blade element momentum theory.</p>
+<p>In the low-fidelity regime, <strong>FLORIS</strong> provides a set of analytical steady-state
+wake models varying from simple top-hat wake shape (Jensen) to more complex
+statistical wake models (Gauss, Cumulative-Curl). Being a steady-state model,
+FLORIS allows modelers to capture instantaneous wake effects for a given
+atmospheric condition and control setting.
+<strong>FLASC</strong> is a post-processing tool that incorporates FLORIS to compare with
+field data.</p>
 </section>
-<section id="defining-capabilities">
-<h2>Defining Capabilities<a class="headerlink" href="#defining-capabilities" title="Permalink to this heading">#</a></h2>
-<p>The objective is to define the analyses, design processes, and other investigations that are
-possible with the existing software tools supported by WETO.</p>
-<ol class="arabic simple">
-<li><p>Start by defining a specific task (analysis, design, validation, etc).</p></li>
-<li><p>Describe the context:</p></li>
-</ol>
-<ul class="simple">
-<li><p>Why does anyone need to do this?</p></li>
-<li><p>What does it mean in the big picture of wind energy?</p></li>
-</ul>
-<ol class="arabic simple" start="3">
-<li><p>Create a map of steps taken to accomplish the task. This should be written in words to describe
-the tasks, and a flow chart may be useful to connect the task descriptions in sequence if
-multiple steps may occur concurrently.</p></li>
-<li><p>Attach a software tool to each task.</p></li>
-</ol>
-<p>The result should be a map of the software required to accomplish a high level piece of work
-with WETO software. To visualize the map, it is helpful to first draw the connections
-on paper. Once the graph is accurate, add the nodes and their connectivity to a text-based
-digital representation of the graph using <a class="reference external" href="https://mermaid.js.org/intro/">mermaid</a> which allows to
-track changes to the graph and automatically render it on the website.</p>
-</section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -584,20 +503,20 @@ track changes to the graph and automatically render it on the website.</p>
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../workshop/workshop_report.html"
+       href="system_design.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">2023 Workshop Report</p>
+        <p class="prev-next-title">System Design</p>
       </div>
     </a>
     <a class="right-next"
-       href="aero.html"
+       href="../portfolio_analysis/software_list.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Wind Turbine and Wind Farm Aerodynamics</p>
+        <p class="prev-next-title">Software Listing</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -616,8 +535,7 @@ track changes to the graph and automatically render it on the website.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wireframe-prototype">Wireframe prototype</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-capabilities">Defining Capabilities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-stack">Software Stack</a></li>
 </ul>
   </nav></div>
 

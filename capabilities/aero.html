@@ -165,6 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="overview.html">Portfolio Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Wind Turbine and Wind Farm Aerodynamics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="system_design.html">System Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wake_loss_wfc.html">Wake Loss and Wind Farm Controls.</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../portfolio_analysis/software_list.html">Software Listing</a></li>
@@ -361,7 +362,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -377,6 +380,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-stack">Software Stack</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -388,31 +399,77 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="wind-turbine-and-wind-farm-aerodynamics">
 <span id="aero-capability"></span><h1>Wind Turbine and Wind Farm Aerodynamics<a class="headerlink" href="#wind-turbine-and-wind-farm-aerodynamics" title="Permalink to this heading">#</a></h1>
-<p>The detailed design of wind turbine components and wind farms is detailed
-here. This process typically involves modeling system components at varying
-levels of fidelity while moving through the design space.</p>
+<p>Being driven by the wind, the study of wind turbines and wind farms is
+inherently highly dependent on aerodynamic modeling capability.
+This topic area is highly coupled to much of the research and development
+work within the wind energy industry.
+Aerodynamic design is used to optimize the performance of wind turbines,
+balance the loads in high wind or high turbulence events to minimize
+damage to the whole system and improve reliability, and improve
+the energy recovery downstream of a wind turbine to minimize the wake
+loss throughout the wind farm.
+In general, aerodynamics models choose between fidelity and computational
+cost, and practitioners should also find the balance that fits their
+needs.</p>
+<section id="software-stack">
+<h2>Software Stack<a class="headerlink" href="#software-stack" title="Permalink to this heading">#</a></h2>
+<p>The study of aerodynamics spans various technical areas and applications.</p>
+<div class="mermaid">
+            mindmap
+    root(&quot;WETO Software Portfolio&quot;)
+        ps(Engineering-fidelity Physics Models)
+            OpenFAST
+            FAST.Farm
+
+        hfm(High Fidelity Models)
+            AMR Wind
+            Nalu Wind
+            ERF
+            WindSE
+
+        do(&quot; &quot;)
+
+        ctrl(Controls)
+            FLORIS
+
+        ra(&quot; &quot;)
+        cost(&quot; &quot;)
+        wild(&quot; &quot;)
+        om(&quot; &quot;)
+        </div><p>In addition to separating by application, this software stack can be divided
+by fidelity.
+The following graphic roughly orders this tool suite from high fidelity at the top
+to low fidelity at the bottom.</p>
 <div class="mermaid">
             flowchart TD
-    A[&quot;ExaWind
-    RANS/LES hybrid, time accurate, blade resolved&quot;]
+
+    A[&quot;Nalu-Wind
+    LES, time accurate, blade resolved&quot;]
 
     B[&quot;AMR-Wind
     LES, time accurate, actuator line&quot;]
 
     C[&quot;WindSE
-    RANS, time accurate, actuator disk&quot;]
+    RANS, LES, time accurate, actuator disk&quot;]
 
     D[&quot;OpenFAST/FAST.Farm
-    Engineering models, time accurate, BEM, beam models&quot;]
+    Engineering models, time accurate, BEM-derived models + FVW&quot;]
 
     E[&quot;FLORIS
     Analytical, steady state&quot;]
 
-    A --&gt; B
-    B --&gt; C
-    C --&gt; D
-    D --&gt; E
+    subgraph ExaWind
+    A
+    B
+    end
+
+    A ~~~ C
+    B ~~~ C
+
+    C ~~~ D
+    D ~~~ E
         </div></section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -466,6 +523,20 @@ levels of fidelity while moving through the design space.</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-stack">Software Stack</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
