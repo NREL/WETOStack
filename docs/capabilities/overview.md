@@ -64,12 +64,14 @@ or Terrawatthours (TWh).
 ````
 
 ````{card}
-Wake Loss
+[](wake_loss_wfc_capability)
 ^^^
 Wake loss modeling is the study of turbine-turbine interactions via wind turbine
 wakes. Typically, the interaction mechanism is energy loss due to a shadow in the
 wind speed behind a wind turbine, but other mechanisms such as influence on
 turbulence are also considered.
+Wind farm controls is often studied in conjunction with wake loss modeling
+as a mechanism for reducing wake losses.
 ````
 
 ````{card}

@@ -18,6 +18,7 @@ parts:
     sections:
     - file: capabilities/aero
     - file: capabilities/system_design
+    - file: capabilities/wake_loss_wfc
   - file: portfolio_analysis/software_list
   - file: portfolio_analysis/map_network
   - file: portfolio_analysis/attributes_schema
