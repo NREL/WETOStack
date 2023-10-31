@@ -20,7 +20,7 @@ The study of aerodynamics spans various technical areas and applications.
 
 ```{mermaid}
 mindmap
-    root("WETO Software Portfolio")
+    root("Aerodynamics")
         ps(Engineering-fidelity Physics Models)
             OpenFAST
             FAST.Farm
