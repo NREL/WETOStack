@@ -46,10 +46,12 @@ mindmap
             CORAL
             NRWAL
             WOMBAT
-            OpenOA
 
         wild(Wild Life Impact)
             SSRS
+
+        om(Operation and Maintenance)
+            OpenOA
 ```
 
 
