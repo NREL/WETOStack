@@ -76,3 +76,33 @@ flowchart TD
     C ~~~ D
     D ~~~ E
 ```
+
+**ExaWind**, part of the DOE Exascale Computing Project, has developed wind energy simulation
+software capable of leveraging state of the art supercomputers achieves exascale
+performance (10^18 floating point operations per second).
+This software is made up primarily of **AMR-Wind** and **Nalu-Wind**.
+AMR-Wind is a large eddy simulation (LES) code that uses adaptive mesh refinement
+through AMReX to resolve the wind farm flow field.
+Nalu-Wind is another LES code that uses a fixed, unstructured mesh to resolve the
+flow field around the blade.
+ExaWind brings the two codes together through advanced numerical methods to
+efficiently model the large spread in spatial and temporal scales in the full wind farm.
+ExaWind couples with OpenFAST to simulate fluid-structure interactions (FSI).
+
+**WindSE** is a wind farm systems engineering tool that uses a variety of
+computational fluid dynamics (CFD) models to simulate the wind farm flow field
+including Reynolds-averaged Navier-Stokes (RANS), LES, and an actuator disk model.
+It is coupled to optimization algorithms for use in wind farm layout design.
+
+**OpenFAST** includes actuator disk-based aerodynamics models including Blade Element
+Momentum theory (BEMT) and Dynamic BEM (DBEMT).
+**FAST.Farm** is a farm-level simulator building on OpenFAST, and it includes
+a free vortex wake (FVW) model to simulate the wake of wind turbines within
+a farm.
+OpenFAST also includes TurbSim, a stochastic turbulence model, and InflowWind,
+a tool for generating wind inflow conditions or OpenFAST simulations.
+
+**FLORIS** is a low fidelity simulator that includes steady state analytical
+wind turbine wake models.
+While this is explicitly not aerodynamics, this tool is useful for
+rapidly estimating and optimizing wind farm layout and controls.
