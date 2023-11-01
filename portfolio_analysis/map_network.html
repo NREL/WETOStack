@@ -409,52 +409,9 @@ to construct their inputs. These are connected through workflows rather than cod
 <span class="kn">import</span> <span class="nn">yaml</span>
 <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
 
-<span class="c1"># model_list_inputs = yaml.safe_load( open(&quot;analysis_list.yaml&quot;, &quot;r&quot;) )</span>
-<span class="c1"># models = model_list_inputs[&quot;active&quot;] + model_list_inputs[&quot;partial&quot;]</span>
+<span class="n">model_list_inputs</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;analysis_list.yaml&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">models</span> <span class="o">=</span> <span class="n">model_list_inputs</span><span class="p">[</span><span class="s2">&quot;active&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">model_list_inputs</span><span class="p">[</span><span class="s2">&quot;partial&quot;</span><span class="p">]</span>
 
-<span class="n">models</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;amr-wind&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;anba4&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;dw_tap&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;dwind&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;erf&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;fastfarm&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;flasc&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;floris&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;hercules&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;hopp&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;moa_python&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;moorpy&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;nalu-wind&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;openfast&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;openoa&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;openturbine&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;pynumad&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;raft&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rosco&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;sonata&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;weis&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;windse&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;wisdem&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;wombat&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;wtk&quot;</span><span class="p">,</span>
-
-    <span class="c1"># Partially or not at all completed in the database</span>
-    <span class="c1"># coral</span>
-    <span class="s2">&quot;dgen&quot;</span><span class="p">,</span>
-    <span class="c1"># empty</span>
-    <span class="s2">&quot;hybridbosse&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;landbosse&quot;</span><span class="p">,</span>
-    <span class="c1"># nrwal</span>
-    <span class="s2">&quot;orbit&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;pysam&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rev&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rex&quot;</span><span class="p">,</span>
-    <span class="c1"># sowfa</span>
-    <span class="c1"># ssrs</span>
-    <span class="c1"># wpgnn_playgen</span>
-    <span class="c1"># wtdigitwin</span>
-<span class="p">]</span>
 <span class="n">model_attributes_map</span> <span class="o">=</span> <span class="p">{</span>
     <span class="n">model</span><span class="p">:</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;software_attributes&quot;</span><span class="p">,</span> <span class="s2">&quot;database&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2">.yaml&quot;</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
     <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span>
@@ -583,7 +540,58 @@ to construct their inputs. These are connected through workflows rather than cod
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/0ae1d51db42b6f2a3ec27ffd0cbc350e33685bf823e1409f07c2695e500b7637.png" src="../_images/0ae1d51db42b6f2a3ec27ffd0cbc350e33685bf823e1409f07c2695e500b7637.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/networkx/drawing/nx_agraph.py:304,</span> in <span class="ni">pygraphviz_layout</span><span class="nt">(G, prog, root, args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">303</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">304</span>     <span class="kn">import</span> <span class="nn">pygraphviz</span>
+<span class="g g-Whitespace">    </span><span class="mi">305</span> <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pygraphviz&#39;
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">edges_indirect</span> <span class="o">=</span> <span class="p">[(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="ow">in</span> <span class="n">network_graph</span><span class="o">.</span><span class="n">edges</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># layout = nx.nx_pydot.graphviz_layout(network_graph, prog=&quot;neato&quot;)</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">layout</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">nx_agraph</span><span class="o">.</span><span class="n">graphviz_layout</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">network_graph</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">prog</span><span class="o">=</span><span class="s2">&quot;sfdp&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="c1"># args=&quot;-Gnormalize=true&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="c1"># args=&quot;-GK=0.5&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="c1"># layout = nx.spring_layout(network_graph, k=2)</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> 
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="c1"># nodes</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="n">network_graph</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="n">layout</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="c1"># node_size=1000</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/networkx/drawing/nx_agraph.py:260,</span> in <span class="ni">graphviz_layout</span><span class="nt">(G, prog, root, args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">229</span> <span class="k">def</span> <span class="nf">graphviz_layout</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">prog</span><span class="o">=</span><span class="s2">&quot;neato&quot;</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">230</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Create node positions for G using Graphviz.</span>
+<span class="g g-Whitespace">    </span><span class="mi">231</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">232</span><span class="sd">     Parameters</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">258</span><span class="sd">     see https://gitlab.com/graphviz/graphviz/-/issues/1767 for more info.</span>
+<span class="g g-Whitespace">    </span><span class="mi">259</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">260</span>     <span class="k">return</span> <span class="n">pygraphviz_layout</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">prog</span><span class="o">=</span><span class="n">prog</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="n">root</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/networkx/drawing/nx_agraph.py:306,</span> in <span class="ni">pygraphviz_layout</span><span class="nt">(G, prog, root, args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">304</span>     <span class="kn">import</span> <span class="nn">pygraphviz</span>
+<span class="g g-Whitespace">    </span><span class="mi">305</span> <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">306</span>     <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">307</span>         <span class="s2">&quot;requires pygraphviz &quot;</span> <span class="s2">&quot;http://pygraphviz.github.io/&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">308</span>     <span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">    </span><span class="mi">309</span> <span class="k">if</span> <span class="n">root</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">310</span>     <span class="n">args</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;-Groot=</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="ne">ImportError</span>: requires pygraphviz http://pygraphviz.github.io/
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -612,7 +620,7 @@ to construct their inputs. These are connected through workflows rather than cod
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 100.0, 0.0, 100.0)
 </pre></div>
 </div>
-<img alt="../_images/680b6f8454a4350ffe56bfdfe81881e51bbdc8e47fd7cee3dd1bf0276e79cdee.png" src="../_images/680b6f8454a4350ffe56bfdfe81881e51bbdc8e47fd7cee3dd1bf0276e79cdee.png" />
+<img alt="../_images/16432ce159d09df6abaf354a16f808ec2c6d0156fceb7ecf6f2456de26bebac1.png" src="../_images/16432ce159d09df6abaf354a16f808ec2c6d0156fceb7ecf6f2456de26bebac1.png" />
 </div>
 </div>
 </section>
