@@ -59,6 +59,8 @@ These projects are actively supported and funded by WETO as of FY23.
 - CORAL: https://github.com/NREL/CORAL
 - NRWAL: https://github.com/NREL/NRWAL
 - WOMBAT: https://github.com/WISDEM/WOMBAT
+
+**Operation and Maintenance**
 - OpenOA: https://github.com/nrel/openoa
 
 **Wildlife Impact**
