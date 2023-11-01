@@ -405,7 +405,15 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="software-attributes">
 <h1>Software Attributes<a class="headerlink" href="#software-attributes" title="Permalink to this heading">#</a></h1>
 <p>The sections here tabulate the software attribute database.
-Each attribute (column) is described in the <a class="reference internal" href="attributes_schema.html#schema"><span class="std std-ref">Attribute Schema</span></a>.</p>
+Each attribute (column) is described in the <a class="reference internal" href="attributes_schema.html#schema"><span class="std std-ref">Attribute Schema</span></a>.
+Some columns contain lists of strings which means that they cannot be fully sorted.
+Instead, they can be filtered by searching for a string with the following Sequel query:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span>SELECT * FROM $table WHERE &lt;column name&gt; LIKE &#39;%&lt;search string&gt;%&#39;;
+
+-- For example:
+SELECT * FROM $table WHERE system_location LIKE &#39;%land%&#39;;
+</pre></div>
+</div>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">

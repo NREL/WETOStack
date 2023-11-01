@@ -404,7 +404,9 @@ document.write(`
 <p>This dashboard outlines typical workflows and capabilities involved
 in wind energy system design and analysis using the WETO Software Suite.</p>
 <div class="mermaid">
-            mindmap
+            %%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
+
+mindmap
     root(&quot;WETO Software Portfolio&quot;)
         ps(Engineering-fidelity Physics Models)
             OpenFAST

@@ -23,6 +23,8 @@ See that topic area for more information.
 ## Software Stack
 
 ```{mermaid}
+%%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
+
 mindmap
     root("Wake Loss Modeling")
         ps(Engineering-fidelity Physics Models)

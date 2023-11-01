@@ -14,7 +14,15 @@ kernelspec:
 
 The sections here tabulate the software attribute database.
 Each attribute (column) is described in the [](schema).
+Some columns contain lists of strings which means that they cannot be fully sorted.
+Instead, they can be filtered by searching for a string with the following Sequel query:
 
+```sql
+SELECT * FROM $table WHERE <column name> LIKE '%<search string>%';
+
+-- For example:
+SELECT * FROM $table WHERE system_location LIKE '%land%';
+```
 
 ```{code-cell} ipython3
 :tags: [hide-cell]

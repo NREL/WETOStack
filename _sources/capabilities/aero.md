@@ -19,6 +19,8 @@ needs.
 The study of aerodynamics spans various technical areas and applications.
 
 ```{mermaid}
+%%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
+
 mindmap
     root("Aerodynamics")
         ps(Engineering-fidelity Physics Models)
