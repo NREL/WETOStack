@@ -1,5 +1,5 @@
 (portfolio_overview)=
-# Portfolio Overview
+# Capabilities
 
 This dashboard outlines typical workflows and capabilities involved
 in wind energy system design and analysis using the WETO Software Suite.
