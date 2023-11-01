@@ -1,5 +1,17 @@
 jupyter-book
+jupyter-cache
 pydata-sphinx-theme==0.13.1
 matplotlib
 numpy
 sphinxcontrib.mermaid
+pyyaml
+
+# attribute tables
+# import altair as alt
+datapane
+pandas
+
+# network map
+networkx
+squarify
+# pygraphviz
