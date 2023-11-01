@@ -5,6 +5,8 @@ This dashboard outlines typical workflows and capabilities involved
 in wind energy system design and analysis using the WETO Software Suite.
 
 ```{mermaid}
+%%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
+
 mindmap
     root("WETO Software Portfolio")
         ps(Engineering-fidelity Physics Models)
