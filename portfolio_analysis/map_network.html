@@ -409,9 +409,52 @@ to construct their inputs. These are connected through workflows rather than cod
 <span class="kn">import</span> <span class="nn">yaml</span>
 <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
 
-<span class="n">model_list_inputs</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;analysis_list.yaml&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">models</span> <span class="o">=</span> <span class="n">model_list_inputs</span><span class="p">[</span><span class="s2">&quot;active&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">model_list_inputs</span><span class="p">[</span><span class="s2">&quot;partial&quot;</span><span class="p">]</span>
+<span class="c1"># model_list_inputs = yaml.safe_load( open(&quot;analysis_list.yaml&quot;, &quot;r&quot;) )</span>
+<span class="c1"># models = model_list_inputs[&quot;active&quot;] + model_list_inputs[&quot;partial&quot;]</span>
 
+<span class="n">models</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;amr-wind&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;anba4&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;dw_tap&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;dwind&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;erf&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fastfarm&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;flasc&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;floris&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;hercules&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;hopp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;moa_python&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;moorpy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nalu-wind&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;openfast&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;openoa&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;openturbine&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pynumad&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;raft&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rosco&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sonata&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;weis&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;windse&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;wisdem&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;wombat&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;wtk&quot;</span><span class="p">,</span>
+
+    <span class="c1"># Partially or not at all completed in the database</span>
+    <span class="c1"># coral</span>
+    <span class="s2">&quot;dgen&quot;</span><span class="p">,</span>
+    <span class="c1"># empty</span>
+    <span class="s2">&quot;hybridbosse&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;landbosse&quot;</span><span class="p">,</span>
+    <span class="c1"># nrwal</span>
+    <span class="s2">&quot;orbit&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pysam&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rev&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rex&quot;</span><span class="p">,</span>
+    <span class="c1"># sowfa</span>
+    <span class="c1"># ssrs</span>
+    <span class="c1"># wpgnn_playgen</span>
+    <span class="c1"># wtdigitwin</span>
+<span class="p">]</span>
 <span class="n">model_attributes_map</span> <span class="o">=</span> <span class="p">{</span>
     <span class="n">model</span><span class="p">:</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;software_attributes&quot;</span><span class="p">,</span> <span class="s2">&quot;database&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2">.yaml&quot;</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
     <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span>
@@ -426,8 +469,14 @@ to construct their inputs. These are connected through workflows rather than cod
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">yaml</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">model_list_inputs</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;analysis_list.yaml&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">models</span> <span class="o">=</span> <span class="n">model_list_inputs</span><span class="p">[</span><span class="s2">&quot;active&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">model_list_inputs</span><span class="p">[</span><span class="s2">&quot;partial&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># model_list_inputs = yaml.safe_load( open(&quot;analysis_list.yaml&quot;, &quot;r&quot;) )</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># models = model_list_inputs[&quot;active&quot;] + model_list_inputs[&quot;partial&quot;]</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">models</span> <span class="o">=</span> <span class="p">[</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="s2">&quot;amr-wind&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="s2">&quot;anba4&quot;</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span>     <span class="c1"># wtdigitwin</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span> <span class="p">]</span>
 
 <span class="ne">ModuleNotFoundError</span>: No module named &#39;networkx&#39;
 </pre></div>
@@ -583,7 +632,7 @@ to construct their inputs. These are connected through workflows rather than cod
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 100.0, 0.0, 100.0)
 </pre></div>
 </div>
-<img alt="../_images/31c13e3351ec37aae525bf5372a65bbdadfeb41aa479e8f3dece8186d343d10c.png" src="../_images/31c13e3351ec37aae525bf5372a65bbdadfeb41aa479e8f3dece8186d343d10c.png" />
+<img alt="../_images/9656466572a768b2570333967916e3818a3127d0b41b86a9465267a932f9d345.png" src="../_images/9656466572a768b2570333967916e3818a3127d0b41b86a9465267a932f9d345.png" />
 </div>
 </div>
 </section>

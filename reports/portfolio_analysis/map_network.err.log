@@ -19,9 +19,52 @@ from pathlib import Path
 import yaml
 import networkx as nx
 
-model_list_inputs = yaml.safe_load( open("analysis_list.yaml", "r") )
-models = model_list_inputs["active"] + model_list_inputs["partial"]
+# model_list_inputs = yaml.safe_load( open("analysis_list.yaml", "r") )
+# models = model_list_inputs["active"] + model_list_inputs["partial"]
 
+models = [
+    "amr-wind",
+    "anba4",
+    "dw_tap",
+    "dwind",
+    "erf",
+    "fastfarm",
+    "flasc",
+    "floris",
+    "hercules",
+    "hopp",
+    "moa_python",
+    "moorpy",
+    "nalu-wind",
+    "openfast",
+    "openoa",
+    "openturbine",
+    "pynumad",
+    "raft",
+    "rosco",
+    "sonata",
+    "weis",
+    "windse",
+    "wisdem",
+    "wombat",
+    "wtk",
+
+    # Partially or not at all completed in the database
+    # coral
+    "dgen",
+    # empty
+    "hybridbosse",
+    "landbosse",
+    # nrwal
+    "orbit",
+    "pysam",
+    "rev",
+    "rex",
+    # sowfa
+    # ssrs
+    # wpgnn_playgen
+    # wtdigitwin
+]
 model_attributes_map = {
     model: yaml.safe_load( open(Path("..", "..", "software_attributes", "database", f"{model}.yaml"), "r") )
     for model in models
@@ -35,8 +78,14 @@ Cell [0;32mIn[1], line 3[0m
 [1;32m      1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpathlib[39;00m [38;5;28;01mimport[39;00m Path
 [1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01myaml[39;00m
 [0;32m----> 3[0m [38;5;28;01mimport[39;00m [38;5;21;01mnetworkx[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnx[39;00m
-[1;32m      5[0m model_list_inputs [38;5;241m=[39m yaml[38;5;241m.[39msafe_load( [38;5;28mopen[39m([38;5;124m"[39m[38;5;124manalysis_list.yaml[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mr[39m[38;5;124m"[39m) )
-[1;32m      6[0m models [38;5;241m=[39m model_list_inputs[[38;5;124m"[39m[38;5;124mactive[39m[38;5;124m"[39m] [38;5;241m+[39m model_list_inputs[[38;5;124m"[39m[38;5;124mpartial[39m[38;5;124m"[39m]
+[1;32m      5[0m [38;5;66;03m# model_list_inputs = yaml.safe_load( open("analysis_list.yaml", "r") )[39;00m
+[1;32m      6[0m [38;5;66;03m# models = model_list_inputs["active"] + model_list_inputs["partial"][39;00m
+[1;32m      8[0m models [38;5;241m=[39m [
+[1;32m      9[0m     [38;5;124m"[39m[38;5;124mamr-wind[39m[38;5;124m"[39m,
+[1;32m     10[0m     [38;5;124m"[39m[38;5;124manba4[39m[38;5;124m"[39m,
+[0;32m   (...)[0m
+[1;32m     49[0m     [38;5;66;03m# wtdigitwin[39;00m
+[1;32m     50[0m ]
 
 [0;31mModuleNotFoundError[0m: No module named 'networkx'
 
