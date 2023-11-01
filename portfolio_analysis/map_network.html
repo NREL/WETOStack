@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Depedency Analysis &#8212; WETO Software Stack</title>
+    <title>Depedencies &#8212; WETO Software Stack</title>
   
   
   
@@ -72,7 +72,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Attribute Schema" href="attributes_schema.html" />
-    <link rel="prev" title="Software Listing" href="software_list.html" />
+    <link rel="prev" title="Wake Loss and Wind Farm Controls." href="../capabilities/wake_loss_wfc.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -160,14 +160,15 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Portfolio Analysis</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../capabilities/overview.html">Portfolio Overview</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="software_list.html">Software Listing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_table.html">Software Attributes</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../capabilities/overview.html">Capabilities</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../capabilities/aero.html">Wind Turbine and Wind Farm Aerodynamics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../capabilities/system_design.html">System Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../capabilities/wake_loss_wfc.html">Wake Loss and Wind Farm Controls.</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="software_list.html">Software Listing</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Depedency Analysis</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Depedencies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="attributes_schema.html">Attribute Schema</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Development Best Practices</span></p>
@@ -371,7 +372,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Depedency Analysis</h1>
+    <h1>Depedencies</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -385,8 +386,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="depedency-analysis">
-<h1>Depedency Analysis<a class="headerlink" href="#depedency-analysis" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="depedencies">
+<h1>Depedencies<a class="headerlink" href="#depedencies" title="Permalink to this heading">#</a></h1>
 <p>By collecting data on the projects within the WETO portfolio that use other tools
 within the portfolio, we can get a sense for the software projects that are at the “core”
 of the capabilities.</p>
@@ -408,49 +409,8 @@ to construct their inputs. These are connected through workflows rather than cod
 <span class="kn">import</span> <span class="nn">yaml</span>
 <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
 
-<span class="n">models</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;amr-wind&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;anba4&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;dw_tap&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;dwind&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;erf&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;fastfarm&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;flasc&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;floris&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;hercules&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;hopp&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;moa_python&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;moorpy&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;nalu-wind&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;openfast&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;openoa&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;openturbine&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;pynumad&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;raft&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rosco&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;sonata&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;weis&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;windse&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;wisdem&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;wombat&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;wtk&quot;</span><span class="p">,</span>
-
-    <span class="c1"># Partially or not at all completed in the database</span>
-    <span class="c1"># &quot;coral&quot;,</span>
-    <span class="s2">&quot;dgen&quot;</span><span class="p">,</span>
-    <span class="c1"># &quot;empty&quot;,</span>
-    <span class="s2">&quot;hybridbosse&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;landbosse&quot;</span><span class="p">,</span>
-    <span class="c1"># &quot;nrwal&quot;,</span>
-    <span class="s2">&quot;orbit&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;pysam&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rev&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rex&quot;</span><span class="p">,</span>
-    <span class="c1"># &quot;sowfa&quot;,</span>
-    <span class="c1"># &quot;ssrs&quot;,</span>
-    <span class="c1"># &quot;wpgnn_playgen&quot;,</span>
-    <span class="c1"># &quot;wtdigitwin&quot;,</span>
-<span class="p">]</span>
+<span class="n">model_list_inputs</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;analysis_list.yaml&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">models</span> <span class="o">=</span> <span class="n">model_list_inputs</span><span class="p">[</span><span class="s2">&quot;active&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">model_list_inputs</span><span class="p">[</span><span class="s2">&quot;partial&quot;</span><span class="p">]</span>
 
 <span class="n">model_attributes_map</span> <span class="o">=</span> <span class="p">{</span>
     <span class="n">model</span><span class="p">:</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;software_attributes&quot;</span><span class="p">,</span> <span class="s2">&quot;database&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2">.yaml&quot;</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
@@ -466,16 +426,8 @@ to construct their inputs. These are connected through workflows rather than cod
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">yaml</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">models</span> <span class="o">=</span> <span class="p">[</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="s2">&quot;amr-wind&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="s2">&quot;anba4&quot;</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span>     <span class="c1"># &quot;wtdigitwin&quot;,</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="n">model_attributes_map</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span>     <span class="n">model</span><span class="p">:</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;software_attributes&quot;</span><span class="p">,</span> <span class="s2">&quot;database&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2">.yaml&quot;</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span> <span class="p">}</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">model_list_inputs</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;analysis_list.yaml&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">models</span> <span class="o">=</span> <span class="n">model_list_inputs</span><span class="p">[</span><span class="s2">&quot;active&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">model_list_inputs</span><span class="p">[</span><span class="s2">&quot;partial&quot;</span><span class="p">]</span>
 
 <span class="ne">ModuleNotFoundError</span>: No module named &#39;networkx&#39;
 </pre></div>
@@ -524,7 +476,9 @@ to construct their inputs. These are connected through workflows rather than cod
     <span class="n">network_graph</span><span class="p">,</span>
     <span class="n">prog</span><span class="o">=</span><span class="s2">&quot;sfdp&quot;</span><span class="p">,</span>
     <span class="c1"># args=&quot;-Gnormalize=true&quot;</span>
+    <span class="c1"># args=&quot;-GK=0.5&quot;</span>
 <span class="p">)</span>
+<span class="c1"># layout = nx.spring_layout(network_graph, k=2)</span>
 
 <span class="c1"># nodes</span>
 <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span>
@@ -629,7 +583,7 @@ to construct their inputs. These are connected through workflows rather than cod
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 100.0, 0.0, 100.0)
 </pre></div>
 </div>
-<img alt="../_images/73062fdd47c042fff63b6c3bbfffd02e690eb865702ad90419ddd8f90c933b70.png" src="../_images/73062fdd47c042fff63b6c3bbfffd02e690eb865702ad90419ddd8f90c933b70.png" />
+<img alt="../_images/31c13e3351ec37aae525bf5372a65bbdadfeb41aa479e8f3dece8186d343d10c.png" src="../_images/31c13e3351ec37aae525bf5372a65bbdadfeb41aa479e8f3dece8186d343d10c.png" />
 </div>
 </div>
 </section>
@@ -663,12 +617,12 @@ to construct their inputs. These are connected through workflows rather than cod
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="software_list.html"
+       href="../capabilities/wake_loss_wfc.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Software Listing</p>
+        <p class="prev-next-title">Wake Loss and Wind Farm Controls.</p>
       </div>
     </a>
     <a class="right-next"
