@@ -1,0 +1,43 @@
+active:
+- amr-wind
+- anba4
+- dw_tap
+- dwind
+- erf
+- fastfarm
+- flasc
+- floris
+- hercules
+- hopp
+- moa_python
+- moorpy
+- nalu-wind
+- openfast
+- openoa
+- openturbine
+- pynumad
+- raft
+- rosco
+- sonata
+- weis
+- windse
+- wisdem
+- wombat
+- wtk
+
+partial:
+# Partially or not at all completed in the database
+# coral
+- dgen
+# empty
+- hybridbosse
+- landbosse
+# nrwal
+- orbit
+- pysam
+- rev
+- rex
+# sowfa
+# ssrs
+# wpgnn_playgen
+# wtdigitwin
