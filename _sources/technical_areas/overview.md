@@ -151,6 +151,8 @@ mindmap
         wild(" ")
         om(" ")
 ```
+
+- DW TAP https://github.com/NREL/dw-tap-app - A simple tool for cost-effectively and accurately assessing wind resources without having to physically take direct measurements in the field.
 ````
 
 
@@ -173,10 +175,16 @@ mindmap
             ORBIT
             CORAL
             NRWAL
-            WOMBAT
+
         wild(" ")
         om(" ")
 ```
+
+- LandBOSSE https://github.com/WISDEM/LandBOSSE - A systems engineering tool that estimates the balance-of-system (BOS) costs associated with installing utility scale wind plants (10, 1.5 MW turbines or larger)
+- HybridBOSSE https://github.com/NREL/HybridBOSSE - A tool for estimating BOS costs for hybrid power plants that share infrastructure.
+- ORBIT https://github.com/WISDEM/ORBIT - A model to study the cost and times associated with Offshore Wind Balance of System (BOS) processes.
+- CORAL https://github.com/NREL/CORAL - Concurrent ORBIT for shared Resource Analysis Library
+- NRWAL https://github.com/NREL/NRWAL - A library of offshore wind cost equations (plus new energy technologies like marine hydro!).
 ````
 
 
@@ -198,6 +206,8 @@ mindmap
             SSRS
         om(" ")
 ```
+
+- SSRS https://github.com/NREL/SSRS - A stochastic agent-based model for predicting raptor movements through an orographic updraft field estimated using the spatially varying wind conditions and ground features (altitude, slope, aspect).
 ````
 
 
@@ -218,5 +228,9 @@ mindmap
         wild(" ")
         om(Operation and Maintenance)
             OpenOA
+            WOMBAT
 ```
+
+- WOMBAT https://github.com/WISDEM/WOMBAT - A library to simulate the operation and maintenance phase (O&M) of distributed, land-based, and offshore windfarms using a discrete event simultaion framework.
+- OpenOA https://github.com/nrel/openoa - A framework for working with large time-series data from wind plants, such as SCADA.
 ````

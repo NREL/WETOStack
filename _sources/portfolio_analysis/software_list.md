@@ -45,13 +45,13 @@ mindmap
             ORBIT
             CORAL
             NRWAL
-            WOMBAT
 
         wild(Wild Life Impact)
             SSRS
 
         om(Operation and Maintenance)
             OpenOA
+            WOMBAT
 ```
 
 The set of software under the WETO umbrella is listed here.
@@ -110,10 +110,10 @@ These projects are actively supported and funded by WETO as of FY23.
 - ORBIT: https://github.com/WISDEM/ORBIT
 - CORAL: https://github.com/NREL/CORAL
 - NRWAL: https://github.com/NREL/NRWAL
-- WOMBAT: https://github.com/WISDEM/WOMBAT
 
 **Operation and Maintenance**
 - OpenOA: https://github.com/nrel/openoa
+- WOMBAT: https://github.com/WISDEM/WOMBAT
 
 **Wildlife Impact**
 - SSRS: https://github.com/NREL/SSRS
