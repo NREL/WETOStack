@@ -16,6 +16,7 @@ parts:
   chapters:
   - file: portfolio_analysis/software_list
   - file: portfolio_analysis/attribute_table
+  - file: technical_areas/overview
   - file: capabilities/overview
     sections:
     - file: capabilities/aero
