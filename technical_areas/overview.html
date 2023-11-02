@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Capabilities &#8212; WETO Software Stack</title>
+    <title>Technical Areas &#8212; WETO Software Stack</title>
   
   
   
@@ -68,11 +68,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'capabilities/overview';</script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'technical_areas/overview';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Aerodynamics" href="aero.html" />
-    <link rel="prev" title="Technical Areas" href="../technical_areas/overview.html" />
+    <link rel="next" title="Capabilities" href="../capabilities/overview.html" />
+    <link rel="prev" title="Software Attributes" href="../portfolio_analysis/attribute_table.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -162,11 +164,11 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../portfolio_analysis/software_list.html">Software Listing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../portfolio_analysis/attribute_table.html">Software Attributes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../technical_areas/overview.html">Technical Areas</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Capabilities</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="aero.html">Aerodynamics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="system_design.html">System Design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wake_loss_wfc.html">Wake Loss and Wind Farm Controls.</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Technical Areas</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../capabilities/overview.html">Capabilities</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../capabilities/aero.html">Aerodynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../capabilities/system_design.html">System Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../capabilities/wake_loss_wfc.html">Wake Loss and Wind Farm Controls.</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../portfolio_analysis/map_network.html">Depedencies</a></li>
@@ -246,7 +248,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/rafmudaf/wetostack/edit/main/docs/capabilities/overview.md" target="_blank"
+      <li><a href="https://github.com/rafmudaf/wetostack/edit/main/docs/technical_areas/overview.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -263,7 +265,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/rafmudaf/wetostack/issues/new?title=Issue%20on%20page%20%2Fcapabilities/overview.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/rafmudaf/wetostack/issues/new?title=Issue%20on%20page%20%2Ftechnical_areas/overview.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +295,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/capabilities/overview.md" target="_blank"
+      <li><a href="../_sources/technical_areas/overview.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -362,9 +364,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -375,20 +375,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Capabilities</h1>
+    <h1>Technical Areas</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wireframe-prototype">Wireframe prototype</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-capabilities">Defining Capabilities</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -398,114 +389,231 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="capabilities">
-<span id="portfolio-overview"></span><h1>Capabilities<a class="headerlink" href="#capabilities" title="Permalink to this heading">#</a></h1>
-<p>This page outlines typical workflows and capabilities involved
-in wind energy system design and analysis using the WETO Software Suite.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="technical-areas">
+<span id="id1"></span><h1>Technical Areas<a class="headerlink" href="#technical-areas" title="Permalink to this heading">#</a></h1>
+<p>The WETO software portfolio can be subdivided into key technical areas that
+cover the breadth of wind energy system design and analysis.
+The technical areas and their associated tools are listed here.</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
-<p class="sd-card-text">Plant Performance</p>
+<p class="sd-card-text">Engineering-fidelity Physics Models</p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text">Plant performance analysis involves the simulation of power production
-for the collection of wind turbines in a wind farm given the atmospheric
-conditions over a period of time. The result is typically represented
-as Annual Energy Production (AEP) in Megawatthours (MWh), Gigawatthours (GWh),
-or Terrawatthours (TWh).</p>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-header docutils">
-<p class="sd-card-text"><a class="reference internal" href="wake_loss_wfc.html#wake-loss-wfc-capability"><span class="std std-ref">Wake Loss and Wind Farm Controls.</span></a></p>
-</div>
-<div class="sd-card-body docutils">
-<p class="sd-card-text">Wake loss modeling is the study of turbine-turbine interactions via wind turbine
-wakes. Typically, the interaction mechanism is energy loss due to a shadow in the
-wind speed behind a wind turbine, but other mechanisms such as influence on
-turbulence are also considered.
-Wind farm controls is often studied in conjunction with wake loss modeling
-as a mechanism for reducing wake losses.</p>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-header docutils">
-<p class="sd-card-text">Rotor Optimization</p>
-</div>
-<div class="sd-card-body docutils">
-<p class="sd-card-text">Rotor optimization focuses on the iterative design of the rotor components
-such as blades and control systems. This process typically involves modeling
-the aerodynamic loads and subsequent elastic response of the blade. This
-aero-elastic model is used within an optimization algorithm to arrive at
-rotor designs that meet a set of requirements.</p>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-header docutils">
-<p class="sd-card-text">Control Co-Design</p>
-</div>
-<div class="sd-card-body docutils">
-<p class="sd-card-text">Control co-design is a method for advanced system designs that incorporate
-control systems into the structural and aerodynamic designs. The hardware
-and software systems are designed in a coupled sense rather than individually.
-The result is a blade that may only be operable or optimal with a specific
-controller, but the performance can be much greater than a decoupled design.</p>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-header docutils">
-<p class="sd-card-text"><a class="reference internal" href="system_design.html#system-design-capability"><span class="std std-ref">System Design</span></a></p>
-</div>
-<div class="sd-card-body docutils">
-<p class="sd-card-text">System design involves the high-level preliminary design of the power
-generation systems and their connection to the grid. Additionally, cost
-models are incorporated here to identify an initial estimate of the cost
-of energy.</p>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-header docutils">
-<p class="sd-card-text"><a class="reference internal" href="aero.html#aero-capability"><span class="std std-ref">Aerodynamics</span></a></p>
-</div>
-<div class="sd-card-body docutils">
-<p class="sd-card-text">The detailed design of wind turbine components and wind farms is detailed
-here. This process typically involves modeling system components at varying
-levels of fidelity while moving through the design space.</p>
-</div>
-</div>
-<section id="wireframe-prototype">
-<h2>Wireframe prototype<a class="headerlink" href="#wireframe-prototype" title="Permalink to this heading">#</a></h2>
-<p>The capabilities dashboard will contain a list of high level capabilities made up of components
-of the WETO software stack. It will describe each capability as they relate to the software
-used to complete it. This should not be a tutorial on doing each of these things, but it should
-give an idea of the tools that are required to do it. It will give an intuition on which
-models are related, interconnected, and perform certain tasks.</p>
-<img alt="capabilities" class="align-center" src="../_images/capabilities_listing_design.png" />
-</section>
-<section id="defining-capabilities">
-<h2>Defining Capabilities<a class="headerlink" href="#defining-capabilities" title="Permalink to this heading">#</a></h2>
-<p>The objective is to define the analyses, design processes, and other investigations that are
-possible with the existing software tools supported by WETO.</p>
-<ol class="arabic simple">
-<li><p>Start by defining a specific task (analysis, design, validation, etc).</p></li>
-<li><p>Describe the context:</p></li>
-</ol>
-<ul class="simple">
-<li><p>Why does anyone need to do this?</p></li>
-<li><p>What does it mean in the big picture of wind energy?</p></li>
+<div class="mermaid">
+            %%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
+
+mindmap
+    root(&quot;WETO Software Portfolio&quot;)
+        ps(Engineering-fidelity Physics Models)
+            OpenFAST
+            FAST.Farm
+            MoorPy
+            wtDigiTwin
+            ANBA4
+            RAFT
+
+        ps(&quot; &quot;)
+        hfm(&quot; &quot;)
+        do(&quot; &quot;)
+        ctrl(&quot; &quot;)
+        ra(&quot; &quot;)
+        cost(&quot; &quot;)
+        wild(&quot; &quot;)
+        om(&quot; &quot;)
+        </div><ul class="simple">
+<li><p class="sd-card-text">OpenFAST <a class="github reference external" href="https://github.com/openfast/openfast">openfast/openfast</a> - Multi-physics, multi-fidelity tool for simulating the coupled dynamic response of wind turbines.</p></li>
+<li><p class="sd-card-text">FAST.Farm <a class="github reference external" href="https://github.com/openfast/openfast">openfast/openfast</a> - Mid-fidelity wind farm simulator that uses OpenFAST as a turbine model.</p></li>
+<li><p class="sd-card-text">MoorPy <a class="github reference external" href="https://github.com/nrel/moorpy">nrel/moorpy</a> - Quasi-static mooring model and a suite of associated functions for mooring system analysis.</p></li>
+<li><p class="sd-card-text">wtDigiTwin <a class="github reference external" href="https://github.com/ebranlard/wtDigiTwin">ebranlard/wtDigiTwin</a> - Digital twin model for wind turbine containing a set of structural dynamics tools, beam theory, FEM and more.</p></li>
+<li><p class="sd-card-text">RAFT <a class="github reference external" href="https://github.com/WISDEM/RAFT">WISDEM/RAFT</a> - Library for frequency-domain analysis of floating wind turbines.</p></li>
+<li><p class="sd-card-text">ANBA4 <a class="github reference external" href="https://github.com/ANBA4/anba4">ANBA4/anba4</a> - Computes the 6x6 stiffness and mass matrices of arbitrarily complex composite beam cross sections.</p></li>
 </ul>
-<ol class="arabic simple" start="3">
-<li><p>Create a map of steps taken to accomplish the task. This should be written in words to describe
-the tasks, and a flow chart may be useful to connect the task descriptions in sequence if
-multiple steps may occur concurrently.</p></li>
-<li><p>Attach a software tool to each task.</p></li>
-</ol>
-<p>The result should be a map of the software required to accomplish a high level piece of work
-with WETO software. To visualize the map, it is helpful to first draw the connections
-on paper. Once the graph is accurate, add the nodes and their connectivity to a text-based
-digital representation of the graph using <a class="reference external" href="https://mermaid.js.org/intro/">mermaid</a> which allows to
-track changes to the graph and automatically render it on the website.</p>
-</section>
-<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">High Fidelity Models</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="mermaid">
+            %%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
+
+mindmap
+    root(&quot;WETO Software Portfolio&quot;)
+        ps(&quot; &quot;)
+        hfm(High Fidelity Models)
+            AMR Wind
+            Nalu Wind
+            OpenTurbine
+            ERF
+            WindSE
+            pyNuMAD
+        do(&quot; &quot;)
+        ctrl(&quot; &quot;)
+        ra(&quot; &quot;)
+        cost(&quot; &quot;)
+        wild(&quot; &quot;)
+        om(&quot; &quot;)
+        </div><ul class="simple">
+<li><p class="sd-card-text">AMR-Wind <a class="github reference external" href="https://github.com/exawind/amr-wind">exawind/amr-wind</a> - Massively parallel, block-structured adaptive-mesh, incompressible flow solver for wind turbine and wind farm simulations.</p></li>
+<li><p class="sd-card-text">Nalu-Wind <a class="github reference external" href="https://github.com/exawind/nalu-wind">exawind/nalu-wind</a> - Generalized, unstructured, massively parallel, incompressible flow solver for wind turbine and wind farm simulations.</p></li>
+<li><p class="sd-card-text">OpenTurbine <a class="github reference external" href="https://github.com/exawind/openturbine">exawind/openturbine</a> - Wind turbine structural dynamics simulation code for land-based and offshore wind turbines specifically designed to couple with low-fidelity aerodynamic/hydrodynamic models (OpenFAST) and high-fidelity computational fluid dynamics (CFD) models (ExaWind).</p></li>
+<li><p class="sd-card-text">ERF <a class="github reference external" href="https://github.com/erf-model/ERF">erf-model/ERF</a> - Compressible Navier-Stokes solver on an Arakawa C-grid for large-scale weather modeling.</p></li>
+<li><p class="sd-card-text">WindSE <a class="github reference external" href="https://github.com/nrel/windse">nrel/windse</a> - Python package that uses a FEniCS backend to perform wind farm simulations and optimization.</p></li>
+<li><p class="sd-card-text">pyNuMAD <a class="github reference external" href="https://github.com/sandialabs/pyNuMAD">sandialabs/pyNuMAD</a> - Simplifies the process of creating a three-dimensional model of a wind turbine blade by providing an intermediary between raw blade data and analytical platforms (ANSYS, Cubit, OpenFAST, etc).</p></li>
+</ul>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Design &amp; Optimization</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="mermaid">
+            %%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
+
+mindmap
+    root(&quot;WETO Software Portfolio&quot;)
+        ps(&quot; &quot;)
+        hfm(&quot; &quot;)
+        do(Design &amp; Optimization)
+            WEIS
+            WISDEM
+            HOPP
+            SONATA
+        ctrl(&quot; &quot;)
+        ra(&quot; &quot;)
+        cost(&quot; &quot;)
+        wild(&quot; &quot;)
+        om(&quot; &quot;)
+        </div><ul class="simple">
+<li><p class="sd-card-text">WEIS <a class="github reference external" href="https://github.com/wisdem/weis">wisdem/weis</a> - Wind Energy with Integrated Servo-control performs multifidelity co-design of wind turbines by combining multiple NREL-developed tools to enable design optimization of floating offshore wind turbines.</p></li>
+<li><p class="sd-card-text">WISDEM <a class="github reference external" href="https://github.com/wisdem/wisdem">wisdem/wisdem</a> - Set of wind turbine and plant cost and energy production models along with financial models for assessing overall wind plant cost of energy.</p></li>
+<li><p class="sd-card-text">HOPP <a class="github reference external" href="https://github.com/NREL/HOPP">NREL/HOPP</a> - Assesses optimal designs for the deployment of utility-scale hybrid energy plants, particularly considering wind, solar and storage.</p></li>
+<li><p class="sd-card-text">SONATA <a class="github reference external" href="https://github.com/ptrbortolotti/SONATA">ptrbortolotti/SONATA</a> - Toolbox for Multidisciplinary Rotor Blade Design Environment for Structural Optimization and Aeroelastic Analysis.</p></li>
+</ul>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Controls</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="mermaid">
+            %%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
+
+mindmap
+    root(&quot;WETO Software Portfolio&quot;)
+        ps(&quot; &quot;)
+        hfm(&quot; &quot;)
+        do(&quot; &quot;)
+        ctrl(Controls)
+            ROSCO
+            FLORIS
+            FLASC
+            hercules
+            moa_python
+        ra(&quot; &quot;)
+        cost(&quot; &quot;)
+        wild(&quot; &quot;)
+        om(&quot; &quot;)
+        </div><ul class="simple">
+<li><p class="sd-card-text">ROSCO <a class="github reference external" href="https://github.com/NREL/ROSCO">NREL/ROSCO</a> - Reference controller with industry-standard functionality and generic tuning</p></li>
+<li><p class="sd-card-text">FLORIS <a class="github reference external" href="https://github.com/nrel/floris">nrel/floris</a> - Controls-focused wind farm simulation software incorporating steady-state engineering wake models into a performance-focused Python framework.</p></li>
+<li><p class="sd-card-text">FLASC <a class="github reference external" href="https://github.com/nrel/flasc">nrel/flasc</a> - Suite of analysis tools for SCADA data filtering, analysis, wind farm model validation, field experiment design, and field experiment monitoring.</p></li>
+<li><p class="sd-card-text">hercules <a class="github reference external" href="https://github.com/nrel/hercules:">nrel/hercules:</a></p></li>
+<li><p class="sd-card-text">moa_python <a class="github reference external" href="https://github.com/nrel/moa_python:">nrel/moa_python:</a></p></li>
+</ul>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Resource Assessment</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="mermaid">
+            %%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
+
+mindmap
+    root(&quot;WETO Software Portfolio&quot;)
+        ps(&quot; &quot;)
+        hfm(&quot; &quot;)
+        do(&quot; &quot;)
+        ctrl(&quot; &quot;)
+        ra(Resource Assessment)
+            DW TAP
+        cost(&quot; &quot;)
+        wild(&quot; &quot;)
+        om(&quot; &quot;)
+        </div></div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Cost Models</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="mermaid">
+            %%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
+
+mindmap
+    root(&quot;WETO Software Portfolio&quot;)
+        ps(&quot; &quot;)
+        hfm(&quot; &quot;)
+        do(&quot; &quot;)
+        ctrl(&quot; &quot;)
+        ra(&quot; &quot;)
+        cost(Cost Models)
+            LandBOSSE
+            HybridBOSSE
+            ORBIT
+            CORAL
+            NRWAL
+            WOMBAT
+        wild(&quot; &quot;)
+        om(&quot; &quot;)
+        </div></div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Wild Life Impact</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="mermaid">
+            %%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
+
+mindmap
+    root(&quot;WETO Software Portfolio&quot;)
+        ps(&quot; &quot;)
+        hfm(&quot; &quot;)
+        do(&quot; &quot;)
+        ctrl(&quot; &quot;)
+        ra(&quot; &quot;)
+        cost(&quot; &quot;)
+        wild(Wild Life Impact)
+            SSRS
+        om(&quot; &quot;)
+        </div></div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Operation and Maintenance</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="mermaid">
+            %%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
+
+mindmap
+    root(&quot;WETO Software Portfolio&quot;)
+        ps(&quot; &quot;)
+        hfm(&quot; &quot;)
+        do(&quot; &quot;)
+        ctrl(&quot; &quot;)
+        ra(&quot; &quot;)
+        cost(&quot; &quot;)
+        wild(&quot; &quot;)
+        om(Operation and Maintenance)
+            OpenOA
+        </div></div>
 </div>
 </section>
 
@@ -522,7 +630,7 @@ track changes to the graph and automatically render it on the website.</p>
         },
         kernelOptions: {
             name: "python3",
-            path: "./capabilities"
+            path: "./technical_areas"
         },
         predefinedOutput: true
     }
@@ -538,20 +646,20 @@ track changes to the graph and automatically render it on the website.</p>
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../technical_areas/overview.html"
+       href="../portfolio_analysis/attribute_table.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Technical Areas</p>
+        <p class="prev-next-title">Software Attributes</p>
       </div>
     </a>
     <a class="right-next"
-       href="aero.html"
+       href="../capabilities/overview.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Aerodynamics</p>
+        <p class="prev-next-title">Capabilities</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -561,21 +669,6 @@ track changes to the graph and automatically render it on the website.</p>
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wireframe-prototype">Wireframe prototype</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-capabilities">Defining Capabilities</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

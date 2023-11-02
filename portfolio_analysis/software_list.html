@@ -68,6 +68,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'portfolio_analysis/software_list';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -162,8 +164,9 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Software Listing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="attribute_table.html">Software Attributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../technical_areas/overview.html">Technical Areas</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../capabilities/overview.html">Capabilities</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../capabilities/aero.html">Wind Turbine and Wind Farm Aerodynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../capabilities/aero.html">Aerodynamics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../capabilities/system_design.html">System Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../capabilities/wake_loss_wfc.html">Wake Loss and Wind Farm Controls.</a></li>
 </ul>
@@ -403,7 +406,57 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="software-listing">
 <span id="id1"></span><h1>Software Listing<a class="headerlink" href="#software-listing" title="Permalink to this heading">#</a></h1>
-<p>The set of software under the WETO umbrella is listed here.
+<div class="mermaid">
+            %%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
+
+mindmap
+    root(&quot;WETO Software Portfolio&quot;)
+        ps(Engineering-fidelity Physics Models)
+            OpenFAST
+            FAST.Farm
+            MoorPy
+            wtDigiTwin
+            ANBA4
+            RAFT
+
+        hfm(High Fidelity Models)
+            AMR Wind
+            Nalu Wind
+            OpenTurbine
+            ERF
+            WindSE
+            pyNuMAD
+
+        do(Design &amp; Optimization)
+            WEIS
+            WISDEM
+            HOPP
+            SONATA
+
+        ctrl(Controls)
+            ROSCO
+            FLORIS
+            FLASC
+            hercules
+            moa_python
+
+        ra(Resource Assessment)
+            DW TAP
+
+        cost(Cost Models)
+            LandBOSSE
+            HybridBOSSE
+            ORBIT
+            CORAL
+            NRWAL
+            WOMBAT
+
+        wild(Wild Life Impact)
+            SSRS
+
+        om(Operation and Maintenance)
+            OpenOA
+        </div><p>The set of software under the WETO umbrella is listed here.
 This is intended to eventually be a complete list, but it is likely missing some projects yet.
 Please <a class="reference external" href="https://github.com/rafmudaf/wetostack/edit/main/docs/portfolio_analysis/software_list.md">suggest an edit</a>
 if any information here is incorrect.</p>

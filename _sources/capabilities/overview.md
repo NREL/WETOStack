@@ -1,60 +1,8 @@
 (portfolio_overview)=
 # Capabilities
 
-This dashboard outlines typical workflows and capabilities involved
+This page outlines typical workflows and capabilities involved
 in wind energy system design and analysis using the WETO Software Suite.
-
-```{mermaid}
-%%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
-
-mindmap
-    root("WETO Software Portfolio")
-        ps(Engineering-fidelity Physics Models)
-            OpenFAST
-            FAST.Farm
-            MoorPy
-            wtDigiTwin
-            ANBA4
-            RAFT
-
-        hfm(High Fidelity Models)
-            AMR Wind
-            Nalu Wind
-            OpenTurbine
-            ERF
-            WindSE
-            pyNuMAD
-
-        do(Design & Optimization)
-            WEIS
-            WISDEM
-            HOPP
-            SONATA
-
-        ctrl(Controls)
-            ROSCO
-            FLORIS
-            FLASC
-            hercules
-            moa_python
-
-        ra(Resource Assessment)
-            DW TAP
-
-        cost(Cost Models)
-            LandBOSSE
-            HybridBOSSE
-            ORBIT
-            CORAL
-            NRWAL
-            WOMBAT
-
-        wild(Wild Life Impact)
-            SSRS
-
-        om(Operation and Maintenance)
-            OpenOA
-```
 
 
 ````{card}

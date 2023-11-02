@@ -1,5 +1,5 @@
 (aero_capability)=
-# Wind Turbine and Wind Farm Aerodynamics
+# Aerodynamics
 
 Being driven by the wind, the study of wind turbines and wind farms is
 inherently highly dependent on aerodynamic modeling capability.

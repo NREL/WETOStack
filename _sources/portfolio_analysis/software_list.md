@@ -2,6 +2,58 @@
 (software_listing)=
 # Software Listing
 
+```{mermaid}
+%%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
+
+mindmap
+    root("WETO Software Portfolio")
+        ps(Engineering-fidelity Physics Models)
+            OpenFAST
+            FAST.Farm
+            MoorPy
+            wtDigiTwin
+            ANBA4
+            RAFT
+
+        hfm(High Fidelity Models)
+            AMR Wind
+            Nalu Wind
+            OpenTurbine
+            ERF
+            WindSE
+            pyNuMAD
+
+        do(Design & Optimization)
+            WEIS
+            WISDEM
+            HOPP
+            SONATA
+
+        ctrl(Controls)
+            ROSCO
+            FLORIS
+            FLASC
+            hercules
+            moa_python
+
+        ra(Resource Assessment)
+            DW TAP
+
+        cost(Cost Models)
+            LandBOSSE
+            HybridBOSSE
+            ORBIT
+            CORAL
+            NRWAL
+            WOMBAT
+
+        wild(Wild Life Impact)
+            SSRS
+
+        om(Operation and Maintenance)
+            OpenOA
+```
+
 The set of software under the WETO umbrella is listed here.
 This is intended to eventually be a complete list, but it is likely missing some projects yet.
 Please [suggest an edit](https://github.com/rafmudaf/wetostack/edit/main/docs/portfolio_analysis/software_list.md)
