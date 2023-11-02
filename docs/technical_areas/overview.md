@@ -231,6 +231,6 @@ mindmap
             WOMBAT
 ```
 
-- WOMBAT https://github.com/WISDEM/WOMBAT - A library to simulate the operation and maintenance phase (O&M) of distributed, land-based, and offshore windfarms using a discrete event simultaion framework.
+- WOMBAT https://github.com/WISDEM/WOMBAT - A library to simulate the operation and maintenance phase (O&M) of distributed, land-based, and offshore wind farms using a discrete event simulation framework.
 - OpenOA https://github.com/nrel/openoa - A framework for working with large time-series data from wind plants, such as SCADA.
 ````
