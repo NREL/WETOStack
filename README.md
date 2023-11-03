@@ -2,5 +2,5 @@
 # WETOStack
 
 This repository contains the source for NREL's Holistic Modeling - WETO Software Portfolio
-Coordination project. See [rafmudaf.github.io/WETOStack/](https://rafmudaf.github.io/WETOStack/) for
+Coordination project. See [nrel.github.io/WETOStack/](https://nrel.github.io/WETOStack/) for
 more information.

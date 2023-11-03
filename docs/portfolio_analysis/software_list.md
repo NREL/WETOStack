@@ -56,7 +56,7 @@ mindmap
 
 The set of software under the WETO umbrella is listed here.
 This is intended to eventually be a complete list, but it is likely missing some projects yet.
-Please [suggest an edit](https://github.com/rafmudaf/wetostack/edit/main/docs/portfolio_analysis/software_list.md)
+Please [suggest an edit](https://github.com/nrel/wetostack/edit/main/docs/portfolio_analysis/software_list.md)
 if any information here is incorrect.
 
 This listing contains two groups of software projects:

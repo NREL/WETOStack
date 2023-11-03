@@ -39,7 +39,7 @@ will seed the conversations. Please see the [](workshop_agenda) and [](logistics
 **All attendees are asked to complete the following tasks prior to the workshop:**
 - Review the [](software_listing) to ensure that all WETO-supported software within your field
   of expertise is listed.
-- Create a pull request to https://github.com/rafmudaf/WETOStack with an attributes description
+- Create a pull request to https://github.com/nrel/WETOStack with an attributes description
   for your software projects following the guidance in [](schema).
 - Review the [](workshop_agenda) and [Discussion topics](discussion1).
 
