@@ -1,5 +1,5 @@
 (workshop_top)=
-# 2023 Software Portfolio Workshop
+# 2023 Model Owners Workshop
 
 The Holistic Modeling Portfolio Coordination Project is a three-year project with a goal of
 building the community of WETO software stakeholders. One aspect of this project is an annual
