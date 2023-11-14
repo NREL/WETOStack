@@ -6,9 +6,7 @@ root: index
 parts:
 - caption: Workshops
   chapters:
-  # - file: workshop
-  #   sections:
-  #   - file: workshop_report
+  - file: workshop/nawea_2023
   - file: workshop/workshop
     sections:
     - file: workshop/workshop_report
