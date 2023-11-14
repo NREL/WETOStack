@@ -4,13 +4,14 @@
 format: jb-book
 root: index
 parts:
-- caption: Workshop
+- caption: Workshops
   chapters:
   # - file: workshop
   #   sections:
   #   - file: workshop_report
   - file: workshop/workshop
-  - file: workshop/workshop_report
+    sections:
+    - file: workshop/workshop_report
 
 - caption: Portfolio Analysis
   chapters:

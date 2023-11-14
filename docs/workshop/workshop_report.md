@@ -1,5 +1,5 @@
 (workshop_report_top)=
-# 2023 Workshop Report
+# Workshop Report
 
 The first portfolio coordination workshop for wind energy software model owners, sponsored by the Wind Energy Technology Office (WETO) within the U.S. Department of Energy (DOE), was held September 7, 2023, at the Golden Campus of the National Renewable Energy Laboratory (NREL).  The workshop technical program was organized by Rafael Mudafort, Pietro Bortolotti, and Garrett Barter, as part of the 
 *Holistic, Multi-Fidelity Wind Farm Design Optimization and Model Coordination* project, with the vision that a similar event will be held annually.  Significant thanks and appreciation to Ashley Shamus and Kara Bethea for their help in the planning and logistics of the workshop day.
