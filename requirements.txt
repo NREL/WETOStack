@@ -1,4 +1,6 @@
 jsonschema
 json-schema-for-humans
+matplotlib
+numpy
 pyyaml
 squarify

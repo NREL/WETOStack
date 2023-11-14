@@ -1,17 +1,10 @@
-jupyter-book
+jupyter-book==0.13.2
 jupyter-cache
-pydata-sphinx-theme==0.13.1
-matplotlib
-numpy
+pydata-sphinx-theme==0.8
 sphinxcontrib.mermaid
-pyyaml
+sphinxcontrib.youtube==1.3
 
 # attribute tables
 # import altair as alt
 datapane
 pandas
-
-# network map
-networkx
-squarify
-# pygraphviz

@@ -13,6 +13,9 @@ following focus areas:
 
 This dashboard contains the results and information related to each focus area.
 
+```{youtube} _RBIK_csy0w
+```
+
 ## Table of Contents
 ```{tableofcontents}
 ```
