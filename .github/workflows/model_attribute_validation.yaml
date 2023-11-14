@@ -22,6 +22,7 @@ jobs:
     - name: Install dependencies
       working-directory: ${{runner.workspace}}/WETOStack/
       run: |
+        pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run validation script
       working-directory: ${{runner.workspace}}/WETOStack/software_attributes/
