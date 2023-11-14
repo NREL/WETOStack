@@ -1,8 +1,8 @@
-jupyter-book==0.13.2
+jupyter-book
 jupyter-cache
-pydata-sphinx-theme==0.8
+pydata-sphinx-theme
 sphinxcontrib.mermaid
-sphinxcontrib.youtube==1.3
+sphinxcontrib.youtube
 
 # attribute tables
 # import altair as alt
