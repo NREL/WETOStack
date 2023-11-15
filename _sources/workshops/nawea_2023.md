@@ -11,6 +11,13 @@ material.
 
 ## WETO Software Stack Overview + Community Discussion
 
+Rafael Mudafort and Derek Slaughter covered an overview of the Holistic Modeling Project and 
+the WETO Software Portfolio coordination effort, in particular.
+An overview of the WETO Software Stack broken down by
+technical area and capability was also presented. Finally, a discussion of community needs
+was held to help inform the direction of the Holistic Modeling Project and the WETO software,
+in general.
+
 ```{youtube} _RBIK_csy0w
 ```
 
