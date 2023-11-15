@@ -3,6 +3,7 @@ jupyter-cache
 pydata-sphinx-theme
 sphinxcontrib.mermaid
 sphinxcontrib.youtube
+sphinx-simplepdf
 
 # attribute tables
 # import altair as alt

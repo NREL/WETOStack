@@ -41,6 +41,7 @@ sphinx:
   extra_extensions:
     - 'sphinxcontrib.mermaid'
     - 'sphinxcontrib.youtube'
+    - 'sphinx_simplepdf'
   config:
     html_context:
       default_mode: light

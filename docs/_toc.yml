@@ -6,10 +6,10 @@ root: index
 parts:
 - caption: Workshops
   chapters:
-  - file: workshop/nawea_2023
-  - file: workshop/workshop
+  - file: workshops/nawea_2023
+  - file: workshops/workshop
     sections:
-    - file: workshop/workshop_report
+    - file: workshops/workshop_report
 
 - caption: Portfolio Analysis
   chapters:
