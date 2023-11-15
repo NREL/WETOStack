@@ -169,7 +169,7 @@ The workshop will take place in the Cache La Poudre meeting room in the
 RSF building at NREL's Golden Campus. The room number is "X405" and it is on the RSF's 4th floor
 in the A wing.
 
-```{image} ../_images/rsf_4thfloor_map.png
+```{image} ../_static/images/rsf_4thfloor_map.png
 :alt: rsf_map
 :align: center
 :height: 400px
@@ -196,7 +196,7 @@ NREL staff should park in the parking garage and visitors should park in the vis
 near the East Gate entrance.
 See the map below for guidance.
 
-```{image} ../_images/parking_map.png
+```{image} ../_static/images/parking_map.png
 :alt: rsf_map
 :align: center
 :height: 500px
