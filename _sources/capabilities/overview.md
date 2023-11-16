@@ -71,7 +71,7 @@ used to complete it. This should not be a tutorial on doing each of these things
 give an idea of the tools that are required to do it. It will give an intuition on which
 models are related, interconnected, and perform certain tasks.
 
-```{image} ../_images/capabilities_listing_design.png
+```{image} ../_static/images/capabilities_listing_design.png
 :alt: capabilities
 :align: center
 ```

@@ -33,9 +33,9 @@ Details coming soon.
 Michael Kuhn hosted a workshop covering the background of the ExaWind software
 suite, as well as practical guidance on installing, running, and analyzing results.
 
-{download}`Click here to download the slides.<ExawindWorkshop_NAWEA2023.pdf>`
+{download}`Click here to download the slides.<../_static/ExawindWorkshop_NAWEA2023.pdf>`
 
-```{pdf-include} ExawindWorkshop_NAWEA2023.pdf
+```{pdf-include} ../_static/ExawindWorkshop_NAWEA2023.pdf
 ```
 
 ## WOMBAT
