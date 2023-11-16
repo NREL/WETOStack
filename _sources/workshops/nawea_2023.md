@@ -23,10 +23,16 @@ in general.
 
 ## OpenFAST Overview + Practical Workshop
 
-Jason Jonkman, Emmanuel Branlard, and Derek Slaughter hosted a three-part workshop on
-OpenFAST.
+Jason Jonkman and Emmanuel Branlard hosted a three-part workshop on OpenFAST.
 
-Details coming soon.
+```{youtube} 5Cv2wZ-8jr8
+```
+
+```{youtube} LKCjpU_88UI
+```
+
+```{youtube} ZSkaP9CzqgA
+```
 
 ## ExaWind - AMR Wind & Nalu Wind
 
