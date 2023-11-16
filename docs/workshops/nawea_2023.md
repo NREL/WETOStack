@@ -23,14 +23,19 @@ in general.
 
 ## OpenFAST Overview + Practical Workshop
 
-Jason Jonkman and Emmanuel Branlard hosted a three-part workshop on OpenFAST.
+Jason Jonkman and Emmanuel Branlard hosted a three-part workshop on OpenFAST covering an overview
+of the software, a practical session on running simulations, and a discussion of recent and ongoing
+work around OpenFAST and its applications.
 
+### Section 1 - Overview (Jonkman)
 ```{youtube} 5Cv2wZ-8jr8
 ```
 
+### Section 2 - Practical (Emmanuel)
 ```{youtube} LKCjpU_88UI
 ```
 
+### Section 3 - Recent/Ongoing/Future Work (Jonkman)
 ```{youtube} ZSkaP9CzqgA
 ```
 
