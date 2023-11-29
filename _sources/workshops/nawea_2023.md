@@ -49,7 +49,7 @@ suite, as well as practical guidance on installing, running, and analyzing resul
 ```{pdf-include} ../_static/Exawind_NAWEA2023.pdf
 ```
 
-### HOPP
+## HOPP
 
 Genevieve Starke, Cameron Irmas, and Chris Bay hosted a working on HOPP covering the background,
 capabilities, recent results, future work, and usage of the software.
