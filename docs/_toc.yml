@@ -24,6 +24,7 @@ parts:
   - file: portfolio_analysis/map_network
   - file: portfolio_analysis/attributes_schema
 
-- caption: Software Development Best Practices
+- caption: Resources
   chapters:
-  - file: best_practices
+  - file: software_dev/best_practices
+  - file: software_dev/developer_resources
