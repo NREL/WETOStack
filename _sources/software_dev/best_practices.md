@@ -910,6 +910,48 @@ graph LR
     J --> M
 ```
 
+(communicating_design)=
+## Methodologies for communicating intent and verifying implementation
+
+Software systems always have an architectural design, but it may be explicitly or implicitly
+developed. With an implicit architecture, some general ideas may be communicated, but the
+majority of information is left to readers of the code to understand. Though common in
+research software, this practice can work against efforts to improve the extendability of
+a software (see [](extendability)). The practice of explicitly designing a software
+architecture is highly recommended, but it is outside the scope of this report.
+However, a minimum practice of communicating elements of software design should be
+incorporated into WETO software.
+
+The methods for documenting and communicating software architecture and design vary
+depending on the content and message to convey.
+
+
+
+| one | two |
+| --- | --- |
+| a   | b   |
+
+
+To understand how a change fits into the big picture, it is required to have a sense for the picture from the start.
+Develop diagrams for code architecture and regularly check and update them as the architecture changes.
+
+Types of diagrams:
+
+- State / flow diagrams
+- Class hierarchy
+- Data construction and operation - Show a representative problem describing how operations happen on data in various contexts (serial vs parallel, cpu vs gpu)
+
+Identify and communicate the *parti*.
+
+TODO: add descriptions and examples of UML
+TODO: Describe communicating design intent
+
+
+
+
+
+
+
 (rse)=
 ## Appendix - RSE: The engineers behind research software
 
@@ -1111,25 +1153,6 @@ https://github.com/readme/featured/how-open-is-open-source?mc_cid=50779693b9&mc_
 Documentation as a way to build community
 https://labs.quansight.org/blog/2020/03/documentation-as-a-way-to-build-community
 -->
-
-
-
-<!-- (communicating_design)=
-## Methodologies for communicating intent and verifying implementation
-
-To understand how a change fits into the big picture, it is required to have a sense for the picture from the start.
-Develop diagrams for code architecture and regularly check and update them as the architecture changes.
-
-Types of diagrams:
-
-- State / flow diagrams
-- Class hierarchy
-- Data construction and operation - Show a representative problem describing how operations happen on data in various contexts (serial vs parallel, cpu vs gpu)
-
-Identify and communicate the *parti*.
-
-TODO: add descriptions and examples of UML
-TODO: Describe communicating design intent -->
 
 
 <!-- (accuracy)=
