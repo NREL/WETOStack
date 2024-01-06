@@ -17,11 +17,18 @@ scope:
 - farm
 - atmosphere
 system_type:
-- any
+- hawt
 system_location:
 - any
 time_domain: dynamic
+turbine_model:
+    - actuator
+    - geometry_resolved
+wake_model:
+    - navier_stokes
 loads: false
+design_optimization: false
+costs: false
 tags:
 - adaptive mesh refinement
 - massively parallel
@@ -29,15 +36,17 @@ tags:
 - incompressible flow 
 - actuator disk
 - actuator line
+- large eddy simulation
+- les
 
 # Distribution
 supported_platforms:
 - any
-# package_manager:
-# - TODO
+package_manager:
+- spack_manager
 # package_manager_url:
 # - TODO
-installation_complexity: 7
+installation_complexity: 6
 
 # Documentation
 documentation_url: https://exawind.github.io/amr-wind/
