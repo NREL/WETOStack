@@ -1,74 +1,90 @@
 # General
 github_account: wisdem
 github_repo: landbosse
-# primary_uses:
-# - TODO
-# active_funding: TODO
-# development_status: TODO
-# programming_language: TODO
-# license_type: TODO
-# data_collection_methods:
-# - TODO
-# last_release_date: TODO
+primary_uses:
+- design
+- optimization
+- cost
+active_funding: true
+development_status: new_features
+programming_language: python
+license_type: apache-2.0
+data_collection_methods:
+ - modeling
+ - field
+last_release_date: "2023-06-19"
 
 # Modeling
-# scope:
-# - TODO
-# system_type:
-# - TODO
-# system_location:
-# - TODO
-# time_domain: TODO
-# loads: TODO
-# tags:
-# - TODO
+scope:
+- turbine
+- system
+system_type:
+- hawt
+system_location:
+- any
+time_domain: steady
+turbine_model:
+    - lookup_table
+    - regression
+wake_model:
+    - N/A
+loads: false
+design_optimization: true
+costs: true
+tags:
+- balance of station
+- balance of plant
+- onshore
+- land-based
+- logistics
+- assembly
+- installation
+- lcoe
 
 # Distribution
-# supported_platforms:
-# - TODO
-# package_manager:
-# - TODO
-# package_manager_url:
-# - TODO
-# installation_complexity: TODO
+supported_platforms:
+- any
+package_manager:
+- pypi
+package_manager_url:
+- https://pypi.org/project/landbosse/
+installation_complexity: 3
 
 # Documentation
-# documentation_url: TODO
-# has_user_docs: TODO
-# has_developer_docs: TODO
-# has_api_docs: TODO
-# has_cli_docs: TODO
-# has_installation_docs: TODO
-# has_getting_started_docs: TODO
-# has_examples_tutorials: TODO
-# has_design_intent_statement: TODO
-# readability: TODO
-# project_coverage: TODO
+documentation_url: https://github.com/WISDEM/LandBOSSE/tree/master/installation_instructions
+has_user_docs: true
+has_developer_docs: false
+has_api_docs: false
+has_cli_docs: false
+has_installation_docs: true
+has_getting_started_docs: true
+has_examples_tutorials: true
+has_design_intent_statement: true
+readability: 6
+project_coverage: 3
 
 # Testing
-# testing_framework: TODO
-# continuous_testing: TODO
-# test_coverage: TODO
-# test_documentation: TODO
-# performance_tests: TODO
+testing_framework: true
+continuous_testing: true
+test_coverage: 50
+test_documentation: false
+performance_tests: false
 
 # Interfaces
-# first_class_ui:
-# - TODO
-# has_cli: TODO
-# language_interfaces:
-# - TODO
-# feature_accessibility: TODO
+first_class_ui:
+ - input_files
+has_cli: false
+language_interfaces:
+ - python
+feature_accessibility: 50
 
 # Input / Output
-# filetypes:
-# - TODO
-# file_structure_stability: TODO
+filetypes:
+ - xlsx
+file_structure_stability: stable
 
 # WETO Integrations
-# dependencies:
-# -   - TODO
-#     - TODO
+#dependencies:
 
 # # Community Health
 # open_issues: 0..N

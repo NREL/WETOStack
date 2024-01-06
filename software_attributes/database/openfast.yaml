@@ -15,16 +15,20 @@ last_release_date: "2023-05-16"
 # Modeling
 scope:
 - turbine
-- system
 system_type:
 - hawt
 - vawt
 system_location:
-- land
-- fixed_offshore
-- floating_offshore
+- any
 time_domain: dynamic
+turbine_model:
+    - multibody_bem
+    - vortex_method
+wake_model:
+    - N/A
 loads: true
+design_optimization: false
+costs: false
 tags:
 - modularization framework
 - nonlinear

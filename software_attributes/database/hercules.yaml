@@ -19,11 +19,15 @@ scope:
 system_type:
 - hawt
 system_location:
-- land
-- fixed_offshore
-- floating_offshore
+- any
 time_domain: dynamic
+turbine_model:
+    - actuator
+wake_model:
+    - navier_stokes
 loads: true
+design_optimization: false
+costs: false
 tags:
 - amr-wind
 - large eddy simulation

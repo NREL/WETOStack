@@ -22,7 +22,13 @@ system_type:
 system_location:
 - land
 time_domain: dynamic
+turbine_model:
+    - N/A
+wake_model:
+    - N/A
 loads: false
+design_optimization: false
+costs: false
 tags:
 - distributed wind
 - obstacle modeling

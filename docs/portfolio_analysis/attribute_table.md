@@ -29,7 +29,6 @@ SELECT * FROM $table WHERE system_location LIKE '%land%';
 
 from pathlib import Path
 import yaml
-# import altair as alt
 import datapane as dp
 import pandas as pd
 
@@ -64,16 +63,69 @@ general_df = df[[
 dp.DataTable(general_df)
 ```
 
-## Modeling
+## Turbine Modeling
+```{code-cell} ipython3
+:tags: [hide-input, full-width]
+
+turbine_df = df[[
+    "scope",
+    "system_location",
+    "time_domain",
+    "turbine_model",
+    "loads",
+    "design_optimization",
+    "costs",
+]]
+turbine_df = turbine_df[ turbine_df["scope" in ["turbine","any"]] ]
+dp.DataTable(turbine_df)
+```
+
+## Farm Modeling
+```{code-cell} ipython3
+:tags: [hide-input, full-width]
+
+farm_df = df[[
+    "scope",
+    "system_location",
+    "time_domain",
+    "turbine_model",
+    "wake_model",
+    "loads",
+    "design_optimization",
+    "costs",
+]]
+farm_df = farm_df[ farm_df["scope" in ["farm","any"]] ]
+dp.DataTable(farm_df)
+```
+
+## Cost Modeling
+```{code-cell} ipython3
+:tags: [hide-input, full-width]
+
+cost_df = df[[
+    "scope",
+    "system_location",
+    "design_optimization",
+    "costs",
+    "tags",
+]]
+cost_df = cost_df[ cost_df["scope" in ["farm","any"]] ]
+dp.DataTable(cost_df)
+```
+
+## Full Suite Modeling Comparison
 ```{code-cell} ipython3
 :tags: [hide-input, full-width]
 
 modeling_df = df[[
     "scope",
-    "system_type",
     "system_location",
     "time_domain",
+    "turbine_model",
+    "wake_model",
     "loads",
+    "design_optimization",
+    "costs",
     "tags",
 ]]
 dp.DataTable(modeling_df)

@@ -19,13 +19,17 @@ scope:
 system_type:
 - hawt
 system_location:
-- land
-- fixed_offshore
-- floating_offshore
+- any
 time_domain:
 - steady
 - dynamic
+turbine_model:
+    - actuator
+wake_model:
+    - navier_stokes
 loads: false
+design_optimization: true
+costs: false
 tags:
 - steady state Reynolds-averaged Navier-Stokes (RANS)
 - unsteady, large-eddy simulations (LES) using Navier-Stokes

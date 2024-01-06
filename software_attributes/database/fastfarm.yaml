@@ -17,15 +17,20 @@ scope:
 - farm
 - turbine
 - atmosphere
-- system
 system_type:
 - hawt
 system_location:
-- land
-- fixed_offshore
-- floating_offshore
+- any
 time_domain: dynamic
+turbine_model:
+    - multibody_bem
+    - vortex_method
+wake_model:
+    - dynamic_meandering
+    - vortex_method
 loads: true
+design_optimization: false
+costs: false
 tags:
 - dynamic wake meandering
 - polar wake

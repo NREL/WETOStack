@@ -20,11 +20,16 @@ scope:
 system_type:
 - hawt
 system_location:
-- land
-- fixed_offshore
-- floating_offshore
+- any
 time_domain: dynamic
+turbine_model:
+    - multibody_bem
+    - vortex_method
+wake_model:
+    - N/A
 loads: true
+design_optimization: true
+costs: true
 tags:
 - mid-fidelity engineering models
 - multidisciplinary design optimization

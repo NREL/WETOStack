@@ -17,17 +17,19 @@ last_release_date: "2023-03-20"
 scope:
 - turbine
 system_type:
-- hawt
-- vawt
-- awes
+- any
 system_location:
-- land
-- fixed_offshore
-- floating_offshore
+- any
 time_domain:
 - steady
 - dynamic
+turbine_model:
+    - N/A
+wake_model:
+    - N/A
 loads: false
+design_optimization: true
+costs: false
 tags:
 - Elastic beam
 - Anisotropic beam

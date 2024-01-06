@@ -20,7 +20,13 @@ system_type:
 system_location:
 - any
 time_domain: dynamic
+turbine_model:
+    - N/A
+wake_model:
+    - N/A
 loads: false
+design_optimization: false
+costs: false
 tags:
 - wind toolkit
 - atmospheric modeling
