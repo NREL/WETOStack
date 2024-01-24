@@ -62,7 +62,10 @@ capabilities, recent results, future work, and usage of the software.
 ## WOMBAT
 
 Rob Hammond hosted a workshop that provided an overview of the model and worked through an O&M
-scenario in the public domain to highlight WOMBAT's functionality.
+scenario in the public domain to demonstrate how to fully configure the model, run an analysis, and
+get results.
 
-```{pdf-include} ../_static/nawea_2023_wombat_tutorial_87193.pdf
+{download}`Click here to download the slides.<../_static/nawea_2023_wombat_tutorial_87913.pdf>`
+
+```{pdf-include} ../_static/nawea_2023_wombat_tutorial_87913.pdf
 ```
