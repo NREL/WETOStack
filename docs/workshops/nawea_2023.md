@@ -65,7 +65,7 @@ Rob Hammond hosted a workshop that provided an overview of the model and worked 
 scenario in the public domain to demonstrate how to fully configure the model, run an analysis, and
 get results.
 
-{download}`Click here to download the slides.<../_static/nawea_2023_wombat_tutorial_87913.pdf>`
+{download}`Click here to download the slides.<../_static/WOMBAT_NAWEA2023.pdf>`
 
-```{pdf-include} ../_static/nawea_2023_wombat_tutorial_87913.pdf
+```{pdf-include} ../_static/WOMBAT_NAWEA2023.pdf
 ```
