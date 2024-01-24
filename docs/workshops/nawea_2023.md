@@ -61,8 +61,8 @@ capabilities, recent results, future work, and usage of the software.
 
 ## WOMBAT
 
-Rob Hammond presented an overview of the WOMBAT software.
+Rob Hammond hosted a workshop that provided an overview of the model and worked through an O&M
+scenario in the public domain to highlight WOMBAT's functionality.
 
-Details coming soon.
-
-
+```{pdf-include} ../_static/nawea_2023_wombat_tutorial_87193.pdf
+```
