@@ -49,8 +49,8 @@ schema = {
         },
         "development_status": {
             "description": "\n".join([
-                "- `on_hold`: No active development or maintanence",
-                "- `maintenance`:  Maintenance activites only including bug fixes",
+                "- `on_hold`: No active development or maintenance",
+                "- `maintenance`:  Maintenance activities only including bug fixes",
                 "- `new_features`: Actively planning and developing new features",
             ]),
             "enum": [
@@ -108,7 +108,7 @@ schema = {
         },
         "data_collection_methods": {
             "description": "\n".join([
-                "- `modeling`: Retrived from a numerical model",
+                "- `modeling`: Retrieved from a numerical model",
                 "- `laboratory`: Data from a controlled experiment such as RAAW",
                 "- `field`: Data from systems \"in the field\", typically in a commercial setting",
             ]),
@@ -221,7 +221,7 @@ schema = {
                     "tags": [
                         "Euler bernoulli beam theory",
                         "Blade element momentum theory",
-                        "Reynolds averaged Navier Stokes",
+                        "Reynolds averaged Navier-Stokes",
                         "Large eddy simulation",
                         "Monte carlo methods",
                     ]
