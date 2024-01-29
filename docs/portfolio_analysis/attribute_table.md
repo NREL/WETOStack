@@ -76,7 +76,7 @@ turbine_df = df[[
     "design_optimization",
     "costs",
 ]]
-turbine_df = turbine_df[ turbine_df["scope" in ["turbine","any"]] ]
+turbine_df = turbine_df[ turbine_df["scope"] in ["turbine","any"] ]
 dp.DataTable(turbine_df)
 ```
 
