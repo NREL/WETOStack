@@ -76,7 +76,7 @@ turbine_df = df[[
     "design_optimization",
     "costs",
 ]]
-turbine_df = turbine_df[ turbine_df["scope"] in ["turbine","any"] ]
+turbine_df = turbine_df[ pd.DataFrame( turbine_df["scope"].tolist() ).isin( ["turbine", "any"] ).any(1).values ]
 dp.DataTable(turbine_df)
 ```
 
@@ -94,8 +94,8 @@ farm_df = df[[
     "design_optimization",
     "costs",
 ]]
-farm_df = farm_df[ farm_df["scope" in ["farm","any"]] ]
-dp.DataTable(farm_df)
+farm_df = farm_df[ pd.DataFrame( farm_df["scope"].tolist() ).isin( ["farm", "any"] ).any(1).values ]
+dp.DataTable(farm_df.dropna())
 ```
 
 ## Cost Modeling
@@ -109,8 +109,8 @@ cost_df = df[[
     "costs",
     "tags",
 ]]
-cost_df = cost_df[ cost_df["scope" in ["farm","any"]] ]
-dp.DataTable(cost_df)
+cost_df = cost_df[ cost_df["costs"] == True]
+dp.DataTable(cost_df.dropna())
 ```
 
 ## Full Suite Modeling Comparison
