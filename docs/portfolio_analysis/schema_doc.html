@@ -169,8 +169,8 @@ In the web address, this is the last component: https://github.com/&lt;account>/
 
     <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
 <span class="description"><ul>
-<li><code>on_hold</code>: No active development or maintanence</li>
-<li><code>maintenance</code>:  Maintenance activites only including bug fixes</li>
+<li><code>on_hold</code>: No active development or maintenance</li>
+<li><code>maintenance</code>:  Maintenance activities only including bug fixes</li>
 <li><code>new_features</code>: Actively planning and developing new features</li>
 </ul>
 </span><div class="enum-value" id="development_status_enum">
@@ -263,7 +263,7 @@ In the web address, this is the last component: https://github.com/&lt;account>/
 
     <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
 <span class="description"><ul>
-<li><code>modeling</code>: Retrived from a numerical model</li>
+<li><code>modeling</code>: Retrieved from a numerical model</li>
 <li><code>laboratory</code>: Data from a controlled experiment such as RAAW</li>
 <li><code>field</code>: Data from systems "in the field", typically in a commercial setting</li>
 </ul>
@@ -337,7 +337,7 @@ In the web address, this is the last component: https://github.com/&lt;account>/
             <div class="card-body pl-5">
 
     <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
-<span class="description"><p>The wind energy system scope of the software.</p>
+<span class="description"><p>The wind energy system scope of the software.  System implies engineering and cost coupling</p>
 </span>
         
 
@@ -425,7 +425,7 @@ In the web address, this is the last component: https://github.com/&lt;account>/
             <div class="card-body pl-5">
 
     <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
-<span class="description"><p>The location of the wind energy system supported by the software. Use <code>any</code> if the software is location-agnostic.</p>
+<span class="description"><p>The location of the wind energy system supported by the software. Use <code>any</code> if the software is location-agnostic and <code>offshore</code> for fixed + floating.</p>
 </span>
         
 
@@ -440,7 +440,7 @@ In the web address, this is the last component: https://github.com/&lt;account>/
     <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
 <div class="enum-value" id="system_location_items_enum">
             <h4>Must be one of:</h4>
-            <ul class="list-group"><li class="list-group-item enum-item">"land"</li><li class="list-group-item enum-item">"fixed_offshore"</li><li class="list-group-item enum-item">"floating_offshore"</li><li class="list-group-item enum-item">"any"</li></ul>
+            <ul class="list-group"><li class="list-group-item enum-item">"land"</li><li class="list-group-item enum-item">"offshore"</li><li class="list-group-item enum-item">"fixed_offshore"</li><li class="list-group-item enum-item">"floating_offshore"</li><li class="list-group-item enum-item">"any"</li></ul>
             </div>
         
 
@@ -488,6 +488,94 @@ In the web address, this is the last component: https://github.com/&lt;account>/
         </div>
     </div>
 </div>
+<div class="accordion" id="accordionturbine_model">
+    <div class="card">
+        <div class="card-header" id="headingturbine_model">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#turbine_model"
+                        aria-expanded="" aria-controls="turbine_model" onclick="setAnchor('#turbine_model')"><span class="property-name">turbine_model</span></button>
+            </h2>
+        </div>
+
+        <div id="turbine_model"
+             class="collapse property-definition-div" aria-labelledby="headingturbine_model"
+             data-parent="#accordionturbine_model">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
+<span class="description"><p>The fidelity with which the turbine is represented in the software model (if at all).  Options are 'regression' (e.g. NREL CSM), 'lookup<em>table' (e.g. in FLORIS), 'momentum</em>sink' (e.g. in WRF), 'multibody<em>bem' (e.g. OpenFAST), 'vortex</em>method' (e.g. OLAF), 'actuator' (e.g. in CFD), 'geometry_resolved' (e.g. in CFD), 'SCADA' (e.g. FLASC/OpenOA)</p>
+</span>
+        
+
+        
+        
+
+         <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="turbine_model_items">
+            
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<div class="enum-value" id="turbine_model_items_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"regression"</li><li class="list-group-item enum-item">"lookup_table"</li><li class="list-group-item enum-item">"momentum_sink"</li><li class="list-group-item enum-item">"multibody_bem"</li><li class="list-group-item enum-item">"vortex_method"</li><li class="list-group-item enum-item">"actuator"</li><li class="list-group-item enum-item">"geometry_resolved"</li><li class="list-group-item enum-item">"SCADA"</li><li class="list-group-item enum-item">"N/A"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionwake_model">
+    <div class="card">
+        <div class="card-header" id="headingwake_model">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#wake_model"
+                        aria-expanded="" aria-controls="wake_model" onclick="setAnchor('#wake_model')"><span class="property-name">wake_model</span></button>
+            </h2>
+        </div>
+
+        <div id="wake_model"
+             class="collapse property-definition-div" aria-labelledby="headingwake_model"
+             data-parent="#accordionwake_model">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
+<span class="description"><p>The fidelity with which turbine wakes are represented in the software model (if at all). </p>
+</span>
+        
+
+        
+        
+
+         <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="wake_model_items">
+            
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<div class="enum-value" id="wake_model_items_enum">
+            <h4>Must be one of:</h4>
+            <ul class="list-group"><li class="list-group-item enum-item">"analytical"</li><li class="list-group-item enum-item">"dynamic_meandering"</li><li class="list-group-item enum-item">"vortex_method"</li><li class="list-group-item enum-item">"navier_stokes"</li><li class="list-group-item enum-item">"N/A"</li></ul>
+            </div>
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="accordion" id="accordionloads">
     <div class="card">
         <div class="card-header" id="headingloads">
@@ -504,6 +592,60 @@ In the web address, this is the last component: https://github.com/&lt;account>/
 
     <span class="badge badge-dark value-type">Type: boolean</span><br/>
 <span class="description"><p>Does the software calculate system loads?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiondesign_optimization">
+    <div class="card">
+        <div class="card-header" id="headingdesign_optimization">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#design_optimization"
+                        aria-expanded="" aria-controls="design_optimization" onclick="setAnchor('#design_optimization')"><span class="property-name">design_optimization</span></button>
+            </h2>
+        </div>
+
+        <div id="design_optimization"
+             class="collapse property-definition-div" aria-labelledby="headingdesign_optimization"
+             data-parent="#accordiondesign_optimization">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Can the software conduct design optimization?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordioncosts">
+    <div class="card">
+        <div class="card-header" id="headingcosts">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#costs"
+                        aria-expanded="" aria-controls="costs" onclick="setAnchor('#costs')"><span class="property-name">costs</span></button>
+            </h2>
+        </div>
+
+        <div id="costs"
+             class="collapse property-definition-div" aria-labelledby="headingcosts"
+             data-parent="#accordioncosts">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Does the software include or focus on costs?</p>
 </span>
         
 
@@ -556,7 +698,7 @@ In the web address, this is the last component: https://github.com/&lt;account>/
 <br/><div id="tags_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="nt">tags</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Euler bernoulli beam theory</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Blade element momentum theory</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reynolds averaged Navier Stokes</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reynolds averaged Navier-Stokes</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Large eddy simulation</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Monte carlo methods</span>
 </pre></div>
@@ -1327,7 +1469,7 @@ In the web address, this is the last component: https://github.com/&lt;account>/
     <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
 <div class="enum-value" id="filetypes_items_enum">
             <h4>Must be one of:</h4>
-            <ul class="list-group"><li class="list-group-item enum-item">"csv"</li><li class="list-group-item enum-item">"custom"</li><li class="list-group-item enum-item">"hdf5"</li><li class="list-group-item enum-item">"json"</li><li class="list-group-item enum-item">"numpy binary"</li><li class="list-group-item enum-item">"pvd"</li><li class="list-group-item enum-item">"xdmf"</li><li class="list-group-item enum-item">"yaml"</li></ul>
+            <ul class="list-group"><li class="list-group-item enum-item">"csv"</li><li class="list-group-item enum-item">"custom"</li><li class="list-group-item enum-item">"hdf5"</li><li class="list-group-item enum-item">"json"</li><li class="list-group-item enum-item">"numpy binary"</li><li class="list-group-item enum-item">"pvd"</li><li class="list-group-item enum-item">"xdmf"</li><li class="list-group-item enum-item">"yaml"</li><li class="list-group-item enum-item">"xlsx"</li></ul>
             </div>
         
 
@@ -1470,6 +1612,6 @@ In the web address, this is the last component: https://github.com/&lt;account>/
 </div>
 
     <footer>
-        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2023-10-27 at 17:10:12 -0500</p>
+        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2024-02-01 at 17:05:34 -0600</p>
     </footer></body>
 </html>

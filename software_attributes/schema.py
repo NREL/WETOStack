@@ -175,26 +175,30 @@ schema = {
             "description": "The fidelity with which the turbine is represented in the software model (if at all).  Options are 'regression' (e.g. NREL CSM), 'lookup_table' (e.g. in FLORIS), 'momentum_sink' (e.g. in WRF), 'multibody_bem' (e.g. OpenFAST), 'vortex_method' (e.g. OLAF), 'actuator' (e.g. in CFD), 'geometry_resolved' (e.g. in CFD), 'SCADA' (e.g. FLASC/OpenOA)",
             "type": "array",
             "items": {
-                "enum": ["regression",
-                         "lookup_table",
-                         "momentum_sink",
-                         "multibody_bem",
-                         "vortex_method",
-                         "actuator",
-                         "geometry_resolved",
-                         "SCADA",
-                         "N/A"]
+                "enum": [
+                    "regression",
+                    "lookup_table",
+                    "momentum_sink",
+                    "multibody_bem",
+                    "vortex_method",
+                    "actuator",
+                    "geometry_resolved",
+                    "SCADA",
+                    "N/A"
+                ]
             }
         },
         "wake_model": {
             "description": "The fidelity with which turbine wakes are represented in the software model (if at all). ",
             "type": "array",
             "items": {
-                "enum": ["analytical",
-                         "dynamic_meandering",
-                         "vortex_method",
-                         "navier_stokes",
-                         "N/A"]
+                "enum": [
+                    "analytical",
+                    "dynamic_meandering",
+                    "vortex_method",
+                    "navier_stokes",
+                    "N/A"
+                ]
             }
         },
         "loads": {
