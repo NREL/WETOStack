@@ -20,10 +20,10 @@ system_location:
 - any
 time_domain: dynamic
 turbine_model:
-    - momentum_sink
-    - actuator
+- momentum_sink
+- actuator
 wake_model:
-    - navier_stokes
+- navier_stokes
 loads: false
 design_optimization: false
 costs: false

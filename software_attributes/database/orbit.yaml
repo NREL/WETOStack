@@ -10,8 +10,8 @@ development_status: new_features
 programming_language: python
 license_type: apache-2.0
 data_collection_methods:
- - modeling
- - field
+- modeling
+- field
 last_release_date: "2020-07-01"
 
 # Modeling
@@ -24,10 +24,10 @@ system_location:
 - any
 time_domain: steady
 turbine_model:
-    - multibody_bem
-    - regression
+- multibody_bem
+- regression
 wake_model:
-    - N/A
+- N/A
 loads: false
 design_optimization: true
 costs: true
@@ -72,15 +72,15 @@ performance_tests: false
 
 # Interfaces
 first_class_ui:
- - input_files
+- input_files
 has_cli: false
 language_interfaces:
- - python
+- python
 feature_accessibility: 75
 
 # Input / Output
 filetypes:
- - yaml
+- yaml
 file_structure_stability: stable
 
 # WETO Integrations

@@ -24,9 +24,9 @@ time_domain:
 - steady
 - dynamic
 turbine_model:
-    - actuator
+- actuator
 wake_model:
-    - navier_stokes
+- navier_stokes
 loads: false
 design_optimization: true
 costs: false

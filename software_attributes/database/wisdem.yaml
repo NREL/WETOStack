@@ -23,10 +23,10 @@ system_location:
 - any
 time_domain: steady
 turbine_model:
-    - multibody_bem
-    - regression
+- multibody_bem
+- regression
 wake_model:
-    - N/A
+- N/A
 loads: true
 design_optimization: true
 costs: true

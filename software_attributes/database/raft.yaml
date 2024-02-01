@@ -20,9 +20,9 @@ system_type:
 system_location:
 - floating_offshore
 turbine_model:
-    - multibody_bem
+- multibody_bem
 wake_model:
-    - N/A
+- N/A
 time_domain: frequency
 loads: true
 design_optimization: true

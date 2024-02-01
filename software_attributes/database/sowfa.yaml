@@ -24,9 +24,9 @@ system_location:
 - any
 time_domain: dynamic
 turbine_model:
-    - actuator
+- actuator
 wake_model:
-    - navier_stokes
+- navier_stokes
 loads: true
 design_optimization: false
 costs: false
@@ -58,7 +58,7 @@ has_installation_docs: false
 has_getting_started_docs: false
 has_examples_tutorials: false
 has_design_intent_statement: false
-readability: 90
+readability: 0
 project_coverage: 0
 
 # Testing
@@ -73,7 +73,7 @@ first_class_ui:
 - input_files
 has_cli: false
 language_interfaces:
- - c++
+- c++
 feature_accessibility: 75
 
 # Input / Output

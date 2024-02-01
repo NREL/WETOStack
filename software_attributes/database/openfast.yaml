@@ -22,10 +22,10 @@ system_location:
 - any
 time_domain: dynamic
 turbine_model:
-    - multibody_bem
-    - vortex_method
+- multibody_bem
+- vortex_method
 wake_model:
-    - N/A
+- N/A
 loads: true
 design_optimization: false
 costs: false

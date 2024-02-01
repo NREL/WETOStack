@@ -25,11 +25,11 @@ system_location:
 - any
 time_domain: dynamic
 turbine_model:
-    - regression
-    - lookup_table
-    - multibody_bem
+- regression
+- lookup_table
+- multibody_bem
 wake_model:
-    - analytical
+- analytical
 design_optimization: true
 loads: false
 costs: true

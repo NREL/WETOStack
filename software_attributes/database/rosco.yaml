@@ -20,9 +20,9 @@ system_location:
 - any
 time_domain: dynamic
 turbine_model:
-    - lookup_table
+- lookup_table
 wake_model:
-    - N/A
+- N/A
 loads: false
 design_optimization: false
 costs: false

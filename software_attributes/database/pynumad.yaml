@@ -24,9 +24,9 @@ time_domain:
 - steady
 - dynamic
 turbine_model:
-    - N/A
+- N/A
 wake_model:
-    - N/A
+- N/A
 loads: true
 design_optimization: true
 costs: false

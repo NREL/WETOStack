@@ -20,9 +20,9 @@ system_location:
 - TODO
 time_domain: TODO
 turbine_model:
-    - TODO
+- TODO
 wake_model:
-    - TODO
+- TODO
 loads: TODO
 design_optimization: TODO
 costs: TODO

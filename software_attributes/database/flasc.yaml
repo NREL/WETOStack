@@ -23,10 +23,10 @@ system_location:
 - any
 time_domain: steady
 turbine_model:
-    - lookup_table
-    - SCADA
+- lookup_table
+- SCADA
 wake_model:
-    - analytical
+- analytical
 loads: false
 design_optimization: false
 costs: false

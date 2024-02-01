@@ -22,9 +22,9 @@ system_location:
 - any
 time_domain: dynamic
 turbine_model:
-    - actuator
+- actuator
 wake_model:
-    - navier_stokes
+- navier_stokes
 loads: true
 design_optimization: false
 costs: false

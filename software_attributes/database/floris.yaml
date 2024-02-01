@@ -23,9 +23,9 @@ system_location:
 - any
 time_domain: steady
 turbine_model:
-    - lookup_table
+- lookup_table
 wake_model:
-    - analytical
+- analytical
 loads: false
 design_optimization: true
 costs: false

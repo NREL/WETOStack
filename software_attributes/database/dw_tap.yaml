@@ -23,9 +23,9 @@ system_location:
 - land
 time_domain: dynamic
 turbine_model:
-    - N/A
+- N/A
 wake_model:
-    - N/A
+- N/A
 loads: false
 design_optimization: false
 costs: false

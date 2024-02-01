@@ -22,9 +22,9 @@ system_location:
 time_domain:
 - frequency
 turbine_model:
-    - N/A
+- N/A
 wake_model:
-    - N/A
+- N/A
 loads: true
 design_optimization: false
 costs: false
