@@ -19,6 +19,7 @@ active:
 - raft
 - rosco
 - sonata
+- sowfa
 - weis
 - windse
 - wisdem
@@ -37,7 +38,6 @@ partial:
 - pysam
 - rev
 - rex
-# sowfa
 # ssrs
 # wpgnn_playgen
 # wtdigitwin
