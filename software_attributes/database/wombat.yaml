@@ -1,8 +1,6 @@
 # General
 github_account: wisdem
 github_repo: wombat
-primary_uses:
-- cost
 active_funding: true
 development_status: new_features
 programming_language: python
@@ -25,9 +23,13 @@ turbine_model:
 - N/A
 wake_model:
 - N/A
-loads: false
-design_optimization: false
-costs: true
+does_controls: false
+does_costs: true
+does_data_analysis: false
+does_design: false
+does_design_optimization: false
+does_simulation: false
+does_loads: false
 tags:
 - operations and maintenance
 - discrete event simulation

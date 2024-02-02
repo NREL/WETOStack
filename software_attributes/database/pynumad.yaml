@@ -1,9 +1,6 @@
 # General
 github_account: sandialabs
 github_repo: pynumad
-primary_uses:
-- design
-- optimization
 active_funding: true
 development_status: new_features
 programming_language: python
@@ -27,9 +24,13 @@ turbine_model:
 - N/A
 wake_model:
 - N/A
-loads: true
-design_optimization: true
-costs: false
+does_controls: false
+does_costs: false
+does_data_analysis: false
+does_design: true
+does_design_optimization: true
+does_simulation: false
+does_loads: true
 tags:
 - Elasticity theory
 - Euler bernoulli beam theory

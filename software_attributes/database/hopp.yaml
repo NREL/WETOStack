@@ -1,12 +1,6 @@
 # General
 github_account: nrel
 github_repo: hopp
-primary_uses:
-- controls
-- cost
-- design
-- optimization
-- simulation
 active_funding: true
 development_status: new_features
 programming_language: python
@@ -30,9 +24,13 @@ turbine_model:
 - multibody_bem
 wake_model:
 - analytical
-design_optimization: true
-loads: false
-costs: true
+does_controls: true
+does_costs: true
+does_data_analysis: false
+does_design: true
+does_design_optimization: true
+does_simulation: true
+does_loads: false
 tags:
 - hybrid optimization performance platform
 - hybrid energy system design

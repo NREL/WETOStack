@@ -1,9 +1,6 @@
 # General
 github_account: openfast
 github_repo: openfast
-primary_uses:
-- simulation
-- controls
 active_funding: true
 development_status: new_features
 programming_language: fortran
@@ -28,9 +25,13 @@ turbine_model:
 wake_model:
 - dynamic_meandering
 - vortex_method
-loads: true
-design_optimization: false
-costs: false
+does_controls: true
+does_costs: false
+does_data_analysis: false
+does_design: false
+does_design_optimization: false
+does_simulation: true
+does_loads: true
 tags:
 - dynamic wake meandering
 - polar wake

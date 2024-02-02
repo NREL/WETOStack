@@ -1,9 +1,6 @@
 # General
 github_account: NREL
 github_repo: dw-tap
-primary_uses:
-- data_analysis
-- optimization
 active_funding: true
 development_status: new_features
 programming_language: python
@@ -26,9 +23,13 @@ turbine_model:
 - N/A
 wake_model:
 - N/A
-loads: false
-design_optimization: false
-costs: false
+does_controls: false
+does_costs: false
+does_data_analysis: true
+does_design: false
+does_design_optimization: true
+does_simulation: false
+does_loads: false
 tags:
 - distributed wind
 - obstacle modeling

@@ -1,9 +1,6 @@
 # General
 github_account: nrel
 github_repo: WindSE
-primary_uses:
-- simulation
-- optimization
 active_funding: true
 development_status: new_features
 programming_language: python
@@ -27,23 +24,27 @@ turbine_model:
 - actuator
 wake_model:
 - navier_stokes
-loads: false
-design_optimization: true
-costs: false
+does_controls: false
+does_costs: false
+does_data_analysis: false
+does_design: false
+does_design_optimization: true
+does_simulation: true
+does_loads: false
 tags:
 - steady state Reynolds-averaged Navier-Stokes (RANS)
 - unsteady, large-eddy simulations (LES) using Navier-Stokes
 
 # Distribution
 supported_platforms:
-    - macos
-    - linux
-    - HPC
+- macos
+- linux
+- HPC
 package_manager:
-    - conda
-    - conda-forge
+- conda
+- conda-forge
 package_manager_url:
-    - https://anaconda.org/conda-forge/fenics
+- https://anaconda.org/conda-forge/fenics
 installation_complexity: 2
 
 # Documentation

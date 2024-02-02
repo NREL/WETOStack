@@ -1,8 +1,6 @@
 # General
 github_account: exawind
 github_repo: amr-wind
-primary_uses:
-- simulation
 active_funding: true
 development_status: new_features
 programming_language: c++
@@ -26,9 +24,13 @@ turbine_model:
 - geometry_resolved
 wake_model:
 - navier_stokes
-loads: false
-design_optimization: false
-costs: false
+does_controls: false
+does_costs: false
+does_data_analysis: false
+does_design: false
+does_design_optimization: false
+does_simulation: true
+does_loads: false
 tags:
 - adaptive mesh refinement
 - massively parallel

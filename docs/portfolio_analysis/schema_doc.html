@@ -82,50 +82,6 @@ In the web address, this is the last component: https://github.com/&lt;account>/
         </div>
     </div>
 </div>
-<div class="accordion" id="accordionprimary_uses">
-    <div class="card">
-        <div class="card-header" id="headingprimary_uses">
-            <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#primary_uses"
-                        aria-expanded="" aria-controls="primary_uses" onclick="setAnchor('#primary_uses')"><span class="property-name">primary_uses</span></button>
-            </h2>
-        </div>
-
-        <div id="primary_uses"
-             class="collapse property-definition-div" aria-labelledby="headingprimary_uses"
-             data-parent="#accordionprimary_uses">
-            <div class="card-body pl-5">
-
-    <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
-<span class="description"><p>The primary use for this software. Though there may be many uses, choose the options that most closely match the envisioned use.</p>
-</span>
-        
-
-        
-        
-
-         <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
-    <div class="card">
-        <div class="card-body items-definition" id="primary_uses_items">
-            
-
-    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
-<div class="enum-value" id="primary_uses_items_enum">
-            <h4>Must be one of:</h4>
-            <ul class="list-group"><li class="list-group-item enum-item">"controls"</li><li class="list-group-item enum-item">"cost"</li><li class="list-group-item enum-item">"data_analysis"</li><li class="list-group-item enum-item">"design"</li><li class="list-group-item enum-item">"optimization"</li><li class="list-group-item enum-item">"simulation"</li></ul>
-            </div>
-        
-
-        
-        
-
-        
-        </div>
-    </div>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="accordion" id="accordionactive_funding">
     <div class="card">
         <div class="card-header" id="headingactive_funding">
@@ -547,7 +503,7 @@ In the web address, this is the last component: https://github.com/&lt;account>/
             <div class="card-body pl-5">
 
     <span class="badge badge-dark value-type">Type: array of enum (of string)</span><br/>
-<span class="description"><p>The fidelity with which turbine wakes are represented in the software model (if at all). </p>
+<span class="description"><p>The fidelity with which turbine wakes are represented in the software model (if at all).</p>
 </span>
         
 
@@ -576,22 +532,22 @@ In the web address, this is the last component: https://github.com/&lt;account>/
         </div>
     </div>
 </div>
-<div class="accordion" id="accordionloads">
+<div class="accordion" id="accordiondoes_controls">
     <div class="card">
-        <div class="card-header" id="headingloads">
+        <div class="card-header" id="headingdoes_controls">
             <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#loads"
-                        aria-expanded="" aria-controls="loads" onclick="setAnchor('#loads')"><span class="property-name">loads</span></button>
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#does_controls"
+                        aria-expanded="" aria-controls="does_controls" onclick="setAnchor('#does_controls')"><span class="property-name">does_controls</span></button>
             </h2>
         </div>
 
-        <div id="loads"
-             class="collapse property-definition-div" aria-labelledby="headingloads"
-             data-parent="#accordionloads">
+        <div id="does_controls"
+             class="collapse property-definition-div" aria-labelledby="headingdoes_controls"
+             data-parent="#accordiondoes_controls">
             <div class="card-body pl-5">
 
     <span class="badge badge-dark value-type">Type: boolean</span><br/>
-<span class="description"><p>Does the software calculate system loads?</p>
+<span class="description"><p>Does the software model controls for wind energy or adjacent systems?</p>
 </span>
         
 
@@ -603,18 +559,99 @@ In the web address, this is the last component: https://github.com/&lt;account>/
         </div>
     </div>
 </div>
-<div class="accordion" id="accordiondesign_optimization">
+<div class="accordion" id="accordiondoes_costs">
     <div class="card">
-        <div class="card-header" id="headingdesign_optimization">
+        <div class="card-header" id="headingdoes_costs">
             <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#design_optimization"
-                        aria-expanded="" aria-controls="design_optimization" onclick="setAnchor('#design_optimization')"><span class="property-name">design_optimization</span></button>
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#does_costs"
+                        aria-expanded="" aria-controls="does_costs" onclick="setAnchor('#does_costs')"><span class="property-name">does_costs</span></button>
             </h2>
         </div>
 
-        <div id="design_optimization"
-             class="collapse property-definition-div" aria-labelledby="headingdesign_optimization"
-             data-parent="#accordiondesign_optimization">
+        <div id="does_costs"
+             class="collapse property-definition-div" aria-labelledby="headingdoes_costs"
+             data-parent="#accordiondoes_costs">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Does the software model or focus on costs?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiondoes_data_analysis">
+    <div class="card">
+        <div class="card-header" id="headingdoes_data_analysis">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#does_data_analysis"
+                        aria-expanded="" aria-controls="does_data_analysis" onclick="setAnchor('#does_data_analysis')"><span class="property-name">does_data_analysis</span></button>
+            </h2>
+        </div>
+
+        <div id="does_data_analysis"
+             class="collapse property-definition-div" aria-labelledby="headingdoes_data_analysis"
+             data-parent="#accordiondoes_data_analysis">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Is the software primarily a used for analyzing data separate from generating data?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiondoes_design">
+    <div class="card">
+        <div class="card-header" id="headingdoes_design">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#does_design"
+                        aria-expanded="" aria-controls="does_design" onclick="setAnchor('#does_design')"><span class="property-name">does_design</span></button>
+            </h2>
+        </div>
+
+        <div id="does_design"
+             class="collapse property-definition-div" aria-labelledby="headingdoes_design"
+             data-parent="#accordiondoes_design">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Is the software considered a design tool?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiondoes_design_optimization">
+    <div class="card">
+        <div class="card-header" id="headingdoes_design_optimization">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#does_design_optimization"
+                        aria-expanded="" aria-controls="does_design_optimization" onclick="setAnchor('#does_design_optimization')"><span class="property-name">does_design_optimization</span></button>
+            </h2>
+        </div>
+
+        <div id="does_design_optimization"
+             class="collapse property-definition-div" aria-labelledby="headingdoes_design_optimization"
+             data-parent="#accordiondoes_design_optimization">
             <div class="card-body pl-5">
 
     <span class="badge badge-dark value-type">Type: boolean</span><br/>
@@ -630,22 +667,49 @@ In the web address, this is the last component: https://github.com/&lt;account>/
         </div>
     </div>
 </div>
-<div class="accordion" id="accordioncosts">
+<div class="accordion" id="accordiondoes_simulation">
     <div class="card">
-        <div class="card-header" id="headingcosts">
+        <div class="card-header" id="headingdoes_simulation">
             <h2 class="mb-0">
-                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#costs"
-                        aria-expanded="" aria-controls="costs" onclick="setAnchor('#costs')"><span class="property-name">costs</span></button>
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#does_simulation"
+                        aria-expanded="" aria-controls="does_simulation" onclick="setAnchor('#does_simulation')"><span class="property-name">does_simulation</span></button>
             </h2>
         </div>
 
-        <div id="costs"
-             class="collapse property-definition-div" aria-labelledby="headingcosts"
-             data-parent="#accordioncosts">
+        <div id="does_simulation"
+             class="collapse property-definition-div" aria-labelledby="headingdoes_simulation"
+             data-parent="#accordiondoes_simulation">
             <div class="card-body pl-5">
 
     <span class="badge badge-dark value-type">Type: boolean</span><br/>
-<span class="description"><p>Does the software include or focus on costs?</p>
+<span class="description"><p>Does the software generate characteristic data about it's relevant scope given a description of the system and initial and boundary conditions?</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiondoes_loads">
+    <div class="card">
+        <div class="card-header" id="headingdoes_loads">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#does_loads"
+                        aria-expanded="" aria-controls="does_loads" onclick="setAnchor('#does_loads')"><span class="property-name">does_loads</span></button>
+            </h2>
+        </div>
+
+        <div id="does_loads"
+             class="collapse property-definition-div" aria-labelledby="headingdoes_loads"
+             data-parent="#accordiondoes_loads">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: boolean</span><br/>
+<span class="description"><p>Does the software calculate system loads?</p>
 </span>
         
 
@@ -1612,6 +1676,6 @@ In the web address, this is the last component: https://github.com/&lt;account>/
 </div>
 
     <footer>
-        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2024-02-01 at 17:05:34 -0600</p>
+        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2024-02-02 at 13:28:55 -0600</p>
     </footer></body>
 </html>

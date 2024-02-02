@@ -1,10 +1,6 @@
 # General
 github_account: ptrbortolotti
 github_repo: SONATA
-primary_uses:
-- simulation
-- optimization
-- design
 active_funding: true
 development_status: on_hold
 programming_language: python
@@ -27,9 +23,13 @@ turbine_model:
 - N/A
 wake_model:
 - N/A
-loads: false
-design_optimization: true
-costs: false
+does_controls: false
+does_costs: false
+does_data_analysis: false
+does_design: true
+does_design_optimization: true
+does_simulation: true
+does_loads: false
 tags:
 - 2D planar meshes
 - slender composite beams
