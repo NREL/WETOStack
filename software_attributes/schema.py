@@ -131,7 +131,7 @@ schema = {
 
         ## Modeling
         "scope": {
-            "description": "The wind energy system scope of the software.",
+            "description": "The wind energy system scope of the software.  System implies engineering and cost coupling",
             "type": "array",
             "items": {
                 "enum": ["turbine", "farm", "system", "atmosphere"]
@@ -147,10 +147,10 @@ schema = {
         },
         "system_location": {
             "description": "The location of the wind energy system supported by the software. "
-                "Use `any` if the software is location-agnostic.",
+                "Use `any` if the software is location-agnostic and `offshore` for fixed + floating.",
             "type": "array",
             "items": {
-                "enum": ["land", "fixed_offshore", "floating_offshore", "any"]
+                "enum": ["land", "offshore", "fixed_offshore", "floating_offshore", "any"]
             }
         },
         "time_domain": {
@@ -171,8 +171,46 @@ schema = {
                 }
             ],
         },
+        "turbine_model": {
+            "description": "The fidelity with which the turbine is represented in the software model (if at all).  Options are 'regression' (e.g. NREL CSM), 'lookup_table' (e.g. in FLORIS), 'momentum_sink' (e.g. in WRF), 'multibody_bem' (e.g. OpenFAST), 'vortex_method' (e.g. OLAF), 'actuator' (e.g. in CFD), 'geometry_resolved' (e.g. in CFD), 'SCADA' (e.g. FLASC/OpenOA)",
+            "type": "array",
+            "items": {
+                "enum": [
+                    "regression",
+                    "lookup_table",
+                    "momentum_sink",
+                    "multibody_bem",
+                    "vortex_method",
+                    "actuator",
+                    "geometry_resolved",
+                    "SCADA",
+                    "N/A"
+                ]
+            }
+        },
+        "wake_model": {
+            "description": "The fidelity with which turbine wakes are represented in the software model (if at all). ",
+            "type": "array",
+            "items": {
+                "enum": [
+                    "analytical",
+                    "dynamic_meandering",
+                    "vortex_method",
+                    "navier_stokes",
+                    "N/A"
+                ]
+            }
+        },
         "loads": {
             "description": "Does the software calculate system loads?",
+            "type": "boolean"
+        },
+        "design_optimization": {
+            "description": "Can the software conduct design optimization?",
+            "type": "boolean"
+        },
+        "costs": {
+            "description": "Does the software include or focus on costs?",
             "type": "boolean"
         },
         "tags": {
@@ -365,6 +403,7 @@ schema = {
                     "pvd",
                     "xdmf",
                     "yaml",
+                    "xlsx",
                 ]
             }
         },

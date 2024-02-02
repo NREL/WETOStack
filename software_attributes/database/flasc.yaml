@@ -18,15 +18,18 @@ scope:
 - farm
 - system
 system_type:
-- hawt
 - any
 system_location:
-- land
-- fixed_offshore
-- floating_offshore
 - any
 time_domain: steady
+turbine_model:
+- lookup_table
+- SCADA
+wake_model:
+- analytical
 loads: false
+design_optimization: false
+costs: false
 tags:
 - steady state analytical engineering models
 - scada data analysis

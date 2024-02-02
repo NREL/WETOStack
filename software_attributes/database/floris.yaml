@@ -20,11 +20,15 @@ scope:
 system_type:
 - hawt
 system_location:
-- land
-- fixed_offshore
-- floating_offshore
+- any
 time_domain: steady
+turbine_model:
+- lookup_table
+wake_model:
+- analytical
 loads: false
+design_optimization: true
+costs: false
 tags:
 - steady state
 - analytical wake model

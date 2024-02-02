@@ -13,28 +13,38 @@ last_release_date: "2021-03-21"
 
 # Modeling
 scope:
-- atmosphere
+- turbine
+- farm
 system_type:
-- any
+- hawt
 system_location:
 - any
 time_domain: dynamic
+turbine_model:
+- actuator
+- geometry_resolved
+wake_model:
+    - navier_stokes
 loads: true
+design_optimization: false
+costs: false
 tags:
 - large eddy simulation
 - unstructured
 - massively parallel
 - incompressible flow
 - blade resolved simulation
+- reynolds averaged navier stokes
+- rans
 
 # Distribution
 supported_platforms:
 - any
-# package_manager:
-# - TODO
+package_manager:
+- spack_manager
 # package_manager_url:
 # - TODO
-installation_complexity: 6
+installation_complexity: 7
 
 # Documentation
 documentation_url: https://nalu-wind.readthedocs.io

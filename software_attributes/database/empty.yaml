@@ -19,7 +19,13 @@ system_type:
 system_location:
 - TODO
 time_domain: TODO
+turbine_model:
+- TODO
+wake_model:
+- TODO
 loads: TODO
+design_optimization: TODO
+costs: TODO
 tags:
 - TODO
 

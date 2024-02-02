@@ -19,7 +19,13 @@ system_type:
 system_location:
 - any
 time_domain: dynamic
+turbine_model:
+- multibody_bem
+wake_model:
+- N/A
 loads: true
+design_optimization: false
+costs: false
 tags:
 - geometrically exact beam theory
 - nonlinear finite elements

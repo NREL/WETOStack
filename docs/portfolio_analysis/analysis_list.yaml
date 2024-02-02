@@ -19,11 +19,14 @@ active:
 - raft
 - rosco
 - sonata
+- sowfa
 - weis
 - windse
 - wisdem
 - wombat
 - wtk
+- landbosse
+- orbit
 
 partial:
 # Partially or not at all completed in the database
@@ -31,13 +34,10 @@ partial:
 - dgen
 # empty
 - hybridbosse
-- landbosse
 # nrwal
-- orbit
 - pysam
 - rev
 - rex
-# sowfa
 # ssrs
 # wpgnn_playgen
 # wtdigitwin

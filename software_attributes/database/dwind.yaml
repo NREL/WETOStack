@@ -21,7 +21,13 @@ system_type:
 system_location:
 - land
 time_domain: dynamic
+turbine_model:
+- multibody_bem
+wake_model:
+- N/A
 loads: false
+design_optimization: false
+costs: false
 tags:
 - distributed wind
 - distributed futures

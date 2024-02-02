@@ -24,7 +24,15 @@ system_type:
 system_location:
 - any
 time_domain: dynamic
-# loads: TODO
+turbine_model:
+- regression
+- lookup_table
+- multibody_bem
+wake_model:
+- analytical
+design_optimization: true
+loads: false
+costs: true
 tags:
 - hybrid optimization performance platform
 - hybrid energy system design

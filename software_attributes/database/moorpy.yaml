@@ -13,6 +13,7 @@ last_release_date: "2023-05-10"
 
 # Modeling
 scope:
+- farm
 - system
 system_type:
 - any
@@ -20,7 +21,13 @@ system_location:
 - floating_offshore
 time_domain:
 - frequency
+turbine_model:
+- N/A
+wake_model:
+- N/A
 loads: true
+design_optimization: false
+costs: false
 # tags:
 # - TODO
 

@@ -14,14 +14,19 @@ last_release_date: "2021-11-10"
 # Modeling
 scope:
 - turbine
-- system
 - farm
 system_type:
 - hawt
 system_location:
 - floating_offshore
-time_domain: dynamic
-# loads: TODO
+turbine_model:
+- multibody_bem
+wake_model:
+- N/A
+time_domain: frequency
+loads: true
+design_optimization: true
+costs: false
 # tags:
 # - TODO
 

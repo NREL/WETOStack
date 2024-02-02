@@ -23,7 +23,13 @@ system_location:
 time_domain: 
 - steady
 - dynamic
+turbine_model:
+- N/A
+wake_model:
+- N/A
 loads: true
+design_optimization: true
+costs: false
 tags:
 - Elasticity theory
 - Euler bernoulli beam theory

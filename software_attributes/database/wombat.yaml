@@ -15,12 +15,19 @@ last_release_date: "2023-08-28"
 scope:
 - turbine
 - farm
+- system
 system_type:
 - hawt
 system_location:
 - any
 time_domain: steady
+turbine_model:
+- N/A
+wake_model:
+- N/A
 loads: false
+design_optimization: false
+costs: true
 tags:
 - operations and maintenance
 - discrete event simulation

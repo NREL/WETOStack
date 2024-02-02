@@ -14,11 +14,19 @@ last_release_date: "2023-06-30"
 # Modeling
 scope:
 - atmosphere
-# system_type:
+system_type:
+- any
 system_location:
 - any
 time_domain: dynamic
+turbine_model:
+- momentum_sink
+- actuator
+wake_model:
+- navier_stokes
 loads: false
+design_optimization: false
+costs: false
 tags:
 - adaptive mesh refinement
 - massively parallel

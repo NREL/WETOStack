@@ -18,11 +18,15 @@ scope:
 system_type:
 - hawt
 system_location:
-- land
-- fixed_offshore
-- floating_offshore
+- any
 time_domain: dynamic
+turbine_model:
+- SCADA
+wake_model:
+- N/A
 loads: false
+design_optimization: false
+costs: false
 tags:
 - operational analysis
 - gap analysis
