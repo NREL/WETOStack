@@ -1,8 +1,6 @@
 # General
 github_account: wisdem
 github_repo: raft
-primary_uses:
-- simulation
 active_funding: true
 development_status: new_features
 programming_language: python
@@ -19,14 +17,18 @@ system_type:
 - hawt
 system_location:
 - floating_offshore
+time_domain: frequency
 turbine_model:
 - multibody_bem
 wake_model:
 - N/A
-time_domain: frequency
-loads: true
-design_optimization: true
-costs: false
+does_controls: false
+does_costs: false
+does_data_analysis: false
+does_design: false
+does_design_optimization: true
+does_simulation: true
+does_loads: true
 # tags:
 # - TODO
 

@@ -1,10 +1,6 @@
 # General
 github_account: ANBA4
 github_repo: anba4
-primary_uses:
-- simulation
-- optimization
-- design
 active_funding: true
 development_status: new_features
 programming_language: python
@@ -27,9 +23,13 @@ turbine_model:
 - N/A
 wake_model:
 - N/A
-loads: false
-design_optimization: true
-costs: false
+does_controls: false
+does_costs: false
+does_data_analysis: false
+does_design: true
+does_design_optimization: true
+does_simulation: true
+does_loads: false
 tags:
 - Elastic beam
 - Anisotropic beam
@@ -40,9 +40,9 @@ tags:
 
 # Distribution
 supported_platforms:
-    - macos
-    - linux
-    - HPC
+- macos
+- linux
+- HPC
 # package_manager:
 # package_manager_url:
 installation_complexity: 7

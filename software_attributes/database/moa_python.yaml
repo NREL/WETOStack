@@ -1,8 +1,6 @@
 # General
 github_account: nrel
 github_repo: moa_python
-primary_uses:
-- data_analysis
 active_funding: true
 development_status: new_features
 programming_language: python
@@ -23,9 +21,13 @@ turbine_model:
 - actuator
 wake_model:
 - navier_stokes
-loads: true
-design_optimization: false
-costs: false
+does_controls: false
+does_costs: false
+does_data_analysis: true
+does_design: false
+does_design_optimization: false
+does_simulation: false
+does_loads: true
 tags:
 - amr-wind
 - hercules

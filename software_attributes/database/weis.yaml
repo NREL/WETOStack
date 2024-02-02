@@ -1,11 +1,6 @@
 # General
 github_account: wisdem
 github_repo: weis
-primary_uses:
-- controls
-- simulation
-- optimization
-- design
 active_funding: true
 development_status: new_features
 programming_language: python
@@ -27,9 +22,13 @@ turbine_model:
 - vortex_method
 wake_model:
 - N/A
-loads: true
-design_optimization: true
-costs: true
+does_controls: true
+does_costs: true
+does_data_analysis: false
+does_design: true
+does_design_optimization: true
+does_simulation: true
+does_loads: true
 tags:
 - mid-fidelity engineering models
 - multidisciplinary design optimization
@@ -37,11 +36,11 @@ tags:
 
 # Distribution
 supported_platforms:
-    - macos
-    - linux
-    - HPC
+- macos
+- linux
+- HPC
 package_manager:
-    - conda
+- conda
 # package_manager_url:
 installation_complexity: 6
 
