@@ -451,11 +451,14 @@ to construct their inputs. These are connected through workflows rather than cod
 <span class="kn">import</span> <span class="nn">yaml</span>
 <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
 
-<span class="n">model_list_inputs</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;analysis_list.yaml&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">software_attr_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;software_attributes&quot;</span><span class="p">)</span>
+<span class="n">software_database_dir</span> <span class="o">=</span> <span class="n">software_attr_dir</span> <span class="o">/</span> <span class="s2">&quot;database&quot;</span>
+
+<span class="n">model_list_inputs</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span><span class="n">software_attr_dir</span> <span class="o">/</span> <span class="s2">&quot;database_list.yaml&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
 <span class="n">models</span> <span class="o">=</span> <span class="n">model_list_inputs</span><span class="p">[</span><span class="s2">&quot;active&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">model_list_inputs</span><span class="p">[</span><span class="s2">&quot;partial&quot;</span><span class="p">]</span>
 
 <span class="n">model_attributes_map</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="n">model</span><span class="p">:</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;software_attributes&quot;</span><span class="p">,</span> <span class="s2">&quot;database&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2">.yaml&quot;</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
+    <span class="n">model</span><span class="p">:</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span> <span class="n">software_database_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2">.yaml&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
     <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span>
 <span class="p">}</span>
 </pre></div>
@@ -468,8 +471,8 @@ to construct their inputs. These are connected through workflows rather than cod
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">yaml</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">model_list_inputs</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;analysis_list.yaml&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">models</span> <span class="o">=</span> <span class="n">model_list_inputs</span><span class="p">[</span><span class="s2">&quot;active&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">model_list_inputs</span><span class="p">[</span><span class="s2">&quot;partial&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">software_attr_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;software_attributes&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">software_database_dir</span> <span class="o">=</span> <span class="n">software_attr_dir</span> <span class="o">/</span> <span class="s2">&quot;database&quot;</span>
 
 <span class="ne">ModuleNotFoundError</span>: No module named &#39;networkx&#39;
 </pre></div>
@@ -596,7 +599,7 @@ to construct their inputs. These are connected through workflows rather than cod
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/8a9282c5edc9538d394156b1401bd880aa5ce911519243fe6ff9c5c0f970cedc.png" src="../_images/8a9282c5edc9538d394156b1401bd880aa5ce911519243fe6ff9c5c0f970cedc.png" />
+<img alt="../_images/9ed72089bdc093985f21037bed21748ad265ec75301ad8619927c057a7929928.png" src="../_images/9ed72089bdc093985f21037bed21748ad265ec75301ad8619927c057a7929928.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -622,10 +625,18 @@ to construct their inputs. These are connected through workflows rather than cod
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 100.0, 0.0, 100.0)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">for</span> <span class="n">model</span><span class="p">,</span> <span class="n">dependents</span> <span class="ow">in</span> <span class="n">model_connectivity</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dependents</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">7</span>         <span class="n">depending</span><span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">depending</span><span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">non_zero</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">depending</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">}</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">squarify</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">non_zero</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span> <span class="n">label</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">non_zero</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+
+<span class="ne">KeyError</span>: &#39;nalu-wind&#39;
 </pre></div>
 </div>
-<img alt="../_images/0d9458fa923dd6ab4ec4e4b3650fc9ab37d0f4869c11104cdca1e600cd2d2333.png" src="../_images/0d9458fa923dd6ab4ec4e4b3650fc9ab37d0f4869c11104cdca1e600cd2d2333.png" />
 </div>
 </div>
 </section>
