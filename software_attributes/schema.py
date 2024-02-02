@@ -25,23 +25,7 @@ schema = {
                 "In the web address, this is the last component: "
                 "https://github.com/\<account\>/\<repo\>.",
             "type": "string"
-        },
-        "primary_uses": {
-            "description": "The primary use for this software. "
-                "Though there may be many uses, choose the options that "
-                "most closely match the envisioned use.",
-            "type": "array",
-            "items": {
-                "enum": [
-                    "controls",
-                    "cost",
-                    "data_analysis",
-                    "design",
-                    "optimization",
-                    "simulation",
-                ]
-            }
-        },
+        },      
         "active_funding": {
             "description": "Has this project received funding to directly support "
                 "software development in the current quarter?",
@@ -189,7 +173,7 @@ schema = {
             }
         },
         "wake_model": {
-            "description": "The fidelity with which turbine wakes are represented in the software model (if at all). ",
+            "description": "The fidelity with which turbine wakes are represented in the software model (if at all).",
             "type": "array",
             "items": {
                 "enum": [
@@ -201,16 +185,32 @@ schema = {
                 ]
             }
         },
-        "loads": {
-            "description": "Does the software calculate system loads?",
+        "does_controls": {
+            "description": "Does the software model controls for wind energy or adjacent systems?",
             "type": "boolean"
         },
-        "design_optimization": {
+        "does_costs": {
+            "description": "Does the software model or focus on costs?",
+            "type": "boolean"
+        },
+        "does_data_analysis": {
+            "description": "Is the software primarily a used for analyzing data separate from generating data?",
+            "type": "boolean"
+        },
+        "does_design": {
+            "description": "Is the software considered a design tool?",
+            "type": "boolean"
+        },
+        "does_design_optimization": {
             "description": "Can the software conduct design optimization?",
             "type": "boolean"
         },
-        "costs": {
-            "description": "Does the software include or focus on costs?",
+        "does_simulation": {
+            "description": "Does the software generate characteristic data about it's relevant scope given a description of the system and initial and boundary conditions?",
+            "type": "boolean"
+        },
+        "does_loads": {
+            "description": "Does the software calculate system loads?",
             "type": "boolean"
         },
         "tags": {
