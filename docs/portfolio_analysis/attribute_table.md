@@ -32,7 +32,8 @@ import yaml
 import datapane as dp
 import pandas as pd
 
-model_list_inputs = yaml.safe_load( open("analysis_list.yaml", "r") )
+software_attr_dir = Path("..", "..", "software_attributes")
+model_list_inputs = yaml.safe_load( open(software_attr_dir / "database_list.yaml", "r") )
 models = model_list_inputs["active"]
 
 model_attributes_map = {

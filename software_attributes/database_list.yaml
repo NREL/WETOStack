@@ -9,12 +9,14 @@ active:
 - floris
 - hercules
 - hopp
+- landbosse
 - moa_python
 - moorpy
 - nalu-wind
 - openfast
 - openoa
 - openturbine
+- orbit
 - pynumad
 - raft
 - rosco
@@ -25,8 +27,6 @@ active:
 - wisdem
 - wombat
 - wtk
-- landbosse
-- orbit
 
 partial:
 # Partially or not at all completed in the database

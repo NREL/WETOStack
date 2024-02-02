@@ -7,49 +7,10 @@ draft_202012_validator = Draft202012Validator(schema)
 
 if __name__=="__main__":
 
-    model_list = [
-        "amr-wind",
-        "anba4",
-        "erf",
-        "fastfarm",
-        "flasc",
-        "floris",
-        "hercules",
-        "hopp",
-        "moa_python",
-        "moorpy",
-        "nalu-wind",
-        "openfast",
-        "openoa",
-        "openturbine",
-        "pynumad",
-        "raft",
-        "rosco",
-        "sonata",
-        "weis",
-        "windse",
-        "wisdem",
-        "wombat",
-        # "coral",
-        # "dgen",
-        "dw_tap",
-        "dwind",
-        # "empty",
-        # "hybridbosse",
-        # "landbosse",
-        # "nrwal",
-        # "orbit",
-        # "pysam",
-        # "rev",
-        # "rex",
-        # "sowfa",
-        # "ssrs",
-        # "wpgnn_playgen",
-        # "wtdigitwin",
-        "wtk"
-    ]
+    model_list_inputs = yaml.safe_load( open("database_list.yaml", "r") )
+    models = model_list_inputs["active"] + model_list_inputs["partial"]
 
-    for model in model_list:
+    for model in models:
         print(f"Validating {model}...")
         input_file = Path("database", f"{model}.yaml")
         with open(input_file, "r") as infile:
