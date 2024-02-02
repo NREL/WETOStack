@@ -50,10 +50,20 @@ df = pd.DataFrame.from_dict(model_attributes_map, orient="index")
 ```{code-cell} ipython3
 :tags: [hide-input, full-width]
 
+# Get all columns that begin with "does_"
+does_columns = [col for col in df.columns if col.startswith("does_")]
+
+# Make a list of all the "does_" columns that are True for each row dropping the "does_" prefix
+# Add this to the dataframe
+for i, row in df.iterrows():
+    does_list = [col.replace("does_", "") for col in does_columns if row[col]]
+    # print(f"{i}: {does_list}")
+    df.at[i, "does"] = does_list
+
 general_df = df[[
     "github_account",
     "github_repo",
-    "primary_uses",
+    "does",
     "active_funding",
     "development_status",
     "programming_language",
@@ -73,9 +83,9 @@ turbine_df = df[[
     "system_location",
     "time_domain",
     "turbine_model",
-    "loads",
-    "design_optimization",
-    "costs",
+    "does_loads",
+    "does_design_optimization",
+    "does_costs",
 ]]
 turbine_df = turbine_df[ pd.DataFrame( turbine_df["scope"].tolist() ).isin( ["turbine", "any"] ).any(1).values ]
 dp.DataTable(turbine_df)
@@ -91,9 +101,9 @@ farm_df = df[[
     "time_domain",
     "turbine_model",
     "wake_model",
-    "loads",
-    "design_optimization",
-    "costs",
+    "does_loads",
+    "does_design_optimization",
+    "does_costs",
 ]]
 farm_df = farm_df[ pd.DataFrame( farm_df["scope"].tolist() ).isin( ["farm", "any"] ).any(1).values ]
 dp.DataTable(farm_df.dropna())
@@ -106,11 +116,11 @@ dp.DataTable(farm_df.dropna())
 cost_df = df[[
     "scope",
     "system_location",
-    "design_optimization",
-    "costs",
+    "does_design_optimization",
+    "does_costs",
     "tags",
 ]]
-cost_df = cost_df[ cost_df["costs"] == True]
+cost_df = cost_df[ cost_df["does_costs"] == True]
 dp.DataTable(cost_df.dropna())
 ```
 
@@ -124,9 +134,13 @@ modeling_df = df[[
     "time_domain",
     "turbine_model",
     "wake_model",
-    "loads",
-    "design_optimization",
-    "costs",
+    "does_controls",
+    "does_costs",
+    "does_data_analysis",
+    "does_design",
+    "does_design_optimization",
+    "does_simulation",
+    "does_loads",
     "tags",
 ]]
 dp.DataTable(modeling_df)
