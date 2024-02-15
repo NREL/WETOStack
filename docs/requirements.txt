@@ -8,3 +8,4 @@ sphinx-simplepdf~=1.6
 # import altair as alt
 datapane~=0.17
 pandas~=1.5
+networkx
