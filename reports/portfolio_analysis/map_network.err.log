@@ -15,31 +15,98 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from pathlib import Path
-import yaml
-import networkx as nx
+import matplotlib.pyplot as plt
 
-software_attr_dir = Path("..", "..", "software_attributes")
-software_database_dir = software_attr_dir / "database"
+edges_direct = [(u, v) for (u, v, d) in network_graph.edges(data=True) if d["weight"] == 1]
+edges_indirect = [(u, v) for (u, v, d) in network_graph.edges(data=True) if d["weight"] == 2]
 
-model_list_inputs = yaml.safe_load( open(software_attr_dir / "database_list.yaml", "r") )
-models = model_list_inputs["active"] + model_list_inputs["partial"]
+# layout = nx.nx_pydot.graphviz_layout(network_graph, prog="neato")
+layout = nx.nx_agraph.graphviz_layout(
+    network_graph,
+    prog="sfdp",
+    # args="-Gnormalize=true"
+    # args="-GK=0.5"
+)
+# layout = nx.spring_layout(network_graph, k=2)
 
-model_attributes_map = {
-    model: yaml.safe_load( open( software_database_dir / f"{model}.yaml", "r") )
-    for model in models
-}
+# nodes
+nx.draw_networkx_nodes(
+    network_graph,
+    layout,
+    # node_size=1000
+)
+
+# edges
+nx.draw_networkx_edges(
+    network_graph,
+    layout,
+    edgelist=edges_direct,
+    width=1,
+    # edge_color="b"
+)
+
+nx.draw_networkx_edges(
+    network_graph,
+    layout,
+    edgelist=edges_indirect,
+    width=1,
+    # alpha=0.5,
+    # edge_color="b",
+    style=":"
+    # edge_color="r"
+)
+
+# node labels
+label_options = {"ec": "k", "fc": "white", "alpha": 0.7}
+nx.draw_networkx_labels(
+    network_graph,
+    layout,
+    font_size=8,
+    bbox=label_options,
+    # font_family="sans-serif"
+)
+# edge weight labels
+# edge_labels = nx.get_edge_attributes(network_graph, "weight")
+# nx.draw_networkx_edge_labels(network_graph, layout, edge_labels)
+
+# Title/legend
+ax = plt.gca()
+font = {"fontname": "Helvetica", "color": "k", "fontweight": "bold", "fontsize": 14}
+ax.set_title("WETO Software Portfolio Connectivity", font)
+
+# Change font color for legend
+font["color"] = "k"
+ax.text(
+    0.80,
+    0.10,
+    "------- Direct",
+    horizontalalignment="left",
+    transform=ax.transAxes,
+    fontdict=font,
+)
+ax.text(
+    0.80,
+    0.06,
+    "........ Indirect",
+    horizontalalignment="left",
+    transform=ax.transAxes,
+    fontdict=font,
+)
+
+ax = plt.gca()
+ax.margins(0.08)
+plt.axis("off")
+plt.tight_layout()
+plt.show()
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[1], line 3[0m
-[1;32m      1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpathlib[39;00m [38;5;28;01mimport[39;00m Path
-[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01myaml[39;00m
-[0;32m----> 3[0m [38;5;28;01mimport[39;00m [38;5;21;01mnetworkx[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnx[39;00m
-[1;32m      5[0m software_attr_dir [38;5;241m=[39m Path([38;5;124m"[39m[38;5;124m..[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124m..[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124msoftware_attributes[39m[38;5;124m"[39m)
-[1;32m      6[0m software_database_dir [38;5;241m=[39m software_attr_dir [38;5;241m/[39m [38;5;124m"[39m[38;5;124mdatabase[39m[38;5;124m"[39m
+Cell [0;32mIn[3], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+[1;32m      3[0m edges_direct [38;5;241m=[39m [(u, v) [38;5;28;01mfor[39;00m (u, v, d) [38;5;129;01min[39;00m network_graph[38;5;241m.[39medges(data[38;5;241m=[39m[38;5;28;01mTrue[39;00m) [38;5;28;01mif[39;00m d[[38;5;124m"[39m[38;5;124mweight[39m[38;5;124m"[39m] [38;5;241m==[39m [38;5;241m1[39m]
+[1;32m      4[0m edges_indirect [38;5;241m=[39m [(u, v) [38;5;28;01mfor[39;00m (u, v, d) [38;5;129;01min[39;00m network_graph[38;5;241m.[39medges(data[38;5;241m=[39m[38;5;28;01mTrue[39;00m) [38;5;28;01mif[39;00m d[[38;5;124m"[39m[38;5;124mweight[39m[38;5;124m"[39m] [38;5;241m==[39m [38;5;241m2[39m]
 
-[0;31mModuleNotFoundError[0m: No module named 'networkx'
+[0;31mModuleNotFoundError[0m: No module named 'matplotlib'
 
