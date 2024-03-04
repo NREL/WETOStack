@@ -13,27 +13,6 @@ following focus areas:
 
 This dashboard contains the results and information related to each focus area.
 
-## Project Updates
-
-::::{grid}
-:gutter: 3
-
-:::{grid-item-card} OpenFAST on conda
-OpenFAST can now be installed with conda for any system!
-This simplifies the installation process and allows users to
-easily stay up to date.
-More info [here](https://nwtc.nrel.gov/FAST).
-:::
-
-:::{grid-item-card} HOPP #7
-Here's the second card.
-:::
-
-:::{grid-item-card} Plot velocity profiles in FLORIS
-Here's the third card.
-:::
-::::
-
 ## Table of Contents
 ```{tableofcontents}
 ```
