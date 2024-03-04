@@ -18,6 +18,8 @@ technical area and capability was also presented. Finally, a discussion of commu
 was held to help inform the direction of the Holistic Modeling Project and the WETO software,
 in general.
 
+{download}`Click here to download the slides.<../_static/WETOStack_NAWEA2023.pdf>`
+
 ```{youtube} _RBIK_csy0w
 ```
 
