@@ -20,3 +20,4 @@ __pycache__/
 *.toc
 *.upa
 *.upb
+*.pyg
