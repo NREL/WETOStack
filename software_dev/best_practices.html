@@ -437,7 +437,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extendability">Extendability</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-style">Code style</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-style">Code Style</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-zen-of-python">The Zen of Python</a></li>
 </ul>
 </li>
@@ -452,7 +452,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-integration-automating-tests-compliance-and-delivery">Continuous Integration: Automating Tests, Compliance, and Delivery</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodologies-for-communicating-intent-and-verifying-implementation">Methodologies for communicating intent and verifying implementation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-rses-the-engineers-behind-research-software">Appendix - RSEs: The engineers behind research software</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rse-value-recognition">RSE Value Recognition</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#career-growth-and-trajectory">Career Growth and Trajectory</a></li>
@@ -530,7 +529,7 @@ for developing this understanding is to answer the following questions of a give
 <li><p>What is its purpose?</p></li>
 <li><p>What is its role in the field of wind energy?</p></li>
 <li><p>What is the profile of the expected users?</p></li>
-<li><p>For how long will it be relevant?</p></li>
+<li><p>How long will it be relevant?</p></li>
 <li><p>What is the expected impact?</p></li>
 </ul>
 <p>These questions allow model owners to identify the appropriate methods for the design, development,
@@ -569,7 +568,7 @@ of WETO software can trust these tools and accurately understand the risks to wo
 </li>
 <li><p><a class="reference internal" href="#extendability" id="id17">Extendability</a></p>
 <ul>
-<li><p><a class="reference internal" href="#code-style" id="id18">Code style</a></p>
+<li><p><a class="reference internal" href="#code-style" id="id18">Code Style</a></p>
 <ul>
 <li><p><a class="reference internal" href="#the-zen-of-python" id="id19">The Zen of Python</a></p></li>
 </ul>
@@ -586,11 +585,10 @@ of WETO software can trust these tools and accurately understand the risks to wo
 <li><p><a class="reference internal" href="#continuous-integration-automating-tests-compliance-and-delivery" id="id26">Continuous Integration: Automating Tests, Compliance, and Delivery</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#methodologies-for-communicating-intent-and-verifying-implementation" id="id27">Methodologies for communicating intent and verifying implementation</a></p></li>
-<li><p><a class="reference internal" href="#appendix-rses-the-engineers-behind-research-software" id="id28">Appendix - RSEs: The engineers behind research software</a></p>
+<li><p><a class="reference internal" href="#appendix-rses-the-engineers-behind-research-software" id="id27">Appendix - RSEs: The engineers behind research software</a></p>
 <ul>
-<li><p><a class="reference internal" href="#rse-value-recognition" id="id29">RSE Value Recognition</a></p></li>
-<li><p><a class="reference internal" href="#career-growth-and-trajectory" id="id30">Career Growth and Trajectory</a></p></li>
+<li><p><a class="reference internal" href="#rse-value-recognition" id="id28">RSE Value Recognition</a></p></li>
+<li><p><a class="reference internal" href="#career-growth-and-trajectory" id="id29">Career Growth and Trajectory</a></p></li>
 </ul>
 </li>
 </ul>
@@ -620,7 +618,7 @@ knowledge.</p></li>
 Refer to contextual guidelines and conventions for flags, syntax, and functionality.
 At a minimum, provide documentation via the help flag; extended documentation alongside
 examples and tutorials is helpful.</p></li>
-<li><p>Input and output files: Use a common file structure relevant to the type of data produced from a software,
+<li><p>Input and output files: Use a common file structure relevant to the type of data produced from a software
 and leverage the existing ecosystem of tools to pre- and post-process input and output files.</p></li>
 <li><p>Error messages: Identify an error messaging system that enables communicating to users without encumbering
 the development process.
@@ -954,7 +952,7 @@ maintenance are added to an existing software project. This covers both the tech
 and the management of multiple developers and development efforts happening
 concurrently.</p>
 <p>The life cycle of WETO software projects typically follows a pattern of funding,
-development, and release, resulting in a recurring development workflow depicted in Figure \ref{fig:dev_lifecycle}.
+development, and release, resulting in a recurring development workflow depicted in the diagram below.
 The “Maintenance” tasks are usually optional and implicitly embedded
 in future development efforts. Therefore, it is critical to the life of all WETO software to
 prioritize extendability so future funding opportunities are attractive to stakeholders
@@ -995,12 +993,12 @@ languages (Rust, Julia, Elixir) and enable a wider developer base.
 Software project managers should strive to create a development environment balancing the need for
 modern tooling, modern developer expectations, and stability.</p>
 <section id="code-style">
-<h3><a class="toc-backref" href="#id18" role="doc-backlink">Code style</a><a class="headerlink" href="#code-style" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">Code Style</a><a class="headerlink" href="#code-style" title="Link to this heading">#</a></h3>
 <p>In software development, the word “grok” is often used (see usage in
 <a class="reference external" href="https://hn.algolia.com/?q=grok">Hacker News</a>,
 <a class="reference external" href="https://lobste.rs/search?q=grok&amp;amp;what=stories&amp;amp;order=newest">Lobsters</a>,
 <a class="reference external" href="https://stackoverflow.com/search?tab=newest&amp;amp;q=grok&amp;amp;searchOn=3">StackOverflow</a>)
-to communicate about degrees of understanding. This word is described by it’s creator as follows:
+to communicate about degrees of understanding. This word is described by its creator as follows:
 (Source: <a class="reference external" href="https://en.wikipedia.org/wiki/Grok">Wikipedia</a>).</p>
 <blockquote>
 <div><p><em>Grok</em> means “to understand”, of course, but Dr. Mahmoud, who might be termed the leading
@@ -1069,7 +1067,7 @@ In the face of ambiguity, refuse the temptation to guess.
 There should be one-- and preferably only one --obvious way to do it.
 Although that way may not be obvious at first unless you&#39;re Dutch.
 Now is better than never.
-Although never is often better than \*right\* now.
+Although never is often better than *right* now.
 If the implementation is hard to explain, it&#39;s a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let&#39;s do more of those!
@@ -1236,7 +1234,7 @@ details to high-level efforts.
 GitHub provides extensive <a class="reference external" href="https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources">training material</a>
 for git as well as GitHub features.</p>
 <p>The primary GitHub features are described next, and a typical sequence of events across these
-features is diagramed in the figure below.</p>
+features is diagrammed in the figure below.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/features/actions">Actions</a>: This is a full-featured cloud computing
 environment that is typically used for automating software quality processes such as
@@ -1385,7 +1383,7 @@ input, such as the following:</p>
 new code is well tested. Though automatically testing the <em>quality</em> of tests may be impractical,
 it is simple and helpful to automatically check the <em>quantity</em> of tests to ensure new
 code is covered.
-For the same of a user-friendly CT pipeline, consider grouping tests into categories
+For the sake of a user-friendly CT pipeline, consider grouping tests into categories
 that can be run in parallel by the automated system.
 Also, minimize the time required to execute the test suite so developers get
 the automated feedback as soon as possible.</p>
@@ -1461,46 +1459,45 @@ components are GitHub Actions steps.</p>
     H --&gt; K
     I --&gt; L
     J --&gt; M
-        </div></section>
-</section>
-<section id="methodologies-for-communicating-intent-and-verifying-implementation">
-<span id="communicating-design"></span><h2><a class="toc-backref" href="#id27" role="doc-backlink">Methodologies for communicating intent and verifying implementation</a><a class="headerlink" href="#methodologies-for-communicating-intent-and-verifying-implementation" title="Link to this heading">#</a></h2>
-<p>Software systems always have an architectural design, but it may be explicitly or implicitly
+        </div><!-- (communicating_design)=
+## Methodologies for Communicating Intent and Verifying Implementation
+
+Software systems always have an architectural design, but it may be explicitly or implicitly
 developed. With an implicit architecture, some general ideas may be communicated, but the
 majority of information is left to readers of the code to understand. Though common in
 research software, this practice can work against efforts to improve the extendability of
-a software (see <a class="reference internal" href="#extendability"><span class="std std-ref">Extendability</span></a>). The practice of explicitly designing a software
+a software (see [](extendability)). The practice of explicitly designing a software
 architecture is highly recommended, but it is outside the scope of this report.
 However, a minimum practice of communicating elements of software design should be
-incorporated into WETO software.</p>
-<p>The methods for documenting and communicating software architecture and design vary
-depending on the content and message to convey.</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>one</p></th>
-<th class="head"><p>two</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>a</p></td>
-<td><p>b</p></td>
-</tr>
-</tbody>
-</table>
-<p>To understand how a change fits into the big picture, it is required to have a sense for the picture from the start.
-Develop diagrams for code architecture and regularly check and update them as the architecture changes.</p>
-<p>Types of diagrams:</p>
-<ul class="simple">
-<li><p>State / flow diagrams</p></li>
-<li><p>Class hierarchy</p></li>
-<li><p>Data construction and operation - Show a representative problem describing how operations happen on data in various contexts (serial vs parallel, cpu vs gpu)</p></li>
-</ul>
-<p>Identify and communicate the <em>parti</em>.</p>
-<p>TODO: add descriptions and examples of UML
-TODO: Describe communicating design intent</p>
+incorporated into WETO software.
+
+The methods for documenting and communicating software architecture and design vary
+depending on the content and message to convey.
+
+
+
+| one | two |
+| --- | --- |
+| a   | b   |
+
+
+To understand how a change fits into the big picture, it is required to have a sense for the picture from the start.
+Develop diagrams for code architecture and regularly check and update them as the architecture changes.
+
+Types of diagrams:
+
+- State / flow diagrams
+- Class hierarchy
+- Data construction and operation - Show a representative problem describing how operations happen on data in various contexts (serial vs parallel, cpu vs gpu)
+
+Identify and communicate the *parti*.
+
+TODO: add descriptions and examples of UML
+TODO: Describe communicating design intent -->
+</section>
 </section>
 <section id="appendix-rses-the-engineers-behind-research-software">
-<span id="rse"></span><h2><a class="toc-backref" href="#id28" role="doc-backlink">Appendix - RSEs: The engineers behind research software</a><a class="headerlink" href="#appendix-rses-the-engineers-behind-research-software" title="Link to this heading">#</a></h2>
+<span id="rse"></span><h2><a class="toc-backref" href="#id27" role="doc-backlink">Appendix - RSEs: The engineers behind research software</a><a class="headerlink" href="#appendix-rses-the-engineers-behind-research-software" title="Link to this heading">#</a></h2>
 <p>Research software exists in a unique environment where the majority of users and developers
 share expertise within a specific field, and funding mechanisms are often tied to results
 from using the software rather than to the software itself.
@@ -1512,7 +1509,7 @@ For the sake of the WETO software portfolio and the researchers working in these
 it is important to directly consider the needs and expectations of the people
 responsible for designing and implementing research software projects.</p>
 <p>The term research software engineer (RSE) is defined by the
-<a class="reference external" href="https://society-rse.org/about/">UK-RSE Society</a> as:</p>
+<a class="reference external" href="https://society-rse.org/about/">UK-RSE Society</a> as follows:</p>
 <blockquote>
 <div><p>A Research Software Engineer (RSE) combines professional software engineering expertise with
 an intimate understanding of research.</p>
@@ -1524,7 +1521,7 @@ The research environments in academia and government labs are often structured t
 academic publication, so the resulting teams are commonly made up of mostly domain researchers
 and a minority of research software engineers.
 The domain researchers inform the needs of the research software and are the primary users.
-The RSE’s design and develop the software systems as well as manage various IT responsibilities
+The RSEs design and develop the software systems as well as manage various information technology (IT) responsibilities
 for the group such as creating computer-based workflows, managing data, constructing web-based
 research artifacts, and training colleagues on best practices in research computing.</p>
 <p>In this context, note the difference between computer science and software engineering (both
@@ -1546,7 +1543,7 @@ definition, implementation, assessment, measurement, management, change, and imp
 the software life cycle process itself.</p></li>
 </ul>
 <section id="rse-value-recognition">
-<h3><a class="toc-backref" href="#id29" role="doc-backlink">RSE Value Recognition</a><a class="headerlink" href="#rse-value-recognition" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id28" role="doc-backlink">RSE Value Recognition</a><a class="headerlink" href="#rse-value-recognition" title="Link to this heading">#</a></h3>
 <p>Writing code and designing software systems are entirely different things, and the latter
 must be recognized relative to the value it adds to the research process.
 Software design and software architecture are complicated topics covered in
@@ -1565,11 +1562,11 @@ Avoid trivializing software design as “programming”, and consider many RSEs 
 or science degrees and treat their work as engineering or science.</p>
 </section>
 <section id="career-growth-and-trajectory">
-<h3><a class="toc-backref" href="#id30" role="doc-backlink">Career Growth and Trajectory</a><a class="headerlink" href="#career-growth-and-trajectory" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id29" role="doc-backlink">Career Growth and Trajectory</a><a class="headerlink" href="#career-growth-and-trajectory" title="Link to this heading">#</a></h3>
 <p>In addition to acknowledgment of work and value added, it is important to provide meaningful
 career guidance to RSEs to both serve their personal goals and ensure
-that the projects have well-rounded contributors. RSEs should have some level of domain
-experience; that is to say that they should <em>use</em> as well as <em>develop</em> their software.
+the projects have well-rounded contributors. RSEs should have some level of domain
+experience; that is, they should <em>use</em> as well as <em>develop</em> their software.
 RSEs should know the context in which their software exists.
 They should be experts in the implementation and very good in the usage.
 A characteristic career trajectory within the national lab environment may take the following path:</p>
@@ -1578,7 +1575,7 @@ A characteristic career trajectory within the national lab environment may take 
 <li><p>Year 2: Co-author analyses, improve modeling, inform work plans</p></li>
 <li><p>Year 3: Lead author analyses, guide future development efforts, write work plans</p></li>
 <li><p>Year 4: Propose new work; seek funding to expand the software project</p></li>
-<li><p>Year 5: Inform center-wide software culture and practices.</p></li>
+<li><p>Year 5: Inform centerwide software culture and practices.</p></li>
 </ul>
 <p>In general, the amount of code written by an RSE should peak around Year 2 or 3 and
 then taper off. The responsibility for creating software should not be entirely removed, but
@@ -1976,7 +1973,7 @@ Submit to Journal of Open Source Software (JOSS) -->
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extendability">Extendability</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-style">Code style</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-style">Code Style</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-zen-of-python">The Zen of Python</a></li>
 </ul>
 </li>
@@ -1991,7 +1988,6 @@ Submit to Journal of Open Source Software (JOSS) -->
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-integration-automating-tests-compliance-and-delivery">Continuous Integration: Automating Tests, Compliance, and Delivery</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodologies-for-communicating-intent-and-verifying-implementation">Methodologies for communicating intent and verifying implementation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-rses-the-engineers-behind-research-software">Appendix - RSEs: The engineers behind research software</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rse-value-recognition">RSE Value Recognition</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#career-growth-and-trajectory">Career Growth and Trajectory</a></li>

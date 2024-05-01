@@ -52,7 +52,7 @@ stakeholders are varied with a subset being the following:
 These software tools are typically the end user of other generic software libraries, so
 the funding cycles are often tied to applied research rather than the development of the
 software itself. Because the developers are also wind energy researchers, these tools are
-typically designed in a way that closely resembles the application in which they’re used.
+typically designed in a way that closely resembles the application in which they're used.
 In addition, the expertise and incentives for the developers have a high variability, and
 often neither is aligned with software engineering or computer science.
 
@@ -62,7 +62,7 @@ for developing this understanding is to answer the following questions of a give
 - What is its purpose?
 - What is its role in the field of wind energy?
 - What is the profile of the expected users?
-- For how long will it be relevant?
+- How long will it be relevant?
 - What is the expected impact?
 
 These questions allow model owners to identify the appropriate methods for the design, development,
@@ -102,7 +102,7 @@ knowledge.
 Refer to contextual guidelines and conventions for flags, syntax, and functionality.
 At a minimum, provide documentation via the help flag; extended documentation alongside
 examples and tutorials is helpful.
-- Input and output files: Use a common file structure relevant to the type of data produced from a software,
+- Input and output files: Use a common file structure relevant to the type of data produced from a software
 and leverage the existing ecosystem of tools to pre- and post-process input and output files.
 - Error messages: Identify an error messaging system that enables communicating to users without encumbering
 the development process.
@@ -259,7 +259,7 @@ Most importantly, all user interfaces should be well documented.
 #### Command Line Interface
 
 The command line interface, or CLI, is one type of front end for software.
-It is the method by which a software is executed via a computer’s terminal.
+It is the method by which a software is executed via a computer's terminal.
 WETO software should in general adhere to the following conventions and principles for CLIs.
 However, these are guidelines and can be skipped when context is clear or another
 option improves usability.
@@ -385,7 +385,7 @@ and the management of multiple developers and development efforts happening
 concurrently.
 
 The life cycle of WETO software projects typically follows a pattern of funding,
-development, and release, resulting in a recurring development workflow depicted in Figure \ref{fig:dev_lifecycle}.
+development, and release, resulting in a recurring development workflow depicted in the diagram below.
 The "Maintenance" tasks are usually optional and implicitly embedded
 in future development efforts. Therefore, it is critical to the life of all WETO software to
 prioritize extendability so future funding opportunities are attractive to stakeholders
@@ -399,6 +399,7 @@ Possibly include this diagram (or a version of the funding / development cycle) 
 -->
 
 ```{mermaid}
+:title: A representation of the typical life cycle of software extension tasks within the research environment
 
 flowchart LR
 
@@ -432,23 +433,23 @@ languages (Rust, Julia, Elixir) and enable a wider developer base.
 Software project managers should strive to create a development environment balancing the need for
 modern tooling, modern developer expectations, and stability.
 
-### Code style
+### Code Style
 
 In software development, the word "grok" is often used (see usage in
 [Hacker News](https://hn.algolia.com/?q=grok),
 [Lobsters](https://lobste.rs/search?q=grok&what=stories&order=newest),
 [StackOverflow](https://stackoverflow.com/search?tab=newest&q=grok&searchOn=3))
-to communicate about degrees of understanding. This word is described by it's creator as follows:
+to communicate about degrees of understanding. This word is described by its creator as follows:
 (Source: [Wikipedia](https://en.wikipedia.org/wiki/Grok)).
 
 > *Grok* means "to understand", of course, but Dr. Mahmoud, who might be termed the leading
   Terran expert on Martians, explains that it also means, "to drink" and "a hundred other
   English words, words which we think of as antithetical concepts. 'Grok' means *all* of
-  these. It means 'fear', it means 'love', it means 'hate' – proper hate, for by the Martian
+  these. It means 'fear', it means 'love', it means 'hate' -- proper hate, for by the Martian
   'map' you cannot hate anything unless you grok it, understand it so thoroughly that you
-  merge with it and it merges with you – then you can hate it. By hating yourself. But this
+  merge with it and it merges with you -- then you can hate it. By hating yourself. But this
   implies that you love it, too, and cherish it and would not have it otherwise. Then you
-  can *hate* – and (I think) Martian hate is an emotion so black that the nearest human
+  can *hate* -- and (I think) Martian hate is an emotion so black that the nearest human
   equivalent could only be called mild distaste."
 
 That such a word exists and is widely used in software development illustrates the high value
@@ -512,7 +513,7 @@ prints the Zen of Python:
     There should be one-- and preferably only one --obvious way to do it.
     Although that way may not be obvious at first unless you're Dutch.
     Now is better than never.
-    Although never is often better than \*right\* now.
+    Although never is often better than *right* now.
     If the implementation is hard to explain, it's a bad idea.
     If the implementation is easy to explain, it may be a good idea.
     Namespaces are one honking great idea -- let's do more of those!
@@ -675,7 +676,7 @@ GitHub provides extensive [training material](https://docs.github.com/en/get-sta
 for git as well as GitHub features.
 
 The primary GitHub features are described next, and a typical sequence of events across these
-features is diagramed in the figure below.
+features is diagrammed in the figure below.
 
 - [Actions](https://github.com/features/actions): This is a full-featured cloud computing
     environment that is typically used for automating software quality processes such as
@@ -703,6 +704,8 @@ features is diagramed in the figure below.
     and communicate relevant details.
 
 ```{mermaid}
+:title: A representative workflow among all actors in a software development workflow leveraging GitHub features
+
 sequenceDiagram
     autonumber
 
@@ -829,7 +832,7 @@ Continuous testing is established by adopting a testing framework and ensuring a
 new code is well tested. Though automatically testing the *quality* of tests may be impractical,
 it is simple and helpful to automatically check the *quantity* of tests to ensure new
 code is covered.
-For the same of a user-friendly CT pipeline, consider grouping tests into categories
+For the sake of a user-friendly CT pipeline, consider grouping tests into categories
 that can be run in parallel by the automated system.
 Also, minimize the time required to execute the test suite so developers get
 the automated feedback as soon as possible.
@@ -869,6 +872,8 @@ For reference, a typical CI pipeline for a Python package is shown in the figure
 components are GitHub Actions steps.
 
 ```{mermaid}
+:title: A typical continuous integration pipeline using GitHub features including distinct steps for testing, compliance checking, and deployment
+
 graph LR
 
     A(("
@@ -913,8 +918,8 @@ graph LR
     J --> M
 ```
 
-(communicating_design)=
-## Methodologies for communicating intent and verifying implementation
+<!-- (communicating_design)=
+## Methodologies for Communicating Intent and Verifying Implementation
 
 Software systems always have an architectural design, but it may be explicitly or implicitly
 developed. With an implicit architecture, some general ideas may be communicated, but the
@@ -947,7 +952,7 @@ Types of diagrams:
 Identify and communicate the *parti*.
 
 TODO: add descriptions and examples of UML
-TODO: Describe communicating design intent
+TODO: Describe communicating design intent -->
 
 
 
@@ -970,7 +975,7 @@ it is important to directly consider the needs and expectations of the people
 responsible for designing and implementing research software projects.
 
 The term research software engineer (RSE) is defined by the
-[UK-RSE Society](https://society-rse.org/about/) as:
+[UK-RSE Society](https://society-rse.org/about/) as follows:
 > A Research Software Engineer (RSE) combines professional software engineering expertise with
   an intimate understanding of research.
 
@@ -981,7 +986,7 @@ The research environments in academia and government labs are often structured t
 academic publication, so the resulting teams are commonly made up of mostly domain researchers
 and a minority of research software engineers.
 The domain researchers inform the needs of the research software and are the primary users.
-The RSE's design and develop the software systems as well as manage various IT responsibilities
+The RSEs design and develop the software systems as well as manage various information technology (IT) responsibilities
 for the group such as creating computer-based workflows, managing data, constructing web-based
 research artifacts, and training colleagues on best practices in research computing.
 
@@ -992,7 +997,7 @@ descriptions taken from Wikipedia):
     Computer science spans theoretical disciplines (such as algorithms, theory of computation,
     and information theory) to applied disciplines (including the design and implementation of
     hardware and software).
-    
+
 - [Software engineering](https://en.wikipedia.org/wiki/Software_engineering) is an
     engineering-based approach to software development. A software
     engineer is a person who applies the engineering design process to design, develop, maintain,
@@ -1026,8 +1031,8 @@ or science degrees and treat their work as engineering or science.
 ### Career Growth and Trajectory
 In addition to acknowledgment of work and value added, it is important to provide meaningful
 career guidance to RSEs to both serve their personal goals and ensure
-that the projects have well-rounded contributors. RSEs should have some level of domain
-experience; that is to say that they should *use* as well as *develop* their software.
+the projects have well-rounded contributors. RSEs should have some level of domain
+experience; that is, they should *use* as well as *develop* their software.
 RSEs should know the context in which their software exists.
 They should be experts in the implementation and very good in the usage.
 A characteristic career trajectory within the national lab environment may take the following path:
@@ -1036,7 +1041,7 @@ A characteristic career trajectory within the national lab environment may take 
 - Year 2: Co-author analyses, improve modeling, inform work plans
 - Year 3: Lead author analyses, guide future development efforts, write work plans
 - Year 4: Propose new work; seek funding to expand the software project
-- Year 5: Inform center-wide software culture and practices.
+- Year 5: Inform centerwide software culture and practices.
 
 In general, the amount of code written by an RSE should peak around Year 2 or 3 and
 then taper off. The responsibility for creating software should not be entirely removed, but
