@@ -12,7 +12,6 @@ mindmap
             FAST.Farm
             MoorPy
             wtDigiTwin
-            ANBA4
             RAFT
 
         hfm(High Fidelity Models)
@@ -78,7 +77,6 @@ These projects are actively supported and funded by WETO as of FY23.
 - MoorPy: https://github.com/nrel/moorpy
 - wtDigiTwin: https://github.com/ebranlard/wtDigiTwin
 - RAFT: https://github.com/WISDEM/RAFT
-- ANBA4: https://github.com/ANBA4/anba4
 
 **High fidelity models**
 - AMR-Wind: https://github.com/exawind/amr-wind
