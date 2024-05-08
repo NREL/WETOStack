@@ -36,9 +36,9 @@ A sample agenda is provided below, but specific agendas will vary.
 | --------- | -------- | ----- |
 | 0:00 - 0:20 | 20 min | Intro to Portfolio Coordination Project, WETO Software Stack overview |
 | 0:20 - 0:40 | 20 min | WETO Software Stack Q&A |
-| 0:40 - 0:50 | 10 min | Toolchain intro(1) |
-| 0:50 - 1:05 | 15 min | Capabilities, workflows(2) |
-| 1:05 - 1:15 | 10 min | Maturity and quality status(3), Future development roadmap(4) |
+| 0:40 - 0:50 | 10 min | Toolchain intro |
+| 0:50 - 1:05 | 15 min | Capabilities, workflows |
+| 1:05 - 1:15 | 10 min | Future development roadmap |
 | 1:15 - 1:25 | 10 min | Poll on usability issues, voting for roadmap priorities |
-| 1:25 - 1:55 | 30 min | Open and guided discussion, Q&A |
-| 1:55 - 2:00 |  5 min | Outro and Methods for community engagement (5) |
+| 1:25 - 1:55 | 30 min | Community discussion, Q&A |
+| 1:55 - 2:00 |  5 min | Outro and Methods for community engagement |
