@@ -17,6 +17,11 @@ users of WETO software.
 | June 18 | 7-9 am MDT | Controls | FLORIS, FLASC, Hercules, Moa |
 | June 20 | 7-9 am MDT | OpenFAST+ | OpenFAST, FAST.Farm, ROSCO, and associated tools |
 
+`````{admonition} Contact
+:class: tip
+Please contact Rafael Mudafort (rafael.mudafort@nrel.gov) with any questions.
+`````
+
 ## Registration
 
 **To register, complete this form: [WETO Software Stack workshop registration](https://docs.google.com/forms/d/1Pbk34YmhjRBEsnPteqY8OLgjxsq82TkWULCVhABwuHY/edit).**
