@@ -18,7 +18,6 @@ mindmap
             FAST.Farm
             MoorPy
             wtDigiTwin
-            ANBA4
             RAFT
 
         ps(" ")
@@ -36,7 +35,6 @@ mindmap
 - MoorPy https://github.com/nrel/moorpy - Quasi-static mooring model and a suite of associated functions for mooring system analysis.
 - wtDigiTwin https://github.com/ebranlard/wtDigiTwin - Digital twin model for wind turbine containing a set of structural dynamics tools, beam theory, FEM and more.
 - RAFT https://github.com/WISDEM/RAFT - Library for frequency-domain analysis of floating wind turbines.
-- ANBA4 https://github.com/ANBA4/anba4 - Computes the 6x6 stiffness and mass matrices of arbitrarily complex composite beam cross sections.
 ````
 
 
