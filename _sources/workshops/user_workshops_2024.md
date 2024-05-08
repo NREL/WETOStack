@@ -11,11 +11,11 @@ users of WETO software.
 
 | Date | Time | Topic Area | Relevant Software |
 | ---- | ---- | ---------- | ----------------- |
-| June 10th | 7-9 am MDT | Systems Engineering | WISDEM, WEIS, pyNuMAD, SONATA |
-| June 12th | 8-10 am MDT | TEA and cost modeling | ORBIT, LandBOSSE, WOMBAT, OpenOA, NRWAL, CORAL |
-| June 13th | 7-9 am MDT | HFM | AMR Wind, Nalu Wind, ERF, OpenTurbine |
-| June 18th | 7-9 am MDT | Controls | FLORIS, FLASC, Hercules, Moa |
-| June 20th | 7-9 am MDT | OpenFAST+ | OpenFAST, FAST.Farm, ROSCO, and associated tools |
+| June 10 | 7-9 am MDT | Systems Engineering | WISDEM, WEIS, pyNuMAD, SONATA |
+| June 12 | 8-10 am MDT | TEA, cost modeling | ORBIT, LandBOSSE, WOMBAT, OpenOA, NRWAL, CORAL |
+| June 13 | 7-9 am MDT | HFM | AMR Wind, Nalu Wind, ERF, OpenTurbine |
+| June 18 | 7-9 am MDT | Controls | FLORIS, FLASC, Hercules, Moa |
+| June 20 | 7-9 am MDT | OpenFAST+ | OpenFAST, FAST.Farm, ROSCO, and associated tools |
 
 ## Registration
 
