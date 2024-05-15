@@ -19,12 +19,12 @@ mindmap
             Nalu Wind
             OpenTurbine
             ERF
-            WindSE
             pyNuMAD
 
         do(Design & Optimization)
             WEIS
             WISDEM
+            WindSE
             HOPP
             SONATA
 
@@ -83,12 +83,12 @@ These projects are actively supported and funded by WETO as of FY23.
 - Nalu-Wind: https://github.com/exawind/nalu-wind
 - OpenTurbine: https://github.com/exawind/openturbine
 - ERF: https://github.com/erf-model/ERF
-- WindSE: https://github.com/nrel/windse
 - pyNuMAD: https://github.com/sandialabs/pyNuMAD
 
 **Design and optimization**
 - WEIS: https://github.com/wisdem/weis
 - WISDEM: https://github.com/wisdem/wisdem
+- WindSE: https://github.com/nrel/windse
 - HOPP: https://github.com/NREL/HOPP
 - SONATA: https://github.com/ptrbortolotti/SONATA
 
