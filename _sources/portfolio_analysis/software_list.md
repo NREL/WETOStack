@@ -54,9 +54,13 @@ mindmap
 ```
 
 The set of software under the WETO umbrella is listed here.
-This is intended to eventually be a complete list, but it is likely missing some projects yet.
+While this is intended to be a complete list, it is likely missing some projects.
 Please [suggest an edit](https://github.com/nrel/wetostack/edit/main/docs/portfolio_analysis/software_list.md)
 if any information here is incorrect.
+Including a software in this list requires the following:
+- Entry in [software_attributes/database_list.yaml](https://github.com/NREL/WETOStack/blob/main/software_attributes/database_list.yaml)
+- Entry in [docs/software_list.md](https://github.com/NREL/WETOStack/blob/main/docs/portfolio_analysis/software_list.md)
+- Corresponding YAML file in [software_attributes/database](https://github.com/NREL/WETOStack/tree/main/software_attributes/database)
 
 This listing contains two groups of software projects:
 
