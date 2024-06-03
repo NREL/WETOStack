@@ -13,13 +13,19 @@ users of WETO software.
 | ---- | ---- | ---------- | ----------------- |
 | June 10 | 7-9 am MDT | Systems Engineering | WISDEM, WEIS, WindSE, pyNuMAD, SONATA |
 | June 12 | 8-10 am MDT | TEA, cost modeling | ORBIT, LandBOSSE, WOMBAT, NRWAL, CORAL |
-| June 13 | 7-9 am MDT | HFM | AMR Wind, Nalu Wind, ERF, OpenTurbine |
 | June 18 | 7-9 am MDT | Controls | FLORIS, FLASC, Hercules, Moa, OpenOA |
 | June 20 | 7-9 am MDT | OpenFAST+ | OpenFAST, FAST.Farm, ROSCO, and associated tools |
 
 `````{admonition} Contact
 :class: tip
 Please contact Rafael Mudafort (rafael.mudafort@nrel.gov) with any questions.
+`````
+
+`````{admonition} Schedule Changes
+:class: warning
+
+- The HFM workshop (AMR Wind, Nalu Wind, ERF, OpenTurbine) originally scheduled for June 13 has been postponed, and the rescheduled date will be announced soon.
+- WindSE was initially included in the HFM workshop, but it has been moved to the Systems Engineering workshop on June 10.
 `````
 
 ## Registration
