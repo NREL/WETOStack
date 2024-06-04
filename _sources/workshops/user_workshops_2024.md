@@ -13,7 +13,7 @@ users of WETO software.
 | ---- | ---- | ---------- | ----------------- |
 | June 10 | 7-9 am MDT | Systems Engineering | WISDEM, WEIS, WindSE, pyNuMAD, SONATA |
 | June 12 | 8-10 am MDT | TEA, cost modeling | ORBIT, LandBOSSE, WOMBAT, NRWAL, CORAL |
-| June 18 | 7-9 am MDT | Controls | FLORIS, FLASC, Hercules, Moa, OpenOA |
+| June 18 | 7-9 am MDT | Controls | FLORIS, FLASC, Hercules, OpenOA |
 | June 20 | 7-9 am MDT | OpenFAST+ | OpenFAST, FAST.Farm, ROSCO, and associated tools |
 
 `````{admonition} Contact
