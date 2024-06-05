@@ -13,6 +13,8 @@ To build the site, run the following command:
 ```bash
 pip install -r docs/requirements.txt
 
+cd docs/
+
 jupyter-book build .
 ```
 
@@ -33,3 +35,4 @@ Or paste this line directly into your browser bar:
     file://<removed>/wetostack/docs/_build/html/index.html
 
 ```
+Note that the docs/_build folder must be removed and a rebuild done if changes to the software_attributes/database/ yamls are made.

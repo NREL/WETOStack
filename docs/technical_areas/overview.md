@@ -19,6 +19,7 @@ mindmap
             MoorPy
             wtDigiTwin
             RAFT
+            OWENS
 
         ps(" ")
         hfm(" ")
@@ -35,6 +36,7 @@ mindmap
 - MoorPy https://github.com/nrel/moorpy - Quasi-static mooring model and a suite of associated functions for mooring system analysis.
 - wtDigiTwin https://github.com/ebranlard/wtDigiTwin - Digital twin model for wind turbine containing a set of structural dynamics tools, beam theory, FEM and more.
 - RAFT https://github.com/WISDEM/RAFT - Library for frequency-domain analysis of floating wind turbines.
+- OWENS https://github.com/sandialabs/OWENS.jl - Multi-physics aero-servo-elastic tool with coupling to OpenFAST hydrodynamics and mooring for the coupled dynamic response of VAWTs and crossflow turbines.
 ````
 
 

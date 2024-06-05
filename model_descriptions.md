@@ -6,6 +6,7 @@ This is a list of WETO-supported software projects.
 - https://github.com/openfast
 - https://github.com/wisdem
 - https://github.com/erf-model
+- https://github.com/sandialabs
 
 ## Physics simulators
 FLORIS
@@ -20,6 +21,8 @@ OpenFAST
 - python-toolbox
 - matlab-toolbox
 - weio
+
+OWENS: End to end aero-servo-elastic preprocessing, simulation, and post processing for VAWTs and crossflow turbines.
 
 SOWFA: Simulator for Wind Farm Applications
 Release Date: June 27, 2016
