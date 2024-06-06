@@ -11,7 +11,6 @@ mindmap
             OpenFAST
             FAST.Farm
             MoorPy
-            wtDigiTwin
             RAFT
 
         hfm(High Fidelity Models)
@@ -79,7 +78,6 @@ These projects are actively supported and funded by WETO as of FY23.
 - OpenFAST: https://github.com/openfast/openfast
 - FAST.Farm: https://github.com/openfast/openfast
 - MoorPy: https://github.com/nrel/moorpy
-- wtDigiTwin: https://github.com/ebranlard/wtDigiTwin
 - RAFT: https://github.com/WISDEM/RAFT
 
 **High fidelity models**
