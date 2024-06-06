@@ -24,8 +24,9 @@ Please contact Rafael Mudafort (rafael.mudafort@nrel.gov) with any questions.
 `````{admonition} Schedule Changes
 :class: warning
 
-- The HFM workshop (AMR Wind, Nalu Wind, ERF, OpenTurbine) originally scheduled for June 13 has been postponed, and the rescheduled date will be announced soon.
-- WindSE was initially included in the HFM workshop, but it has been moved to the Systems Engineering workshop on June 10.
+- The **HFM workshop** (AMR Wind, Nalu Wind, ERF, OpenTurbine) originally scheduled for June 13 has been postponed, and the rescheduled date will be announced soon.
+- **WindSE** was initially included in the HFM workshop, but it has been moved to the Systems Engineering workshop on June 10.
+- **OpenOA** was initially included in the TEA / Cost Modeling workshop, but it has been moved to the Controls workshop on June 18.
 `````
 
 ## Registration
