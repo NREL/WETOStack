@@ -17,7 +17,6 @@ mindmap
             OpenFAST
             FAST.Farm
             MoorPy
-            wtDigiTwin
             RAFT
 
         ps(" ")
@@ -33,7 +32,6 @@ mindmap
 - OpenFAST https://github.com/openfast/openfast - Multi-physics, multi-fidelity tool for simulating the coupled dynamic response of wind turbines.
 - FAST.Farm https://github.com/openfast/openfast - Mid-fidelity wind farm simulator that uses OpenFAST as a turbine model.
 - MoorPy https://github.com/nrel/moorpy - Quasi-static mooring model and a suite of associated functions for mooring system analysis.
-- wtDigiTwin https://github.com/ebranlard/wtDigiTwin - Digital twin model for wind turbine containing a set of structural dynamics tools, beam theory, FEM and more.
 - RAFT https://github.com/WISDEM/RAFT - Library for frequency-domain analysis of floating wind turbines.
 ````
 
