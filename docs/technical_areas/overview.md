@@ -114,7 +114,6 @@ mindmap
             FLORIS
             FLASC
             hercules
-            moa_python
         ra(" ")
         cost(" ")
         wild(" ")
@@ -125,7 +124,6 @@ mindmap
 - FLORIS https://github.com/nrel/floris - Controls-focused wind farm simulation software incorporating steady-state engineering wake models into a performance-focused Python framework.
 - FLASC https://github.com/nrel/flasc - Suite of analysis tools for SCADA data filtering, analysis, wind farm model validation, field experiment design, and field experiment monitoring.
 - hercules https://github.com/nrel/hercules - Wind farm emulator for controls testing with LES models.
-- moa_python https://github.com/nrel/moa_python - Wind farm performance post processing and analysis tool.
 ````
 
 

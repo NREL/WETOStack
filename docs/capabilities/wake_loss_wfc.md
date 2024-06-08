@@ -43,7 +43,6 @@ mindmap
             FLORIS
             FLASC
             hercules
-            moa_python
 
         ra(" ")
 

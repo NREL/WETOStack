@@ -32,7 +32,6 @@ mindmap
             FLORIS
             FLASC
             hercules
-            moa_python
 
         ra(Resource Assessment)
             DW TAP
@@ -99,7 +98,6 @@ These projects are actively supported and funded by WETO as of FY23.
 - FLORIS: https://github.com/nrel/floris
 - FLASC: https://github.com/nrel/flasc
 - hercules: https://github.com/nrel/hercules
-- moa_python: https://github.com/nrel/moa_python
 
 **Resources assessment**
 - DW TAP: https://github.com/NREL/dw-tap-app
@@ -142,6 +140,9 @@ These projects are either funded outside of WETO, are not actively funded, or ar
 **High fidelity models**
 - SOWFA: https://github.com/nrel/sowfa
 - NuMAD: https://github.com/sandialabs/NuMAD
+
+**Wind farm controls**
+- moa_python: https://github.com/nrel/moa_python
 
 **Numerical weather prediction**
 - WRF: https://github.com/wrf-model/WRF
