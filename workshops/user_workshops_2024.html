@@ -71,6 +71,8 @@
                 gtag('config', 'G-XK6LTW8XM7');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'workshops/user_workshops_2024';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -422,6 +424,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#registration">Registration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workshop-format">Workshop Format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#systems-engineering-workshop-june-10">Systems Engineering Workshop - June 10</a></li>
 </ul>
             </nav>
         </div>
@@ -508,41 +511,87 @@ A sample agenda is provided below, but specific agendas will vary.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>0:00 - 0:20</p></td>
-<td><p>20 min</p></td>
+<tr class="row-even"><td><p>0:00 - 0:05</p></td>
+<td><p>5 min</p></td>
+<td><p>Welcome and intro</p></td>
+</tr>
+<tr class="row-odd"><td><p>0:05 - 0:15</p></td>
+<td><p>10 min</p></td>
 <td><p>Intro to Portfolio Coordination Project, WETO Software Stack overview</p></td>
 </tr>
-<tr class="row-odd"><td><p>0:20 - 0:40</p></td>
-<td><p>20 min</p></td>
+<tr class="row-even"><td><p>0:15 - 0:30</p></td>
+<td><p>15 min</p></td>
 <td><p>WETO Software Stack Q&amp;A</p></td>
 </tr>
-<tr class="row-even"><td><p>0:40 - 0:50</p></td>
-<td><p>10 min</p></td>
-<td><p>Toolchain intro</p></td>
+<tr class="row-odd"><td><p>0:30 - 1:20</p></td>
+<td><p>50 min</p></td>
+<td><p>Model introductions, capabilities and workflow demo, future roadmap</p></td>
 </tr>
-<tr class="row-odd"><td><p>0:50 - 1:05</p></td>
-<td><p>15 min</p></td>
-<td><p>Capabilities, workflows</p></td>
-</tr>
-<tr class="row-even"><td><p>1:05 - 1:15</p></td>
-<td><p>10 min</p></td>
-<td><p>Future development roadmap</p></td>
-</tr>
-<tr class="row-odd"><td><p>1:15 - 1:25</p></td>
-<td><p>10 min</p></td>
+<tr class="row-even"><td><p>1:20</p></td>
+<td><p>2 min</p></td>
 <td><p>Poll on usability issues, voting for roadmap priorities</p></td>
 </tr>
-<tr class="row-even"><td><p>1:25 - 1:55</p></td>
+<tr class="row-odd"><td><p>1:20 - 1:50</p></td>
 <td><p>30 min</p></td>
 <td><p>Community discussion, Q&amp;A</p></td>
 </tr>
-<tr class="row-odd"><td><p>1:55 - 2:00</p></td>
-<td><p>5 min</p></td>
+<tr class="row-even"><td><p>1:50 -  end</p></td>
+<td><p>10 min</p></td>
 <td><p>Outro and Methods for community engagement</p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<p>The software included in the workshops are organized slightly differently than the <a class="reference internal" href="../portfolio_analysis/software_list.html#software-listing"><span class="std std-ref">Software Listing</span></a>.
+Rather than organizing the workshops by the thing that each software does, the workshops are
+organized by the technical area in which each software is used.
+This allows the workshop attendees to have a more common interest in the software being discussed.</p>
+<div class="mermaid">
+            %%{init: { 'logLevel': 'debug', 'theme': 'default' , 'themeVariables': {'git0': '#CF784B', 'cScale1': '#B5B867', 'cScale2': '#FFEA59', 'cScale3': '#B7DBDB', 'cScale4': '#335B8E', 'cScale5': '#6CA18F'} }  }%%
+
+mindmap
+    root(&quot;WETO Software Portfolio&quot;)
+        ps(Systems Engineering)
+            WEIS
+            WISDEM
+            WindSE
+            pyNuMAD
+
+        hfm(High Fidelity Modeling)
+            AMR Wind
+            Nalu Wind
+            OpenTurbine
+            ERF
+
+        ctrl(Wind Farm Controls and Analysis)
+            FLORIS
+            FLASC
+            hercules
+            OpenOA
+
+        cost(TEA &amp; Cost Models)
+            LandBOSSE
+            HybridBOSSE
+            ORBIT
+            CORAL
+            NRWAL
+            WOMBAT
+
+        do(OpenFAST+)
+            OpenFAST
+            FAST.Farm
+            ROSCO
+            openfast_toolbox
+        </div></section>
+<section id="systems-engineering-workshop-june-10">
+<h2>Systems Engineering Workshop - June 10<a class="headerlink" href="#systems-engineering-workshop-june-10" title="Link to this heading">#</a></h2>
+<p>Rafael Mudafort, Pietro Bortolotti, Garrett Barter, Dan Zalkind, Ernesto Camarena, Jeff Allen,
+and Ethan Young co-hosted this workshop.</p>
+<p><a class="reference download internal" download="" href="../_downloads/a423ed121910587031ff7a529656ee5f/UserWorkshops2024_SystemsEngineering.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Click</span> <span class="pre">here</span> <span class="pre">to</span> <span class="pre">download</span> <span class="pre">the</span> <span class="pre">slides.</span></code></a></p>
+<p>Video recording coming soon.</p>
+<!-- 
+```{youtube} ZSkaP9CzqgA
+``` -->
 </section>
 </section>
 
@@ -612,6 +661,7 @@ A sample agenda is provided below, but specific agendas will vary.</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#registration">Registration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workshop-format">Workshop Format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#systems-engineering-workshop-june-10">Systems Engineering Workshop - June 10</a></li>
 </ul>
   </nav></div>
 
