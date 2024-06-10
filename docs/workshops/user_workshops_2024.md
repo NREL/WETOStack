@@ -46,11 +46,63 @@ A sample agenda is provided below, but specific agendas will vary.
 
 | Time Slot | Duration | Topic |
 | --------- | -------- | ----- |
-| 0:00 - 0:20 | 20 min | Intro to Portfolio Coordination Project, WETO Software Stack overview |
-| 0:20 - 0:40 | 20 min | WETO Software Stack Q&A |
-| 0:40 - 0:50 | 10 min | Toolchain intro |
-| 0:50 - 1:05 | 15 min | Capabilities, workflows |
-| 1:05 - 1:15 | 10 min | Future development roadmap |
-| 1:15 - 1:25 | 10 min | Poll on usability issues, voting for roadmap priorities |
-| 1:25 - 1:55 | 30 min | Community discussion, Q&A |
-| 1:55 - 2:00 |  5 min | Outro and Methods for community engagement |
+| 0:00 - 0:05 |  5 min | Welcome and intro |
+| 0:05 - 0:15 | 10 min | Intro to Portfolio Coordination Project, WETO Software Stack overview |
+| 0:15 - 0:30 | 15 min | WETO Software Stack Q&A |
+| 0:30 - 1:20 | 50 min | Model introductions, capabilities and workflow demo, future roadmap |
+| 1:20        |  2 min | Poll on usability issues, voting for roadmap priorities |
+| 1:20 - 1:50 | 30 min | Community discussion, Q&A |
+| 1:50 -  end | 10 min | Outro and Methods for community engagement |
+
+The software included in the workshops are organized slightly differently than the [](software_listing).
+Rather than organizing the workshops by the thing that each software does, the workshops are
+organized by the technical area in which each software is used.
+This allows the workshop attendees to have a more common interest in the software being discussed.
+
+```{mermaid}
+%%{init: { 'logLevel': 'debug', 'theme': 'default' , 'themeVariables': {'git0': '#CF784B', 'cScale1': '#B5B867', 'cScale2': '#FFEA59', 'cScale3': '#B7DBDB', 'cScale4': '#335B8E', 'cScale5': '#6CA18F'} }  }%%
+
+mindmap
+    root("WETO Software Portfolio")
+        ps(Systems Engineering)
+            WEIS
+            WISDEM
+            WindSE
+            pyNuMAD
+
+        hfm(High Fidelity Modeling)
+            AMR Wind
+            Nalu Wind
+            OpenTurbine
+            ERF
+
+        ctrl(Wind Farm Controls and Analysis)
+            FLORIS
+            FLASC
+            hercules
+            OpenOA
+
+        cost(TEA & Cost Models)
+            LandBOSSE
+            HybridBOSSE
+            ORBIT
+            CORAL
+            NRWAL
+            WOMBAT
+
+        do(OpenFAST+)
+            OpenFAST
+            FAST.Farm
+            ROSCO
+            openfast_toolbox
+```
+
+## Systems Engineering Workshop - June 10
+
+Rafael Mudafort, Pietro Bortolotti, Garrett Barter, Dan Zalkind, Ernesto Camarena, Jeff Allen,
+and Ethan Young co-hosted this workshop.
+
+{download}`Click here to download the slides.<../_static/UserWorkshops2024_SystemsEngineering.pdf>`
+
+```{youtube} urab_dN12Ws
+```
