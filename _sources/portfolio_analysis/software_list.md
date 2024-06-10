@@ -39,7 +39,6 @@ mindmap
 
         cost(Cost Models)
             LandBOSSE
-            HybridBOSSE
             ORBIT
             CORAL
             NRWAL
@@ -106,7 +105,6 @@ These projects are actively supported and funded by WETO as of FY23.
 
 **Cost models**
 - LandBOSSE: https://github.com/WISDEM/LandBOSSE
-- HybridBOSSE: https://github.com/NREL/HybridBOSSE
 - ORBIT: https://github.com/WISDEM/ORBIT
 - CORAL: https://github.com/NREL/CORAL
 - NRWAL: https://github.com/NREL/NRWAL
@@ -169,6 +167,7 @@ These projects are either funded outside of WETO, are not actively funded, or ar
 **Cost models**
 - FUSED-Wind: https://github.com/FUSED-Wind/fusedwind
 - Marmot: https://github.com/NREL/Marmot
+- HybridBOSSE: https://github.com/NREL/HybridBOSSE - A tool for estimating BOS costs for hybrid power plants that share infrastructure.
 
 *Deprecated or no longer supported:*
 - Turbine_costSE: turb_costSE is a set of models that link wind turbine component masses (and a few other key variables) to component costs.
