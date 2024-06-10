@@ -5,9 +5,9 @@ primary_uses:
 - simulation
 - optimization
 active_funding: true
-development_status: maturation
+development_status: new_features
 programming_language: julia
-license_type: LGPL-3.0
+license_type: lgpl-3.0
 data_collection_methods:
 - modeling
 last_release_date: "2024-04-10"
@@ -24,11 +24,10 @@ time_domain:
 - dynamic
 - steady
 turbine_model:
-- actuator_cylinder
-- double_multiple_streamtube
+- multibody_bem
 - vortex_method
 wake_model:
-- multibody FVW
+- vortex_method
 loads: true
 design_optimization: true
 costs: true
@@ -82,7 +81,7 @@ performance_tests: false
 # Interfaces
 first_class_ui:
 - input_files
-- scripting
+- library_interface
 has_cli: true
 language_interfaces:
 - julia
@@ -95,10 +94,14 @@ file_structure_stability: semantic_versioning
 
 # WETO Integrations
 dependencies:
-- AeroDyn
-- MoorDyn
-- HydroDyn
-- Turbsim
+- - AeroDyn
+  - direct
+- - MoorDyn
+  - direct
+- - HydroDyn
+  - direct
+- - Turbsim
+  - direct
 
 # # Community Health
 # open_issues: 0..N
