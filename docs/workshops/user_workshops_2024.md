@@ -84,7 +84,6 @@ mindmap
 
         cost(TEA & Cost Models)
             LandBOSSE
-            HybridBOSSE
             ORBIT
             CORAL
             NRWAL
