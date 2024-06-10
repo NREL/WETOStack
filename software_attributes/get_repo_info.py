@@ -14,6 +14,7 @@ repo_list = [
     ("https://github.com", "erf-model", "erf"),
     ("https://github.com", "openfast", "kitefast"),
     ("https://github.com", "openfast", "openfast"),
+    ("https://github.com", "sandialabs", "OWENS.jl"),
     ("https://github.com", "nrel", "rosco"),
     ("https://github.com", "nrel", "rosco_toolbox"),
     ("https://github.com", "wisdem", "wisdem"),

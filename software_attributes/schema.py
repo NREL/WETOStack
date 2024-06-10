@@ -250,7 +250,7 @@ schema = {
             "description": "List the package managers leveraged to distribute the software.",
             "type": "array",
             "items": {
-                "enum": ["homebrew", "pypi", "conda", "conda-forge", "spack_manager"]
+                "enum": ["homebrew", "pypi", "conda", "conda-forge", "spack_manager", "julia"]
             }
         },
         "package_manager_url": {

@@ -18,6 +18,7 @@ mindmap
             FAST.Farm
             MoorPy
             RAFT
+            OWENS
 
         ps(" ")
         hfm(" ")
@@ -33,6 +34,7 @@ mindmap
 - FAST.Farm https://github.com/openfast/openfast - Mid-fidelity wind farm simulator that uses OpenFAST as a turbine model.
 - MoorPy https://github.com/nrel/moorpy - Quasi-static mooring model and a suite of associated functions for mooring system analysis.
 - RAFT https://github.com/WISDEM/RAFT - Library for frequency-domain analysis of floating wind turbines.
+- OWENS https://github.com/sandialabs/OWENS.jl - Multi-physics aero-servo-elastic tool with coupling to OpenFAST hydrodynamics and mooring for the coupled dynamic response of VAWTs and crossflow turbines.
 ````
 
 

@@ -12,6 +12,7 @@ mindmap
             FAST.Farm
             MoorPy
             RAFT
+            OWENS
 
         hfm(High Fidelity Models)
             AMR Wind
@@ -78,6 +79,7 @@ These projects are actively supported and funded by WETO as of FY23.
 - FAST.Farm: https://github.com/openfast/openfast
 - MoorPy: https://github.com/nrel/moorpy
 - RAFT: https://github.com/WISDEM/RAFT
+- OWENS: https://github.com/sandialabs/OWENS.jl
 
 **High fidelity models**
 - AMR-Wind: https://github.com/exawind/amr-wind
@@ -129,7 +131,6 @@ These projects are either funded outside of WETO, are not actively funded, or ar
 - PyFrame3DD: https://github.com/WISDEM/pyFrame3DD
 - CACTUS: https://github.com/sandialabs/CACTUS
 - WEC-Sim/MOST: https://github.com/WEC-Sim/WEC-Sim and http://www.morenergylab.polito.it/most/
-- OWENS: https://www.nrel.gov/docs/fy23osti/83748.pdf
 
 *Deprecated or no longer supported:*
 - ADAMS2AD: The MSC.ADAMS-to-AeroDyn (ADAMS2AD) interface is a software package for simulating the coupled dynamic response of horizontal-axis wind turbines.
@@ -241,3 +242,4 @@ The following GitHub organizations house some of the software projects supported
 - https://github.com/openfast
 - https://github.com/wisdem
 - https://github.com/erf-model
+- https://github.com/sandialabs
