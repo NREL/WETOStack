@@ -459,6 +459,7 @@ mindmap
         ps(Engineering-fidelity Physics Models)
             OpenFAST
             FAST.Farm
+            OWENS
 
         hfm(High Fidelity Models)
             AMR Wind
@@ -491,8 +492,8 @@ to low fidelity at the bottom.</p>
     C[&quot;WindSE
     RANS, LES, time accurate, actuator disk&quot;]
 
-    D[&quot;OpenFAST/FAST.Farm
-    Engineering models, time accurate, BEM-derived models + FVW&quot;]
+    D[&quot;OpenFAST/FAST.Farm/OWENS
+    Engineering models, time accurate, BEM-derived models + FVW for HAWTs and VAWTs&quot;]
 
     E[&quot;FLORIS
     Analytical, steady state&quot;]
@@ -523,12 +524,13 @@ computational fluid dynamics (CFD) models to simulate the wind farm flow field
 including Reynolds-averaged Navier-Stokes (RANS), LES, and an actuator disk model.
 It is coupled to optimization algorithms for use in wind farm layout design.</p>
 <p><strong>OpenFAST</strong> includes actuator disk-based aerodynamics models including Blade Element
-Momentum theory (BEMT) and Dynamic BEM (DBEMT).
-<strong>FAST.Farm</strong> is a farm-level simulator building on OpenFAST, and it includes
+Momentum theory (BEMT) and Dynamic BEM (DBEMT).</p>
+<p><strong>FAST.Farm</strong> is a farm-level simulator building on OpenFAST, and it includes
 a free vortex wake (FVW) model to simulate the wake of wind turbines within
 a farm.
 OpenFAST also includes TurbSim, a stochastic turbulence model, and InflowWind,
 a tool for generating wind inflow conditions or OpenFAST simulations.</p>
+<p><strong>OWENS</strong> includes Actuator Cylinder (AC) and Double Multiple Streamtube (DMS) aerodynamics models including 3-D and unsteady approximations, with corrections for curved and deforming blades. OWENS is also coupled to the OpenFAST free vortex wake model for higher fidelity and multi-turbine capabilities.</p>
 <p><strong>FLORIS</strong> is a low fidelity simulator that includes steady state analytical
 wind turbine wake models.
 While this is explicitly not aerodynamics, this tool is useful for
