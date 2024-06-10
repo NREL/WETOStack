@@ -104,7 +104,5 @@ and Ethan Young co-hosted this workshop.
 
 {download}`Click here to download the slides.<../_static/UserWorkshops2024_SystemsEngineering.pdf>`
 
-Video recording coming soon.
-<!-- 
-```{youtube} ZSkaP9CzqgA
-``` -->
+```{youtube} urab_dN12Ws
+```
