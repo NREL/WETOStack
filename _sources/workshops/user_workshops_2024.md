@@ -96,7 +96,13 @@ mindmap
             openfast_toolbox
 ```
 
-## Systems Engineering Workshop - June 10
+## Workshop Recap, Recordings, and Slides
+
+The workshop recordings are hosted on [YouTube](https://www.youtube.com/playlist?list=PL6ksUtsZI1dwRXeWFCmJT6cEN1xijsHJz),
+and they are embedded on this page.
+A PDF version of the slides that were presented at each workshop are included here, as well.
+
+### Systems Engineering
 
 Rafael Mudafort, Pietro Bortolotti, Garrett Barter, Dan Zalkind, Ernesto Camarena, Jeff Allen,
 and Ethan Young co-hosted this workshop.
