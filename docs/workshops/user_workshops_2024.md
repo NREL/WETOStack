@@ -111,3 +111,13 @@ and Ethan Young co-hosted this workshop.
 
 ```{youtube} urab_dN12Ws
 ```
+
+### Technoeconomic Analysis and Cost Modeling
+
+Rafael Mudafort, Pietro Bortolotti, Garrett Barter, Rob Hammond, Sophie Bredenkamp, and Nick Riccobono
+co-hosted this workshop.
+
+{download}`Click here to download the slides.<../_static/UserWorkshops2024_TEA.pdf>`
+
+```{youtube} keT7KcBHmgM
+```
