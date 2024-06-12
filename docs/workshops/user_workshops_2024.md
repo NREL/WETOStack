@@ -104,18 +104,32 @@ A PDF version of the slides that were presented at each workshop are included he
 
 ### Systems Engineering
 
-Rafael Mudafort, Pietro Bortolotti, Garrett Barter, Dan Zalkind, Ernesto Camarena, Jeff Allen,
-and Ethan Young co-hosted this workshop.
+The sections presented in this workshop are:
+- [WETO Software Stack](https://nrel.github.io/NREL/WETOStack) by Rafael Mudafort
+- [WISDEM](https://github.com/WISDEM/WISDEM) by Pietro Bortolotti
+- [WEIS](https://github.com/NREL/WEIS) by Dan Zalkind
+- [pyNuMAD](https://github.com/sandialabs/pyNuMAD) by Ernesto Camarena
+- [WindSE](https://github.com/NREL/WindSE) by Jeff Allen and Ethan Young
+
+Garrett Barter co-hosted the workshop and facilitated the discussion.
 
 {download}`Click here to download the slides.<../_static/UserWorkshops2024_SystemsEngineering.pdf>`
 
 ```{youtube} urab_dN12Ws
 ```
 
-### Technoeconomic Analysis and Cost Modeling
+### TEA and Cost Modeling
 
-Rafael Mudafort, Pietro Bortolotti, Garrett Barter, Rob Hammond, Sophie Bredenkamp, and Nick Riccobono
-co-hosted this workshop.
+The sections presented in this workshop are:
+- [WETO Software Stack](https://nrel.github.io/NREL/WETOStack) by Rafael Mudafort
+- [LandBOSSE](https://github.com/WISDEM/LandBOSSE) by Rob Hammond
+- [ORBIT](https://github.com/WISDEM/ORBIT​) by Nick Riccobono
+- [CORAL](https://github.com/NREL/CORAL​) by Sophie Bredenkamp
+- [WOMBAT](https://github.com/WISDEM/WOMBAT​) by Rob Hammond
+- [WAVES](https://github.com/NREL/WAVES​) by Rob Hammond
+- [NRWAL](https://github.com/NREL/NRWAL) by Rob Hammond
+
+Garrett Barter co-hosted the workshop and facilitated the discussion.
 
 {download}`Click here to download the slides.<../_static/UserWorkshops2024_TEA.pdf>`
 
