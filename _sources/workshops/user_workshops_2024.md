@@ -120,9 +120,6 @@ Garrett Barter co-hosted the workshop and facilitated the discussion.
 
 ### Technoeconomic Analysis and Cost Modeling
 
-Rob Hammond, Sophie Bredenkamp, and Nick Riccobono
-co-hosted this workshop.
-
 The sections presented in this workshop are:
 - [WETO Software Stack](https://nrel.github.io/NREL/WETOStack) by Rafael Mudafort
 - [LandBOSSE](https://github.com/WISDEM/LandBOSSE) by Rob Hammond
