@@ -118,7 +118,7 @@ Garrett Barter co-hosted the workshop and facilitated the discussion.
 ```{youtube} urab_dN12Ws
 ```
 
-### Technoeconomic Analysis and Cost Modeling
+### TEA and Cost Modeling
 
 The sections presented in this workshop are:
 - [WETO Software Stack](https://nrel.github.io/NREL/WETOStack) by Rafael Mudafort
