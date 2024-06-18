@@ -480,6 +480,156 @@ Instead, they can be filtered by searching for a string with the following Seque
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">yaml</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">datapane</span> <span class="k">as</span> <span class="nn">dp</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">software_attr_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;software_attributes&quot;</span><span class="p">)</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9.19</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">datapane</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">21</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;0.17.0&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="c1"># Public API re-exports</span>
+<span class="ne">---&gt; </span><span class="mi">21</span> <span class="kn">from</span> <span class="nn">.client</span> <span class="kn">import</span> <span class="p">(</span>  <span class="c1"># isort:skip  otherwise circular import issue</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span>     <span class="n">IN_PYTEST</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="n">DPClientError</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="n">DPMode</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="n">enable_logging</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="n">print_debug_info</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span>     <span class="n">get_dp_mode</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span>     <span class="n">set_dp_mode</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="p">)</span>  <span class="c1"># isort:skip  otherwise circular import issue</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="kn">from</span> <span class="nn">.blocks</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span>     <span class="n">HTML</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">33</span>     <span class="n">Attachment</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="n">wrap_block</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span> <span class="kn">from</span> <span class="nn">.processors</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span>     <span class="n">FontChoice</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span>     <span class="n">Formatting</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span>     <span class="n">upload_report</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="p">)</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9.19</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">datapane</span><span class="o">/</span><span class="n">client</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Copyright 2020 StackHut Limited (trading as Datapane)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># SPDX-License-Identifier: Apache-2.0</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># flake8: noqa:F401</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">.exceptions</span> <span class="kn">import</span> <span class="n">DPClientError</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">IN_PYTEST</span><span class="p">,</span> <span class="n">DPMode</span><span class="p">,</span> <span class="n">display_msg</span><span class="p">,</span> <span class="n">enable_logging</span><span class="p">,</span> <span class="n">get_dp_mode</span><span class="p">,</span> <span class="n">log</span><span class="p">,</span> <span class="n">print_debug_info</span><span class="p">,</span> <span class="n">set_dp_mode</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># from .config import init  # isort:skip  otherwise circular import issue</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9.19</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">datapane</span><span class="o">/</span><span class="n">client</span><span class="o">/</span><span class="n">exceptions</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">datapane.common</span> <span class="kn">import</span> <span class="n">DPError</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">def</span> <span class="nf">add_help_text</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="se">\n</span><span class="s2">Please run with `dp.enable_logging()`, restart your Jupyter kernel/Python instance, and/or visit https://www.github.com/datapane/datapane&quot;</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9.19</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">datapane</span><span class="o">/</span><span class="n">common</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span><span class="sd"> Shared code used by client and dp-server</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd"> NOTE - this module should not depend on any client or server specific code and is imported first</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Copyright 2020 StackHut Limited (trading as Datapane)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># SPDX-License-Identifier: Apache-2.0</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># flake8: noqa:F401</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">.datafiles</span> <span class="kn">import</span> <span class="n">ArrowFormat</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">.dp_types</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">ARROW_EXT</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">ARROW_MIMETYPE</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span>     <span class="n">log</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">33</span> <span class="kn">from</span> <span class="nn">.ops_utils</span> <span class="kn">import</span> <span class="n">pushd</span><span class="p">,</span> <span class="n">timestamp</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9.19</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">datapane</span><span class="o">/</span><span class="n">common</span><span class="o">/</span><span class="n">datafiles</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">enum</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">IO</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Union</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">pyarrow</span> <span class="k">as</span> <span class="nn">pa</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">pandas.errors</span> <span class="kn">import</span> <span class="n">ParserError</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9.19</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pandas</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">22</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="k">del</span> <span class="n">_hard_dependencies</span><span class="p">,</span> <span class="n">_dependency</span><span class="p">,</span> <span class="n">_missing_dependencies</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="c1"># numpy compat</span>
+<span class="ne">---&gt; </span><span class="mi">22</span> <span class="kn">from</span> <span class="nn">pandas.compat</span> <span class="kn">import</span> <span class="n">is_numpy_dev</span> <span class="k">as</span> <span class="n">_is_numpy_dev</span>  <span class="c1"># pyright: ignore # noqa:F401</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="kn">from</span> <span class="nn">pandas._libs</span> <span class="kn">import</span> <span class="n">hashtable</span> <span class="k">as</span> <span class="n">_hashtable</span><span class="p">,</span> <span class="n">lib</span> <span class="k">as</span> <span class="n">_lib</span><span class="p">,</span> <span class="n">tslib</span> <span class="k">as</span> <span class="n">_tslib</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9.19</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pandas</span><span class="o">/</span><span class="n">compat</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">18</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TYPE_CHECKING</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="kn">from</span> <span class="nn">pandas._typing</span> <span class="kn">import</span> <span class="n">F</span>
+<span class="ne">---&gt; </span><span class="mi">18</span> <span class="kn">from</span> <span class="nn">pandas.compat.numpy</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">is_numpy_dev</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="n">np_version_under1p21</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="kn">from</span> <span class="nn">pandas.compat.pyarrow</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="n">pa_version_under1p01</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="n">pa_version_under2p0</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span>     <span class="n">pa_version_under9p0</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9.19</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pandas</span><span class="o">/</span><span class="n">compat</span><span class="o">/</span><span class="n">numpy</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span><span class="w"> </span><span class="sd">&quot;&quot;&quot; support numpy compatibility across versions &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">pandas.util.version</span> <span class="kn">import</span> <span class="n">Version</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># numpy versioning</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">_np_version</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">__version__</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9.19</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pandas</span><span class="o">/</span><span class="n">util</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># pyright: reportUnusedImport = false</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">pandas.util._decorators</span> <span class="kn">import</span> <span class="p">(</span>  <span class="c1"># noqa:F401</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">Appender</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">Substitution</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">cache_readonly</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">pandas.core.util.hashing</span> <span class="kn">import</span> <span class="p">(</span>  <span class="c1"># noqa:F401</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">hash_array</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">hash_pandas_object</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9.19</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pandas</span><span class="o">/</span><span class="n">util</span><span class="o">/</span><span class="n">_decorators</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">14</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">Any</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">Callable</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">Mapping</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">cast</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="kn">import</span> <span class="nn">warnings</span>
+<span class="ne">---&gt; </span><span class="mi">14</span> <span class="kn">from</span> <span class="nn">pandas._libs.properties</span> <span class="kn">import</span> <span class="n">cache_readonly</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="kn">from</span> <span class="nn">pandas._typing</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="n">F</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="n">T</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="kn">from</span> <span class="nn">pandas.util._exceptions</span> <span class="kn">import</span> <span class="n">find_stack_level</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.9.19</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pandas</span><span class="o">/</span><span class="n">_libs</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">13</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="s2">&quot;NaT&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="s2">&quot;NaTType&quot;</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="s2">&quot;Interval&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="p">]</span>
+<span class="ne">---&gt; </span><span class="mi">13</span> <span class="kn">from</span> <span class="nn">pandas._libs.interval</span> <span class="kn">import</span> <span class="n">Interval</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="kn">from</span> <span class="nn">pandas._libs.tslibs</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="n">NaT</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="n">NaTType</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span>     <span class="n">iNaT</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/pandas/_libs/interval.pyx:1,</span> in <span class="ni">init pandas._libs.interval</span><span class="nt">()</span>
+
+<span class="ne">ValueError</span>: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+</pre></div>
+</div>
+</div>
 </details>
 </div>
 <section id="general">
@@ -507,75 +657,6 @@ Instead, they can be filtered by searching for a string with the following Seque
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/datapane/common/df_processor.py:26: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
-  elif isinstance(df.index, pd.Int64Index):
-</pre></div>
-</div>
-<div class="output text_html"><style>
-  #dp-4bff24609109478986a3cb5c587b58ba {
-    width: 1px;
-    min-width: 100%;
-  }
-</style>
-<iframe id="dp-4bff24609109478986a3cb5c587b58ba" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot; /&gt;
-
-&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;shortcut icon&quot; sizes=&quot;192x192&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-
-&lt;script src=&quot;https://kit.fontawesome.com/256c714d9a.js&quot;&gt;&lt;/script&gt;
-&lt;link
-  href=&quot;https://fonts.googleapis.com/css?family=Inter:400,500,600,700|Inconsolata|Karla|Rubik&amp;display=swap&quot;
-  rel=&quot;stylesheet&quot;
-/&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/index.css&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/tailwind.css&quot; /&gt;
-&lt;script&gt;
-  // analytics config
-  // TODO -- pass these in as props for consistency?
-  window.dpAppRunner = false;
-  window.dpLocal = true;
-
-  /* construct the view */
-  const htmlHeader = `&lt;style type=&quot;text/css&quot;&gt;:root {
-    --dp-accent-color: #4E46E5;
-    --dp-bg-color: #FFF;
-    --dp-text-align: left;
-    --dp-font-family: Inter, ui-sans-serif, system-ui;
-}&lt;/style&gt;`;
-  window.reportProps = { htmlHeader, isLightProse: false, isOrg: false, mode: &quot;VIEW&quot;, reportWidthClass: &quot;max-w-screen-xl&quot; };
-
-  if (!window.dpAppRunner) {
-      // pass app data via props if in local (static) mode, otherwise this data is fetched from the server
-      window.reportProps[&quot;appData&quot;] = { data: { result: {&quot;view_xml&quot;: &quot;\u003cView version=\&quot;1\&quot; fragment=\&quot;false\&quot;\u003e\u003cDataTable type=\&quot;application/vnd.apache.arrow+binary\&quot; rows=\&quot;27\&quot; columns=\&quot;9\&quot; schema=\&quot;[]\&quot; src=\&quot;ref://dacbbb4e2b\&quot;/\u003e\u003c/View\u003e&quot;, &quot;assets&quot;: {&quot;dacbbb4e2b&quot;: {&quot;src&quot;: &quot;data:application/vnd.apache.arrow+binary;base64,QVJST1cxAAD/////OAoAABQAAAAAAAAAAAAKAA4ABgAFAAgACgAAAAABBAAQAAAAAAAKAAwAAAAEAAgACgAAANAGAAAEAAAAAQAAAAwAAAAIAAwABAAIAAgAAAAIAAAAEAAAAAYAAABwYW5kYXMAAJoGAAB7ImluZGV4X2NvbHVtbnMiOiBbXSwgImNvbHVtbl9pbmRleGVzIjogW10sICJjb2x1bW5zIjogW3sibmFtZSI6ICJpbmRleCIsICJmaWVsZF9uYW1lIjogImluZGV4IiwgInBhbmRhc190eXBlIjogInVuaWNvZGUiLCAibnVtcHlfdHlwZSI6ICJzdHJpbmciLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogImdpdGh1Yl9hY2NvdW50IiwgImZpZWxkX25hbWUiOiAiZ2l0aHViX2FjY291bnQiLCAicGFuZGFzX3R5cGUiOiAiY2F0ZWdvcmljYWwiLCAibnVtcHlfdHlwZSI6ICJpbnQ4IiwgIm1ldGFkYXRhIjogeyJudW1fY2F0ZWdvcmllcyI6IDgsICJvcmRlcmVkIjogZmFsc2V9fSwgeyJuYW1lIjogImdpdGh1Yl9yZXBvIiwgImZpZWxkX25hbWUiOiAiZ2l0aHViX3JlcG8iLCAicGFuZGFzX3R5cGUiOiAidW5pY29kZSIsICJudW1weV90eXBlIjogInN0cmluZyIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAicHJpbWFyeV91c2VzIiwgImZpZWxkX25hbWUiOiAicHJpbWFyeV91c2VzIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiAxMiwgIm9yZGVyZWQiOiBmYWxzZX19LCB7Im5hbWUiOiAiYWN0aXZlX2Z1bmRpbmciLCAiZmllbGRfbmFtZSI6ICJhY3RpdmVfZnVuZGluZyIsICJwYW5kYXNfdHlwZSI6ICJib29sIiwgIm51bXB5X3R5cGUiOiAiYm9vbGVhbiIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAiZGV2ZWxvcG1lbnRfc3RhdHVzIiwgImZpZWxkX25hbWUiOiAiZGV2ZWxvcG1lbnRfc3RhdHVzIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiAzLCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJwcm9ncmFtbWluZ19sYW5ndWFnZSIsICJmaWVsZF9uYW1lIjogInByb2dyYW1taW5nX2xhbmd1YWdlIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiA0LCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJsaWNlbnNlX3R5cGUiLCAiZmllbGRfbmFtZSI6ICJsaWNlbnNlX3R5cGUiLCAicGFuZGFzX3R5cGUiOiAiY2F0ZWdvcmljYWwiLCAibnVtcHlfdHlwZSI6ICJpbnQ4IiwgIm1ldGFkYXRhIjogeyJudW1fY2F0ZWdvcmllcyI6IDYsICJvcmRlcmVkIjogZmFsc2V9fSwgeyJuYW1lIjogImRhdGFfY29sbGVjdGlvbl9tZXRob2RzIiwgImZpZWxkX25hbWUiOiAiZGF0YV9jb2xsZWN0aW9uX21ldGhvZHMiLCAicGFuZGFzX3R5cGUiOiAiY2F0ZWdvcmljYWwiLCAibnVtcHlfdHlwZSI6ICJpbnQ4IiwgIm1ldGFkYXRhIjogeyJudW1fY2F0ZWdvcmllcyI6IDYsICJvcmRlcmVkIjogZmFsc2V9fSwgeyJuYW1lIjogImxhc3RfcmVsZWFzZV9kYXRlIiwgImZpZWxkX25hbWUiOiAibGFzdF9yZWxlYXNlX2RhdGUiLCAicGFuZGFzX3R5cGUiOiAiY2F0ZWdvcmljYWwiLCAibnVtcHlfdHlwZSI6ICJpbnQ4IiwgIm1ldGFkYXRhIjogeyJudW1fY2F0ZWdvcmllcyI6IDIwLCAib3JkZXJlZCI6IGZhbHNlfX1dLCAiY3JlYXRvciI6IHsibGlicmFyeSI6ICJweWFycm93IiwgInZlcnNpb24iOiAiMTYuMS4wIn0sICJwYW5kYXNfdmVyc2lvbiI6ICIx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IjogInVuaWNvZGUiLCAibnVtcHlfdHlwZSI6ICJzdHJpbmciLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogInByaW1hcnlfdXNlcyIsICJmaWVsZF9uYW1lIjogInByaW1hcnlfdXNlcyIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogMTIsICJvcmRlcmVkIjogZmFsc2V9fSwgeyJuYW1lIjogImFjdGl2ZV9mdW5kaW5nIiwgImZpZWxkX25hbWUiOiAiYWN0aXZlX2Z1bmRpbmciLCAicGFuZGFzX3R5cGUiOiAiYm9vbCIsICJudW1weV90eXBlIjogImJvb2xlYW4iLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogImRldmVsb3BtZW50X3N0YXR1cyIsICJmaWVsZF9uYW1lIjogImRldmVsb3BtZW50X3N0YXR1cyIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogMywgIm9yZGVyZWQiOiBmYWxzZX19LCB7Im5hbWUiOiAicHJvZ3JhbW1pbmdfbGFuZ3VhZ2UiLCAiZmllbGRfbmFtZSI6ICJwcm9ncmFtbWluZ19sYW5ndWFnZSIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogNCwgIm9yZGVyZWQiOiBmYWxzZX19LCB7Im5hbWUiOiAibGljZW5zZV90eXBlIiwgImZpZWxkX25hbWUiOiAibGljZW5zZV90eXBlIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiA2LCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJkYXRhX2NvbGxlY3Rpb25fbWV0aG9kcyIsICJmaWVsZF9uYW1lIjogImRhdGFfY29sbGVjdGlvbl9tZXRob2RzIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiA2LCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJsYXN0X3JlbGVhc2VfZGF0ZSIsICJmaWVsZF9uYW1lIjogImxhc3RfcmVsZWFzZV9kYXRlIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiAyMCwgIm9yZGVyZWQiOiBmYWxzZX19XSwgImNyZWF0b3IiOiB7ImxpYnJhcnkiOiAicHlhcnJvdyIsICJ2ZXJzaW9uIjogIjE2LjEuMCJ9LCAicGFuZGFzX3ZlcnNpb24iOiAiMS41LjMifQAACgAAAAgDAACcAgAAXAIAAAACAADMAQAAdAEAAAwBAAC4AAAAXAAAAAQAAACY/f//AAABBRQAAABEAAAAJAAAAAQAAAAAAAAAEQAAAGxhc3RfcmVsZWFzZV9kYXRlAAAAIP7//wwAAAAGAAAAAAAAAIz9//8AAAABCAAAAEz9///s/f//AAABBRQAAABIAAAAKAAAAAQAAAAAAAAAFwAAAGRhdGFfY29sbGVjdGlvbl9tZXRob2RzAHj+//8MAAAABQAAAAAAAADk/f//AAAAAQgAAACk/f//RP7//wAAAQUUAAAAQAAAACAAAAAEAAAAAAAAAAwAAABsaWNlbnNlX3R5cGUAAAAAyP7//wwAAAAEAAAAAAAAADT+//8AAAABCAAAAPT9//+U/v//AAABBRQAAABUAAAAMAAAAAQAAAAAAAAAFAAAAHByb2dyYW1taW5nX2xhbmd1YWdlAAAAAAgAFAAIAAQACAAAABAAAAADAAAAAAAAAAAAAACY/v//AAAAAQgAAABY/v//+P7//wAAAQUUAAAARAAAACQAAAAEAAAAAAAAABIAAABkZXZlbG9wbWVudF9zdGF0dXMAAID///8MAAAAAgAAAAAAAADs/v//AAAAAQgAAACs/v//5P7//wAAAQYQAAAAIAAAAAQAAAAAAAAADgAAAGFjdGl2ZV9mdW5kaW5nAADc/v//fP///wAAAQUUAAAASAAAACgAAAAEAAAAAAAAAAwAAABwcmltYXJ5X3VzZXMAAAAACAAQAAgABAAIAAAADAAAAAEAAAAAAAAAdP///wAAAAEIAAAANP///2z///8AAAEFEAAAABwAAAAEAAAAAAAAAAsAAABnaXRodWJfcmVwbwBg////EAAYAAgABgAHAAwAEAAUABAAAAAAAAEFFAAAAEgAAAAoAAAABAAAAAAAAAAOAAAAZ2l0aHViX2FjY291bnQAAAgACAAAAAQACAAAAAwAAAAIAAwACAAHAAgAAAAAAAABCAAAAMj///8QABQACAAGAAcADAAAABAAEAAAAAAAAQUQAAAAHAAAAAQAAAAAAAAABQAAAGluZGV4AAAABAAEAAQAAAAICwAAQVJST1cx&quot;, &quot;hash&quot;: &quot;dacbbb4e2b&quot;, &quot;size&quot;: 12440, &quot;mime&quot;: &quot;application/vnd.apache.arrow+binary&quot;}}} }};
-  }
-&lt;/script&gt;
-&lt;script type=&quot;module&quot;&gt;
-  import { mountReport } from &quot;https://datapane-cdn.com/v0.17.0/report/index.es.js&quot;;
-  mountReport(window.reportProps);
-&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;script&gt;
-    window.isIPythonEmbed = true;
-  &lt;/script&gt;
-  &lt;body&gt;
-    &lt;main class=&quot;max-w-screen-xl w-full mx-auto&quot;&gt;
-      &lt;div id=&quot;report&quot; class=&quot;w-full&quot;&gt;&lt;/div&gt;
-    &lt;/main&gt;
-    &lt;script src=&quot;https://datapane-cdn.com/v0.17.0/assets/iframeResizer.contentWindow.min.js&quot;&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-" style="border: none">
-</iframe>
-<script type="module">
-  import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-4bff24609109478986a3cb5c587b58ba");
-</script>
-</div></div>
 </div>
 </section>
 <section id="turbine-modeling">
@@ -602,77 +683,6 @@ Instead, they can be filtered by searching for a string with the following Seque
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1844/3124008716.py:10: FutureWarning: In a future version of pandas all arguments of DataFrame.any and Series.any will be keyword-only.
-  turbine_df = turbine_df[ pd.DataFrame( turbine_df[&quot;scope&quot;].tolist() ).isin( [&quot;turbine&quot;, &quot;any&quot;] ).any(1).values ]
-/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/datapane/common/df_processor.py:26: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
-  elif isinstance(df.index, pd.Int64Index):
-</pre></div>
-</div>
-<div class="output text_html"><style>
-  #dp-8a63d38ca022470a9058806e99bd6feb {
-    width: 1px;
-    min-width: 100%;
-  }
-</style>
-<iframe id="dp-8a63d38ca022470a9058806e99bd6feb" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot; /&gt;
-
-&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;shortcut icon&quot; sizes=&quot;192x192&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-
-&lt;script src=&quot;https://kit.fontawesome.com/256c714d9a.js&quot;&gt;&lt;/script&gt;
-&lt;link
-  href=&quot;https://fonts.googleapis.com/css?family=Inter:400,500,600,700|Inconsolata|Karla|Rubik&amp;display=swap&quot;
-  rel=&quot;stylesheet&quot;
-/&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/index.css&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/tailwind.css&quot; /&gt;
-&lt;script&gt;
-  // analytics config
-  // TODO -- pass these in as props for consistency?
-  window.dpAppRunner = false;
-  window.dpLocal = true;
-
-  /* construct the view */
-  const htmlHeader = `&lt;style type=&quot;text/css&quot;&gt;:root {
-    --dp-accent-color: #4E46E5;
-    --dp-bg-color: #FFF;
-    --dp-text-align: left;
-    --dp-font-family: Inter, ui-sans-serif, system-ui;
-}&lt;/style&gt;`;
-  window.reportProps = { htmlHeader, isLightProse: false, isOrg: false, mode: &quot;VIEW&quot;, reportWidthClass: &quot;max-w-screen-xl&quot; };
-
-  if (!window.dpAppRunner) {
-      // pass app data via props if in local (static) mode, otherwise this data is fetched from the server
-      window.reportProps[&quot;appData&quot;] = { data: { result: {&quot;view_xml&quot;: &quot;\u003cView version=\&quot;1\&quot; fragment=\&quot;false\&quot;\u003e\u003cDataTable type=\&quot;application/vnd.apache.arrow+binary\&quot; rows=\&quot;23\&quot; columns=\&quot;7\&quot; schema=\&quot;[]\&quot; src=\&quot;ref://1142a8e4ac\&quot;/\u003e\u003c/View\u003e&quot;, &quot;assets&quot;: {&quot;1142a8e4ac&quot;: {&quot;src&quot;: &quot;data:application/vnd.apache.arrow+binary;base64,QVJST1cxAAD/////gAcAABAAAAAAAAoADgAGAAUACAAKAAAAAAEEABAAAAAAAAoADAAAAAQACAAKAAAADAUAAAQAAAABAAAADAAAAAgADAAEAAgACAAAAAgAAAAQAAAABgAAAHBhbmRhcwAA1gQAAHsiaW5kZXhfY29sdW1ucyI6IFtdLCAiY29sdW1uX2luZGV4ZXMiOiBbXSwgImNvbHVtbnMiOiBbeyJuYW1lIjogImluZGV4IiwgImZpZWxkX25hbWUiOiAiaW5kZXgiLCAicGFuZGFzX3R5cGUiOiAidW5pY29kZSIsICJudW1weV90eXBlIjogInN0cmluZyIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAic2NvcGUiLCAiZmllbGRfbmFtZSI6ICJzY29wZSIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogNywgIm9yZGVyZWQiOiBmYWxzZX19LCB7Im5hbWUiOiAic3lzdGVtX2xvY2F0aW9uIiwgImZpZWxkX25hbWUiOiAic3lzdGVtX2xvY2F0aW9uIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiAzLCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJ0aW1lX2RvbWFpbiIsICJmaWVsZF9uYW1lIjogInRpbWVfZG9tYWluIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiA1LCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJ0dXJiaW5lX21vZGVsIiwgImZpZWxkX25hbWUiOiAidHVyYmluZV9tb2RlbCIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogMTAsICJvcmRl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ZXgiLCAicGFuZGFzX3R5cGUiOiAidW5pY29kZSIsICJudW1weV90eXBlIjogInN0cmluZyIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAic2NvcGUiLCAiZmllbGRfbmFtZSI6ICJzY29wZSIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogNywgIm9yZGVyZWQiOiBmYWxzZX19LCB7Im5hbWUiOiAic3lzdGVtX2xvY2F0aW9uIiwgImZpZWxkX25hbWUiOiAic3lzdGVtX2xvY2F0aW9uIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiAzLCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJ0aW1lX2RvbWFpbiIsICJmaWVsZF9uYW1lIjogInRpbWVfZG9tYWluIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiA1LCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJ0dXJiaW5lX21vZGVsIiwgImZpZWxkX25hbWUiOiAidHVyYmluZV9tb2RlbCIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogMTAsICJvcmRlcmVkIjogZmFsc2V9fSwgeyJuYW1lIjogImxvYWRzIiwgImZpZWxkX25hbWUiOiAibG9hZHMiLCAicGFuZGFzX3R5cGUiOiAiYm9vbCIsICJudW1weV90eXBlIjogImJvb2xlYW4iLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogImRlc2lnbl9vcHRpbWl6YXRpb24iLCAiZmllbGRfbmFtZSI6ICJkZXNpZ25fb3B0aW1pemF0aW9uIiwgInBhbmRhc190eXBlIjogImJvb2wiLCAibnVtcHlfdHlwZSI6ICJib29sZWFuIiwgIm1ldGFkYXRhIjogbnVsbH0sIHsibmFtZSI6ICJjb3N0cyIsICJmaWVsZF9uYW1lIjogImNvc3RzIiwgInBhbmRhc190eXBlIjogImJvb2wiLCAibnVtcHlfdHlwZSI6ICJib29sZWFuIiwgIm1ldGFkYXRhIjogbnVsbH1dLCAiY3JlYXRvciI6IHsibGlicmFyeSI6ICJweWFycm93IiwgInZlcnNpb24iOiAiMTYuMS4wIn0sICJwYW5kYXNfdmVyc2lvbiI6ICIxLjUuMyJ9AAAIAAAAGAIAALQBAABEAQAA7AAAAJQAAABoAAAAMAAAAAQAAAAY/v//AAABBhAAAAAYAAAABAAAAAAAAAAFAAAAY29zdHMAAAAI/v//QP7//wAAAQYQAAAAJAAAAAQAAAAAAAAAEwAAAGRlc2lnbl9vcHRpbWl6YXRpb24APP7//3T+//8AAAEGEAAAABgAAAAEAAAAAAAAAAUAAABsb2FkcwAAAGT+///8/v//AAABBRQAAABEAAAAIAAAAAQAAAAAAAAADQAAAHR1cmJpbmVfbW9kZWwAAABY////EAAAAAMAAAAAAAAAAAAAAPj+//8AAAABCAAAALj+//9Q////AAABBRQAAABEAAAAJAAAAAQAAAAAAAAACwAAAHRpbWVfZG9tYWluAAgAEAAIAAQACAAAAAwAAAACAAAAAAAAAEz///8AAAABCAAAAAz///+k////AAABBRQAAABMAAAAKAAAAAQAAAAAAAAADwAAAHN5c3RlbV9sb2NhdGlvbgAIABQACAAEAAgAAAAQAAAAAQAAAAAAAAAAAAAAqP///wAAAAEIAAAAaP///xAAGAAIAAYABwAMABAAFAAQAAAAAAABBRQAAABAAAAAIAAAAAQAAAAAAAAABQAAAHNjb3BlAAAACAAIAAAABAAIAAAADAAAAAgADAAIAAcACAAAAAAAAAEIAAAAyP///xAAFAAIAAYABwAMAAAAEAAQAAAAAAABBRAAAAAcAAAABAAAAAAAAAAFAAAAaW5kZXgAAAAEAAQABAAAABAIAABBUlJPVzE=&quot;, &quot;hash&quot;: &quot;1142a8e4ac&quot;, &quot;size&quot;: 8324, &quot;mime&quot;: &quot;application/vnd.apache.arrow+binary&quot;}}} }};
-  }
-&lt;/script&gt;
-&lt;script type=&quot;module&quot;&gt;
-  import { mountReport } from &quot;https://datapane-cdn.com/v0.17.0/report/index.es.js&quot;;
-  mountReport(window.reportProps);
-&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;script&gt;
-    window.isIPythonEmbed = true;
-  &lt;/script&gt;
-  &lt;body&gt;
-    &lt;main class=&quot;max-w-screen-xl w-full mx-auto&quot;&gt;
-      &lt;div id=&quot;report&quot; class=&quot;w-full&quot;&gt;&lt;/div&gt;
-    &lt;/main&gt;
-    &lt;script src=&quot;https://datapane-cdn.com/v0.17.0/assets/iframeResizer.contentWindow.min.js&quot;&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-" style="border: none">
-</iframe>
-<script type="module">
-  import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-8a63d38ca022470a9058806e99bd6feb");
-</script>
-</div></div>
 </div>
 </section>
 <section id="farm-modeling">
@@ -700,77 +710,6 @@ Instead, they can be filtered by searching for a string with the following Seque
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1844/267071324.py:11: FutureWarning: In a future version of pandas all arguments of DataFrame.any and Series.any will be keyword-only.
-  farm_df = farm_df[ pd.DataFrame( farm_df[&quot;scope&quot;].tolist() ).isin( [&quot;farm&quot;, &quot;any&quot;] ).any(1).values ]
-/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/datapane/common/df_processor.py:26: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
-  elif isinstance(df.index, pd.Int64Index):
-</pre></div>
-</div>
-<div class="output text_html"><style>
-  #dp-752287e9b0334e869a7aff438118162c {
-    width: 1px;
-    min-width: 100%;
-  }
-</style>
-<iframe id="dp-752287e9b0334e869a7aff438118162c" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot; /&gt;
-
-&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;shortcut icon&quot; sizes=&quot;192x192&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-
-&lt;script src=&quot;https://kit.fontawesome.com/256c714d9a.js&quot;&gt;&lt;/script&gt;
-&lt;link
-  href=&quot;https://fonts.googleapis.com/css?family=Inter:400,500,600,700|Inconsolata|Karla|Rubik&amp;display=swap&quot;
-  rel=&quot;stylesheet&quot;
-/&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/index.css&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/tailwind.css&quot; /&gt;
-&lt;script&gt;
-  // analytics config
-  // TODO -- pass these in as props for consistency?
-  window.dpAppRunner = false;
-  window.dpLocal = true;
-
-  /* construct the view */
-  const htmlHeader = `&lt;style type=&quot;text/css&quot;&gt;:root {
-    --dp-accent-color: #4E46E5;
-    --dp-bg-color: #FFF;
-    --dp-text-align: left;
-    --dp-font-family: Inter, ui-sans-serif, system-ui;
-}&lt;/style&gt;`;
-  window.reportProps = { htmlHeader, isLightProse: false, isOrg: false, mode: &quot;VIEW&quot;, reportWidthClass: &quot;max-w-screen-xl&quot; };
-
-  if (!window.dpAppRunner) {
-      // pass app data via props if in local (static) mode, otherwise this data is fetched from the server
-      window.reportProps[&quot;appData&quot;] = { data: { result: {&quot;view_xml&quot;: &quot;\u003cView version=\&quot;1\&quot; fragment=\&quot;false\&quot;\u003e\u003cDataTable type=\&quot;application/vnd.apache.arrow+binary\&quot; rows=\&quot;16\&quot; columns=\&quot;8\&quot; schema=\&quot;[]\&quot; src=\&quot;ref://1295a099f8\&quot;/\u003e\u003c/View\u003e&quot;, &quot;assets&quot;: {&quot;1295a099f8&quot;: {&quot;src&quot;: &quot;data:application/vnd.apache.arrow+binary;base64,QVJST1cxAAD/////cAgAABQAAAAAAAAAAAAKAA4ABgAFAAgACgAAAAABBAAQAAAAAAAKAAwAAAAEAAgACgAAAKgFAAAEAAAAAQAAAAwAAAAIAAwABAAIAAgAAAAIAAAAEAAAAAYAAABwYW5kYXMAAHIFAAB7ImluZGV4X2NvbHVtbnMiOiBbXSwgImNvbHVtbl9pbmRleGVzIjogW10sICJjb2x1bW5zIjogW3sibmFtZSI6ICJpbmRleCIsICJmaWVsZF9uYW1lIjogImluZGV4IiwgInBhbmRhc190eXBlIjogInVuaWNvZGUiLCAibnVtcHlfdHlwZSI6ICJzdHJpbmciLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogInNjb3BlIiwgImZpZWxkX25hbWUiOiAic2NvcGUiLCAicGFuZGFzX3R5cGUiOiAiY2F0ZWdvcmljYWwiLCAibnVtcHlfdHlwZSI6ICJpbnQ4IiwgIm1ldGFkYXRhIjogeyJudW1fY2F0ZWdvcmllcyI6IDYsICJvcmRlcmVkIjogZmFsc2V9fSwgeyJuYW1lIjogInN5c3RlbV9sb2NhdGlvbiIsICJmaWVsZF9uYW1lIjogInN5c3RlbV9sb2NhdGlvbiIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogMywgIm9yZGVyZWQiOiBmYWxzZX19LCB7Im5hbWUiOiAidGltZV9kb21haW4iLCAiZmllbGRfbmFtZSI6ICJ0aW1lX2RvbWFpbiIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogNiwgIm9yZGVyZWQiOiBmYWxzZX19LCB7Im5hbWUiOiAidHVyYmluZV9tb2RlbCIsICJmaWVsZF9uYW1lIjogInR1cmJpbmVfbW9kZWwiLCAicGFuZGFzX3R5cGUiOiAiY2F0ZWdvcmljYWwiLCAibnVtcHlfdHlwZSI6ICJpbnQ4IiwgIm1ldGFkYXRhIjogeyJudW1fY2F0ZWdvcmllcyI6IDksICJv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bWUiOiAidGltZV9kb21haW4iLCAiZmllbGRfbmFtZSI6ICJ0aW1lX2RvbWFpbiIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogNiwgIm9yZGVyZWQiOiBmYWxzZX19LCB7Im5hbWUiOiAidHVyYmluZV9tb2RlbCIsICJmaWVsZF9uYW1lIjogInR1cmJpbmVfbW9kZWwiLCAicGFuZGFzX3R5cGUiOiAiY2F0ZWdvcmljYWwiLCAibnVtcHlfdHlwZSI6ICJpbnQ4IiwgIm1ldGFkYXRhIjogeyJudW1fY2F0ZWdvcmllcyI6IDksICJvcmRlcmVkIjogZmFsc2V9fSwgeyJuYW1lIjogIndha2VfbW9kZWwiLCAiZmllbGRfbmFtZSI6ICJ3YWtlX21vZGVsIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiA1LCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJsb2FkcyIsICJmaWVsZF9uYW1lIjogImxvYWRzIiwgInBhbmRhc190eXBlIjogImJvb2wiLCAibnVtcHlfdHlwZSI6ICJib29sZWFuIiwgIm1ldGFkYXRhIjogbnVsbH0sIHsibmFtZSI6ICJkZXNpZ25fb3B0aW1pemF0aW9uIiwgImZpZWxkX25hbWUiOiAiZGVzaWduX29wdGltaXphdGlvbiIsICJwYW5kYXNfdHlwZSI6ICJib29sIiwgIm51bXB5X3R5cGUiOiAiYm9vbGVhbiIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAiY29zdHMiLCAiZmllbGRfbmFtZSI6ICJjb3N0cyIsICJwYW5kYXNfdHlwZSI6ICJib29sIiwgIm51bXB5X3R5cGUiOiAiYm9vbGVhbiIsICJtZXRhZGF0YSI6IG51bGx9XSwgImNyZWF0b3IiOiB7ImxpYnJhcnkiOiAicHlhcnJvdyIsICJ2ZXJzaW9uIjogIjE2LjEuMCJ9LCAicGFuZGFzX3ZlcnNpb24iOiAiMS41LjMifQAACQAAAGgCAAAEAgAAlAEAADwBAADkAAAAlAAAAGgAAAAwAAAABAAAAMz9//8AAAEGEAAAABgAAAAEAAAAAAAAAAUAAABjb3N0cwAAALz9///0/f//AAABBhAAAAAkAAAABAAAAAAAAAATAAAAZGVzaWduX29wdGltaXphdGlvbgDw/f//KP7//wAAAQYQAAAAGAAAAAQAAAAAAAAABQAAAGxvYWRzAAAAGP7//7D+//8AAAEFFAAAADwAAAAcAAAABAAAAAAAAAAKAAAAd2FrZV9tb2RlbAAAYP///wwAAAAEAAAAAAAAAKT+//8AAAABCAAAAGT+///8/v//AAABBRQAAABEAAAAIAAAAAQAAAAAAAAADQAAAHR1cmJpbmVfbW9kZWwAAABY////EAAAAAMAAAAAAAAAAAAAAPj+//8AAAABCAAAALj+//9Q////AAABBRQAAABEAAAAJAAAAAQAAAAAAAAACwAAAHRpbWVfZG9tYWluAAgAEAAIAAQACAAAAAwAAAACAAAAAAAAAEz///8AAAABCAAAAAz///+k////AAABBRQAAABMAAAAKAAAAAQAAAAAAAAADwAAAHN5c3RlbV9sb2NhdGlvbgAIABQACAAEAAgAAAAQAAAAAQAAAAAAAAAAAAAAqP///wAAAAEIAAAAaP///xAAGAAIAAYABwAMABAAFAAQAAAAAAABBRQAAABAAAAAIAAAAAQAAAAAAAAABQAAAHNjb3BlAAAACAAIAAAABAAIAAAADAAAAAgADAAIAAcACAAAAAAAAAEIAAAAyP///xAAFAAIAAYABwAMAAAAEAAQAAAAAAABBRAAAAAcAAAABAAAAAAAAAAFAAAAaW5kZXgAAAAEAAQABAAAABAJAABBUlJPVzE=&quot;, &quot;hash&quot;: &quot;1295a099f8&quot;, &quot;size&quot;: 9316, &quot;mime&quot;: &quot;application/vnd.apache.arrow+binary&quot;}}} }};
-  }
-&lt;/script&gt;
-&lt;script type=&quot;module&quot;&gt;
-  import { mountReport } from &quot;https://datapane-cdn.com/v0.17.0/report/index.es.js&quot;;
-  mountReport(window.reportProps);
-&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;script&gt;
-    window.isIPythonEmbed = true;
-  &lt;/script&gt;
-  &lt;body&gt;
-    &lt;main class=&quot;max-w-screen-xl w-full mx-auto&quot;&gt;
-      &lt;div id=&quot;report&quot; class=&quot;w-full&quot;&gt;&lt;/div&gt;
-    &lt;/main&gt;
-    &lt;script src=&quot;https://datapane-cdn.com/v0.17.0/assets/iframeResizer.contentWindow.min.js&quot;&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-" style="border: none">
-</iframe>
-<script type="module">
-  import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-752287e9b0334e869a7aff438118162c");
-</script>
-</div></div>
 </div>
 </section>
 <section id="cost-modeling">
@@ -795,75 +734,6 @@ Instead, they can be filtered by searching for a string with the following Seque
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/datapane/common/df_processor.py:26: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
-  elif isinstance(df.index, pd.Int64Index):
-</pre></div>
-</div>
-<div class="output text_html"><style>
-  #dp-538a827ed1ee41ac88d656f72e72810d {
-    width: 1px;
-    min-width: 100%;
-  }
-</style>
-<iframe id="dp-538a827ed1ee41ac88d656f72e72810d" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot; /&gt;
-
-&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;shortcut icon&quot; sizes=&quot;192x192&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-
-&lt;script src=&quot;https://kit.fontawesome.com/256c714d9a.js&quot;&gt;&lt;/script&gt;
-&lt;link
-  href=&quot;https://fonts.googleapis.com/css?family=Inter:400,500,600,700|Inconsolata|Karla|Rubik&amp;display=swap&quot;
-  rel=&quot;stylesheet&quot;
-/&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/index.css&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/tailwind.css&quot; /&gt;
-&lt;script&gt;
-  // analytics config
-  // TODO -- pass these in as props for consistency?
-  window.dpAppRunner = false;
-  window.dpLocal = true;
-
-  /* construct the view */
-  const htmlHeader = `&lt;style type=&quot;text/css&quot;&gt;:root {
-    --dp-accent-color: #4E46E5;
-    --dp-bg-color: #FFF;
-    --dp-text-align: left;
-    --dp-font-family: Inter, ui-sans-serif, system-ui;
-}&lt;/style&gt;`;
-  window.reportProps = { htmlHeader, isLightProse: false, isOrg: false, mode: &quot;VIEW&quot;, reportWidthClass: &quot;max-w-screen-xl&quot; };
-
-  if (!window.dpAppRunner) {
-      // pass app data via props if in local (static) mode, otherwise this data is fetched from the server
-      window.reportProps[&quot;appData&quot;] = { data: { result: {&quot;view_xml&quot;: &quot;\u003cView version=\&quot;1\&quot; fragment=\&quot;false\&quot;\u003e\u003cDataTable type=\&quot;application/vnd.apache.arrow+binary\&quot; rows=\&quot;7\&quot; columns=\&quot;5\&quot; schema=\&quot;[]\&quot; src=\&quot;ref://db1e9e190e\&quot;/\u003e\u003c/View\u003e&quot;, &quot;assets&quot;: {&quot;db1e9e190e&quot;: {&quot;src&quot;: &quot;data:application/vnd.apache.arrow+binary;base64,QVJST1cxAAD/////kAUAABQAAAAAAAAAAAAKAA4ABgAFAAgACgAAAAABBAAQAAAAAAAKAAwAAAAEAAgACgAAAMgDAAAEAAAAAQAAAAwAAAAIAAwABAAIAAgAAAAIAAAAEAAAAAYAAABwYW5kYXMAAJMDAAB7ImluZGV4X2NvbHVtbnMiOiBbXSwgImNvbHVtbl9pbmRleGVzIjogW10sICJjb2x1bW5zIjogW3sibmFtZSI6ICJpbmRleCIsICJmaWVsZF9uYW1lIjogImluZGV4IiwgInBhbmRhc190eXBlIjogInVuaWNvZGUiLCAibnVtcHlfdHlwZSI6ICJzdHJpbmciLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogInNjb3BlIiwgImZpZWxkX25hbWUiOiAic2NvcGUiLCAicGFuZGFzX3R5cGUiOiAiY2F0ZWdvcmljYWwiLCAibnVtcHlfdHlwZSI6ICJpbnQ4IiwgIm1ldGFkYXRhIjogeyJudW1fY2F0ZWdvcmllcyI6IDUsICJvcmRlcmVkIjogZmFsc2V9fSwgeyJuYW1lIjogInN5c3RlbV9sb2NhdGlvbiIsICJmaWVsZF9uYW1lIjogInN5c3RlbV9sb2NhdGlvbiIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogMSwgIm9yZGVyZWQiOiBmYWxzZX19LCB7Im5hbWUiOiAiZGVzaWduX29wdGltaXphdGlvbiIsICJmaWVsZF9uYW1lIjogImRlc2lnbl9vcHRpbWl6YXRpb24iLCAicGFuZGFzX3R5cGUiOiAiYm9vbCIsICJudW1weV90eXBlIjogImJvb2xlYW4iLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogImNvc3RzIiwgImZpZWxkX25hbWUiOiAiY29zdHMiLCAicGFuZGFzX3R5cGUiOiAiYm9vbCIsICJudW1weV90eXBlIjogImJvb2xlYW4iLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogInRhZ3MiLCAiZmllbGRfbmFtZSI6ICJ0YWdzIiwgInBhbmRhc190eXBlIjogInVuaWNv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YXNlZCcsICdsb2dpc3RpY3MnLCAnYXNzZW1ibHknLCAnaW5zdGFsbGF0aW9uJywgJ2xjb2UnXVsnYmFsYW5jZSBvZiBzdGF0aW9uJywgJ2JhbGFuY2Ugb2YgcGxhbnQnLCAnZml4ZWQgYm90dG9tJywgJ2Zsb2F0aW5nJywgJ2xvZ2lzdGljcycsICdhc3NlbWJseScsICdpbnN0YWxsYXRpb24nLCAnbGNvZSddWydzZWN0aW9uYWwgcHJvcGVydHkgcHJlcHJvY2Vzc2luZycsICdtYXNzIGJhc2VkIGNvc3QnLCAnam9pbnRlZCBtdWx0aS1ib2R5JywgJ211bHRpLXR1cmJpbmUnLCAnbm9ubGluZWFyIG9yIGxpbmVhciB0aW1lIGRvbWFpbiBzaW11bGF0aW9uJywgJ3N0ZWFkeSBzdGF0ZSBzaW11bGF0aW9uJywgJ2h5ZHJva2luZXRpYyBmbHVpZCBjb3JyZWN0aW9ucycsICdsaW5lYXJpemF0aW9uIGFuZCBleHBvcnQgdG8gcHNldWRhbCBzcGVjdHJhbCBtZXRob2RzJywgJ2F1dG9tYXRlZCBjYW1wYmVsbCBkaWFncmFtIGdlbmVyYXRpb24nLCAnY29tcG9zaXRlIGxldmVsIHN0cmVzcycsICd1bHRpbWF0ZSBmYWlsdXJlIGNoZWNrcycsICdidWNrbGluZyBjaGVja3MnLCAncmFpbmZsb3cgY291bnRpbmcnLCAibWluZXIncyBydWxlIGZhdGlndWUgYWN1bXVsYXRpb24iLCAnYXV0b21hdGljIGdyYWRpZW50cycsICdWVEsgb3V0cHV0cyddWydtaWQtZmlkZWxpdHkgZW5naW5lZXJpbmcgbW9kZWxzJywgJ211bHRpZGlzY2lwbGluYXJ5IGRlc2lnbiBvcHRpbWl6YXRpb24nLCAnY29udHJvbHMgY28tZGVzaWduJ11bJ2xvdy1maWRlbGl0eSBjb25jZXB0dWFsIG1vZGVscycsICdtdWx0aWRpc2NpcGxpbmFyeSBkZXNpZ24gb3B0aW1pemF0aW9uJ11bJ29wZXJhdGlvbnMgYW5kIG1haW50ZW5hbmNlJywgJ2Rpc2NyZXRlIGV2ZW50IHNpbXVsYXRpb24nXQAAAAAA/////wAAAAAQAAAADAAUAAYACAAMABAADAAAAAAABABsAAAAKAAAAAQAAAABAAAAmAcAAAAAAACgAQAAAAAAAMAEAAAAAAAAAAAAAAIAAACgBQAAAAAAALAAAAAAAAAAgAAAAAAAAADQBgAAAAAAALgAAAAAAAAAEAAAAAAAAAAAAAoADAAAAAQACAAKAAAAyAMAAAQAAAABAAAADAAAAAgADAAEAAgACAAAAAgAAAAQAAAABgAAAHBhbmRhcwAAkwMAAHsiaW5kZXhfY29sdW1ucyI6IFtdLCAiY29sdW1uX2luZGV4ZXMiOiBbXSwgImNvbHVtbnMiOiBbeyJuYW1lIjogImluZGV4IiwgImZpZWxkX25hbWUiOiAiaW5kZXgiLCAicGFuZGFzX3R5cGUiOiAidW5pY29kZSIsICJudW1weV90eXBlIjogInN0cmluZyIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAic2NvcGUiLCAiZmllbGRfbmFtZSI6ICJzY29wZSIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogNSwgIm9yZGVyZWQiOiBmYWxzZX19LCB7Im5hbWUiOiAic3lzdGVtX2xvY2F0aW9uIiwgImZpZWxkX25hbWUiOiAic3lzdGVtX2xvY2F0aW9uIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiAxLCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJkZXNpZ25fb3B0aW1pemF0aW9uIiwgImZpZWxkX25hbWUiOiAiZGVzaWduX29wdGltaXphdGlvbiIsICJwYW5kYXNfdHlwZSI6ICJib29sIiwgIm51bXB5X3R5cGUiOiAiYm9vbGVhbiIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAiY29zdHMiLCAiZmllbGRfbmFtZSI6ICJjb3N0cyIsICJwYW5kYXNfdHlwZSI6ICJib29sIiwgIm51bXB5X3R5cGUiOiAiYm9vbGVhbiIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAidGFncyIsICJmaWVsZF9uYW1lIjogInRhZ3MiLCAicGFuZGFzX3R5cGUiOiAidW5pY29kZSIsICJudW1weV90eXBlIjogInN0cmluZyIsICJtZXRhZGF0YSI6IG51bGx9XSwgImNyZWF0b3IiOiB7ImxpYnJhcnkiOiAicHlhcnJvdyIsICJ2ZXJzaW9uIjogIjE2LjEuMCJ9LCAicGFuZGFzX3ZlcnNpb24iOiAiMS41LjMifQAGAAAAaAEAAAQBAACUAAAAXAAAADAAAAAEAAAAwP7//wAAAQUQAAAAGAAAAAQAAAAAAAAABAAAAHRhZ3MAAAAAsP7//+j+//8AAAEGEAAAABgAAAAEAAAAAAAAAAUAAABjb3N0cwAAANj+//8Q////AAABBhAAAAAkAAAABAAAAAAAAAATAAAAZGVzaWduX29wdGltaXphdGlvbgAM////pP///wAAAQUUAAAATAAAACgAAAAEAAAAAAAAAA8AAABzeXN0ZW1fbG9jYXRpb24ACAAUAAgABAAIAAAAEAAAAAEAAAAAAAAAAAAAAKj///8AAAABCAAAAGj///8QABgACAAGAAcADAAQABQAEAAAAAAAAQUUAAAAQAAAACAAAAAEAAAAAAAAAAUAAABzY29wZQAAAAgACAAAAAQACAAAAAwAAAAIAAwACAAHAAgAAAAAAAABCAAAAMj///8QABQACAAGAAcADAAAABAAEAAAAAAAAQUQAAAAHAAAAAQAAAAAAAAABQAAAGluZGV4AAAABAAEAAQAAADoBQAAQVJST1cx&quot;, &quot;hash&quot;: &quot;db1e9e190e&quot;, &quot;size&quot;: 6808, &quot;mime&quot;: &quot;application/vnd.apache.arrow+binary&quot;}}} }};
-  }
-&lt;/script&gt;
-&lt;script type=&quot;module&quot;&gt;
-  import { mountReport } from &quot;https://datapane-cdn.com/v0.17.0/report/index.es.js&quot;;
-  mountReport(window.reportProps);
-&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;script&gt;
-    window.isIPythonEmbed = true;
-  &lt;/script&gt;
-  &lt;body&gt;
-    &lt;main class=&quot;max-w-screen-xl w-full mx-auto&quot;&gt;
-      &lt;div id=&quot;report&quot; class=&quot;w-full&quot;&gt;&lt;/div&gt;
-    &lt;/main&gt;
-    &lt;script src=&quot;https://datapane-cdn.com/v0.17.0/assets/iframeResizer.contentWindow.min.js&quot;&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-" style="border: none">
-</iframe>
-<script type="module">
-  import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-538a827ed1ee41ac88d656f72e72810d");
-</script>
-</div></div>
 </div>
 </section>
 <section id="full-suite-modeling-comparison">
@@ -891,75 +761,6 @@ Instead, they can be filtered by searching for a string with the following Seque
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/datapane/common/df_processor.py:26: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
-  elif isinstance(df.index, pd.Int64Index):
-</pre></div>
-</div>
-<div class="output text_html"><style>
-  #dp-fbf4a2f478b2451597c51f2868718588 {
-    width: 1px;
-    min-width: 100%;
-  }
-</style>
-<iframe id="dp-fbf4a2f478b2451597c51f2868718588" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot; /&gt;
-
-&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;shortcut icon&quot; sizes=&quot;192x192&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-
-&lt;script src=&quot;https://kit.fontawesome.com/256c714d9a.js&quot;&gt;&lt;/script&gt;
-&lt;link
-  href=&quot;https://fonts.googleapis.com/css?family=Inter:400,500,600,700|Inconsolata|Karla|Rubik&amp;display=swap&quot;
-  rel=&quot;stylesheet&quot;
-/&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/index.css&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/tailwind.css&quot; /&gt;
-&lt;script&gt;
-  // analytics config
-  // TODO -- pass these in as props for consistency?
-  window.dpAppRunner = false;
-  window.dpLocal = true;
-
-  /* construct the view */
-  const htmlHeader = `&lt;style type=&quot;text/css&quot;&gt;:root {
-    --dp-accent-color: #4E46E5;
-    --dp-bg-color: #FFF;
-    --dp-text-align: left;
-    --dp-font-family: Inter, ui-sans-serif, system-ui;
-}&lt;/style&gt;`;
-  window.reportProps = { htmlHeader, isLightProse: false, isOrg: false, mode: &quot;VIEW&quot;, reportWidthClass: &quot;max-w-screen-xl&quot; };
-
-  if (!window.dpAppRunner) {
-      // pass app data via props if in local (static) mode, otherwise this data is fetched from the server
-      window.reportProps[&quot;appData&quot;] = { data: { result: {&quot;view_xml&quot;: &quot;\u003cView version=\&quot;1\&quot; fragment=\&quot;false\&quot;\u003e\u003cDataTable type=\&quot;application/vnd.apache.arrow+binary\&quot; rows=\&quot;27\&quot; columns=\&quot;9\&quot; schema=\&quot;[]\&quot; src=\&quot;ref://17a2e1ca25\&quot;/\u003e\u003c/View\u003e&quot;, &quot;assets&quot;: {&quot;17a2e1ca25&quot;: {&quot;src&quot;: &quot;data:application/vnd.apache.arrow+binary;base64,QVJST1cxAAD/////CAkAABQAAAAAAAAAAAAKAA4ABgAFAAgACgAAAAABBAAQAAAAAAAKAAwAAAAEAAgACgAAABQGAAAEAAAAAQAAAAwAAAAIAAwABAAIAAgAAAAIAAAAEAAAAAYAAABwYW5kYXMAAN8FAAB7ImluZGV4X2NvbHVtbnMiOiBbXSwgImNvbHVtbl9pbmRleGVzIjogW10sICJjb2x1bW5zIjogW3sibmFtZSI6ICJpbmRleCIsICJmaWVsZF9uYW1lIjogImluZGV4IiwgInBhbmRhc190eXBlIjogInVuaWNvZGUiLCAibnVtcHlfdHlwZSI6ICJzdHJpbmciLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogInNjb3BlIiwgImZpZWxkX25hbWUiOiAic2NvcGUiLCAicGFuZGFzX3R5cGUiOiAiY2F0ZWdvcmljYWwiLCAibnVtcHlfdHlwZSI6ICJpbnQ4IiwgIm1ldGFkYXRhIjogeyJudW1fY2F0ZWdvcmllcyI6IDksICJvcmRlcmVkIjogZmFsc2V9fSwgeyJuYW1lIjogInN5c3RlbV9sb2NhdGlvbiIsICJmaWVsZF9uYW1lIjogInN5c3RlbV9sb2NhdGlvbiIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogMywgIm9yZGVyZWQiOiBmYWxzZX19LCB7Im5hbWUiOiAidGltZV9kb21haW4iLCAiZmllbGRfbmFtZSI6ICJ0aW1lX2RvbWFpbiIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogNiwgIm9yZGVyZWQiOiBmYWxzZX19LCB7Im5hbWUiOiAidHVyYmluZV9tb2RlbCIsICJmaWVsZF9uYW1lIjogInR1cmJpbmVfbW9kZWwiLCAicGFuZGFzX3R5cGUiOiAiY2F0ZWdvcmljYWwiLCAibnVtcHlfdHlwZSI6ICJpbnQ4IiwgIm1ldGFkYXRhIjogeyJudW1fY2F0ZWdvcmllcyI6IDEyLCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJ3YWtlX21vZGVsIiwgImZpZWxkX25hbWUiOiAid2FrZV9tb2RlbCIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogNSwgIm9yZGVyZWQiOiBmYWxzZX19LCB7Im5hbWUiOiAibG9hZHMiLCAiZmllbGRfbmFtZSI6ICJsb2FkcyIsICJwYW5kYXNfdHlwZSI6ICJib29sIiwgIm51bXB5X3R5cGUiOiAiYm9vbGVhbiIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAiZGVzaWduX29wdGltaXphdGlvbiIsICJmaWVsZF9uYW1lIjogImRlc2lnbl9vcHRpbWl6YXRpb24iLCAicGFuZGFzX3R5cGUiOiAiYm9vbCIsICJudW1weV90eXBlIjogImJvb2xlYW4iLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogImNvc3RzIiwgImZpZWxkX25hbWUiOiAiY29zdHMiLCAicGFuZGFzX3R5cGUiOiAiYm9vbCIsICJudW1weV90eXBlIjogImJvb2xlYW4iLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogInRhZ3MiLCAiZmllbGRfbmFtZSI6ICJ0YWdzIiwgInBhbmRhc190eXBlIjogInVuaWNvZGUiLCAibnVtcHlfdHlwZSI6ICJzdHJpbmciLCAibWV0YWRhdGEiOiBudWxsfV0sICJjcmVhdG9yIjogeyJsaWJyYXJ5IjogInB5YXJyb3ciLCAidmVyc2lvbiI6ICIxNi4xLjAifSwgInBhbmRhc192ZXJzaW9uIjogIjEuNS4zIn0ACgAAAJQCAAAwAgAAwAEAAGgBAAAQAQAAwAAAAJQAAABcAAAAMAAAAAQAAACk/f//AAABBRAAAAAYAAAABAAAAAAAAAAEAAAAdGFncwAAAACU/f//zP3//wAAAQYQAAAAGAAAAAQAAAAAAAAABQAAAGNvc3RzAAAAvP3///T9//8AAAEGEAAAACQAAAAEAAAAAAAAABMAAABkZXNpZ25fb3B0aW1pemF0aW9uAPD9//8o/v//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dXJlZCBhZGFwdGl2ZS1tZXNoJywgJ2luY29tcHJlc3NpYmxlIGZsb3cnLCAnYWN0dWF0b3IgZGlzaycsICdhY3R1YXRvciBsaW5lJywgJ2xhcmdlIGVkZHkgc2ltdWxhdGlvbicsICdsZXMnXVsnZGlzdHJpYnV0ZWQgd2luZCcsICdvYnN0YWNsZSBtb2RlbGluZycsICdhdG1vc3BoZXJpYyBtb2RlbGluZycsICdyZXNvdXJjZSBlc3RpbWF0aW9uJywgJ3R1cmJpbmcgc2l0aW5nJ11bJ2Rpc3RyaWJ1dGVkIHdpbmQnLCAnZGlzdHJpYnV0ZWQgZnV0dXJlcycsICd0ZWNobmljYWwgcG90ZW50aWFsJywgJ2FubnVhbGl6ZWQgZW5lcmd5IHByb2R1Y3Rpdml0eSddWydhZGFwdGl2ZSBtZXNoIHJlZmluZW1lbnQnLCAnbWFzc2l2ZWx5IHBhcmFsbGVsJywgJ2Jsb2NrLXN0cnVjdHVyZWQgYWRhcHRpdmUtbWVzaCcsICdtb2lzdCBjb21wcmVzc2libGUgZmxvdycsICdwcmVjaXBpdGF0aW9uJywgJ21pY3JvcGh5c2ljcyBzY2hlbWUnLCAncGxhbmV0YXJ5IGJvdW5kYXJ5IGxheWVyIHNjaGVtZScsICdyZWFsIG1ldGVvcm9sb2dpY2FsIGRhdGEgaW5pdGlhbC9ib3VuZGFyeSBjb25kaXRpb25zJ11bJ2R5bmFtaWMgd2FrZSBtZWFuZGVyaW5nJywgJ3BvbGFyIHdha2UnLCAnY3VybGVkIHdha2UnLCAnd2FrZS1hZGRlZCB0dXJidWxlbmNlJ11bJ3N0ZWFkeSBzdGF0ZSBhbmFseXRpY2FsIGVuZ2luZWVyaW5nIG1vZGVscycsICdzY2FkYSBkYXRhIGFuYWx5c2lzJywgJ2ZpbHRlcmluZycsICdlc3RpbWF0aW9uJywgJ3dpbmQgZmFybSB2aXN1YWxpemF0aW9uJywgJ2ZhdWx0IGRldGVjdGlvbiddWydzdGVhZHkgc3RhdGUnLCAnYW5hbHl0aWNhbCB3YWtlIG1vZGVsJywgJ2dhdXNzaWFuIHdha2UnLCAnZW5naW5lZXJpbmcgbW9kZWwnXVsnYW1yLXdpbmQnLCAnbGFyZ2UgZWRkeSBzaW11bGF0aW9uJywgJ3dpbmQgZmFybSBmbG93IGNvbnRyb2wnXVsnaHlicmlkIG9wdGltaXphdGlvbiBwZXJmb3JtYW5jZSBwbGF0Zm9ybScsICdoeWJyaWQgZW5lcmd5IHN5c3RlbSBkZXNpZ24nLCAncmVuZXdhYmxlIGVuZXJneSBwb2xpY3kgYW5hbHlzaXMnLCAnc3lzdGVtIHNpemluZycsICdzeXN0ZW0gY29zdCddWydiYWxhbmNlIG9mIHN0YXRpb24nLCAnYmFsYW5jZSBvZiBwbGFudCcsICdvbnNob3JlJywgJ2xhbmQtYmFzZWQnLCAnbG9naXN0aWNzJywgJ2Fzc2VtYmx5JywgJ2luc3RhbGxhdGlvbicsICdsY29lJ11bJ2xhcmdlIGVkZHkgc2ltdWxhdGlvbicsICd1bnN0cnVjdHVyZWQnLCAnbWFzc2l2ZWx5IHBhcmFsbGVsJywgJ2luY29tcHJlc3NpYmxlIGZsb3cnLCAnYmxhZGUgcmVzb2x2ZWQgc2ltdWxhdGlvbicsICdyZXlub2xkcyBhdmVyYWdlZCBuYXZpZXIgc3Rva2VzJywgJ3JhbnMnXVsnbW9kdWxhcml6YXRpb24gZnJhbWV3b3JrJywgJ25vbmxpbmVhcicsICdhY3R1YXRvciBsaW5lIG1ldGhvZCcsICdibGFkZSBlbGVtZW50IG1vbWVudHVtIHRoZW9yeScsICdmcmVlIHZvcnRleC13YWtlJywgJ3Vuc3RlYWR5IGFpcmZvaWwgYWVyb2R5bmFtaWNzJywgJ2dlb21ldHJpY2FsbHkgZXhhY3QgYmVhbSB0aGVvcnknLCAnbXVsdGktYm9keScsICdtb2RhbCBkeW5hbWljcycsICdmaW5pdGUgZWxlbWVudCBtZXRob2QnLCAnQ3JhaWctQmFtcHRvbiByZWR1Y3Rpb24nLCAnUG90ZW50aWFsLWZsb3cgdGhlb3J5JywgJ1N0cmlwLXRoZW9yeScsICdvcGVyYXRpbmctcG9pbnQgZGV0ZXJtaW5hdGlvbicsICdsaW5lYXJpemF0aW9uJ11bJ29wZXJhdGlvbmFsIGFuYWx5c2lzJywgJ2dhcCBhbmFseXNpcycsICdhbm51YWwgZW5lcmd5IHByb2R1Y3Rpb24nLCAnbW9udGUgY2FybG8nLCAnbG9uZyB0ZXJtJywgJ3R1cmJpbmUgaWRlYWwgZW5lcmd5JywgJ3dha2UgbG9zc2VzJywgJ21hY2hpbmUgbGVhcm5pbmcnXVsnZ2VvbWV0cmljYWxseSBleGFjdCBiZWFtIHRoZW9yeScsICdub25saW5lYXIgZmluaXRlIGVsZW1lbnRzJywgJ0dQVScsICdDVURBJ11bJ2JhbGFuY2Ugb2Ygc3RhdGlvbicsICdiYWxhbmNlIG9mIHBsYW50JywgJ2ZpeGVkIGJvdHRvbScsICdmbG9hdGluZycsICdsb2dpc3RpY3MnLCAnYXNzZW1ibHknLCAnaW5zdGFsbGF0aW9uJywgJ2xjb2UnXVsnc2VjdGlvbmFsIHByb3BlcnR5IHByZXByb2Nlc3NpbmcnLCAnbWFzcyBiYXNlZCBjb3N0JywgJ2pvaW50ZWQgbXVsdGktYm9keScsICdtdWx0aS10dXJiaW5lJywgJ25vbmxpbmVhciBvciBsaW5lYXIgdGltZSBkb21haW4gc2ltdWxhdGlvbicsICdzdGVhZHkgc3RhdGUgc2ltdWxhdGlvbicsICdoeWRyb2tpbmV0aWMgZmx1aWQgY29ycmVjdGlvbnMnLCAnbGluZWFyaXphdGlvbiBhbmQgZXhwb3J0IHRvIHBzZXVkYWwgc3BlY3RyYWwgbWV0aG9kcycsICdhdXRvbWF0ZWQgY2FtcGJlbGwgZGlhZ3JhbSBnZW5lcmF0aW9uJywgJ2NvbXBvc2l0ZSBsZXZlbCBzdHJlc3MnLCAndWx0aW1hdGUgZmFpbHVyZSBjaGVja3MnLCAnYnVja2xpbmcgY2hlY2tzJywgJ3JhaW5mbG93IGNvdW50aW5nJywgIm1pbmVyJ3MgcnVsZSBmYXRpZ3VlIGFjdW11bGF0aW9uIiwgJ2F1dG9tYXRpYyBncmFkaWVudHMnLCAnVlRLIG91dHB1dHMnXVsnRWxhc3RpY2l0eSB0aGVvcnknLCAnRXVsZXIgYmVybm91bGxpIGJlYW0gdGhlb3J5JywgJ1RpbW9zaGVua28gYmVhbSB0aGVvcnknLCAnQ2xhc3NpY2FsIGxhbWluYXRlZCBwbGF0ZSB0aGVvcnknLCAnRmlyc3Qtb3JkZXIgc2hlYXItZGVmb3JtYXRpb24gcGxhdGUgdGhlb3J5J11bJ1JlZmVyZW5jZSBjb250cm9sbGVyJywgJ0F1dG9tYXRlZCB0dW5pbmcnXVsnMkQgcGxhbmFyIG1lc2hlcycsICdzbGVuZGVyIGNvbXBvc2l0ZSBiZWFtcyddWydpbmNvbXByZXNzaWJsZSBmbG93JywgJ2FjdHVhdG9yIGRpc2snLCAnYWN0dWF0b3IgbGluZScsICdsYXJnZSBlZGR5IHNpbXVsYXRpb24nLCAnbGVzJ11bJ21pZC1maWRlbGl0eSBlbmdpbmVlcmluZyBtb2RlbHMnLCAnbXVsdGlkaXNjaXBsaW5hcnkgZGVzaWduIG9wdGltaXphdGlvbicsICdjb250cm9scyBjby1kZXNpZ24nXVsnc3RlYWR5IHN0YXRlIFJleW5vbGRzLWF2ZXJhZ2VkIE5hdmllci1TdG9rZXMgKFJBTlMpJywgJ3Vuc3RlYWR5LCBsYXJnZS1lZGR5IHNpbXVsYXRpb25zIChMRVMpIHVzaW5nIE5hdmllci1TdG9rZXMnXVsnbG93LWZpZGVsaXR5IGNvbmNlcHR1YWwgbW9kZWxzJywgJ211bHRpZGlzY2lwbGluYXJ5IGRlc2lnbiBvcHRpbWl6YXRpb24nXVsnb3BlcmF0aW9ucyBhbmQgbWFpbnRlbmFuY2UnLCAnZGlzY3JldGUgZXZlbnQgc2ltdWxhdGlvbiddWyd3aW5kIHRvb2xraXQnLCAnYXRtb3NwaGVyaWMgbW9kZWxpbmcnLCAncmVzb3VyY2UgZXN0aW1hdGlvbicsICd3aW5kIGludGVncmF0aW9uIG5hdGlvbmFsIGRhdGFzZXQnXQAAAAAA/////wAAAAAQAAAADAAUAAYACAAMABAADAAAAAAABAC0AAAAKAAAAAQAAAABAAAAMBAAAAAAAABgAgAAAAAAAHgPAAAAAAAAAAAAAAUAAAAYCQAAAAAAALAAAAAAAAAACAEAAAAAAADQCgAAAAAAALgAAAAAAAAAOAAAAAAAAADACwAAAAAAALgAAAAAAAAAcAAAAAAAAADoDAAAAAAAALgAAAAAAAAAYAEAAAAAAAAADwAAAAAAALgAAAAAAAAAeAAAAAAAAAAAAAoADAAAAAQACAAKAAAAFAYAAAQAAAABAAAADAAAAAgADAAEAAgACAAAAAgAAAAQAAAABgAAAHBhbmRhcwAA3wUAAHsiaW5kZXhfY29sdW1ucyI6IFtdLCAiY29sdW1uX2luZGV4ZXMiOiBbXSwgImNvbHVtbnMiOiBbeyJuYW1lIjogImluZGV4IiwgImZpZWxkX25hbWUiOiAiaW5kZXgiLCAicGFuZGFzX3R5cGUiOiAidW5pY29kZSIsICJudW1weV90eXBlIjogInN0cmluZyIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAic2NvcGUiLCAiZmllbGRfbmFtZSI6ICJzY29wZSIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogOSwgIm9yZGVyZWQiOiBmYWxzZX19LCB7Im5hbWUiOiAic3lzdGVtX2xvY2F0aW9uIiwgImZpZWxkX25hbWUiOiAic3lzdGVtX2xvY2F0aW9uIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiAzLCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJ0aW1lX2RvbWFpbiIsICJmaWVsZF9uYW1lIjogInRpbWVfZG9tYWluIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiA2LCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJ0dXJiaW5lX21vZGVsIiwgImZpZWxkX25hbWUiOiAidHVyYmluZV9tb2RlbCIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogMTIsICJvcmRlcmVkIjogZmFsc2V9fSwgeyJuYW1lIjogIndha2VfbW9kZWwiLCAiZmllbGRfbmFtZSI6ICJ3YWtlX21vZGVsIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiA1LCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJsb2FkcyIsICJmaWVsZF9uYW1lIjogImxvYWRzIiwgInBhbmRhc190eXBlIjogImJvb2wiLCAibnVtcHlfdHlwZSI6ICJib29sZWFuIiwgIm1ldGFkYXRhIjogbnVsbH0sIHsibmFtZSI6ICJkZXNpZ25fb3B0aW1pemF0aW9uIiwgImZpZWxkX25hbWUiOiAiZGVzaWduX29wdGltaXphdGlvbiIsICJwYW5kYXNfdHlwZSI6ICJib29sIiwgIm51bXB5X3R5cGUiOiAiYm9vbGVhbiIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAiY29zdHMiLCAiZmllbGRfbmFtZSI6ICJjb3N0cyIsICJwYW5kYXNfdHlwZSI6ICJib29sIiwgIm51bXB5X3R5cGUiOiAiYm9vbGVhbiIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAidGFncyIsICJmaWVsZF9uYW1lIjogInRhZ3MiLCAicGFuZGFzX3R5cGUiOiAidW5pY29kZSIsICJudW1weV90eXBlIjogInN0cmluZyIsICJtZXRhZGF0YSI6IG51bGx9XSwgImNyZWF0b3IiOiB7ImxpYnJhcnkiOiAicHlhcnJvdyIsICJ2ZXJzaW9uIjogIjE2LjEuMCJ9LCAicGFuZGFzX3ZlcnNpb24iOiAiMS41LjMifQAKAAAAlAIAADACAADAAQAAaAEAABABAADAAAAAlAAAAFwAAAAwAAAABAAAAKT9//8AAAEFEAAAABgAAAAEAAAAAAAAAAQAAAB0YWdzAAAAAJT9///M/f//AAABBhAAAAAYAAAABAAAAAAAAAAFAAAAY29zdHMAAAC8/f//9P3//wAAAQYQAAAAJAAAAAQAAAAAAAAAEwAAAGRlc2lnbl9vcHRpbWl6YXRpb24A8P3//yj+//8AAAEGEAAAABgAAAAEAAAAAAAAAAUAAABsb2FkcwAAABj+//+w/v//AAABBRQAAAA8AAAAHAAAAAQAAAAAAAAACgAAAHdha2VfbW9kZWwAAGD///8MAAAABAAAAAAAAACk/v//AAAAAQgAAABk/v///P7//wAAAQUUAAAARAAAACAAAAAEAAAAAAAAAA0AAAB0dXJiaW5lX21vZGVsAAAAWP///xAAAAADAAAAAAAAAAAAAAD4/v//AAAAAQgAAAC4/v//UP///wAAAQUUAAAARAAAACQAAAAEAAAAAAAAAAsAAAB0aW1lX2RvbWFpbgAIABAACAAEAAgAAAAMAAAAAgAAAAAAAABM////AAAAAQgAAAAM////pP///wAAAQUUAAAATAAAACgAAAAEAAAAAAAAAA8AAABzeXN0ZW1fbG9jYXRpb24ACAAUAAgABAAIAAAAEAAAAAEAAAAAAAAAAAAAAKj///8AAAABCAAAAGj///8QABgACAAGAAcADAAQABQAEAAAAAAAAQUUAAAAQAAAACAAAAAEAAAAAAAAAAUAAABzY29wZQAAAAgACAAAAAQACAAAAAwAAAAIAAwACAAHAAgAAAAAAAABCAAAAMj///8QABQACAAGAAcADAAAABAAEAAAAAAAAQUQAAAAHAAAAAQAAAAAAAAABQAAAGluZGV4AAAABAAEAAQAAACoCQAAQVJST1cx&quot;, &quot;hash&quot;: &quot;17a2e1ca25&quot;, &quot;size&quot;: 14936, &quot;mime&quot;: &quot;application/vnd.apache.arrow+binary&quot;}}} }};
-  }
-&lt;/script&gt;
-&lt;script type=&quot;module&quot;&gt;
-  import { mountReport } from &quot;https://datapane-cdn.com/v0.17.0/report/index.es.js&quot;;
-  mountReport(window.reportProps);
-&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;script&gt;
-    window.isIPythonEmbed = true;
-  &lt;/script&gt;
-  &lt;body&gt;
-    &lt;main class=&quot;max-w-screen-xl w-full mx-auto&quot;&gt;
-      &lt;div id=&quot;report&quot; class=&quot;w-full&quot;&gt;&lt;/div&gt;
-    &lt;/main&gt;
-    &lt;script src=&quot;https://datapane-cdn.com/v0.17.0/assets/iframeResizer.contentWindow.min.js&quot;&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-" style="border: none">
-</iframe>
-<script type="module">
-  import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-fbf4a2f478b2451597c51f2868718588");
-</script>
-</div></div>
 </div>
 </section>
 <section id="distribution">
@@ -982,75 +783,6 @@ Instead, they can be filtered by searching for a string with the following Seque
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/datapane/common/df_processor.py:26: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
-  elif isinstance(df.index, pd.Int64Index):
-</pre></div>
-</div>
-<div class="output text_html"><style>
-  #dp-178adda252d0437399d137440e54dc17 {
-    width: 1px;
-    min-width: 100%;
-  }
-</style>
-<iframe id="dp-178adda252d0437399d137440e54dc17" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot; /&gt;
-
-&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;shortcut icon&quot; sizes=&quot;192x192&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-
-&lt;script src=&quot;https://kit.fontawesome.com/256c714d9a.js&quot;&gt;&lt;/script&gt;
-&lt;link
-  href=&quot;https://fonts.googleapis.com/css?family=Inter:400,500,600,700|Inconsolata|Karla|Rubik&amp;display=swap&quot;
-  rel=&quot;stylesheet&quot;
-/&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/index.css&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/tailwind.css&quot; /&gt;
-&lt;script&gt;
-  // analytics config
-  // TODO -- pass these in as props for consistency?
-  window.dpAppRunner = false;
-  window.dpLocal = true;
-
-  /* construct the view */
-  const htmlHeader = `&lt;style type=&quot;text/css&quot;&gt;:root {
-    --dp-accent-color: #4E46E5;
-    --dp-bg-color: #FFF;
-    --dp-text-align: left;
-    --dp-font-family: Inter, ui-sans-serif, system-ui;
-}&lt;/style&gt;`;
-  window.reportProps = { htmlHeader, isLightProse: false, isOrg: false, mode: &quot;VIEW&quot;, reportWidthClass: &quot;max-w-screen-xl&quot; };
-
-  if (!window.dpAppRunner) {
-      // pass app data via props if in local (static) mode, otherwise this data is fetched from the server
-      window.reportProps[&quot;appData&quot;] = { data: { result: {&quot;view_xml&quot;: &quot;\u003cView version=\&quot;1\&quot; fragment=\&quot;false\&quot;\u003e\u003cDataTable type=\&quot;application/vnd.apache.arrow+binary\&quot; rows=\&quot;27\&quot; columns=\&quot;4\&quot; schema=\&quot;[]\&quot; src=\&quot;ref://71384ca7c8\&quot;/\u003e\u003c/View\u003e&quot;, &quot;assets&quot;: {&quot;71384ca7c8&quot;: {&quot;src&quot;: &quot;data:application/vnd.apache.arrow+binary;base64,QVJST1cxAAD/////oAUAABAAAAAAAAoADgAGAAUACAAKAAAAAAEEABAAAAAAAAoADAAAAAQACAAKAAAAxAMAAAQAAAABAAAADAAAAAgADAAEAAgACAAAAAgAAAAQAAAABgAAAHBhbmRhcwAAjgMAAHsiaW5kZXhfY29sdW1ucyI6IFtdLCAiY29sdW1uX2luZGV4ZXMiOiBbXSwgImNvbHVtbnMiOiBbeyJuYW1lIjogImluZGV4IiwgImZpZWxkX25hbWUiOiAiaW5kZXgiLCAicGFuZGFzX3R5cGUiOiAidW5pY29kZSIsICJudW1weV90eXBlIjogInN0cmluZyIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAic3VwcG9ydGVkX3BsYXRmb3JtcyIsICJmaWVsZF9uYW1lIjogInN1cHBvcnRlZF9wbGF0Zm9ybXMiLCAicGFuZGFzX3R5cGUiOiAiY2F0ZWdvcmljYWwiLCAibnVtcHlfdHlwZSI6ICJpbnQ4IiwgIm1ldGFkYXRhIjogeyJudW1fY2F0ZWdvcmllcyI6IDYsICJvcmRlcmVkIjogZmFsc2V9fSwgeyJuYW1lIjogInBhY2thZ2VfbWFuYWdlciIsICJmaWVsZF9uYW1lIjogInBhY2thZ2VfbWFuYWdlciIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogOCwgIm9yZGVyZWQiOiBmYWxzZX19LCB7Im5hbWUiOiAicGFja2FnZV9tYW5hZ2VyX3VybCIsICJmaWVsZF9uYW1lIjogInBhY2thZ2VfbWFuYWdlcl91cmwiLCAicGFuZGFzX3R5cGUiOiAiY2F0ZWdvcmljYWwiLCAibnVtcHlfdHlwZSI6ICJpbnQ4IiwgIm1ldGFkYXRhIjogeyJudW1fY2F0ZWdvcmllcyI6IDEyLCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJpbnN0YWxsYXRpb25fY29tcGxleGl0eSIsICJmaWVsZF9uYW1lIjogImluc3RhbGxhdGlvbl9jb21wbGV4aXR5IiwgInBhbmRhc190eXBlIjogInVpbnQ4IiwgIm51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&quot;, &quot;hash&quot;: &quot;71384ca7c8&quot;, &quot;size&quot;: 7064, &quot;mime&quot;: &quot;application/vnd.apache.arrow+binary&quot;}}} }};
-  }
-&lt;/script&gt;
-&lt;script type=&quot;module&quot;&gt;
-  import { mountReport } from &quot;https://datapane-cdn.com/v0.17.0/report/index.es.js&quot;;
-  mountReport(window.reportProps);
-&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;script&gt;
-    window.isIPythonEmbed = true;
-  &lt;/script&gt;
-  &lt;body&gt;
-    &lt;main class=&quot;max-w-screen-xl w-full mx-auto&quot;&gt;
-      &lt;div id=&quot;report&quot; class=&quot;w-full&quot;&gt;&lt;/div&gt;
-    &lt;/main&gt;
-    &lt;script src=&quot;https://datapane-cdn.com/v0.17.0/assets/iframeResizer.contentWindow.min.js&quot;&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-" style="border: none">
-</iframe>
-<script type="module">
-  import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-178adda252d0437399d137440e54dc17");
-</script>
-</div></div>
 </div>
 </section>
 <section id="documentation">
@@ -1080,75 +812,6 @@ Instead, they can be filtered by searching for a string with the following Seque
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/datapane/common/df_processor.py:26: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
-  elif isinstance(df.index, pd.Int64Index):
-</pre></div>
-</div>
-<div class="output text_html"><style>
-  #dp-f5662f94d8de4ae4b431ba8144ab9032 {
-    width: 1px;
-    min-width: 100%;
-  }
-</style>
-<iframe id="dp-f5662f94d8de4ae4b431ba8144ab9032" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot; /&gt;
-
-&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;shortcut icon&quot; sizes=&quot;192x192&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-
-&lt;script src=&quot;https://kit.fontawesome.com/256c714d9a.js&quot;&gt;&lt;/script&gt;
-&lt;link
-  href=&quot;https://fonts.googleapis.com/css?family=Inter:400,500,600,700|Inconsolata|Karla|Rubik&amp;display=swap&quot;
-  rel=&quot;stylesheet&quot;
-/&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/index.css&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/tailwind.css&quot; /&gt;
-&lt;script&gt;
-  // analytics config
-  // TODO -- pass these in as props for consistency?
-  window.dpAppRunner = false;
-  window.dpLocal = true;
-
-  /* construct the view */
-  const htmlHeader = `&lt;style type=&quot;text/css&quot;&gt;:root {
-    --dp-accent-color: #4E46E5;
-    --dp-bg-color: #FFF;
-    --dp-text-align: left;
-    --dp-font-family: Inter, ui-sans-serif, system-ui;
-}&lt;/style&gt;`;
-  window.reportProps = { htmlHeader, isLightProse: false, isOrg: false, mode: &quot;VIEW&quot;, reportWidthClass: &quot;max-w-screen-xl&quot; };
-
-  if (!window.dpAppRunner) {
-      // pass app data via props if in local (static) mode, otherwise this data is fetched from the server
-      window.reportProps[&quot;appData&quot;] = { data: { result: {&quot;view_xml&quot;: &quot;\u003cView version=\&quot;1\&quot; fragment=\&quot;false\&quot;\u003e\u003cDataTable type=\&quot;application/vnd.apache.arrow+binary\&quot; rows=\&quot;27\&quot; columns=\&quot;11\&quot; schema=\&quot;[]\&quot; src=\&quot;ref://af21f9daca\&quot;/\u003e\u003c/View\u003e&quot;, &quot;assets&quot;: {&quot;af21f9daca&quot;: {&quot;src&quot;: &quot;data:application/vnd.apache.arrow+binary;base64,QVJST1cxAAD/////2AkAABAAAAAAAAoADgAGAAUACAAKAAAAAAEEABAAAAAAAAoADAAAAAQACAAKAAAA6AYAAAQAAAABAAAADAAAAAgADAAEAAgACAAAAAgAAAAQAAAABgAAAHBhbmRhcwAAsQYAAHsiaW5kZXhfY29sdW1ucyI6IFtdLCAiY29sdW1uX2luZGV4ZXMiOiBbXSwgImNvbHVtbnMiOiBbeyJuYW1lIjogImluZGV4IiwgImZpZWxkX25hbWUiOiAiaW5kZXgiLCAicGFuZGFzX3R5cGUiOiAidW5pY29kZSIsICJudW1weV90eXBlIjogInN0cmluZyIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAiZG9jdW1lbnRhdGlvbl91cmwiLCAiZmllbGRfbmFtZSI6ICJkb2N1bWVudGF0aW9uX3VybCIsICJwYW5kYXNfdHlwZSI6ICJ1bmljb2RlIiwgIm51bXB5X3R5cGUiOiAic3RyaW5nIiwgIm1ldGFkYXRhIjogbnVsbH0sIHsibmFtZSI6ICJoYXNfdXNlcl9kb2NzIiwgImZpZWxkX25hbWUiOiAiaGFzX3VzZXJfZG9jcyIsICJwYW5kYXNfdHlwZSI6ICJib29sIiwgIm51bXB5X3R5cGUiOiAiYm9vbGVhbiIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAiaGFzX2RldmVsb3Blcl9kb2NzIiwgImZpZWxkX25hbWUiOiAiaGFzX2RldmVsb3Blcl9kb2NzIiwgInBhbmRhc190eXBlIjogImJvb2wiLCAibnVtcHlfdHlwZSI6ICJib29sZWFuIiwgIm1ldGFkYXRhIjogbnVsbH0sIHsibmFtZSI6ICJoYXNfYXBpX2RvY3MiLCAiZmllbGRfbmFtZSI6ICJoYXNfYXBpX2RvY3MiLCAicGFuZGFzX3R5cGUiOiAiYm9vbCIsICJudW1weV90eXBlIjogImJvb2xlYW4iLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogImhhc19jbGlfZG9jcyIsICJmaWVsZF9uYW1lIjogImhhc19jbGlfZG9jcyIsICJwYW5kYXNfdHlwZSI6ICJib29sIiwgIm51bXB5X3R5cGUiOiAiYm9vbGVhbiIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAiaGFzX2luc3RhbGxhdGlvbl9kb2NzIiwgImZpZWxkX25hbWUiOiAiaGFzX2luc3RhbGxhdGlvbl9kb2NzIiwgInBhbmRhc190eXBlIjogImJvb2wiLCAibnVtcHlfdHlwZSI6ICJib29sZWFuIiwgIm1ldGFkYXRhIjogbnVsbH0sIHsibmFtZSI6ICJoYXNfZ2V0dGluZ19zdGFydGVkX2RvY3MiLCAiZmllbGRfbmFtZSI6ICJoYXNfZ2V0dGluZ19zdGFydGVkX2RvY3MiLCAicGFuZGFzX3R5cGUiOiAiYm9vbCIsICJudW1weV90eXBlIjogImJvb2xlYW4iLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogImhhc19leGFtcGxlc190dXRvcmlhbHMiLCAiZmllbGRfbmFtZSI6ICJoYXNfZXhhbXBsZXNfdHV0b3JpYWxzIiwgInBhbmRhc190eXBlIjogImJvb2wiLCAibnVtcHlfdHlwZSI6ICJib29sZWFuIiwgIm1ldGFkYXRhIjogbnVsbH0sIHsibmFtZSI6ICJoYXNfZGVzaWduX2ludGVudF9zdGF0ZW1lbnQiLCAiZmllbGRfbmFtZSI6ICJoYXNfZGVzaWduX2ludGVudF9zdGF0ZW1lbnQiLCAicGFuZGFzX3R5cGUiOiAiYm9vbCIsICJudW1weV90eXBlIjogImJvb2xlYW4iLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogInJlYWRhYmlsaXR5IiwgImZpZWxkX25hbWUiOiAicmVhZGFiaWxpdHkiLCAicGFuZGFzX3R5cGUiOiAidWludDgiLCAibnVtcHlfdHlwZSI6ICJVSW50OCIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAicHJvamVjdF9jb3ZlcmFnZSIsICJmaWVsZF9uYW1lIjogInByb2plY3RfY292ZXJhZ2UiLCAicGFuZGFzX3R5cGUiOiAidWludDgiLCAibnVtcHlfdHlwZSI6ICJVSW50OCIsICJtZXRhZGF0YSI6IG51bGx9XSwgImNyZWF0b3IiOiB7ImxpYnJhcnkiOiAicHlhcnJvdyIsICJ2ZXJzaW9uIjogIjE2LjEuMCJ9LCAi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QgIAAGwCAACJAgAAjQIAAI0CAACzAgAA2wIAAAMDAAAiAwAATQMAAGh0dHBzOi8vZXhhd2luZC5naXRodWIuaW8vYW1yLXdpbmQvaHR0cHM6Ly9kdy10YXAubnJlbC5nb3ZodHRwczovL2VyZi5yZWFkdGhlZG9jcy5pb2h0dHBzOi8vb3BlbmZhc3QucmVhZHRoZWRvY3MuaW9odHRwczovL2ZsYXNjLnJlYWR0aGVkb2NzLmlvL2VuL2xhdGVzdC9odHRwczovL25yZWwuZ2l0aHViLmlvL2Zsb3Jpcy9pbnRyby5odG1saHR0cHM6Ly9ob3BwLnJlYWR0aGVkb2NzLmlvL2VuL2xhdGVzdC9odHRwczovL2dpdGh1Yi5jb20vV0lTREVNL0xhbmRCT1NTRS90cmVlL21hc3Rlci9pbnN0YWxsYXRpb25faW5zdHJ1Y3Rpb25zaHR0cHM6Ly9tb29ycHkucmVhZHRoZWRvY3MuaW9odHRwczovL25hbHUtd2luZC5yZWFkdGhlZG9jcy5pb2h0dHBzOi8vb3BlbmZhc3QucmVhZHRoZWRvY3MuaW9odHRwczovL29wZW5vYS5yZWFkdGhlZG9jcy5pby9odHRwczovL2V4YXdpbmQuZ2l0aHViLmlvL29wZW50dXJiaW5lL2h0dHBzOi8vd2lzZGVtLmdpdGh1Yi5pby9PUkJJVC9odHRwczovL3NhbmRpYWxhYnMuZ2l0aHViLmlvL09XRU5TLmpsL3N0YWJsZS9odHRwczovL3NhbmRpYWxhYnMuZ2l0aHViLmlvL3B5TnVNQUQvaHR0cHM6Ly9vcGVucmFmdC5yZWFkdGhlZG9jcy5pby9lbi9sYXRlc3QvaHR0cHM6Ly9yb3Njby5yZWFkdGhlZG9jcy5pby9ub25laHR0cHM6Ly93ZWlzLnJlYWR0aGVkb2NzLmlvL2VuL2xhdGVzdC9odHRwczovL3dpbmRzZS5yZWFkdGhlZG9jcy5pby9lbi9sYXRlc3QvaHR0cHM6Ly93aXNkZW0ucmVhZHRoZWRvY3MuaW8vZW4vbWFzdGVyL2h0dHBzOi8vV0lTREVNLmdpdGh1Yi5pby9XT01CQVRodHRwczovL3d3dy5ucmVsLmdvdi9ncmlkL3dpbmQtdG9vbGtpdC5odG1sAAAAe7/PBwAAAABbfAMGAAAAAFu8gwYAAAAA9v//BwAAAAAQGIAAAAAAAH//3wcAAAAA/v//BwAAAABors8DAAAAAPb//wcAAAAAYL7fBwAAAAD+9/8HAAAAAFjyAgMAAAAAdvf7BwAAAAAABAIABQYHAAUGCAAFCQYIAgcABwIBBwcHBwQAAAAAAH7z+wcAAAAAAAUCCQUGCAAFAwAABQkBBQIGAAgDAQIGBwcFAAAAAAD/////AAAAABAAAAAMABQABgAIAAwAEAAMAAAAAAAEADwAAAAoAAAABAAAAAEAAADoCQAAAAAAAMACAAAAAAAAkAUAAAAAAAAAAAAAAAAAAAAACgAMAAAABAAIAAoAAADoBgAABAAAAAEAAAAMAAAACAAMAAQACAAIAAAACAAAABAAAAAGAAAAcGFuZGFzAACxBgAAeyJpbmRleF9jb2x1bW5zIjogW10sICJjb2x1bW5faW5kZXhlcyI6IFtdLCAiY29sdW1ucyI6IFt7Im5hbWUiOiAiaW5kZXgiLCAiZmllbGRfbmFtZSI6ICJpbmRleCIsICJwYW5kYXNfdHlwZSI6ICJ1bmljb2RlIiwgIm51bXB5X3R5cGUiOiAic3RyaW5nIiwgIm1ldGFkYXRhIjogbnVsbH0sIHsibmFtZSI6ICJkb2N1bWVudGF0aW9uX3VybCIsICJmaWVsZF9uYW1lIjogImRvY3VtZW50YXRpb25fdXJsIiwgInBhbmRhc190eXBlIjogInVuaWNvZGUiLCAibnVtcHlfdHlwZSI6ICJzdHJpbmciLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogImhhc191c2VyX2RvY3MiLCAiZmllbGRfbmFtZSI6ICJoYXNfdXNlcl9kb2NzIiwgInBhbmRhc190eXBlIjogImJvb2wiLCAibnVtcHlfdHlwZSI6ICJib29sZWFuIiwgIm1ldGFkYXRhIjogbnVsbH0sIHsibmFtZSI6ICJoYXNfZGV2ZWxvcGVyX2RvY3MiLCAiZmllbGRfbmFtZSI6ICJoYXNfZGV2ZWxvcGVyX2RvY3MiLCAicGFuZGFzX3R5cGUiOiAiYm9vbCIsICJudW1weV90eXBlIjogImJvb2xlYW4iLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogImhhc19hcGlfZG9jcyIsICJmaWVsZF9uYW1lIjogImhhc19hcGlfZG9jcyIsICJwYW5kYXNfdHlwZSI6ICJib29sIiwgIm51bXB5X3R5cGUiOiAiYm9vbGVhbiIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAiaGFzX2NsaV9kb2NzIiwgImZpZWxkX25hbWUiOiAiaGFzX2NsaV9kb2NzIiwgInBhbmRhc190eXBlIjogImJvb2wiLCAibnVtcHlfdHlwZSI6ICJib29sZWFuIiwgIm1ldGFkYXRhIjogbnVsbH0sIHsibmFtZSI6ICJoYXNfaW5zdGFsbGF0aW9uX2RvY3MiLCAiZmllbGRfbmFtZSI6ICJoYXNfaW5zdGFsbGF0aW9uX2RvY3MiLCAicGFuZGFzX3R5cGUiOiAiYm9vbCIsICJudW1weV90eXBlIjogImJvb2xlYW4iLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogImhhc19nZXR0aW5nX3N0YXJ0ZWRfZG9jcyIsICJmaWVsZF9uYW1lIjogImhhc19nZXR0aW5nX3N0YXJ0ZWRfZG9jcyIsICJwYW5kYXNfdHlwZSI6ICJib29sIiwgIm51bXB5X3R5cGUiOiAiYm9vbGVhbiIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAiaGFzX2V4YW1wbGVzX3R1dG9yaWFscyIsICJmaWVsZF9uYW1lIjogImhhc19leGFtcGxlc190dXRvcmlhbHMiLCAicGFuZGFzX3R5cGUiOiAiYm9vbCIsICJudW1weV90eXBlIjogImJvb2xlYW4iLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogImhhc19kZXNpZ25faW50ZW50X3N0YXRlbWVudCIsICJmaWVsZF9uYW1lIjogImhhc19kZXNpZ25faW50ZW50X3N0YXRlbWVudCIsICJwYW5kYXNfdHlwZSI6ICJib29sIiwgIm51bXB5X3R5cGUiOiAiYm9vbGVhbiIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAicmVhZGFiaWxpdHkiLCAiZmllbGRfbmFtZSI6ICJyZWFkYWJpbGl0eSIsICJwYW5kYXNfdHlwZSI6ICJ1aW50OCIsICJudW1weV90eXBlIjogIlVJbnQ4IiwgIm1ldGFkYXRhIjogbnVsbH0sIHsibmFtZSI6ICJwcm9qZWN0X2NvdmVyYWdlIiwgImZpZWxkX25hbWUiOiAicHJvamVjdF9jb3ZlcmFnZSIsICJwYW5kYXNfdHlwZSI6ICJ1aW50OCIsICJudW1weV90eXBlIjogIlVJbnQ4IiwgIm1ldGFkYXRhIjogbnVsbH1dLCAiY3JlYXRvciI6IHsibGlicmFyeSI6ICJweWFycm93IiwgInZlcnNpb24iOiAiMTYuMS4wIn0sICJwYW5kYXNfdmVyc2lvbiI6ICIxLjUuMyJ9AAAADAAAAJACAABIAgAAFAIAANwBAACoAQAAdAEAADgBAAD4AAAAvAAAAHwAAABAAAAABAAAALD9//8AAAECEAAAACQAAAAEAAAAAAAAABAAAABwcm9qZWN0X2NvdmVyYWdlAAAAAM7///8IAAAA6P3//wAAAQIQAAAAJAAAAAQAAAAAAAAACwAAAHJlYWRhYmlsaXR5AAAABgAIAAQABgAAAAgAAAAg/v//AAABBhAAAAAsAAAABAAAAAAAAAAbAAAAaGFzX2Rlc2lnbl9pbnRlbnRfc3RhdGVtZW50ACT+//9c/v//AAABBhAAAAAoAAAABAAAAAAAAAAWAAAAaGFzX2V4YW1wbGVzX3R1dG9yaWFscwAAXP7//5T+//8AAAEGEAAAACwAAAAEAAAAAAAAABgAAABoYXNfZ2V0dGluZ19zdGFydGVkX2RvY3MAAAAAmP7//9D+//8AAAEGEAAAACgAAAAEAAAAAAAAABUAAABoYXNfaW5zdGFsbGF0aW9uX2RvY3MAAADQ/v//CP///wAAAQYQAAAAIAAAAAQAAAAAAAAADAAAAGhhc19jbGlfZG9jcwAAAAAA////OP///wAAAQYQAAAAIAAAAAQAAAAAAAAADAAAAGhhc19hcGlfZG9jcwAAAAAw////aP///wAAAQYQAAAAJAAAAAQAAAAAAAAAEgAAAGhhc19kZXZlbG9wZXJfZG9jcwAAZP///5z///8AAAEGEAAAACAAAAAEAAAAAAAAAA0AAABoYXNfdXNlcl9kb2NzAAAAlP///8z///8AAAEFEAAAACQAAAAEAAAAAAAAABEAAABkb2N1bWVudGF0aW9uX3VybAAAAMj///8QABQACAAGAAcADAAAABAAEAAAAAAAAQUQAAAAHAAAAAQAAAAAAAAABQAAAGluZGV4AAAABAAEAAQAAAAACgAAQVJST1cx&quot;, &quot;hash&quot;: &quot;af21f9daca&quot;, &quot;size&quot;: 9656, &quot;mime&quot;: &quot;application/vnd.apache.arrow+binary&quot;}}} }};
-  }
-&lt;/script&gt;
-&lt;script type=&quot;module&quot;&gt;
-  import { mountReport } from &quot;https://datapane-cdn.com/v0.17.0/report/index.es.js&quot;;
-  mountReport(window.reportProps);
-&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;script&gt;
-    window.isIPythonEmbed = true;
-  &lt;/script&gt;
-  &lt;body&gt;
-    &lt;main class=&quot;max-w-screen-xl w-full mx-auto&quot;&gt;
-      &lt;div id=&quot;report&quot; class=&quot;w-full&quot;&gt;&lt;/div&gt;
-    &lt;/main&gt;
-    &lt;script src=&quot;https://datapane-cdn.com/v0.17.0/assets/iframeResizer.contentWindow.min.js&quot;&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-" style="border: none">
-</iframe>
-<script type="module">
-  import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-f5662f94d8de4ae4b431ba8144ab9032");
-</script>
-</div></div>
 </div>
 </section>
 <section id="testing">
@@ -1172,75 +835,6 @@ Instead, they can be filtered by searching for a string with the following Seque
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/datapane/common/df_processor.py:26: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
-  elif isinstance(df.index, pd.Int64Index):
-</pre></div>
-</div>
-<div class="output text_html"><style>
-  #dp-bfb72e1d8c1e4f16b2e01bc17a733401 {
-    width: 1px;
-    min-width: 100%;
-  }
-</style>
-<iframe id="dp-bfb72e1d8c1e4f16b2e01bc17a733401" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot; /&gt;
-
-&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;shortcut icon&quot; sizes=&quot;192x192&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-
-&lt;script src=&quot;https://kit.fontawesome.com/256c714d9a.js&quot;&gt;&lt;/script&gt;
-&lt;link
-  href=&quot;https://fonts.googleapis.com/css?family=Inter:400,500,600,700|Inconsolata|Karla|Rubik&amp;display=swap&quot;
-  rel=&quot;stylesheet&quot;
-/&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/index.css&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/tailwind.css&quot; /&gt;
-&lt;script&gt;
-  // analytics config
-  // TODO -- pass these in as props for consistency?
-  window.dpAppRunner = false;
-  window.dpLocal = true;
-
-  /* construct the view */
-  const htmlHeader = `&lt;style type=&quot;text/css&quot;&gt;:root {
-    --dp-accent-color: #4E46E5;
-    --dp-bg-color: #FFF;
-    --dp-text-align: left;
-    --dp-font-family: Inter, ui-sans-serif, system-ui;
-}&lt;/style&gt;`;
-  window.reportProps = { htmlHeader, isLightProse: false, isOrg: false, mode: &quot;VIEW&quot;, reportWidthClass: &quot;max-w-screen-xl&quot; };
-
-  if (!window.dpAppRunner) {
-      // pass app data via props if in local (static) mode, otherwise this data is fetched from the server
-      window.reportProps[&quot;appData&quot;] = { data: { result: {&quot;view_xml&quot;: &quot;\u003cView version=\&quot;1\&quot; fragment=\&quot;false\&quot;\u003e\u003cDataTable type=\&quot;application/vnd.apache.arrow+binary\&quot; rows=\&quot;27\&quot; columns=\&quot;5\&quot; schema=\&quot;[]\&quot; src=\&quot;ref://7ecd1e725f\&quot;/\u003e\u003c/View\u003e&quot;, &quot;assets&quot;: {&quot;7ecd1e725f&quot;: {&quot;src&quot;: &quot;data:application/vnd.apache.arrow+binary;base64,QVJST1cxAAD/////UAUAABAAAAAAAAoADgAGAAUACAAKAAAAAAEEABAAAAAAAAoADAAAAAQACAAKAAAAwAMAAAQAAAABAAAADAAAAAgADAAEAAgACAAAAAgAAAAQAAAABgAAAHBhbmRhcwAAiAMAAHsiaW5kZXhfY29sdW1ucyI6IFtdLCAiY29sdW1uX2luZGV4ZXMiOiBbXSwgImNvbHVtbnMiOiBbeyJuYW1lIjogImluZGV4IiwgImZpZWxkX25hbWUiOiAiaW5kZXgiLCAicGFuZGFzX3R5cGUiOiAidW5pY29kZSIsICJudW1weV90eXBlIjogInN0cmluZyIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAidGVzdGluZ19mcmFtZXdvcmsiLCAiZmllbGRfbmFtZSI6ICJ0ZXN0aW5nX2ZyYW1ld29yayIsICJwYW5kYXNfdHlwZSI6ICJib29sIiwgIm51bXB5X3R5cGUiOiAiYm9vbGVhbiIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAiY29udGludW91c190ZXN0aW5nIiwgImZpZWxkX25hbWUiOiAiY29udGludW91c190ZXN0aW5nIiwgInBhbmRhc190eXBlIjogImJvb2wiLCAibnVtcHlfdHlwZSI6ICJib29sZWFuIiwgIm1ldGFkYXRhIjogbnVsbH0sIHsibmFtZSI6ICJ0ZXN0X2NvdmVyYWdlIiwgImZpZWxkX25hbWUiOiAidGVzdF9jb3ZlcmFnZSIsICJwYW5kYXNfdHlwZSI6ICJ1aW50OCIsICJudW1weV90eXBlIjogIlVJbnQ4IiwgIm1ldGFkYXRhIjogbnVsbH0sIHsibmFtZSI6ICJ0ZXN0X2RvY3VtZW50YXRpb24iLCAiZmllbGRfbmFtZSI6ICJ0ZXN0X2RvY3VtZW50YXRpb24iLCAicGFuZGFzX3R5cGUiOiAiYm9vbCIsICJudW1weV90eXBlIjogImJvb2xlYW4iLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogInBlcmZvcm1hbmNlX3Rlc3RzIiwgImZpZWxkX25hbWUiOiAicGVyZm9ybWFuY2VfdGVzdHMiLCAicGFuZGFzX3R5cGUiOiAiYm9vbCIsICJudW1weV90eXBl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&quot;, &quot;hash&quot;: &quot;7ecd1e725f&quot;, &quot;size&quot;: 4752, &quot;mime&quot;: &quot;application/vnd.apache.arrow+binary&quot;}}} }};
-  }
-&lt;/script&gt;
-&lt;script type=&quot;module&quot;&gt;
-  import { mountReport } from &quot;https://datapane-cdn.com/v0.17.0/report/index.es.js&quot;;
-  mountReport(window.reportProps);
-&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;script&gt;
-    window.isIPythonEmbed = true;
-  &lt;/script&gt;
-  &lt;body&gt;
-    &lt;main class=&quot;max-w-screen-xl w-full mx-auto&quot;&gt;
-      &lt;div id=&quot;report&quot; class=&quot;w-full&quot;&gt;&lt;/div&gt;
-    &lt;/main&gt;
-    &lt;script src=&quot;https://datapane-cdn.com/v0.17.0/assets/iframeResizer.contentWindow.min.js&quot;&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-" style="border: none">
-</iframe>
-<script type="module">
-  import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-bfb72e1d8c1e4f16b2e01bc17a733401");
-</script>
-</div></div>
 </div>
 </section>
 <section id="interfaces">
@@ -1263,75 +857,6 @@ Instead, they can be filtered by searching for a string with the following Seque
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/datapane/common/df_processor.py:26: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
-  elif isinstance(df.index, pd.Int64Index):
-</pre></div>
-</div>
-<div class="output text_html"><style>
-  #dp-7bc2e8aacea04d90b824f3b61509edf7 {
-    width: 1px;
-    min-width: 100%;
-  }
-</style>
-<iframe id="dp-7bc2e8aacea04d90b824f3b61509edf7" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot; /&gt;
-
-&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;shortcut icon&quot; sizes=&quot;192x192&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-
-&lt;script src=&quot;https://kit.fontawesome.com/256c714d9a.js&quot;&gt;&lt;/script&gt;
-&lt;link
-  href=&quot;https://fonts.googleapis.com/css?family=Inter:400,500,600,700|Inconsolata|Karla|Rubik&amp;display=swap&quot;
-  rel=&quot;stylesheet&quot;
-/&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/index.css&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/tailwind.css&quot; /&gt;
-&lt;script&gt;
-  // analytics config
-  // TODO -- pass these in as props for consistency?
-  window.dpAppRunner = false;
-  window.dpLocal = true;
-
-  /* construct the view */
-  const htmlHeader = `&lt;style type=&quot;text/css&quot;&gt;:root {
-    --dp-accent-color: #4E46E5;
-    --dp-bg-color: #FFF;
-    --dp-text-align: left;
-    --dp-font-family: Inter, ui-sans-serif, system-ui;
-}&lt;/style&gt;`;
-  window.reportProps = { htmlHeader, isLightProse: false, isOrg: false, mode: &quot;VIEW&quot;, reportWidthClass: &quot;max-w-screen-xl&quot; };
-
-  if (!window.dpAppRunner) {
-      // pass app data via props if in local (static) mode, otherwise this data is fetched from the server
-      window.reportProps[&quot;appData&quot;] = { data: { result: {&quot;view_xml&quot;: &quot;\u003cView version=\&quot;1\&quot; fragment=\&quot;false\&quot;\u003e\u003cDataTable type=\&quot;application/vnd.apache.arrow+binary\&quot; rows=\&quot;27\&quot; columns=\&quot;4\&quot; schema=\&quot;[]\&quot; src=\&quot;ref://a10e445e9c\&quot;/\u003e\u003c/View\u003e&quot;, &quot;assets&quot;: {&quot;a10e445e9c&quot;: {&quot;src&quot;: &quot;data:application/vnd.apache.arrow+binary;base64,QVJST1cxAAD/////MAUAABAAAAAAAAoADgAGAAUACAAKAAAAAAEEABAAAAAAAAoADAAAAAQACAAKAAAAgAMAAAQAAAABAAAADAAAAAgADAAEAAgACAAAAAgAAAAQAAAABgAAAHBhbmRhcwAASAMAAHsiaW5kZXhfY29sdW1ucyI6IFtdLCAiY29sdW1uX2luZGV4ZXMiOiBbXSwgImNvbHVtbnMiOiBbeyJuYW1lIjogImluZGV4IiwgImZpZWxkX25hbWUiOiAiaW5kZXgiLCAicGFuZGFzX3R5cGUiOiAidW5pY29kZSIsICJudW1weV90eXBlIjogInN0cmluZyIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAiZmlyc3RfY2xhc3NfdWkiLCAiZmllbGRfbmFtZSI6ICJmaXJzdF9jbGFzc191aSIsICJwYW5kYXNfdHlwZSI6ICJjYXRlZ29yaWNhbCIsICJudW1weV90eXBlIjogImludDgiLCAibWV0YWRhdGEiOiB7Im51bV9jYXRlZ29yaWVzIjogNCwgIm9yZGVyZWQiOiBmYWxzZX19LCB7Im5hbWUiOiAiaGFzX2NsaSIsICJmaWVsZF9uYW1lIjogImhhc19jbGkiLCAicGFuZGFzX3R5cGUiOiAiYm9vbCIsICJudW1weV90eXBlIjogImJvb2xlYW4iLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogImxhbmd1YWdlX2ludGVyZmFjZXMiLCAiZmllbGRfbmFtZSI6ICJsYW5ndWFnZV9pbnRlcmZhY2VzIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiA0LCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJmZWF0dXJlX2FjY2Vzc2liaWxpdHkiLCAiZmllbGRfbmFtZSI6ICJmZWF0dXJlX2FjY2Vzc2liaWxpdHkiLCAicGFuZGFzX3R5cGUiOiAidWludDgiLCAibnVtcHlfdHlwZSI6ICJVSW50OCIsICJtZXRhZGF0YSI6IG51bGx9XSwgImNyZWF0b3IiOiB7ImxpYnJhcnkiOiAicHlhcnJv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AQAAAGAHAAAAAAAAYAEAAAAAAACgAQAAAAAAAAAAAAACAAAAQAUAAAAAAACwAAAAAAAAAGgAAAAAAAAAWAYAAAAAAAC4AAAAAAAAAFAAAAAAAAAAAAAAAAAACgAMAAAABAAIAAoAAACAAwAABAAAAAEAAAAMAAAACAAMAAQACAAIAAAACAAAABAAAAAGAAAAcGFuZGFzAABIAwAAeyJpbmRleF9jb2x1bW5zIjogW10sICJjb2x1bW5faW5kZXhlcyI6IFtdLCAiY29sdW1ucyI6IFt7Im5hbWUiOiAiaW5kZXgiLCAiZmllbGRfbmFtZSI6ICJpbmRleCIsICJwYW5kYXNfdHlwZSI6ICJ1bmljb2RlIiwgIm51bXB5X3R5cGUiOiAic3RyaW5nIiwgIm1ldGFkYXRhIjogbnVsbH0sIHsibmFtZSI6ICJmaXJzdF9jbGFzc191aSIsICJmaWVsZF9uYW1lIjogImZpcnN0X2NsYXNzX3VpIiwgInBhbmRhc190eXBlIjogImNhdGVnb3JpY2FsIiwgIm51bXB5X3R5cGUiOiAiaW50OCIsICJtZXRhZGF0YSI6IHsibnVtX2NhdGVnb3JpZXMiOiA0LCAib3JkZXJlZCI6IGZhbHNlfX0sIHsibmFtZSI6ICJoYXNfY2xpIiwgImZpZWxkX25hbWUiOiAiaGFzX2NsaSIsICJwYW5kYXNfdHlwZSI6ICJib29sIiwgIm51bXB5X3R5cGUiOiAiYm9vbGVhbiIsICJtZXRhZGF0YSI6IG51bGx9LCB7Im5hbWUiOiAibGFuZ3VhZ2VfaW50ZXJmYWNlcyIsICJmaWVsZF9uYW1lIjogImxhbmd1YWdlX2ludGVyZmFjZXMiLCAicGFuZGFzX3R5cGUiOiAiY2F0ZWdvcmljYWwiLCAibnVtcHlfdHlwZSI6ICJpbnQ4IiwgIm1ldGFkYXRhIjogeyJudW1fY2F0ZWdvcmllcyI6IDQsICJvcmRlcmVkIjogZmFsc2V9fSwgeyJuYW1lIjogImZlYXR1cmVfYWNjZXNzaWJpbGl0eSIsICJmaWVsZF9uYW1lIjogImZlYXR1cmVfYWNjZXNzaWJpbGl0eSIsICJwYW5kYXNfdHlwZSI6ICJ1aW50OCIsICJudW1weV90eXBlIjogIlVJbnQ4IiwgIm1ldGFkYXRhIjogbnVsbH1dLCAiY3JlYXRvciI6IHsibGlicmFyeSI6ICJweWFycm93IiwgInZlcnNpb24iOiAiMTYuMS4wIn0sICJwYW5kYXNfdmVyc2lvbiI6ICIxLjUuMyJ9AAAAAAUAAABUAQAA6AAAAKwAAABIAAAABAAAAND+//8AAAECEAAAACwAAAAEAAAAAAAAABUAAABmZWF0dXJlX2FjY2Vzc2liaWxpdHkABgAIAAQABgAAAAgAAAB4////AAABBRQAAABQAAAALAAAAAQAAAAAAAAAEwAAAGxhbmd1YWdlX2ludGVyZmFjZXMACAAUAAgABAAIAAAAEAAAAAEAAAAAAAAAAAAAAHj///8AAAABCAAAADj///9w////AAABBhAAAAAYAAAABAAAAAAAAAAHAAAAaGFzX2NsaQBg////EAAYAAgABgAHAAwAEAAUABAAAAAAAAEFFAAAAEgAAAAoAAAABAAAAAAAAAAOAAAAZmlyc3RfY2xhc3NfdWkAAAgACAAAAAQACAAAAAwAAAAIAAwACAAHAAgAAAAAAAABCAAAAMj///8QABQACAAGAAcADAAAABAAEAAAAAAAAQUQAAAAHAAAAAQAAAAAAAAABQAAAGluZGV4AAAABAAEAAQAAACQBQAAQVJST1cx&quot;, &quot;hash&quot;: &quot;a10e445e9c&quot;, &quot;size&quot;: 5464, &quot;mime&quot;: &quot;application/vnd.apache.arrow+binary&quot;}}} }};
-  }
-&lt;/script&gt;
-&lt;script type=&quot;module&quot;&gt;
-  import { mountReport } from &quot;https://datapane-cdn.com/v0.17.0/report/index.es.js&quot;;
-  mountReport(window.reportProps);
-&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;script&gt;
-    window.isIPythonEmbed = true;
-  &lt;/script&gt;
-  &lt;body&gt;
-    &lt;main class=&quot;max-w-screen-xl w-full mx-auto&quot;&gt;
-      &lt;div id=&quot;report&quot; class=&quot;w-full&quot;&gt;&lt;/div&gt;
-    &lt;/main&gt;
-    &lt;script src=&quot;https://datapane-cdn.com/v0.17.0/assets/iframeResizer.contentWindow.min.js&quot;&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-" style="border: none">
-</iframe>
-<script type="module">
-  import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-7bc2e8aacea04d90b824f3b61509edf7");
-</script>
-</div></div>
 </div>
 </section>
 <section id="input-output">
@@ -1352,75 +877,6 @@ Instead, they can be filtered by searching for a string with the following Seque
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/datapane/common/df_processor.py:26: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
-  elif isinstance(df.index, pd.Int64Index):
-</pre></div>
-</div>
-<div class="output text_html"><style>
-  #dp-4adee696aa2e4e7e8b507b7d3c54dfc7 {
-    width: 1px;
-    min-width: 100%;
-  }
-</style>
-<iframe id="dp-4adee696aa2e4e7e8b507b7d3c54dfc7" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot; /&gt;
-
-&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;shortcut icon&quot; sizes=&quot;192x192&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://datapane-cdn.com/static/v1/datapane-icon-192x192.png&quot;/&gt;
-
-&lt;script src=&quot;https://kit.fontawesome.com/256c714d9a.js&quot;&gt;&lt;/script&gt;
-&lt;link
-  href=&quot;https://fonts.googleapis.com/css?family=Inter:400,500,600,700|Inconsolata|Karla|Rubik&amp;display=swap&quot;
-  rel=&quot;stylesheet&quot;
-/&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/index.css&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://datapane-cdn.com/v0.17.0/report/tailwind.css&quot; /&gt;
-&lt;script&gt;
-  // analytics config
-  // TODO -- pass these in as props for consistency?
-  window.dpAppRunner = false;
-  window.dpLocal = true;
-
-  /* construct the view */
-  const htmlHeader = `&lt;style type=&quot;text/css&quot;&gt;:root {
-    --dp-accent-color: #4E46E5;
-    --dp-bg-color: #FFF;
-    --dp-text-align: left;
-    --dp-font-family: Inter, ui-sans-serif, system-ui;
-}&lt;/style&gt;`;
-  window.reportProps = { htmlHeader, isLightProse: false, isOrg: false, mode: &quot;VIEW&quot;, reportWidthClass: &quot;max-w-screen-xl&quot; };
-
-  if (!window.dpAppRunner) {
-      // pass app data via props if in local (static) mode, otherwise this data is fetched from the server
-      window.reportProps[&quot;appData&quot;] = { data: { result: {&quot;view_xml&quot;: &quot;\u003cView version=\&quot;1\&quot; fragment=\&quot;false\&quot;\u003e\u003cDataTable type=\&quot;application/vnd.apache.arrow+binary\&quot; rows=\&quot;27\&quot; columns=\&quot;2\&quot; schema=\&quot;[]\&quot; src=\&quot;ref://8b41b9e9b7\&quot;/\u003e\u003c/View\u003e&quot;, &quot;assets&quot;: {&quot;8b41b9e9b7&quot;: {&quot;src&quot;: &quot;data:application/vnd.apache.arrow+binary;base64,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&quot;, &quot;hash&quot;: &quot;8b41b9e9b7&quot;, &quot;size&quot;: 4432, &quot;mime&quot;: &quot;application/vnd.apache.arrow+binary&quot;}}} }};
-  }
-&lt;/script&gt;
-&lt;script type=&quot;module&quot;&gt;
-  import { mountReport } from &quot;https://datapane-cdn.com/v0.17.0/report/index.es.js&quot;;
-  mountReport(window.reportProps);
-&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;script&gt;
-    window.isIPythonEmbed = true;
-  &lt;/script&gt;
-  &lt;body&gt;
-    &lt;main class=&quot;max-w-screen-xl w-full mx-auto&quot;&gt;
-      &lt;div id=&quot;report&quot; class=&quot;w-full&quot;&gt;&lt;/div&gt;
-    &lt;/main&gt;
-    &lt;script src=&quot;https://datapane-cdn.com/v0.17.0/assets/iframeResizer.contentWindow.min.js&quot;&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-" style="border: none">
-</iframe>
-<script type="module">
-  import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-4adee696aa2e4e7e8b507b7d3c54dfc7");
-</script>
-</div></div>
 </div>
 </section>
 </section>

@@ -113,7 +113,7 @@ The sections presented in this workshop are:
 
 Garrett Barter co-hosted the workshop and facilitated the discussion.
 
-{download}`Click here to download the slides.<../_static/UserWorkshops2024_SystemsEngineering.pdf>`
+{download}`Click here to download the slides.<../_static/UserWorkshops2024_SE.pdf>`
 
 ```{youtube} urab_dN12Ws
 ```
@@ -134,4 +134,20 @@ Garrett Barter co-hosted the workshop and facilitated the discussion.
 {download}`Click here to download the slides.<../_static/UserWorkshops2024_TEA.pdf>`
 
 ```{youtube} keT7KcBHmgM
+```
+
+### Wind Farm Controls and Analysis
+
+The sections presented in this workshop are:
+- [WETO Software Stack](https://nrel.github.io/NREL/WETOStack) by Rafael Mudafort
+- [FLORIS](https://github.com/NREL/FLORIS) by Misha Sinner
+- [FLASC](https://github.com/NREL/FLASC) by Paul Fleming
+- [OpenOA](https://github.com/NREL/OpenOA) by Eric Simley and Rob Hammond
+- [Hercules](https://github.com/NREL/Hercules) by Misha Sinner and Gen Starke
+
+Garrett Barter co-hosted the workshop and facilitated the discussion.
+
+{download}`Click here to download the slides.<../_static/UserWorkshops2024_WFCA.pdf>`
+
+```{youtube} f-w6whxIBrA
 ```
