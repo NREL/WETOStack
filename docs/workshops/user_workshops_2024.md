@@ -1,5 +1,7 @@
 # 2024 User Workshops
 
+**This series of workshops has passed. See [](workshop_recaps) for a summary.**
+
 The Holistic Modeling Portfolio Coordination Project is hosting a series of workshops in June 2024
 to discuss the current state and future direction of the WETO Software Stack.
 Individual workshops will be held for different topic areas covering a subset of software
@@ -96,6 +98,7 @@ mindmap
             openfast_toolbox
 ```
 
+(workshop_recaps)=
 ## Workshop Recap, Recordings, and Slides
 
 The workshop recordings are hosted on [YouTube](https://www.youtube.com/playlist?list=PL6ksUtsZI1dwRXeWFCmJT6cEN1xijsHJz),
