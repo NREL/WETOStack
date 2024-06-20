@@ -151,3 +151,18 @@ Garrett Barter co-hosted the workshop and facilitated the discussion.
 
 ```{youtube} f-w6whxIBrA
 ```
+
+### OpenFAST Ecosystem
+
+The sections presented in this workshop are:
+- [WETO Software Stack](https://nrel.github.io/NREL/WETOStack) by Rafael Mudafort
+- [OpenFAST](https://github.com/NREL/FLORIS) by Jason Jonkman
+- [ACDC](https://github.com/NREL/FLASC) by Derek Slaughter
+- [ROSCO](https://github.com/NREL/OpenOA) by Dan Zalkind
+
+Garrett Barter co-hosted the workshop and facilitated the discussion.
+
+{download}`Click here to download the slides.<../_static/UserWorkshops2024_OpenFAST.pdf>`
+
+```{youtube} cadiJ4_FGXc
+```
