@@ -1,11 +1,10 @@
-jupyter-book
-jupyter-cache
-pydata-sphinx-theme
-sphinxcontrib.mermaid
-sphinxcontrib.youtube
-sphinx-simplepdf
+jupyter-book~=1.0
+pydata-sphinx-theme~=0.15
+sphinxcontrib.mermaid~=0.9
+sphinxcontrib.youtube~=1.4
+sphinx-simplepdf~=1.6
 
 # attribute tables
 # import altair as alt
-datapane
-pandas
+datapane~=0.17
+pandas~=1.5

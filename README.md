@@ -36,3 +36,8 @@ Or paste this line directly into your browser bar:
 
 ```
 Note that the docs/_build folder must be removed and a rebuild done if changes to the software_attributes/database/ yamls are made.
+
+## Dependencies
+
+The Python packages required to build this project are listed in `requirements.txt`.
+Additional dependencies for the documentation are in `docs/requirements.txt`.
