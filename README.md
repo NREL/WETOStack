@@ -5,6 +5,8 @@ This repository contains the source for NREL's Holistic Modeling - WETO Software
 Coordination project. See [nrel.github.io/WETOStack/](https://nrel.github.io/WETOStack/) for
 more information.
 
+Copyright 2024 Alliance for Sustainable Energy, LLC.
+
 ## Building the site
 
 The site is built using [Jupyter Book](https://jupyterbook.org/intro.html).
@@ -41,3 +43,7 @@ Note that the docs/_build folder must be removed and a rebuild done if changes t
 
 The Python packages required to build this project are listed in `requirements.txt`.
 Additional dependencies for the documentation are in `docs/requirements.txt`.
+
+## License
+
+WETO Software Stack is licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
