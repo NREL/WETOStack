@@ -7,6 +7,8 @@ parts:
 - caption: Workshops
   chapters:
   - file: workshops/user_workshops_2024
+    sections:
+    - file: workshops/user_workshops_2024_report
   - file: workshops/nawea_2023
   - file: workshops/workshop
     sections:

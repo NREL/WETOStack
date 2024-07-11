@@ -1,6 +1,7 @@
+(workshop_2024)=
 # 2024 User Workshops
 
-**This series of workshops has passed. See [](workshop_recaps) for a summary.**
+**This series of workshops has passed. See [](workshop_recaps) and [](workshop_2024_report_top) for more info.**
 
 The Holistic Modeling Portfolio Coordination Project is hosting a series of workshops in June 2024
 to discuss the current state and future direction of the WETO Software Stack.
@@ -99,7 +100,7 @@ mindmap
 ```
 
 (workshop_recaps)=
-## Workshop Recap, Recordings, and Slides
+## Recordings and Slides
 
 The workshop recordings are hosted on [YouTube](https://www.youtube.com/playlist?list=PL6ksUtsZI1dwRXeWFCmJT6cEN1xijsHJz),
 and they are embedded on this page.
