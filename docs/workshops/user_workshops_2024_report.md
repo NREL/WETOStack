@@ -368,7 +368,7 @@ WFC&A discussion:
     - *Rafael*: Whats a good way to advertise these types of events?
 
 Meeting chat:
-- This workshop's chat wasn't very active
+- This workshop's chat was mostly inactive.
 
 ### OpenFAST Ecosystem
 
@@ -403,3 +403,222 @@ Meeting chat:
 - *Andy*: Adding bit more regarding long term support of OpenFAST releases. Historically we have dropped support for old versions as soon as a new version is released.  Going forward we intend to port bugfixes to older versions starting with our 3.5.x version.  So after 4.0 or 5.0 are released, we intend to address minor bugs in the 3.5.x series with new minor releases for a few years.  However, we won't be able to add new features to older versions -- so a new feature in 4.0 or 5.0 would not be included in a future 3.5.x bug fix release.
     - I don't really know how this works, but this sounds like it could only help with compatibility with other softwares. For example, we'll be less likely to have to update AMR when OpenFAST updates, right?
     - *Andy*: Correct.  The thought here is that we can continue supporting AMR-Wind with a set version of OpenFAST rather than forcing AMR-Wind to update. Previously if a bug was found, AMR-Wind would be forced to update to the latest version of OpenFAST to get that fix. Going forward all versions of OpenFAST where only the last digit of the version changes has no input file or interface changes.  So a set of OpenFAST files from 3.5.0 will work seamlessly with 3.5.4.  Our hope with this approach is that it is easier for end users to integrate a given version of OpenFAST and know that they will get future bug fixes that don't require completely revising their integrations. However if the AMR-Wind wants a new feature, then they will need to update to a later version of OpenFAST.  I am expecting that AMR-Wind will probably use the OpenFAST 4.x series for a long time.
+
+## Raw poll data
+
+### Systems Engineering
+
+Polls data temporarily unavailable.
+
+
+### Technoeconomic Analysis and Cost Models
+
+**Overview poll**
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/TEA/poll1.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/TEA/poll2.png
+:align: center
+:width: 600px
+```
+:::
+
+::::
+
+**Topic specific poll**
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/TEA/poll3.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/TEA/poll4.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/TEA/poll5.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/TEA/poll6.png
+:align: center
+:width: 600px
+```
+:::
+
+::::
+
+**Exit poll**
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/TEA/poll7.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/TEA/poll8.png
+:align: center
+:width: 600px
+```
+:::
+
+::::
+
+
+### Wind Farm Controls and Analysis
+
+**Overview poll**
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/WFCA/poll1.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/WFCA/poll2.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/WFCA/poll3.png
+:align: center
+:width: 600px
+```
+:::
+
+::::
+
+**Topic specific poll**
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/WFCA/poll4.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/WFCA/poll5.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/WFCA/poll6.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/WFCA/poll7.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/WFCA/poll8.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/WFCA/poll9.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/WFCA/poll10.png
+:align: center
+:width: 600px
+```
+:::
+
+::::
+
+**Exit poll**
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/WFCA/poll11.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 4
+```{image} ../_static/UserWorkshops2024Polls/WFCA/poll12.png
+:align: center
+:width: 600px
+```
+:::
+
+::::
+
+
+### OpenFAST Ecosystem
+
+Polls data temporarily unavailable.
