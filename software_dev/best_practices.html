@@ -644,7 +644,7 @@ Create a development environment balancing modern needs with stability.</p></li>
 <li><p>Code style: Strive to write code that external developers can easily read and comprehend with minimal
 preexisting context.</p></li>
 <li><p>Architecture and design: Adopt an explicit design process where the major ideas are chosen before any code is written.</p></li>
-<li><p>Software design process - Create a parti diagram and list performance requirements for each level of fidelity in the software.
+<li><p>Software design process: Create a parti diagram and list performance requirements for each level of fidelity in the software.
 Establish methods to validate the design and implementation given knowledge of how a software
 is ultimately used.</p></li>
 <li><p>Design patterns: Study existing design patterns, and adopt a few, as needed.
@@ -658,7 +658,7 @@ community of users.</p></li>
 <li><p>Pull requests (PRs): All components of a PR should be considered documentation for future reference
 and an aspect of version control.
 PR reviews should be verbose, thorough, positive, and referential to guiding documents.</p></li>
-<li><p>Continuous integration: automating tests, compliance, and delivery: Codify software quality by establishing automated systems to check and provide feedback
+<li><p>Continuous integration: Codify software quality by establishing automated systems to check and provide feedback
 within the development process.
 Offload as many manual processes as possible and practical to the continuous integration system.</p></li>
 </ul>
@@ -723,48 +723,43 @@ for this type of software can easily become complex.
 Mature package managers are a great resource because they have a distribution system already in place
 and manage dependencies between software tools.
 The ecosystem of open source software package managers has coalesced around a few primary tools:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Package Manager</p></th>
+<th class="head"><p>Operating System</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://pypi.org">Python Package Index (PyPI)</a></p></td>
+<td><p>Any</p></td>
+<td><p>Source and binary distribution package manager for Python software</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.conda.io/en/latest/">Conda</a></p></td>
+<td><p>Any</p></td>
+<td><p>Package, dependency, and environment management for any language</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://conda-forge.org">Conda-forge</a></p></td>
+<td><p>Any</p></td>
+<td><p>A community-led collection of recipes, build infrastructure, and distributions for the conda package manager</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://brew.sh">Homebrew (brew)</a></p></td>
+<td><p>macOS, Linux</p></td>
+<td><p>The Missing Package Manager for macOS (or Linux)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://spack.io">Spack</a></p></td>
+<td><p>macOS, Linux</p></td>
+<td><p>Package manager for supercomputers supporting any language and distributable product</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/APT_(software)">APT</a></p></td>
+<td><p>Linux</p></td>
+<td><p>A user interface that works with core libraries to handle the installation and removal of software on Debian and Debian-based Linux distributions</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <ul class="simple">
-<li><p><a class="reference external" href="https://pypi.org">Python Package Index (PyPI)</a></p>
-<ul>
-<li><p>Source and binary distribution package manager for Python software</p></li>
-<li><p>Platform: any</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://docs.conda.io/en/latest/">Conda</a></p>
-<ul>
-<li><p>Package, dependency, and environment management for any language</p></li>
-<li><p>Platform: any</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://conda-forge.org">Conda-forge</a></p>
-<ul>
-<li><p>A community-led collection of recipes, build infrastructure, and distributions for the conda package manager</p></li>
-<li><p>Platform: any</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://brew.sh">Homebrew (brew)</a></p>
-<ul>
-<li><p>The Missing Package Manager for macOS (or Linux)</p></li>
-<li><p>Platform: ubiquitous for macOS but also available for Linux</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://spack.io">Spack</a></p>
-<ul>
-<li><p>Package manager for supercomputers supporting any language and distributable product</p></li>
-<li><p>Platform: ubiquitous for Linux-based supercomputers; available for macOS and Linux</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/APT_(software)">APT</a></p>
-<ul>
-<li><p>A user interface that works with core libraries to handle the installation and removal of software on Debian and Debian-based Linux distributions</p></li>
-<li><p>Platform: ubiquitous for Linux for system-level or generic packages</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://fpm.fortran-lang.org/index.html">Fortran package manager (FPM)</a></p>
-<ul>
-<li><p>Fortran-specific executable and library package manager.</p></li>
-</ul>
-</li>
+<li><p><a class="reference external" href="https://fpm.fortran-lang.org/index.html">Fortran package manager (FPM)</a>  | Any           | Fortran-specific executable and library package manager |</p></li>
 </ul>
 <p>The process for including a package in a package management system varies, but all are designed
 to integrate with automated systems to prepare and distribute the package automatically upon
@@ -1370,7 +1365,7 @@ the code directly into the production or released version.
 This practice is enabled by constructing a system of quality check infrastructure that gives
 maintainers the confidence to accept a change and release immediately.
 The “continuous” aspect refers to the automated nature of the quality check systems.
-Ideally, full continuous integration requires all characteristics and potential
+Ideally, full continuous integration requires that all characteristics and potential
 impacts of a code change are tested and validated automatically and without human
 input, such as the following:</p>
 <ul class="simple">
@@ -1510,7 +1505,7 @@ share expertise within a specific field, and funding mechanisms are often tied t
 from using the software rather than to the software itself.
 Because of these nuances of the research software environment, the incentives to create high-quality software are often misaligned with the career incentives for the engineers
 creating the software.
-Without the appropriate incentives, the best practices listed in this report will never gain
+Without the appropriate incentives, the best practices listed in this report will not gain
 adoption, and Wind Energy Technologies Office (WETO) software will suffer in all of the areas listed.
 For the sake of the WETO software portfolio and the researchers working in these groups,
 it is important to directly consider the needs and expectations of the people
@@ -1577,13 +1572,13 @@ experience; that is, they should <em>use</em> as well as <em>develop</em> their 
 RSEs should know the context in which their software exists.
 They should be experts in the implementation and very good in the usage.
 A characteristic career trajectory within the national lab environment may take the following path:</p>
-<ul class="simple">
-<li><p>Year 1: Implement models; develop tests and documentation</p></li>
-<li><p>Year 2: Co-author analyses, improve modeling, inform work plans</p></li>
-<li><p>Year 3: Lead author analyses, guide future development efforts, write work plans</p></li>
-<li><p>Year 4: Propose new work; seek funding to expand the software project</p></li>
-<li><p>Year 5: Inform centerwide software culture and practices.</p></li>
-</ul>
+<ol class="arabic simple">
+<li><p>Implement models, develop tests and documentation</p></li>
+<li><p>Co-author analyses, improve modeling, inform work plans</p></li>
+<li><p>Lead author analyses, guide future development efforts, write work plans</p></li>
+<li><p>Propose new work, seek funding to expand the software project</p></li>
+<li><p>Inform center-wide software culture and practices.</p></li>
+</ol>
 <p>In general, the amount of code written by an RSE should peak around Year 2 or 3 and
 then taper off. The responsibility for creating software should not be entirely removed, but
 the majority of involvement in software development should be code review, design, and
