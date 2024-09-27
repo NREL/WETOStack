@@ -107,11 +107,49 @@ Holistic Modeling Project action items and suggestions:
 During the workshop discussion sections, the presenters conducted polls of the audience.
 For the first three workshops, the polling was conducted via the Microsoft Teams Polls app, and
 Mentimeter was used for the final workshop.
-The Teams Polls app turned out to be unreliable and the method for submitting results was
-unintuitive, so most of the results are not trustworthy and will not be presented here.
+The Teams Polls app turned out to be faulty, so many of the results are unreliable.
+A broad qualitative summary of the results is given here.
 
-...
+### User Support
+In each workshop, questions were asked about existing and future user support options.
+As for existing support, attendees noted that they mostly receive help from the model owners
+via the NREL Forums and GitHub-based forums, and that they also use the documentation and examples
+as a reference.
+On future user support, the questions asked attendees to rank support options in order
+of priority.
+The questions in each workshop were different, so a direct comparison is not made.
+However, respondents generally settled on the following ranking:
 
+1. Community forums
+2. Model-specific workshops and trainings
+3. Improved examples
+4. Improved documentation
+5. Paid support
+
+### Upcoming Development Focus Areas
+Polls were conducted to understand the community's priorities around future development of the
+WETO Stack.
+The questions evolved throughout the series of workshops, but the results overwhelmingly indicate
+that the community supports focusing on usability and accessibility improvements.
+Specifically, "Documentation" and "Tutorials & Examples" were the clear favorite with
+"Installability" and "Usability / Seamless workflows" coming after.
+
+As an indicative example, a poll in the OpenFAST workshop asked attendees to write in their
+top priorities and displayed the answers in a word cloud. Of the 31 responses, 26 were related to
+accessibility issues.
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/OpenFAST/poll4.png
+:align: center
+:width: 600px
+```
+:::
+
+::::
 
 ## Workshop Feedback
 
