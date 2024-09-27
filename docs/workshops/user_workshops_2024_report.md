@@ -221,11 +221,11 @@ from the attendees are not attributed.
 
 ### Systems Engineering
 
-Portfolio discussion:
+**Portfolio discussion**
 - Suggestion to provide guidance on using the various software together to accomplish a given task
 - Although documentation, examples, and other user support may exist, it can be difficult to find it
 - The individual software projects may have examples on how to accomplish tasks within their scope, but describing how they can be used together would be helpful
-- *Pietro*: There is an intention for develop unified workflows and especially that integrate with windIO; this is a work in progress
+- *Pietro*: There is an intention to develop unified workflows and especially that integrate with windIO; this is a work in progress
 - *Pietro*: Workflows are very user-dependent, so addressing this need is a challenge for the model owners to navigate
 - It would be helpful to have user groups that are split into categories based on the type of work they do
     - There are developers, OEMs, operators, academia - All these have different capabilities and want to use various NREL software, but they need to do different things
@@ -235,7 +235,7 @@ Portfolio discussion:
 - There's a broad array of tools within this software stack, and it would be useful to be able to integrate in-house tools to complete a particular workflow
     - How can we integrate in-house models with the high-level methods within the WETO Stack?
 
-SE discussion:
+**SE discussion**
 - It's not uncommon to come across an example that doesn't run due to outdated files or dependency libraries
     - Given that we have limited time to evaluate these tools, ensuring that things work as-is would reduce the barrier to entry
     - "I got the same feeling when I saw what WindSE can do. It looks amazing, but I know if I go and try it out I'm going to get stuck, and it's going to take me some time."
@@ -254,7 +254,7 @@ SE discussion:
     - *Jeff*: As developers, we're blinded to the issues for new users because we created these systems and spend a lot of time with them
     - *Rafael*: You only have the unique experience of seeing something for the first time one, so it's really helpful to hear your struggles and feedback on the onboarding process when you're experiencing them
         - Feel free to engage directly with us on these problems
-- The reference systems the Pietro and co are creating could be a good way to show case this set of tools
+- The reference systems that Pietro and co are creating could be a good way to show case this set of tools
     - Suggest to open source the reference turbine design process as a demo
     - Related, many of these tools interface with windIO - how do you see the ongoing engagement with windIO?
     - *Rafael*: From the holistic modeling perspective, we intend to start integrating windIO more directly within the WETO Stack over the next year
@@ -268,7 +268,7 @@ SE discussion:
     - *Jeff*: Let us know if you have a use-case where you want to connect multifidelity models because this is often where new development comes from
     - *Ernesto*: In the past, a challenge of going from low fidelity to high fidelity is that you need to add more information to the inputs, so having a common input structure facilitates structuring the data up front
 
-Meeting chat:
+**Meeting chat**
 - I think pushing windIO forward as a universal input file format will facilitate to work with various of the WETO tools. It took us a while to juggle between WISDEM, openFAST, SONATA and some external tools. OpenFAST is not yet on windIO, right? But still between wisdem and sonata the windIO format was not defined 100% the same, so some adjustments were necessary. 
     - *Garrett*: Thank you for that comment, Daniel.  That is certainly the long-term vision, and progress is being made, although not always as quickly to help all projects
 - Is there any possibility to integrate nrel's turbine library with wisdem? Maybe using windio? https://github.com/NREL/turbine-models
@@ -300,14 +300,11 @@ Meeting chat:
 
 ### Technoeconomic Analysis and Cost Models
 
-Portfolio discussion:
+**Portfolio discussion**
 - How are assumptions in the cost models developed and communicated?
     - *Rob*: Expanding the software documentation and publishing these methods is a focus of the upcoming year of work, and it is already included in the future roadmap
 
-
-
-
-Meeting chat:
+**Meeting chat**
 - Interested to know if there are any tools in development to handle end of service or end of life of wind farms and decommissioning pathways. Especially TEA and cost models of these processes.
     - *Garrett*: Both ORBIT and LandBOSSE, which will be presented today, have line item costs for decommissioning, but those end-of-life processes are not modeled to the same resolution as assembly and installation at the front-end
 - Thanks.   Do you have any interface with TECHTEST that DOE EERE published?
@@ -336,13 +333,13 @@ Meeting chat:
 
 ### Wind Farm Controls and Analysis
 
-Portfolio discussion:
+**Portfolio discussion**
 - Confusion has been around what model do I choose for my particular needs?
     - So if I want to do some sort of mid fidelity modeling, how do I choose one tool over another?
     - Ideally, there would be a guide that serves as an entry point to the WETO Stack
     - *Rafael*: For that specific question, FAST.Farm is a good start, but generally I think a mapping of the software at one level higher than the mindmap that we currently have would be helpful
 
-WFC&A discussion:
+**WFC&A discussion**
 - From the polls, "community forums" were voted as the user-support option that is more desired
 - Having a starting point and classification of the tools would be helpful to new and experienced users
     - Different models can do many things, but now I have too many options so how do I choose one and use them effectively
@@ -367,11 +364,12 @@ WFC&A discussion:
         - An online meeting or other live event where stakeholders (users, contributors) who have contributed to FLORIS are invited
     - *Rafael*: Whats a good way to advertise these types of events?
 
-Meeting chat:
+**Meeting chat**
 - This workshop's chat was mostly inactive.
 
 ### OpenFAST Ecosystem
 
+**OpenFAST discussion**
 - How to communicate information broadly about updates and events relate to WETO Software?
     - An email newsletter is good, but also putting information on the internet is helpful so that others who aren't subscribed to the email can also find it
 - If you have a new model or want to make changes to an existing model, whats the recommended sequence of steps to do this (specific to ROSCO)?
@@ -384,7 +382,7 @@ Meeting chat:
         - Keeping in sync with WEIS and other adjacent software is more challenging, but we're testing processes for navigating this
 - Lots of discussion around processes for contribution back to the OpenFAST ecosystem and especially the openfast_toolbox project
 
-Meeting chat:
+**Meeting chat**
 - Hi Derek, great tool ACDC! What openFast modules are supported? ElastoDyn or also BeamDyn? ServoDyn fixed bottom or also floating? Can one set manually the degrees of freedom in the elastoDyn file?
     - *Derek*: It's been pretty thoroughly tested with ElastoDyn, BeamDyn, and AeroDyn. If you can normally do linearization in OpenFAST it should be supported by ACDC. The visualization currently only supports lines so SubDyn doesn't visualize very well, but frequencies and damping are correct. It has worked on floating as well, though it doesn't visualize the platform
 - How does the External DLL option work?
@@ -408,7 +406,106 @@ Meeting chat:
 
 ### Systems Engineering
 
-Polls data temporarily unavailable.
+**Topic specific poll**
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/SE/poll1.png
+:align: center
+:width: 600px
+```
+:::
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/SE/poll2.png
+:align: center
+:width: 600px
+```
+:::
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/SE/poll3.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/SE/poll4.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/SE/poll5.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/SE/poll6.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/SE/poll7.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/SE/poll8.png
+:align: center
+:width: 600px
+```
+:::
+
+::::
+
+**Exit poll**
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/SE/poll9.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/SE/poll10.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/SE/poll11.png
+:align: center
+:width: 600px
+```
+:::
+
+::::
+
 
 
 ### Technoeconomic Analysis and Cost Models
@@ -419,7 +516,7 @@ Polls data temporarily unavailable.
 :gutter: 1
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/TEA/poll1.png
 :align: center
 :width: 600px
@@ -427,7 +524,7 @@ Polls data temporarily unavailable.
 :::
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/TEA/poll2.png
 :align: center
 :width: 600px
@@ -442,7 +539,7 @@ Polls data temporarily unavailable.
 :gutter: 1
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/TEA/poll3.png
 :align: center
 :width: 600px
@@ -450,7 +547,7 @@ Polls data temporarily unavailable.
 :::
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/TEA/poll4.png
 :align: center
 :width: 600px
@@ -458,7 +555,7 @@ Polls data temporarily unavailable.
 :::
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/TEA/poll5.png
 :align: center
 :width: 600px
@@ -466,7 +563,7 @@ Polls data temporarily unavailable.
 :::
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/TEA/poll6.png
 :align: center
 :width: 600px
@@ -481,7 +578,7 @@ Polls data temporarily unavailable.
 :gutter: 1
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/TEA/poll7.png
 :align: center
 :width: 600px
@@ -489,7 +586,7 @@ Polls data temporarily unavailable.
 :::
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/TEA/poll8.png
 :align: center
 :width: 600px
@@ -507,7 +604,7 @@ Polls data temporarily unavailable.
 :gutter: 1
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/WFCA/poll1.png
 :align: center
 :width: 600px
@@ -515,7 +612,7 @@ Polls data temporarily unavailable.
 :::
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/WFCA/poll2.png
 :align: center
 :width: 600px
@@ -523,7 +620,7 @@ Polls data temporarily unavailable.
 :::
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/WFCA/poll3.png
 :align: center
 :width: 600px
@@ -538,7 +635,7 @@ Polls data temporarily unavailable.
 :gutter: 1
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/WFCA/poll4.png
 :align: center
 :width: 600px
@@ -546,7 +643,7 @@ Polls data temporarily unavailable.
 :::
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/WFCA/poll5.png
 :align: center
 :width: 600px
@@ -554,7 +651,7 @@ Polls data temporarily unavailable.
 :::
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/WFCA/poll6.png
 :align: center
 :width: 600px
@@ -562,7 +659,7 @@ Polls data temporarily unavailable.
 :::
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/WFCA/poll7.png
 :align: center
 :width: 600px
@@ -570,7 +667,7 @@ Polls data temporarily unavailable.
 :::
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/WFCA/poll8.png
 :align: center
 :width: 600px
@@ -578,7 +675,7 @@ Polls data temporarily unavailable.
 :::
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/WFCA/poll9.png
 :align: center
 :width: 600px
@@ -586,7 +683,7 @@ Polls data temporarily unavailable.
 :::
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/WFCA/poll10.png
 :align: center
 :width: 600px
@@ -601,7 +698,7 @@ Polls data temporarily unavailable.
 :gutter: 1
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/WFCA/poll11.png
 :align: center
 :width: 600px
@@ -609,7 +706,7 @@ Polls data temporarily unavailable.
 :::
 
 :::{grid-item-card}
-:columns: 4
+:columns: 6
 ```{image} ../_static/UserWorkshops2024Polls/WFCA/poll12.png
 :align: center
 :width: 600px
@@ -621,4 +718,62 @@ Polls data temporarily unavailable.
 
 ### OpenFAST Ecosystem
 
-Polls data temporarily unavailable.
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/OpenFAST/poll1.png
+:align: center
+:width: 600px
+```
+:::
+
+::::
+
+**Topic specific poll**
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/OpenFAST/poll2.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/OpenFAST/poll3.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/OpenFAST/poll4.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/OpenFAST/poll5.png
+:align: center
+:width: 600px
+```
+:::
+
+:::{grid-item-card}
+:columns: 6
+```{image} ../_static/UserWorkshops2024Polls/OpenFAST/poll6.png
+:align: center
+:width: 600px
+```
+:::
+
+::::
