@@ -84,10 +84,10 @@ file_structure_stability: in_development
 dependencies:
 -   - floris
     - direct
--   - hybridbosse
-    - direct
 -   - orbit
     - indirect
+# -   - hybridbosse
+#     - direct
 # -   - rev
 #     - direct
 # -   - sam

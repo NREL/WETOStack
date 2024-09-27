@@ -18,6 +18,8 @@ technical area and capability was also presented. Finally, a discussion of commu
 was held to help inform the direction of the Holistic Modeling Project and the WETO software,
 in general.
 
+{download}`Click here to download the slides.<../_static/NAWEA2023_WETOStack.pdf>`
+
 ```{youtube} _RBIK_csy0w
 ```
 
@@ -44,9 +46,9 @@ work around OpenFAST and its applications.
 Michael Kuhn hosted a workshop covering the background of the ExaWind software
 suite, as well as practical guidance on installing, running, and analyzing results.
 
-{download}`Click here to download the slides.<../_static/Exawind_NAWEA2023.pdf>`
+{download}`Click here to download the slides.<../_static/NAWEA2023_Exawind.pdf>`
 
-```{pdf-include} ../_static/Exawind_NAWEA2023.pdf
+```{pdf-include} ../_static/NAWEA2023_Exawind.pdf
 ```
 
 ## HOPP
@@ -54,9 +56,9 @@ suite, as well as practical guidance on installing, running, and analyzing resul
 Genevieve Starke, Cameron Irmas, and Chris Bay hosted a working on HOPP covering the background,
 capabilities, recent results, future work, and usage of the software.
 
-{download}`Click here to download the slides.<../_static/HOPP_NAWEA2023.pdf>`
+{download}`Click here to download the slides.<../_static/NAWEA2023_HOPP.pdf>`
 
-```{pdf-include} ../_static/HOPP_NAWEA2023.pdf
+```{pdf-include} ../_static/NAWEA2023_HOPP.pdf
 ```
 
 ## WOMBAT
@@ -65,7 +67,7 @@ Rob Hammond hosted a workshop that provided an overview of the model and worked 
 scenario in the public domain to demonstrate how to fully configure the model, run an analysis, and
 get results.
 
-{download}`Click here to download the slides.<../_static/WOMBAT_NAWEA2023.pdf>`
+{download}`Click here to download the slides.<../_static/NAWEA2023_WOMBAT.pdf>`
 
-```{pdf-include} ../_static/WOMBAT_NAWEA2023.pdf
+```{pdf-include} ../_static/NAWEA2023_WOMBAT.pdf
 ```

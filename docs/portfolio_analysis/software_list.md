@@ -11,21 +11,20 @@ mindmap
             OpenFAST
             FAST.Farm
             MoorPy
-            wtDigiTwin
-            ANBA4
             RAFT
+            OWENS
 
         hfm(High Fidelity Models)
             AMR Wind
             Nalu Wind
             OpenTurbine
             ERF
-            WindSE
             pyNuMAD
 
         do(Design & Optimization)
             WEIS
             WISDEM
+            WindSE
             HOPP
             SONATA
 
@@ -34,14 +33,12 @@ mindmap
             FLORIS
             FLASC
             hercules
-            moa_python
 
         ra(Resource Assessment)
             DW TAP
 
         cost(Cost Models)
             LandBOSSE
-            HybridBOSSE
             ORBIT
             CORAL
             NRWAL
@@ -55,9 +52,13 @@ mindmap
 ```
 
 The set of software under the WETO umbrella is listed here.
-This is intended to eventually be a complete list, but it is likely missing some projects yet.
+While this is intended to be a complete list, it is likely missing some projects.
 Please [suggest an edit](https://github.com/nrel/wetostack/edit/main/docs/portfolio_analysis/software_list.md)
 if any information here is incorrect.
+Including a software in this list requires the following:
+- Entry in [software_attributes/database_list.yaml](https://github.com/NREL/WETOStack/blob/main/software_attributes/database_list.yaml)
+- Entry in [docs/software_list.md](https://github.com/NREL/WETOStack/blob/main/docs/portfolio_analysis/software_list.md)
+- Corresponding YAML file in [software_attributes/database](https://github.com/NREL/WETOStack/tree/main/software_attributes/database)
 
 This listing contains two groups of software projects:
 
@@ -76,21 +77,20 @@ These projects are actively supported and funded by WETO as of FY23.
 - OpenFAST: https://github.com/openfast/openfast
 - FAST.Farm: https://github.com/openfast/openfast
 - MoorPy: https://github.com/nrel/moorpy
-- wtDigiTwin: https://github.com/ebranlard/wtDigiTwin
 - RAFT: https://github.com/WISDEM/RAFT
-- ANBA4: https://github.com/ANBA4/anba4
+- OWENS: https://github.com/sandialabs/OWENS.jl
 
 **High fidelity models**
 - AMR-Wind: https://github.com/exawind/amr-wind
 - Nalu-Wind: https://github.com/exawind/nalu-wind
 - OpenTurbine: https://github.com/exawind/openturbine
 - ERF: https://github.com/erf-model/ERF
-- WindSE: https://github.com/nrel/windse
 - pyNuMAD: https://github.com/sandialabs/pyNuMAD
 
 **Design and optimization**
 - WEIS: https://github.com/wisdem/weis
 - WISDEM: https://github.com/wisdem/wisdem
+- WindSE: https://github.com/nrel/windse
 - HOPP: https://github.com/NREL/HOPP
 - SONATA: https://github.com/ptrbortolotti/SONATA
 
@@ -99,14 +99,12 @@ These projects are actively supported and funded by WETO as of FY23.
 - FLORIS: https://github.com/nrel/floris
 - FLASC: https://github.com/nrel/flasc
 - hercules: https://github.com/nrel/hercules
-- moa_python: https://github.com/nrel/moa_python
 
 **Resources assessment**
 - DW TAP: https://github.com/NREL/dw-tap-app
 
 **Cost models**
 - LandBOSSE: https://github.com/WISDEM/LandBOSSE
-- HybridBOSSE: https://github.com/NREL/HybridBOSSE
 - ORBIT: https://github.com/WISDEM/ORBIT
 - CORAL: https://github.com/NREL/CORAL
 - NRWAL: https://github.com/NREL/NRWAL
@@ -131,7 +129,6 @@ These projects are either funded outside of WETO, are not actively funded, or ar
 - PyFrame3DD: https://github.com/WISDEM/pyFrame3DD
 - CACTUS: https://github.com/sandialabs/CACTUS
 - WEC-Sim/MOST: https://github.com/WEC-Sim/WEC-Sim and http://www.morenergylab.polito.it/most/
-- OWENS: https://www.nrel.gov/docs/fy23osti/83748.pdf
 
 *Deprecated or no longer supported:*
 - ADAMS2AD: The MSC.ADAMS-to-AeroDyn (ADAMS2AD) interface is a software package for simulating the coupled dynamic response of horizontal-axis wind turbines.
@@ -142,6 +139,9 @@ These projects are either funded outside of WETO, are not actively funded, or ar
 **High fidelity models**
 - SOWFA: https://github.com/nrel/sowfa
 - NuMAD: https://github.com/sandialabs/NuMAD
+
+**Wind farm controls**
+- moa_python: https://github.com/nrel/moa_python
 
 **Numerical weather prediction**
 - WRF: https://github.com/wrf-model/WRF
@@ -167,6 +167,7 @@ These projects are either funded outside of WETO, are not actively funded, or ar
 **Cost models**
 - FUSED-Wind: https://github.com/FUSED-Wind/fusedwind
 - Marmot: https://github.com/NREL/Marmot
+- HybridBOSSE: https://github.com/NREL/HybridBOSSE - A tool for estimating BOS costs for hybrid power plants that share infrastructure.
 
 *Deprecated or no longer supported:*
 - Turbine_costSE: turb_costSE is a set of models that link wind turbine component masses (and a few other key variables) to component costs.
@@ -240,3 +241,4 @@ The following GitHub organizations house some of the software projects supported
 - https://github.com/openfast
 - https://github.com/wisdem
 - https://github.com/erf-model
+- https://github.com/sandialabs

@@ -1,6 +1,5 @@
 active:
 - amr-wind
-- anba4
 - dw_tap
 - dwind
 - erf
@@ -10,13 +9,13 @@ active:
 - hercules
 - hopp
 - landbosse
-- moa_python
 - moorpy
 - nalu-wind
 - openfast
 - openoa
 - openturbine
 - orbit
+- owens
 - pynumad
 - raft
 - rosco
@@ -33,11 +32,9 @@ partial:
 # coral
 - dgen
 # empty
-- hybridbosse
 # nrwal
 - pysam
 - rev
 - rex
 # ssrs
 # wpgnn_playgen
-# wtdigitwin

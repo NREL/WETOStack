@@ -6,6 +6,7 @@ This is a list of WETO-supported software projects.
 - https://github.com/openfast
 - https://github.com/wisdem
 - https://github.com/erf-model
+- https://github.com/sandialabs
 
 ## Physics simulators
 FLORIS
@@ -20,6 +21,8 @@ OpenFAST
 - python-toolbox
 - matlab-toolbox
 - weio
+
+OWENS: End to end aero-servo-elastic preprocessing, simulation, and post processing for VAWTs and crossflow turbines.
 
 SOWFA: Simulator for Wind Farm Applications
 Release Date: June 27, 2016
@@ -105,10 +108,6 @@ turb_costSE is a set of models that link wind turbine component masses (and a fe
 WPGNN and PLayGen: Wind Plant Graph Neural Network and Plant Layout Generator
 Release Date: May 5, 2022
 WPGNN is the graph neural network machine learning-based surrogate model and software that provides a streamlined approximation of wind plant wake models. It can rapidly estimate the energy production of the plant and turbines for any arbitrarily sized wind plant and layout under any inflow condition. The included plant layout generator can produce random realizations of realistic wind plant layouts from one of the four canonical styles: cluster, single string, multiple string, or parallel string. 
-
-wtDigiTwin: Wind Turbine Digital Twin
-Release Date: Feb. 1, 2021
-wtDigiTwin provides a digital twin solution for wind turbine applications. wtDigiTwin estimates loads, motions, and environmental conditions for an operating wind turbine. The program uses supervisory control and data acquisition measurements as inputs, together with a wind turbine model.
 
 
 ## Design

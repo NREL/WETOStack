@@ -1,6 +1,7 @@
-jsonschema
+jsonschema~=4.21
 json-schema-for-humans
-matplotlib
-numpy
+matplotlib~=3.9
+numpy~=1.26
+# pygraphviz
 pyyaml
 squarify

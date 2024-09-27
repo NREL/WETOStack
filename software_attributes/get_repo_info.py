@@ -14,12 +14,12 @@ repo_list = [
     ("https://github.com", "erf-model", "erf"),
     ("https://github.com", "openfast", "kitefast"),
     ("https://github.com", "openfast", "openfast"),
+    ("https://github.com", "sandialabs", "OWENS.jl"),
     ("https://github.com", "nrel", "rosco"),
     ("https://github.com", "nrel", "rosco_toolbox"),
     ("https://github.com", "wisdem", "wisdem"),
     ("https://github.com", "wisdem", "weis"),
     ("https://github.com", "NREL", "HOPP"),
-    ("https://github.com", "NREL", "HybridBOSSE"),
     ("https://github.com", "WISDEM", "landbosse"),
     ("https://github.com", "WISDEM", "WOMBAT"),
 ]

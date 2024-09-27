@@ -17,9 +17,8 @@ mindmap
             OpenFAST
             FAST.Farm
             MoorPy
-            wtDigiTwin
-            ANBA4
             RAFT
+            OWENS
 
         ps(" ")
         hfm(" ")
@@ -34,9 +33,8 @@ mindmap
 - OpenFAST https://github.com/openfast/openfast - Multi-physics, multi-fidelity tool for simulating the coupled dynamic response of wind turbines.
 - FAST.Farm https://github.com/openfast/openfast - Mid-fidelity wind farm simulator that uses OpenFAST as a turbine model.
 - MoorPy https://github.com/nrel/moorpy - Quasi-static mooring model and a suite of associated functions for mooring system analysis.
-- wtDigiTwin https://github.com/ebranlard/wtDigiTwin - Digital twin model for wind turbine containing a set of structural dynamics tools, beam theory, FEM and more.
 - RAFT https://github.com/WISDEM/RAFT - Library for frequency-domain analysis of floating wind turbines.
-- ANBA4 https://github.com/ANBA4/anba4 - Computes the 6x6 stiffness and mass matrices of arbitrarily complex composite beam cross sections.
+- OWENS https://github.com/sandialabs/OWENS.jl - Multi-physics aero-servo-elastic tool with coupling to OpenFAST hydrodynamics and mooring for the coupled dynamic response of VAWTs and crossflow turbines.
 ````
 
 
@@ -54,7 +52,6 @@ mindmap
             Nalu Wind
             OpenTurbine
             ERF
-            WindSE
             pyNuMAD
         do(" ")
         ctrl(" ")
@@ -68,7 +65,6 @@ mindmap
 - Nalu-Wind https://github.com/exawind/nalu-wind - Generalized, unstructured, massively parallel, incompressible flow solver for wind turbine and wind farm simulations.
 - OpenTurbine https://github.com/exawind/openturbine - Wind turbine structural dynamics simulation code for land-based and offshore wind turbines specifically designed to couple with low-fidelity aerodynamic/hydrodynamic models (OpenFAST) and high-fidelity computational fluid dynamics (CFD) models (ExaWind).
 - ERF https://github.com/erf-model/ERF - Compressible Navier-Stokes solver on an Arakawa C-grid for large-scale weather modeling.
-- WindSE https://github.com/nrel/windse - Python package that uses a FEniCS backend to perform wind farm simulations and optimization. 
 - pyNuMAD https://github.com/sandialabs/pyNuMAD - Simplifies the process of creating a three-dimensional model of a wind turbine blade by providing an intermediary between raw blade data and analytical platforms (ANSYS, Cubit, OpenFAST, etc).
 ````
 
@@ -86,6 +82,7 @@ mindmap
         do(Design & Optimization)
             WEIS
             WISDEM
+            WindSE
             HOPP
             SONATA
         ctrl(" ")
@@ -97,6 +94,7 @@ mindmap
 
 - WEIS https://github.com/wisdem/weis - Wind Energy with Integrated Servo-control performs multifidelity co-design of wind turbines by combining multiple NREL-developed tools to enable design optimization of floating offshore wind turbines.
 - WISDEM https://github.com/wisdem/wisdem - Set of wind turbine and plant cost and energy production models along with financial models for assessing overall wind plant cost of energy.
+- WindSE https://github.com/nrel/windse - Python package that uses a FEniCS backend to perform wind farm simulations and optimization. 
 - HOPP https://github.com/NREL/HOPP - Assesses optimal designs for the deployment of utility-scale hybrid energy plants, particularly considering wind, solar and storage.
 - SONATA https://github.com/ptrbortolotti/SONATA - Toolbox for Multidisciplinary Rotor Blade Design Environment for Structural Optimization and Aeroelastic Analysis.
 ````
@@ -118,7 +116,6 @@ mindmap
             FLORIS
             FLASC
             hercules
-            moa_python
         ra(" ")
         cost(" ")
         wild(" ")
@@ -129,7 +126,6 @@ mindmap
 - FLORIS https://github.com/nrel/floris - Controls-focused wind farm simulation software incorporating steady-state engineering wake models into a performance-focused Python framework.
 - FLASC https://github.com/nrel/flasc - Suite of analysis tools for SCADA data filtering, analysis, wind farm model validation, field experiment design, and field experiment monitoring.
 - hercules https://github.com/nrel/hercules - Wind farm emulator for controls testing with LES models.
-- moa_python https://github.com/nrel/moa_python - Wind farm performance post processing and analysis tool.
 ````
 
 
@@ -171,7 +167,6 @@ mindmap
         ra(" ")
         cost(Cost Models)
             LandBOSSE
-            HybridBOSSE
             ORBIT
             CORAL
             NRWAL
@@ -181,7 +176,6 @@ mindmap
 ```
 
 - LandBOSSE https://github.com/WISDEM/LandBOSSE - A systems engineering tool that estimates the balance-of-system (BOS) costs associated with installing utility scale wind plants (10, 1.5 MW turbines or larger)
-- HybridBOSSE https://github.com/NREL/HybridBOSSE - A tool for estimating BOS costs for hybrid power plants that share infrastructure.
 - ORBIT https://github.com/WISDEM/ORBIT - A model to study the cost and times associated with Offshore Wind Balance of System (BOS) processes.
 - CORAL https://github.com/NREL/CORAL - Concurrent ORBIT for shared Resource Analysis Library
 - NRWAL https://github.com/NREL/NRWAL - A library of offshore wind cost equations (plus new energy technologies like marine hydro!).

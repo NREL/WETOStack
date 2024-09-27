@@ -1,0 +1,110 @@
+# General
+github_account: sandialabs
+github_repo: OWENS.jl
+primary_uses:
+- simulation
+- optimization
+active_funding: true
+development_status: new_features
+programming_language: julia
+license_type: lgpl-3.0
+data_collection_methods:
+- modeling
+last_release_date: "2024-04-10"
+
+# Modeling
+scope:
+- turbine
+- farm
+system_type:
+- vawt
+system_location:
+- any
+time_domain: 
+- dynamic
+- steady
+turbine_model:
+- multibody_bem
+- vortex_method
+wake_model:
+- vortex_method
+loads: true
+design_optimization: true
+costs: true
+tags:
+- sectional property preprocessing
+- mass based cost
+- jointed multi-body
+- multi-turbine
+- nonlinear or linear time domain simulation
+- steady state simulation
+- hydrokinetic fluid corrections
+- linearization and export to pseudal spectral methods
+- automated campbell diagram generation
+- composite level stress
+- ultimate failure checks
+- buckling checks
+- rainflow counting
+- miner's rule fatigue acumulation
+- automatic gradients
+- VTK outputs
+
+# Distribution
+supported_platforms:
+- any
+package_manager:
+- julia
+package_manager_url:
+- git@github.com:sandialabs/OWENS.jl.git
+installation_complexity: 5
+
+# Documentation
+documentation_url: https://sandialabs.github.io/OWENS.jl/stable/
+has_user_docs: true
+has_developer_docs: true
+has_api_docs: true
+has_cli_docs: false
+has_installation_docs: true
+has_getting_started_docs: true
+has_examples_tutorials: true
+has_design_intent_statement: false
+readability: 2
+project_coverage: 2
+
+# Testing
+testing_framework: true
+continuous_testing: true
+test_coverage: 50
+test_documentation: false
+performance_tests: false
+
+# Interfaces
+first_class_ui:
+- input_files
+- library_interface
+has_cli: true
+language_interfaces:
+- julia
+feature_accessibility: 98
+
+# Input / Output
+filetypes:
+- custom
+file_structure_stability: semantic_versioning
+
+# WETO Integrations
+dependencies:
+- - AeroDyn
+  - direct
+- - MoorDyn
+  - direct
+- - HydroDyn
+  - direct
+- - Turbsim
+  - direct
+
+# # Community Health
+# open_issues: 0..N
+# open_pull_requests: 0..N
+# average_time_to_engage: 0..N
+# outside_contributors: 0..N
