@@ -17,13 +17,13 @@ schema = {
         "github_account": {
             "description": "The associated account on GitHub.\n"
                 "In the web address, this is the middle component: "
-                "https://github.com/\<account\>/\<repo\>.",
+                "https://github.com/<account>/<repo>.",
             "type": "string"
         },
         "github_repo": {
             "description": "The repository name.\n"
                 "In the web address, this is the last component: "
-                "https://github.com/\<account\>/\<repo\>.",
+                "https://github.com/<account>/<repo>.",
             "type": "string"
         },      
         "active_funding": {
