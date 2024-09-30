@@ -1,8 +1,6 @@
 # General
 github_account: nrel
 github_repo: flasc
-primary_uses:
-- data_analysis
 active_funding: true
 development_status: new_features
 programming_language: python
@@ -27,9 +25,13 @@ turbine_model:
 - SCADA
 wake_model:
 - analytical
-loads: false
-design_optimization: false
-costs: false
+does_controls: false
+does_costs: false
+does_data_analysis: true
+does_design: false
+does_design_optimization: false
+does_simulation: false
+does_loads: false
 tags:
 - steady state analytical engineering models
 - scada data analysis

@@ -1,8 +1,6 @@
 # General
 github_account: TODO
 github_repo: TODO
-primary_uses:
-- TODO
 active_funding: TODO
 development_status: TODO
 programming_language: TODO
@@ -23,9 +21,13 @@ turbine_model:
 - TODO
 wake_model:
 - TODO
-loads: TODO
-design_optimization: TODO
-costs: TODO
+does_controls: TODO
+does_costs: TODO
+does_data_analysis: TODO
+does_design: TODO
+does_design_optimization: TODO
+does_simulation: TODO
+does_loads: TODO
 tags:
 - TODO
 

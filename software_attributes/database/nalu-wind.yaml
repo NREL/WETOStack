@@ -1,8 +1,6 @@
 # General
 github_account: exawind
 github_repo: nalu-wind
-primary_uses:
-- simulation
 active_funding: true
 development_status: new_features
 programming_language: c++
@@ -24,10 +22,14 @@ turbine_model:
 - actuator
 - geometry_resolved
 wake_model:
-    - navier_stokes
-loads: true
-design_optimization: false
-costs: false
+- navier_stokes
+does_controls: false
+does_costs: false
+does_data_analysis: false
+does_design: false
+does_design_optimization: false
+does_simulation: true
+does_loads: true
 tags:
 - large eddy simulation
 - unstructured

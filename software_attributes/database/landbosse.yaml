@@ -1,10 +1,6 @@
 # General
 github_account: wisdem
 github_repo: landbosse
-primary_uses:
-- design
-- optimization
-- cost
 active_funding: true
 development_status: new_features
 programming_language: python
@@ -28,9 +24,13 @@ turbine_model:
 - regression
 wake_model:
 - N/A
-loads: false
-design_optimization: true
-costs: true
+does_controls: false
+does_costs: true
+does_data_analysis: false
+does_design: true
+does_design_optimization: true
+does_simulation: false
+does_loads: false
 tags:
 - balance of station
 - balance of plant

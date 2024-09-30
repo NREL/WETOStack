@@ -1,8 +1,6 @@
 # General
 github_account: nrel
 github_repo: floris
-primary_uses:
-- simulation
 active_funding: true
 development_status: new_features
 programming_language: python
@@ -26,9 +24,13 @@ turbine_model:
 - lookup_table
 wake_model:
 - analytical
-loads: false
-design_optimization: true
-costs: false
+does_controls: true
+does_costs: false
+does_data_analysis: false
+does_design: false
+does_design_optimization: true
+does_simulation: true
+does_loads: false
 tags:
 - steady state
 - analytical wake model

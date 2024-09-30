@@ -1,9 +1,6 @@
 # General
 github_account: sandialabs
 github_repo: OWENS.jl
-primary_uses:
-- simulation
-- optimization
 active_funding: true
 development_status: new_features
 programming_language: julia
@@ -28,9 +25,13 @@ turbine_model:
 - vortex_method
 wake_model:
 - vortex_method
-loads: true
-design_optimization: true
-costs: true
+does_controls: false
+does_costs: false
+does_data_analysis: false
+does_design: false
+does_design_optimization: true
+does_simulation: true
+does_loads: true
 tags:
 - sectional property preprocessing
 - mass based cost
