@@ -1,5 +1,5 @@
 (bestpractices)=
-# Research Software Best Practices
+# WETO Software Best Practices
 
 Wind energy researchers typically share one key characteristic: a passion for increasing
 wind energy in the global energy mix. The U.S. Department of Energy (DOE) supports this mission

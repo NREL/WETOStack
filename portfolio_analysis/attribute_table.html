@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,10 +39,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/images/logo.css?v=ac23bd2b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -78,6 +81,7 @@
     <link rel="prev" title="Software Listing" href="software_list.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -93,19 +97,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -113,7 +106,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -121,8 +113,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -138,7 +130,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -166,21 +159,17 @@
     
     
     <img src="../_static/logo.gif" class="logo__image only-light" alt=" - Home"/>
-    <script>document.write(`<img src="../_static/logo.gif" class="logo__image only-dark" alt=" - Home"/>`);</script>
+    <img src="../_static/logo.gif" class="logo__image only-dark pst-js-only" alt=" - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Workshops</span></p>
@@ -212,7 +201,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../software_dev/best_practices.html">Research Software Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software_dev/best_practices.html">WETO Software Best Practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../software_dev/developer_resources.html">Developer Training</a></li>
 </ul>
 
@@ -385,24 +374,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -529,12 +510,12 @@ Instead, they can be filtered by searching for a string with the following Seque
 </pre></div>
 </div>
 <div class="output text_html"><style>
-  #dp-08b7553cfd5643a396f0480a5885cbf6 {
+  #dp-2e89fe4c8db7418c8a6fc8715ac8c37e {
     width: 1px;
     min-width: 100%;
   }
 </style>
-<iframe id="dp-08b7553cfd5643a396f0480a5885cbf6" srcdoc="&lt;!DOCTYPE html&gt;
+<iframe id="dp-2e89fe4c8db7418c8a6fc8715ac8c37e" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -589,7 +570,7 @@ Instead, they can be filtered by searching for a string with the following Seque
 </iframe>
 <script type="module">
   import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-08b7553cfd5643a396f0480a5885cbf6");
+  iframeResize({ log: true, checkOrigin: false }, "#dp-2e89fe4c8db7418c8a6fc8715ac8c37e");
 </script>
 </div></div>
 </div>
@@ -619,19 +600,19 @@ Instead, they can be filtered by searching for a string with the following Seque
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1835/3317172343.py:10: FutureWarning: In a future version of pandas all arguments of DataFrame.any and Series.any will be keyword-only.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1802/3317172343.py:10: FutureWarning: In a future version of pandas all arguments of DataFrame.any and Series.any will be keyword-only.
   turbine_df = turbine_df[ pd.DataFrame( turbine_df[&quot;scope&quot;].tolist() ).isin( [&quot;turbine&quot;, &quot;any&quot;] ).any(1).values ]
 /opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/datapane/common/df_processor.py:26: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
   elif isinstance(df.index, pd.Int64Index):
 </pre></div>
 </div>
 <div class="output text_html"><style>
-  #dp-ffb9ea2854084b3796b02cc78f96dcb1 {
+  #dp-3930b3ba5eb84c86bcc2218dc372ef40 {
     width: 1px;
     min-width: 100%;
   }
 </style>
-<iframe id="dp-ffb9ea2854084b3796b02cc78f96dcb1" srcdoc="&lt;!DOCTYPE html&gt;
+<iframe id="dp-3930b3ba5eb84c86bcc2218dc372ef40" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -686,7 +667,7 @@ Instead, they can be filtered by searching for a string with the following Seque
 </iframe>
 <script type="module">
   import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-ffb9ea2854084b3796b02cc78f96dcb1");
+  iframeResize({ log: true, checkOrigin: false }, "#dp-3930b3ba5eb84c86bcc2218dc372ef40");
 </script>
 </div></div>
 </div>
@@ -717,19 +698,19 @@ Instead, they can be filtered by searching for a string with the following Seque
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1835/2262452956.py:11: FutureWarning: In a future version of pandas all arguments of DataFrame.any and Series.any will be keyword-only.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1802/2262452956.py:11: FutureWarning: In a future version of pandas all arguments of DataFrame.any and Series.any will be keyword-only.
   farm_df = farm_df[ pd.DataFrame( farm_df[&quot;scope&quot;].tolist() ).isin( [&quot;farm&quot;, &quot;any&quot;] ).any(1).values ]
 /opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/datapane/common/df_processor.py:26: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
   elif isinstance(df.index, pd.Int64Index):
 </pre></div>
 </div>
 <div class="output text_html"><style>
-  #dp-e7ca061178f848d692c146d9777e7d5d {
+  #dp-731de2a4bd864fa08e5f2ed5a23f6a9b {
     width: 1px;
     min-width: 100%;
   }
 </style>
-<iframe id="dp-e7ca061178f848d692c146d9777e7d5d" srcdoc="&lt;!DOCTYPE html&gt;
+<iframe id="dp-731de2a4bd864fa08e5f2ed5a23f6a9b" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -784,7 +765,7 @@ Instead, they can be filtered by searching for a string with the following Seque
 </iframe>
 <script type="module">
   import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-e7ca061178f848d692c146d9777e7d5d");
+  iframeResize({ log: true, checkOrigin: false }, "#dp-731de2a4bd864fa08e5f2ed5a23f6a9b");
 </script>
 </div></div>
 </div>
@@ -817,12 +798,12 @@ Instead, they can be filtered by searching for a string with the following Seque
 </pre></div>
 </div>
 <div class="output text_html"><style>
-  #dp-cbbf1325c5a04320820870f949e9064e {
+  #dp-c178f0f3ac0f49f2b02c270a3c7432d9 {
     width: 1px;
     min-width: 100%;
   }
 </style>
-<iframe id="dp-cbbf1325c5a04320820870f949e9064e" srcdoc="&lt;!DOCTYPE html&gt;
+<iframe id="dp-c178f0f3ac0f49f2b02c270a3c7432d9" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -877,7 +858,7 @@ Instead, they can be filtered by searching for a string with the following Seque
 </iframe>
 <script type="module">
   import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-cbbf1325c5a04320820870f949e9064e");
+  iframeResize({ log: true, checkOrigin: false }, "#dp-c178f0f3ac0f49f2b02c270a3c7432d9");
 </script>
 </div></div>
 </div>
@@ -917,12 +898,12 @@ Instead, they can be filtered by searching for a string with the following Seque
 </pre></div>
 </div>
 <div class="output text_html"><style>
-  #dp-eeebd493389441f1be220970b4b08742 {
+  #dp-5bffefc6964e4ec38c029df5de0187d4 {
     width: 1px;
     min-width: 100%;
   }
 </style>
-<iframe id="dp-eeebd493389441f1be220970b4b08742" srcdoc="&lt;!DOCTYPE html&gt;
+<iframe id="dp-5bffefc6964e4ec38c029df5de0187d4" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -977,7 +958,7 @@ Instead, they can be filtered by searching for a string with the following Seque
 </iframe>
 <script type="module">
   import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-eeebd493389441f1be220970b4b08742");
+  iframeResize({ log: true, checkOrigin: false }, "#dp-5bffefc6964e4ec38c029df5de0187d4");
 </script>
 </div></div>
 </div>
@@ -1008,12 +989,12 @@ Instead, they can be filtered by searching for a string with the following Seque
 </pre></div>
 </div>
 <div class="output text_html"><style>
-  #dp-ca451c716d7d4d0e88a85e0e94f405f2 {
+  #dp-48ab082891074fa2b17f95515b8c6166 {
     width: 1px;
     min-width: 100%;
   }
 </style>
-<iframe id="dp-ca451c716d7d4d0e88a85e0e94f405f2" srcdoc="&lt;!DOCTYPE html&gt;
+<iframe id="dp-48ab082891074fa2b17f95515b8c6166" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -1068,7 +1049,7 @@ Instead, they can be filtered by searching for a string with the following Seque
 </iframe>
 <script type="module">
   import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-ca451c716d7d4d0e88a85e0e94f405f2");
+  iframeResize({ log: true, checkOrigin: false }, "#dp-48ab082891074fa2b17f95515b8c6166");
 </script>
 </div></div>
 </div>
@@ -1106,12 +1087,12 @@ Instead, they can be filtered by searching for a string with the following Seque
 </pre></div>
 </div>
 <div class="output text_html"><style>
-  #dp-fa44cd05d0dd41da9797336d115ea9a7 {
+  #dp-26280771e786457a84b291859cd29bcb {
     width: 1px;
     min-width: 100%;
   }
 </style>
-<iframe id="dp-fa44cd05d0dd41da9797336d115ea9a7" srcdoc="&lt;!DOCTYPE html&gt;
+<iframe id="dp-26280771e786457a84b291859cd29bcb" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -1166,7 +1147,7 @@ Instead, they can be filtered by searching for a string with the following Seque
 </iframe>
 <script type="module">
   import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-fa44cd05d0dd41da9797336d115ea9a7");
+  iframeResize({ log: true, checkOrigin: false }, "#dp-26280771e786457a84b291859cd29bcb");
 </script>
 </div></div>
 </div>
@@ -1198,12 +1179,12 @@ Instead, they can be filtered by searching for a string with the following Seque
 </pre></div>
 </div>
 <div class="output text_html"><style>
-  #dp-0e9ac546c0e143ff99d4dc52751da202 {
+  #dp-f0e75a1cfed54ac7a5f8f0734d53d8ec {
     width: 1px;
     min-width: 100%;
   }
 </style>
-<iframe id="dp-0e9ac546c0e143ff99d4dc52751da202" srcdoc="&lt;!DOCTYPE html&gt;
+<iframe id="dp-f0e75a1cfed54ac7a5f8f0734d53d8ec" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -1258,7 +1239,7 @@ Instead, they can be filtered by searching for a string with the following Seque
 </iframe>
 <script type="module">
   import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-0e9ac546c0e143ff99d4dc52751da202");
+  iframeResize({ log: true, checkOrigin: false }, "#dp-f0e75a1cfed54ac7a5f8f0734d53d8ec");
 </script>
 </div></div>
 </div>
@@ -1289,12 +1270,12 @@ Instead, they can be filtered by searching for a string with the following Seque
 </pre></div>
 </div>
 <div class="output text_html"><style>
-  #dp-e2f5071fc79b41cfa80c472ee7701a90 {
+  #dp-ff0ea9cb486f451eb3c6fcebd25ae515 {
     width: 1px;
     min-width: 100%;
   }
 </style>
-<iframe id="dp-e2f5071fc79b41cfa80c472ee7701a90" srcdoc="&lt;!DOCTYPE html&gt;
+<iframe id="dp-ff0ea9cb486f451eb3c6fcebd25ae515" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -1349,7 +1330,7 @@ Instead, they can be filtered by searching for a string with the following Seque
 </iframe>
 <script type="module">
   import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-e2f5071fc79b41cfa80c472ee7701a90");
+  iframeResize({ log: true, checkOrigin: false }, "#dp-ff0ea9cb486f451eb3c6fcebd25ae515");
 </script>
 </div></div>
 </div>
@@ -1378,12 +1359,12 @@ Instead, they can be filtered by searching for a string with the following Seque
 </pre></div>
 </div>
 <div class="output text_html"><style>
-  #dp-0f938d616d05458e92f3faf4e709a9ae {
+  #dp-a0db2ed356af4c9d85618697111ab312 {
     width: 1px;
     min-width: 100%;
   }
 </style>
-<iframe id="dp-0f938d616d05458e92f3faf4e709a9ae" srcdoc="&lt;!DOCTYPE html&gt;
+<iframe id="dp-a0db2ed356af4c9d85618697111ab312" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -1438,7 +1419,7 @@ Instead, they can be filtered by searching for a string with the following Seque
 </iframe>
 <script type="module">
   import { iframeResize } from "https://datapane-cdn.com/v0.17.0/report/index.es.js";
-  iframeResize({ log: true, checkOrigin: false }, "#dp-0f938d616d05458e92f3faf4e709a9ae");
+  iframeResize({ log: true, checkOrigin: false }, "#dp-a0db2ed356af4c9d85618697111ab312");
 </script>
 </div></div>
 </div>
@@ -1500,7 +1481,8 @@ Instead, they can be filtered by searching for a string with the following Seque
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1571,8 +1553,8 @@ By Rafael Mudafort, National Renewable Energy Laboratory
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>
