@@ -130,7 +130,7 @@ The sections presented in this workshop are:
 - [ORBIT](https://github.com/WISDEM/ORBIT) by Nick Riccobono
 - [CORAL](https://github.com/NREL/CORAL) by Sophie Bredenkamp
 - [WOMBAT](https://github.com/WISDEM/WOMBAT) by Rob Hammond
-- [WAVE](https://github.com/NREL/WAVES) by Rob Hammond
+- [WAVES](https://github.com/NREL/WAVES) by Rob Hammond
 - [NRWAL](https://github.com/NREL/NRWAL) by Rob Hammond
 
 Garrett Barter co-hosted the workshop and facilitated the discussion.
