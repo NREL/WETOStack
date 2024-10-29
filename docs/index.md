@@ -1,8 +1,8 @@
 # WETO Software Stack
 
 NREL's National Wind Technology Center is engaged in a multiyear effort to elevate the
-quality and robustness of the software portfolio supported by Department of Energy's
-[Wind Energy Technologies Office (WETO)](https://www.energy.gov/eere/wind/wind-energy-technologies-office).
+quality and robustness of the WETO Software Stack, the software portfolio supported by
+Department of Energy's [Wind Energy Technologies Office (WETO)](https://www.energy.gov/eere/wind/wind-energy-technologies-office).
 To achieve this goal, a dedicated *Portfolio Coordination* project is under way with the
 following focus areas:
 
