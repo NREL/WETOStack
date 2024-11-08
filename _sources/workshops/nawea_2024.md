@@ -47,3 +47,10 @@ work around OpenFAST and its applications.
 ### Section 3 - Recent/Ongoing/Future Work (Jonkman)
 ```{youtube} x2ksHi6UZ1Y
 ```
+
+## FLORIS
+
+Misha Sinner hosted a workshop on FLORIS covering the background of the software,
+as well as practical guidance on installing, running, and analyzing results.
+
+{download}`Click here to download the slides.<../_static/NAWEA2024_FLORIS.pdf>`
