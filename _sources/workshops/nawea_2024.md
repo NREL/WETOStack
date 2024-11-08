@@ -54,3 +54,10 @@ Misha Sinner hosted a workshop on FLORIS covering the background of the software
 as well as practical guidance on installing, running, and analyzing results.
 
 {download}`Click here to download the slides.<../_static/NAWEA2024_FLORIS.pdf>`
+
+## AMR Wind
+
+Michael Kuhn hosted a workshop on AMR Wind talking through the AMR Wind models and
+a practical guide to running simulations.
+
+{download}`Click here to download the slides.<../_static/NAWEA2024_AMRWind.pdf>`
