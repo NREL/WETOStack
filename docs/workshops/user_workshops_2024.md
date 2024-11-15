@@ -18,19 +18,20 @@ users of WETO software.
 | June 12 | 8-10 am MDT | TEA, cost modeling | ORBIT, LandBOSSE, WOMBAT, NRWAL, CORAL |
 | June 18 | 7-9 am MDT | Controls | FLORIS, FLASC, Hercules, OpenOA |
 | June 20 | 7-9 am MDT | OpenFAST+ | OpenFAST, FAST.Farm, ROSCO, and associated tools |
+| Nov 13 | 10 am - 12 pm MST | HFM | ExaWind, AMR-Wind, Nalu-Wind, OpenTurbine, ERF |
 
 `````{admonition} Contact
 :class: tip
 Please contact Rafael Mudafort (rafael.mudafort@nrel.gov) with any questions.
 `````
 
-`````{admonition} Schedule Changes
+<!-- `````{admonition} Schedule Changes
 :class: warning
 
 - The **HFM workshop** (AMR Wind, Nalu Wind, ERF, OpenTurbine) originally scheduled for June 13 has been postponed, and the rescheduled date will be announced soon.
 - **WindSE** was initially included in the HFM workshop, but it has been moved to the Systems Engineering workshop on June 10.
 - **OpenOA** was initially included in the TEA / Cost Modeling workshop, but it has been moved to the Controls workshop on June 18.
-`````
+````` -->
 
 ## Registration
 
@@ -169,4 +170,21 @@ Garrett Barter co-hosted the workshop and facilitated the discussion.
 {download}`Click here to download the slides.<../_static/UserWorkshops2024_OpenFAST.pdf>`
 
 ```{youtube} cadiJ4_FGXc
+```
+
+### High Fidelity Modeling
+
+The sections presented in this workshop are:
+- [WETO Software Stack](https://nrel.github.io/WETOStack) by Rafael Mudafort
+- [ExaWind](https://exawind.github.io) by Mike Sprague
+- [ExaWind:OpenTurbine](https://github.com/exawind/openturbine) by Mike Sprague
+- [ExaWind:AMR-Wind](https://github.com/exawind/amr-wind) by Michael Kuhn
+- [ExaWind Software and Performance](https://exawind.github.io/amr-wind/walkthrough/compiling.html) by Jon Rood and Marc Henry de Frahan
+- [Energy Resource and Forecasting (ERF)](https://github.com/erf-model/erf) by Eliot Quon
+
+Garrett Barter co-hosted the workshop and facilitated the discussion.
+
+{download}`Click here to download the slides.<../_static/UserWorkshops2024_HFM.pdf>`
+
+```{youtube} N7oH9IG3occ
 ```
