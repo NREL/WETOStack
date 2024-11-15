@@ -179,7 +179,7 @@ The sections presented in this workshop are:
 - [ExaWind](https://exawind.github.io) by Mike Sprague
 - [ExaWind:OpenTurbine](https://github.com/exawind/openturbine) by Mike Sprague
 - [ExaWind:AMR-Wind](https://github.com/exawind/amr-wind) by Michael Kuhn
-- [ExaWind Software and Performance](https://exawind.github.io/amr-wind/walkthrough/compiling.html) by Jon Rood and Marc Henry de Franc
+- [ExaWind Software and Performance](https://exawind.github.io/amr-wind/walkthrough/compiling.html) by Jon Rood and Marc Henry de Frahan
 - [Energy Resource and Forecasting (ERF)](https://github.com/erf-model/erf) by Eliot Quon
 
 Garrett Barter co-hosted the workshop and facilitated the discussion.
