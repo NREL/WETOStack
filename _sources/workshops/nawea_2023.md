@@ -48,7 +48,7 @@ suite, as well as practical guidance on installing, running, and analyzing resul
 
 {download}`Click here to download the slides.<../_static/NAWEA2023_ExaWind.pdf>`
 
-```{pdf-include} ../_static/NAWEA2023_Exawind.pdf
+```{pdf-include} ../_static/NAWEA2023_ExaWind.pdf
 ```
 
 ## HOPP
