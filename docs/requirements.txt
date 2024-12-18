@@ -9,3 +9,4 @@ sphinx-simplepdf~=1.6
 datapane~=0.17
 pandas~=1.5
 networkx
+ghapi

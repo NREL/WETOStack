@@ -52,17 +52,3 @@ where openfast
 
 See the [OpenFAST Installation docs](https://openfast.readthedocs.io/en/main/source/install/index.html#conda-installation)
 for more information.
-
-## This was pretty tough because...
-
-Add details on the challenges in building OpenFAST for Windows
-What were the specifics?
-How were they solved?
-Any interesting journeys getting to the end?
-Maybe link to the pull requests that completed this work
-
-## Whats next?
-
-This is just one step in making OpenFAST more accessible to users.
-Another recent developement is the distribution of Docker images for OpenFAST.
-See here for more information.
