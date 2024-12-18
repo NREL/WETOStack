@@ -28,7 +28,7 @@ from ghapi.all import GhApi
 import yaml
 from IPython.display import Markdown, display
 
-github_token = os.getenv('GITHUB_TOKEN')
+github_token = os.getenv('GH_TOKEN')
 
 software_attr_dir = Path("..", "..", "software_attributes")
 

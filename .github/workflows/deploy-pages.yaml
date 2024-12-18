@@ -33,6 +33,8 @@ jobs:
       working-directory: ${{runner.workspace}}/WETOStack/docs/
       run: |
         jupyter-book build .
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
