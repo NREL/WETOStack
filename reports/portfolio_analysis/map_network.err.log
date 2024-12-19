@@ -1,48 +1,155 @@
 Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+  File "/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
-  File "/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/nbclient/client.py", line 1314, in execute
+  File "/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/nbclient/client.py", line 1314, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+  File "/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
     return loop.run_until_complete(inner)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+  File "/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
     return future.result()
            ^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/nbclient/client.py", line 709, in async_execute
+  File "/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/nbclient/client.py", line 709, in async_execute
     await self.async_execute_cell(
-  File "/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+  File "/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/nbclient/client.py", line 1062, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+  File "/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from pathlib import Path
-import yaml
-import networkx as nx
+import matplotlib.pyplot as plt
 
-software_attr_dir = Path("..", "..", "software_attributes")
-software_database_dir = software_attr_dir / "database"
+edges_direct = [(u, v) for (u, v, d) in network_graph.edges(data=True) if d["weight"] == 1]
+edges_indirect = [(u, v) for (u, v, d) in network_graph.edges(data=True) if d["weight"] == 2]
 
-model_list_inputs = yaml.safe_load( open(software_attr_dir / "database_list.yaml", "r") )
-models = model_list_inputs["active"] + model_list_inputs["partial"]
+# layout = nx.nx_pydot.graphviz_layout(network_graph, prog="neato")
+layout = nx.nx_agraph.graphviz_layout(
+    network_graph,
+    prog="sfdp",
+    # args="-Gnormalize=true"
+    # args="-GK=0.5"
+)
+# layout = nx.spring_layout(network_graph, k=2)
 
-model_attributes_map = {
-    model: yaml.safe_load( open( software_database_dir / f"{model}.yaml", "r") )
-    for model in models
-}
+# nodes
+nx.draw_networkx_nodes(
+    network_graph,
+    layout,
+    # node_size=1000
+)
+
+# edges
+nx.draw_networkx_edges(
+    network_graph,
+    layout,
+    edgelist=edges_direct,
+    width=1,
+    # edge_color="b"
+)
+
+nx.draw_networkx_edges(
+    network_graph,
+    layout,
+    edgelist=edges_indirect,
+    width=1,
+    # alpha=0.5,
+    # edge_color="b",
+    style=":"
+    # edge_color="r"
+)
+
+# node labels
+label_options = {"ec": "k", "fc": "white", "alpha": 0.7}
+nx.draw_networkx_labels(
+    network_graph,
+    layout,
+    font_size=8,
+    bbox=label_options,
+    # font_family="sans-serif"
+)
+# edge weight labels
+# edge_labels = nx.get_edge_attributes(network_graph, "weight")
+# nx.draw_networkx_edge_labels(network_graph, layout, edge_labels)
+
+# Title/legend
+ax = plt.gca()
+font = {"fontname": "Helvetica", "color": "k", "fontweight": "bold", "fontsize": 14}
+ax.set_title("WETO Software Portfolio Connectivity", font)
+
+# Change font color for legend
+font["color"] = "k"
+ax.text(
+    0.80,
+    0.10,
+    "------- Direct",
+    horizontalalignment="left",
+    transform=ax.transAxes,
+    fontdict=font,
+)
+ax.text(
+    0.80,
+    0.06,
+    "........ Indirect",
+    horizontalalignment="left",
+    transform=ax.transAxes,
+    fontdict=font,
+)
+
+ax = plt.gca()
+ax.margins(0.08)
+plt.axis("off")
+plt.tight_layout()
+plt.show()
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[1], line 3[0m
-[1;32m      1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpathlib[39;00m [38;5;28;01mimport[39;00m Path
-[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01myaml[39;00m
-[0;32m----> 3[0m [38;5;28;01mimport[39;00m [38;5;21;01mnetworkx[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnx[39;00m
-[1;32m      5[0m software_attr_dir [38;5;241m=[39m Path([38;5;124m"[39m[38;5;124m..[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124m..[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124msoftware_attributes[39m[38;5;124m"[39m)
-[1;32m      6[0m software_database_dir [38;5;241m=[39m software_attr_dir [38;5;241m/[39m [38;5;124m"[39m[38;5;124mdatabase[39m[38;5;124m"[39m
+File [0;32m/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/networkx/drawing/nx_agraph.py:301[0m, in [0;36mpygraphviz_layout[0;34m(G, prog, root, args)[0m
+[1;32m    300[0m [38;5;28;01mtry[39;00m:
+[0;32m--> 301[0m     [38;5;28;01mimport[39;00m [38;5;21;01mpygraphviz[39;00m
+[1;32m    302[0m [38;5;28;01mexcept[39;00m [38;5;167;01mImportError[39;00m [38;5;28;01mas[39;00m err:
 
-[0;31mModuleNotFoundError[0m: No module named 'networkx'
+[0;31mModuleNotFoundError[0m: No module named 'pygraphviz'
+
+The above exception was the direct cause of the following exception:
+
+[0;31mImportError[0m                               Traceback (most recent call last)
+Cell [0;32mIn[3], line 7[0m
+[1;32m      4[0m edges_indirect [38;5;241m=[39m [(u, v) [38;5;28;01mfor[39;00m (u, v, d) [38;5;129;01min[39;00m network_graph[38;5;241m.[39medges(data[38;5;241m=[39m[38;5;28;01mTrue[39;00m) [38;5;28;01mif[39;00m d[[38;5;124m"[39m[38;5;124mweight[39m[38;5;124m"[39m] [38;5;241m==[39m [38;5;241m2[39m]
+[1;32m      6[0m [38;5;66;03m# layout = nx.nx_pydot.graphviz_layout(network_graph, prog="neato")[39;00m
+[0;32m----> 7[0m layout [38;5;241m=[39m [43mnx[49m[38;5;241;43m.[39;49m[43mnx_agraph[49m[38;5;241;43m.[39;49m[43mgraphviz_layout[49m[43m([49m
+[1;32m      8[0m [43m    [49m[43mnetwork_graph[49m[43m,[49m
+[1;32m      9[0m [43m    [49m[43mprog[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43msfdp[39;49m[38;5;124;43m"[39;49m[43m,[49m
+[1;32m     10[0m [43m    [49m[38;5;66;43;03m# args="-Gnormalize=true"[39;49;00m
+[1;32m     11[0m [43m    [49m[38;5;66;43;03m# args="-GK=0.5"[39;49;00m
+[1;32m     12[0m [43m)[49m
+[1;32m     13[0m [38;5;66;03m# layout = nx.spring_layout(network_graph, k=2)[39;00m
+[1;32m     14[0m 
+[1;32m     15[0m [38;5;66;03m# nodes[39;00m
+[1;32m     16[0m nx[38;5;241m.[39mdraw_networkx_nodes(
+[1;32m     17[0m     network_graph,
+[1;32m     18[0m     layout,
+[1;32m     19[0m     [38;5;66;03m# node_size=1000[39;00m
+[1;32m     20[0m )
+
+File [0;32m/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/networkx/drawing/nx_agraph.py:257[0m, in [0;36mgraphviz_layout[0;34m(G, prog, root, args)[0m
+[1;32m    226[0m [38;5;28;01mdef[39;00m [38;5;21mgraphviz_layout[39m(G, prog[38;5;241m=[39m[38;5;124m"[39m[38;5;124mneato[39m[38;5;124m"[39m, root[38;5;241m=[39m[38;5;28;01mNone[39;00m, args[38;5;241m=[39m[38;5;124m"[39m[38;5;124m"[39m):
+[1;32m    227[0m [38;5;250m    [39m[38;5;124;03m"""Create node positions for G using Graphviz.[39;00m
+[1;32m    228[0m 
+[1;32m    229[0m [38;5;124;03m    Parameters[39;00m
+[0;32m   (...)[0m
+[1;32m    255[0m [38;5;124;03m    see https://gitlab.com/graphviz/graphviz/-/issues/1767 for more info.[39;00m
+[1;32m    256[0m [38;5;124;03m    """[39;00m
+[0;32m--> 257[0m     [38;5;28;01mreturn[39;00m [43mpygraphviz_layout[49m[43m([49m[43mG[49m[43m,[49m[43m [49m[43mprog[49m[38;5;241;43m=[39;49m[43mprog[49m[43m,[49m[43m [49m[43mroot[49m[38;5;241;43m=[39;49m[43mroot[49m[43m,[49m[43m [49m[43margs[49m[38;5;241;43m=[39;49m[43margs[49m[43m)[49m
+
+File [0;32m/opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/networkx/drawing/nx_agraph.py:303[0m, in [0;36mpygraphviz_layout[0;34m(G, prog, root, args)[0m
+[1;32m    301[0m     [38;5;28;01mimport[39;00m [38;5;21;01mpygraphviz[39;00m
+[1;32m    302[0m [38;5;28;01mexcept[39;00m [38;5;167;01mImportError[39;00m [38;5;28;01mas[39;00m err:
+[0;32m--> 303[0m     [38;5;28;01mraise[39;00m [38;5;167;01mImportError[39;00m([38;5;124m"[39m[38;5;124mrequires pygraphviz http://pygraphviz.github.io/[39m[38;5;124m"[39m) [38;5;28;01mfrom[39;00m [38;5;21;01merr[39;00m
+[1;32m    304[0m [38;5;28;01mif[39;00m root [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[1;32m    305[0m     args [38;5;241m+[39m[38;5;241m=[39m [38;5;124mf[39m[38;5;124m"[39m[38;5;124m-Groot=[39m[38;5;132;01m{[39;00mroot[38;5;132;01m}[39;00m[38;5;124m"[39m
+
+[0;31mImportError[0m: requires pygraphviz http://pygraphviz.github.io/
 
