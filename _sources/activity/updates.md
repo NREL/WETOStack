@@ -23,7 +23,7 @@ links to sources, and other news that may be of interest to the WETO community.
 
 import os
 from pathlib import Path
-from datetime import datetime, timedelta
+from datetime import datetime, timezone, timedelta
 from ghapi.all import GhApi
 import yaml
 from IPython.display import Markdown, display
@@ -59,7 +59,8 @@ for account, repo, release_date in recent_releases:
     release_list_md += f"- {account}/{repo} - {release_date.strftime('%Y-%m-%d')}\n"
 
 display(Markdown(release_list_md))
-display(Markdown(f"*Updated on {datetime.today().strftime('%Y-%m-%d')}*"))
+display(Markdown(f"*Updated on {datetime.now(tz=timezone(-timedelta(hours=7))).strftime('%Y-%m-%d')}*"))
+# Note the timedelta is inaccurate for part of the year, but it's purpose is to have the correct day
 ```
 
 ## Latest News
