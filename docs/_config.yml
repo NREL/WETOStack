@@ -5,7 +5,7 @@ title:
 author: Rafael Mudafort, National Renewable Energy Laboratory
 logo: _static/images/logo.gif
 copyright: '2024 Alliance for Sustainable Energy, LLC'
-only_build_toc_files: true
+# only_build_toc_files: true
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

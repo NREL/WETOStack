@@ -4,8 +4,9 @@
 format: jb-book
 root: index
 parts:
-- caption: Workshops
+- caption: Activity and Events
   chapters:
+  - file: activity/updates
   - file: workshops/nawea_2024
   - file: workshops/user_workshops_2024
     sections:

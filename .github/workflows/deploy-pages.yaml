@@ -7,6 +7,12 @@ on:
     # - develop
     paths:
     - docs/**
+  schedule:
+    # https://crontab.guru/#00_00_*_*_2,4,6
+    # "At 00:00 on Tuesday, Thursday, and Saturday."
+    # Time zone for GitHub is UTC, so adjust accordingly; -6 in the summer, -7 in the winter.
+    # Therefore, this runs at 6:00 PM Mountain Time on Monday, Wednesday, and Friday.
+    - cron:  '00 00 * * 2,4,6'
 
 # This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
@@ -33,6 +39,8 @@ jobs:
       working-directory: ${{runner.workspace}}/WETOStack/docs/
       run: |
         jupyter-book build .
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
