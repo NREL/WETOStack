@@ -6,7 +6,7 @@ sphinx-simplepdf~=1.6
 
 # attribute tables
 # import altair as alt
-datapane~=0.17
-pandas~=1.5
+itables~=2.2
+pandas~=2.2
 networkx
 ghapi

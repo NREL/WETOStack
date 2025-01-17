@@ -15,22 +15,17 @@ kernelspec:
 The sections here tabulate the software attribute database.
 Each attribute (column) is described in the [](schema).
 Some columns contain lists of strings which means that they cannot be fully sorted.
-Instead, they can be filtered by searching for a string with the following Sequel query:
-
-```sql
-SELECT * FROM $table WHERE <column name> LIKE '%<search string>%';
-
--- For example:
-SELECT * FROM $table WHERE system_location LIKE '%land%';
-```
+Instead, they can be filtered by searching for a string in the search box
 
 ```{code-cell} ipython3
 :tags: [hide-cell]
 
 from pathlib import Path
 import yaml
-import datapane as dp
+from itables import init_notebook_mode
 import pandas as pd
+
+init_notebook_mode(all_interactive=True)
 
 software_attr_dir = Path("..", "..", "software_attributes")
 model_list_inputs = yaml.safe_load( open(software_attr_dir / "database_list.yaml", "r") )
@@ -71,7 +66,7 @@ general_df = df[[
     "data_collection_methods",
     "last_release_date"
 ]]
-dp.DataTable(general_df)
+general_df
 ```
 
 ## Turbine Modeling
@@ -87,8 +82,8 @@ turbine_df = df[[
     "does_design_optimization",
     "does_costs",
 ]]
-turbine_df = turbine_df[ pd.DataFrame( turbine_df["scope"].tolist() ).isin( ["turbine", "any"] ).any(1).values ]
-dp.DataTable(turbine_df)
+turbine_df = turbine_df[ pd.DataFrame( turbine_df["scope"].tolist() ).isin( ["turbine", "any"] ).any(axis=1).values ]
+turbine_df
 ```
 
 ## Farm Modeling
@@ -105,8 +100,8 @@ farm_df = df[[
     "does_design_optimization",
     "does_costs",
 ]]
-farm_df = farm_df[ pd.DataFrame( farm_df["scope"].tolist() ).isin( ["farm", "any"] ).any(1).values ]
-dp.DataTable(farm_df.dropna())
+farm_df = farm_df[ pd.DataFrame( farm_df["scope"].tolist() ).isin( ["farm", "any"] ).any(axis=1).values ]
+farm_df.dropna()
 ```
 
 ## Cost Modeling
@@ -121,7 +116,7 @@ cost_df = df[[
     "tags",
 ]]
 cost_df = cost_df[ cost_df["does_costs"] == True]
-dp.DataTable(cost_df.dropna())
+cost_df.dropna()
 ```
 
 ## Full Suite Modeling Comparison
@@ -143,7 +138,7 @@ modeling_df = df[[
     "does_loads",
     "tags",
 ]]
-dp.DataTable(modeling_df)
+modeling_df
 ```
 
 ## Distribution
@@ -156,7 +151,7 @@ distribution_df = df[[
     "package_manager_url",
     "installation_complexity",
 ]]
-dp.DataTable(distribution_df)
+distribution_df
 ```
 
 ## Documentation
@@ -176,7 +171,7 @@ documentation_df = df[[
     "readability",
     "project_coverage",
 ]]
-dp.DataTable(documentation_df)
+documentation_df
 ```
 
 ## Testing
@@ -190,7 +185,7 @@ testing_df = df[[
     "test_documentation",
     "performance_tests",
 ]]
-dp.DataTable(testing_df)
+testing_df
 ```
 
 ## Interfaces
@@ -203,7 +198,7 @@ interfaces_df = df[[
     "language_interfaces",
     "feature_accessibility",
 ]]
-dp.DataTable(interfaces_df)
+interfaces_df
 ```
 
 ## Input / Output
@@ -214,5 +209,5 @@ io_df = df[[
     "filetypes",
     "file_structure_stability",
 ]]
-dp.DataTable(io_df)
+io_df
 ```
