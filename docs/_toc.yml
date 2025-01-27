@@ -18,6 +18,8 @@ parts:
 
 - caption: Portfolio Analysis
   chapters:
+  - url: https://rafmudaf.github.io/WETOStack/_static/entry-guide/index.html
+    title: Entry Guide
   - file: portfolio_analysis/software_list
   - file: portfolio_analysis/attribute_table
   - file: technical_areas/overview

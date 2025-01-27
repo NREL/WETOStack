@@ -28,7 +28,7 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# This job installs dependencies, builds the book, and pushes it to `gh-pages`
+# This job installs dependencies, builds the site, and pushes it to `gh-pages`
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -46,7 +46,16 @@ jobs:
         pip install --upgrade pip
         pip install -r requirements.txt
         pip install -r docs/requirements.txt
-    - name: Build the book
+
+    # Build the React app first, and then move it to the docs/_static folder so that it's included
+    # in the JupyterBook build.
+    - name: Build the React app
+      working-directory: ${{runner.workspace}}/WETOStack/entry-guide
+      run: |
+        npm install
+        npm run build
+        mv build ../docs/_static/entry-guide
+    - name: Build the JupyterBook
       working-directory: ${{runner.workspace}}/WETOStack/docs/
       run: |
         jupyter-book build .
