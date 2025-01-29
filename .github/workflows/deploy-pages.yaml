@@ -47,14 +47,14 @@ jobs:
         pip install -r requirements.txt
         pip install -r docs/requirements.txt
 
-    # Build the React app first, and then move it to the docs/_static folder so that it's included
+    # Build the Vue app first, and then move it to the docs/_static folder so that it's included
     # in the JupyterBook build.
-    - name: Build the React app
-      working-directory: ${{runner.workspace}}/WETOStack/entry-guide
+    - name: Build the Vue app
+      working-directory: ${{runner.workspace}}/WETOStack/entry_guide
       run: |
         npm install
         npm run build
-        mv build ../docs/_static/entry-guide
+        mv dist ../docs/_static/entry_guide
     - name: Build the JupyterBook
       working-directory: ${{runner.workspace}}/WETOStack/docs/
       run: |
