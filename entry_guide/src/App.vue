@@ -5,6 +5,8 @@ import { VueFlow, useVueFlow } from '@vue-flow/core'
 import { MiniMap } from '@vue-flow/minimap'
 import '@vue-flow/core/dist/style.css'
 import '@vue-flow/minimap/dist/style.css'
+import DecisionNode from './DecisionNode.vue'
+import ToolNode from './ToolNode.vue'
 
 const { updateNode } = useVueFlow()
 
@@ -22,16 +24,9 @@ const toggleState = (node: Node) => {
   updateNode(
     node.id,
     {
-      data: {
-        ...node.data,
-        label: node.data.label,
-      },
       style: {
+        ...node.style,
         backgroundColor: nodeStates[String(node.id)] === "0" ? "#ccc" : "#28a745",
-        color: "#fff",
-        padding: "8px",
-        borderRadius: "4px",
-        textAlign: "center",
       }
     }
   )
@@ -64,9 +59,9 @@ const styledNodes = ref<Node[]>(
   nodes.map((node) => ({
     id: node.id,
     position: {...node.position},
+    type: node.type,
     data: {
       ...node.data,
-      label: node.data.label,
     },
     style: {
       backgroundColor: reachableNodes.has(node.id) ? "#28a745" : "#ccc",
@@ -95,11 +90,19 @@ const styledEdges = ref<Edge[]>(
   <div class="app">
     <h1>Entry Guide: Estimate Performance</h1>
     <VueFlow
-      :nodes="styledNodes"
       :edges="styledEdges"
+      v-model:nodes="styledNodes"
       @node-click="toggleState($event.node)"
       :fit-view-on-init=true
       >
+      <template #node-decision>
+        <DecisionNode />
+      </template>
+
+      <template #node-tool>
+        <ToolNode />
+      </template>
+
       <MiniMap />
     </VueFlow>
   </div>
