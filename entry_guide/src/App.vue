@@ -12,14 +12,29 @@ import { nodes, edgesTemplate } from "./graphData";
 
 const nodeStates: { [key: string]: string } = {
   "1": "0",
-  "2": "0",
+  "2": "1",
+  "4": "1"
 }
 
 // Toggle the state of a node
 const toggleState = (node: Node) => {
   nodeStates[String(node.id)] = nodeStates[String(node.id)] === "0" ? "1" : "0";
-  console.log(`Node ${node.id} state: ${nodeStates[node.id]}`);
-  updateNodeStyle(node);
+  updateNode(
+    node.id,
+    {
+      data: {
+        ...node.data,
+        label: node.data.label,
+      },
+      style: {
+        backgroundColor: nodeStates[String(node.id)] === "0" ? "#ccc" : "#28a745",
+        color: "#fff",
+        padding: "8px",
+        borderRadius: "4px",
+        textAlign: "center",
+      }
+    }
+  )
 };
 
 // Determine reachable nodes dynamically
@@ -43,25 +58,6 @@ const getReachableNodes = (startNodeId: string) => {
 };
 
 const reachableNodes = getReachableNodes("1");
-
-// Add dynamic styles to nodes
-const updateNodeStyle = (node: Node) => (
-  updateNode(node.id, {
-    id: node.id,
-    position: {...node.position},
-    data: {
-      ...node.data,
-      label: node.data.label,
-    },
-    style: {
-      backgroundColor: reachableNodes.has(node.id) ? "#28a745" : "#ccc",
-      color: "#fff",
-      padding: "8px",
-      borderRadius: "4px",
-      textAlign: "center",
-    }
-  })
-);
 
 // const { styledNodes } = useVueFlow() // Consider using useVueFlow for access to internal state
 const styledNodes = ref<Node[]>(
@@ -88,7 +84,7 @@ const styledEdges = ref<Edge[]>(
     ...edge,
     type: "smoothstep",
     style: {
-      stroke: edge.label === "0" ? "green" : "red",
+      stroke: edge.label === nodeStates[edge.source] ? "green" : "grey",
       strokeWidth: 2,
     },
   }))

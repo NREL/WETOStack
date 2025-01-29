@@ -4,7 +4,7 @@ export const nodes = [
     {
         id: "1",
         type: "default",
-        data: { label: "Turbine or Farm" },
+        data: { label: "Farm or Turbine" },
         position: { x: 0, y: 0 },
     },
     {
