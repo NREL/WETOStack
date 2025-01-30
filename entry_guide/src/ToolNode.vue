@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useNode } from '@vue-flow/core';
 
 const { node } = useNode();

@@ -6,21 +6,17 @@ import { useScreenshot } from './Screenshot'
 
 const { capture } = useScreenshot()
 
-const flowKey = 'vue-flow--save-restore'
-
 const {
   nodes,
   edges,
   // addNodes,
   // dimensions,
-  toObject,
+  // toObject,
   // fromObject,
   vueFlowRef
 } = useVueFlow()
 
 function onReset() {
-  localStorage.setItem(flowKey, JSON.stringify(toObject()))
-
   nodes.value.forEach((node: Node) => {
     node.data.state = null
     node.data.reachable = false
