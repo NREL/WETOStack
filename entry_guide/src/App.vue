@@ -26,8 +26,6 @@ const toggleState = (nodeId: string) => {
 };
 
 const setReachable = (startNodeId: string) => {
-  const queue = [startNodeId];
-
   nodes.value.forEach((node: Node) => {
     node.data.reachable = false;
   });
@@ -35,8 +33,9 @@ const setReachable = (startNodeId: string) => {
     edge.data.reachable = false;
   });
 
-  while (queue.length > 0) {
-    const current = queue.shift()!;
+  const queueNodes = [startNodeId];
+  while (queueNodes.length > 0) {
+    const current = queueNodes.shift()!;
 
     const node: Node = nodes.value.find((n: Node) => n.id === current);
     node.data.reachable = true;
@@ -46,10 +45,16 @@ const setReachable = (startNodeId: string) => {
       if (
         edge.source === node.id             // Edge starts at current node
         && edge.label === node.data.state   // Edge label matches current node state, a or b
-        && !node.data.reachable) {          // Target node has not been visited; if it has, this could lead to an infinite loop
+      ) {
+        // This previously checked for whether the node was already checked for reachability
+        // && !node.data.reachable          // Target node has not been visited; if it has, this could lead to an infinite loop
+        // and avoided repeating. This prevented infinite loops if the graph had cycles.
+        // After a design change, the check is not necessary but it could be an issue if the
+        // graph includes cycles in the future. The appropriate check is whether the edge's
+        // target node is reachable.
         
         edge.data.reachable = true;
-        queue.push(edge.target);
+        queueNodes.push(edge.target);
       }
     });
   }
