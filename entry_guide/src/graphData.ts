@@ -6,7 +6,8 @@ export const nodes = [
         type: "decision",
         data: {
             a: "Farm",
-            b: "Turbine"
+            b: "Turbine",
+            state: null
         },
         position: { x: 0, y: 0 },
     },
@@ -15,7 +16,8 @@ export const nodes = [
         type: "decision",
         data: {
             a: "Time domain",
-            b: "Steady state"
+            b: "Steady state",
+            state: null
         },
         position: { x: -200, y: 150 },
     },
@@ -24,7 +26,8 @@ export const nodes = [
         type: "decision",
         data: {
             a: "Yes",
-            b: "No"
+            b: "No",
+            state: null
         },
         position: { x: -200, y: 300 },
     },
@@ -33,7 +36,8 @@ export const nodes = [
         type: "decision",
         data: {
             a: "Floating",
-            b: "Land-based"
+            b: "Land-based",
+            state: null
         },
         position: { x: 0, y: 250 },
     },
@@ -42,7 +46,8 @@ export const nodes = [
         type: "decision",
         data: {
             a: "ABL",
-            b: "Synthetic Turbulence"
+            b: "Synthetic Turbulence",
+            state: null
         },
         position: { x: -200, y: 450 },
     },
@@ -51,7 +56,8 @@ export const nodes = [
         type: "decision",
         data: {
             a: "Resolve geometry",
-            b: "Actuator methods"
+            b: "Actuator methods",
+            state: null
         },
         position: { x: -200, y: 600 },
     },
@@ -60,7 +66,8 @@ export const nodes = [
         type: "decision",
         data: {
             a: "Variable",
-            b: "Steady state"
+            b: "Steady state",
+            state: null
         },
         position: { x: 200, y: 150 },
     },
@@ -69,7 +76,8 @@ export const nodes = [
         type: "decision",
         data: {
             a: "Design",
-            b: "Batch Simulation"
+            b: "Batch Simulation",
+            state: null
         },
         position: { x: 200, y: 300 },
     },

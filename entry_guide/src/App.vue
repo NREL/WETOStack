@@ -24,6 +24,10 @@ const toggleState = (node: Node) => {
   updateNode(
     node.id,
     {
+      data: {
+        ...node.data,
+        state: nodeStates[String(node.id)]
+      },
       style: {
         ...node.style,
         backgroundColor: nodeStates[String(node.id)] === "0" ? "#ccc" : "#28a745",
