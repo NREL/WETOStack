@@ -2,10 +2,21 @@
 import { Panel, useVueFlow } from '@vue-flow/core'
 import StateControlsIcon from './StateControlsIcon.vue'
 import type { Node } from '@vue-flow/core'
+import { useScreenshot } from './Screenshot'
+
+const { capture } = useScreenshot()
 
 const flowKey = 'vue-flow--save-restore'
 
-const { nodes, edges, addNodes, dimensions, toObject, fromObject } = useVueFlow()
+const {
+  nodes,
+  edges,
+  // addNodes,
+  // dimensions,
+  toObject,
+  // fromObject,
+  vueFlowRef
+} = useVueFlow()
 
 function onReset() {
   localStorage.setItem(flowKey, JSON.stringify(toObject()))
@@ -21,7 +32,12 @@ function onReset() {
 }
 
 function onScreenshot() {
-  
+  if (!vueFlowRef.value) {
+    console.warn('VueFlow element not found')
+    return
+  }
+  capture(vueFlowRef.value, { shouldDownload: true })
+
 }
 
 // function onAdd() {
@@ -44,7 +60,7 @@ function onScreenshot() {
         <StateControlsIcon name="reset" />
       </button>
       <button title="save screen shot" @click="onScreenshot">
-        <StateControlsIcon name="restore" />
+        <StateControlsIcon name="screenshot" />
       </button>
       <!-- <button title="add random node" @click="onAdd">
         <StateControlsIcon name="add" />
