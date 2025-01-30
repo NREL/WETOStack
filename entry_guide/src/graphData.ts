@@ -1,13 +1,17 @@
 
+import { ref } from 'vue'  
+
+
 // Export nodes
-export const nodes = [
+export const nodes = ref([
     {
         id: "1",
         type: "decision",
         data: {
             a: "Farm",
             b: "Turbine",
-            state: null
+            state: null,
+            reachable: false
         },
         position: { x: 0, y: 0 },
     },
@@ -17,7 +21,8 @@ export const nodes = [
         data: {
             a: "Time domain",
             b: "Steady state",
-            state: null
+            state: null,
+            reachable: false
         },
         position: { x: -200, y: 150 },
     },
@@ -25,9 +30,10 @@ export const nodes = [
         id: "3",
         type: "decision",
         data: {
-            a: "Yes",
-            b: "No",
-            state: null
+            a: "Power",
+            b: "Power + Loads",
+            state: null,
+            reachable: false
         },
         position: { x: -200, y: 300 },
     },
@@ -37,7 +43,8 @@ export const nodes = [
         data: {
             a: "Floating",
             b: "Land-based",
-            state: null
+            state: null,
+            reachable: false
         },
         position: { x: 0, y: 250 },
     },
@@ -47,7 +54,8 @@ export const nodes = [
         data: {
             a: "ABL",
             b: "Synthetic Turbulence",
-            state: null
+            state: null,
+            reachable: false
         },
         position: { x: -200, y: 450 },
     },
@@ -57,7 +65,8 @@ export const nodes = [
         data: {
             a: "Resolve geometry",
             b: "Actuator methods",
-            state: null
+            state: null,
+            reachable: false
         },
         position: { x: -200, y: 600 },
     },
@@ -67,7 +76,8 @@ export const nodes = [
         data: {
             a: "Variable",
             b: "Steady state",
-            state: null
+            state: null,
+            reachable: false
         },
         position: { x: 200, y: 150 },
     },
@@ -77,7 +87,8 @@ export const nodes = [
         data: {
             a: "Design",
             b: "Batch Simulation",
-            state: null
+            state: null,
+            reachable: false
         },
         position: { x: 200, y: 300 },
     },
@@ -85,85 +96,112 @@ export const nodes = [
 
     {
         id: "9",
-        data: { label: "FLORIS" },
+        data: {
+            label: "FLORIS",
+            reachable: false
+        },
         position: { x: -50, y: 350 },
         type: "tool",
         isEndNode: true,
     },
     {
         id: "10",
-        data: { label: "FAD" },
+        data: {
+            label: "FAD",
+            reachable: false
+        },
         position: { x: 75, y: 400 },
         type: "tool",
         isEndNode: true,
     },
     {
         id: "11",
-        data: { label: "WindSE or Ard" },
+        data: {
+            label: "WindSE or Ard",
+            reachable: false
+        },
         position: { x: -100, y: 400 },
         type: "tool",
         isEndNode: true,
     },
     {
         id: "12",
-        data: { label: "FAST.Farm" },
+        data: {
+            label: "FAST.Farm",
+            reachable: false
+        },
         position: { x: -100, y: 550 },
         type: "tool",
         isEndNode: true,
     },
     {
         id: "13",
-        data: { label: "ExaWind Stack" },
+        data: {
+            label: "ExaWind Stack",
+            reachable: false
+        },
         position: { x: -100, y: 700 },
         type: "tool",
         isEndNode: true,
     },
     {
         id: "14",
-        data: { label: "AMR-Wind or ERF" },
+        data: {
+            label: "AMR-Wind or ERF",
+            reachable: false
+        },
         position: { x: -200, y: 750 },
         type: "tool",
         isEndNode: true,
     },
     {
         id: "15",
-        data: { label: "WISDEM" },
+        data: {
+            label: "WISDEM",
+            reachable: false
+        },
         position: { x: 150, y: 250 },
         type: "tool",
         isEndNode: true,
     },
     {
         id: "16",
-        data: { label: "WEIS" },
+        data: {
+            label: "WEIS",
+            reachable: false
+        },
         position: { x: 150, y: 450 },
         type: "tool",
         isEndNode: true,
     },
     {
         id: "17",
-        data: { label: "OpenFAST" },
+        data: {
+            label: "OpenFAST",
+            reachable: false
+        },
         position: { x: 200, y: 500 },
         type: "tool",
         isEndNode: true,
     },
-];
+]);
 
 // Export edges
-export const edgesTemplate = [
-    { id: "e1-2", source: "1", target: "2", label: "0", type: "smoothstep" },
-    { id: "e1-7", source: "1", target: "7", label: "1", type: "smoothstep" },
-    { id: "e2-3", source: "2", target: "3", label: "0", type: "smoothstep" },
-    { id: "e2-4", source: "2", target: "4", label: "1", type: "smoothstep" },
-    { id: "e3-5", source: "3", target: "5", label: "0", type: "smoothstep" },
-    { id: "e3-11", source: "3", target: "11", label: "1", type: "smoothstep" },
-    { id: "e5-6", source: "5", target: "6", label: "0", type: "smoothstep" },
-    { id: "e5-12", source: "5", target: "12", label: "1", type: "smoothstep" },
-    { id: "e6-14", source: "6", target: "14", label: "0", type: "smoothstep" },
-    { id: "e6-13", source: "6", target: "13", label: "1", type: "smoothstep" },
-    { id: "e4-9", source: "4", target: "9", label: "0", type: "smoothstep" },
-    { id: "e4-10", source: "4", target: "10", label: "1", type: "smoothstep" },
-    { id: "e7-15", source: "7", target: "15", label: "0", type: "smoothstep" },
-    { id: "e7-8", source: "7", target: "8", label: "1", type: "smoothstep" },
-    { id: "e8-16", source: "8", target: "16", label: "0", type: "smoothstep" },
-    { id: "e8-17", source: "8", target: "17", label: "1", type: "smoothstep" },
-];
+export const edges = ref([
+    { id: "e1-2", source: "1", target: "2", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e1-7", source: "1", target: "7", label: "b", type: "decisionEdge", data: { reachable: false } },
+    { id: "e2-3", source: "2", target: "3", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e2-4", source: "2", target: "4", label: "b", type: "decisionEdge", data: { reachable: false } },
+    { id: "e3-5", source: "3", target: "5", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e3-11", source: "3", target: "11", label: "b", type: "decisionEdge", data: { reachable: false } },
+    { id: "e5-6", source: "5", target: "6", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e5-12", source: "5", target: "12", label: "b", type: "decisionEdge", data: { reachable: false } },
+    { id: "e6-14", source: "6", target: "14", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e6-13", source: "6", target: "13", label: "b", type: "decisionEdge", data: { reachable: false } },
+    { id: "e4-9", source: "4", target: "9", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e4-10", source: "4", target: "10", label: "b", type: "decisionEdge", data: { reachable: false } },
+    { id: "e7-15", source: "7", target: "15", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e7-8", source: "7", target: "8", label: "b", type: "decisionEdge", data: { reachable: false } },
+    { id: "e8-16", source: "8", target: "16", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e8-17", source: "8", target: "17", label: "b", type: "decisionEdge", data: { reachable: false } },
+]);
