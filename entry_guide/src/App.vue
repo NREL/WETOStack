@@ -85,7 +85,7 @@ onNodeClick((event) => {
       :nodes="nodes"
       :edges="edges"
       :edgeTypes="{ decisionEdge: markRaw(DecisionEdge) }"
-      :fit-view-on-init=true
+      fit-view-on-init
       >
       <template #node-decision>
         <DecisionNode />
@@ -107,6 +107,6 @@ onNodeClick((event) => {
 <style scoped>
 .app {
   text-align: center;
-  height: 100vh;
+  height: 75vh;
 }
 </style>
