@@ -1,5 +1,5 @@
 <script setup>
-import { useNode } from '@vue-flow/core'
+import { useNode } from '@vue-flow/core';
 
 const { node } = useNode();
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, markRaw } from 'vue'
+import { markRaw } from 'vue'
 import type { Node, Edge } from '@vue-flow/core'
 import { VueFlow, useVueFlow } from '@vue-flow/core'
 import { MiniMap } from '@vue-flow/minimap'
@@ -15,7 +15,7 @@ import { nodes, edges } from "./graphData";
 
 // Toggle the state of a node
 const toggleState = (nodeId: string) => {
-  const node = nodes.value.find((n) => n.id === nodeId);
+  const node: Node = nodes.value.find((n: Node) => n.id === nodeId);
   if (!node) return;
 
   // Toggle state
@@ -28,17 +28,17 @@ const toggleState = (nodeId: string) => {
 const setReachable = (startNodeId: string) => {
   const queue = [startNodeId];
 
-  nodes.value.forEach((node) => {
+  nodes.value.forEach((node: Node) => {
     node.data.reachable = false;
   });
-  edges.value.forEach((edge) => {
+  edges.value.forEach((edge: Edge) => {
     edge.data.reachable = false;
   });
 
   while (queue.length > 0) {
     const current = queue.shift()!;
 
-    const node = nodes.value.find((n) => n.id === current);
+    const node: Node = nodes.value.find((n: Node) => n.id === current);
     node.data.reachable = true;
     
     // Find outgoing edges with label matching the current node state
@@ -46,7 +46,7 @@ const setReachable = (startNodeId: string) => {
       if (
         edge.source === node.id             // Edge starts at current node
         && edge.label === node.data.state   // Edge label matches current node state, a or b
-        && !node.reachable) {               // Target node has not been visited; if it has, this could lead to an infinite loop
+        && !node.data.reachable) {          // Target node has not been visited; if it has, this could lead to an infinite loop
         
         edge.data.reachable = true;
         queue.push(edge.target);

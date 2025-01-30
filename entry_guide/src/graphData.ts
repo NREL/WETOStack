@@ -1,9 +1,10 @@
 
 import { ref } from 'vue'  
+import type { Node, Edge } from '@vue-flow/core'
 
 
 // Export nodes
-export const nodes = ref([
+export const nodes = ref<Node[]>([
     {
         id: "1",
         type: "decision",
@@ -102,7 +103,6 @@ export const nodes = ref([
         },
         position: { x: -50, y: 350 },
         type: "tool",
-        isEndNode: true,
     },
     {
         id: "10",
@@ -112,7 +112,6 @@ export const nodes = ref([
         },
         position: { x: 75, y: 400 },
         type: "tool",
-        isEndNode: true,
     },
     {
         id: "11",
@@ -122,7 +121,6 @@ export const nodes = ref([
         },
         position: { x: -100, y: 400 },
         type: "tool",
-        isEndNode: true,
     },
     {
         id: "12",
@@ -132,7 +130,6 @@ export const nodes = ref([
         },
         position: { x: -100, y: 550 },
         type: "tool",
-        isEndNode: true,
     },
     {
         id: "13",
@@ -142,7 +139,6 @@ export const nodes = ref([
         },
         position: { x: -100, y: 700 },
         type: "tool",
-        isEndNode: true,
     },
     {
         id: "14",
@@ -152,7 +148,6 @@ export const nodes = ref([
         },
         position: { x: -200, y: 750 },
         type: "tool",
-        isEndNode: true,
     },
     {
         id: "15",
@@ -162,7 +157,6 @@ export const nodes = ref([
         },
         position: { x: 150, y: 250 },
         type: "tool",
-        isEndNode: true,
     },
     {
         id: "16",
@@ -172,7 +166,6 @@ export const nodes = ref([
         },
         position: { x: 150, y: 450 },
         type: "tool",
-        isEndNode: true,
     },
     {
         id: "17",
@@ -182,12 +175,11 @@ export const nodes = ref([
         },
         position: { x: 200, y: 500 },
         type: "tool",
-        isEndNode: true,
     },
 ]);
 
 // Export edges
-export const edges = ref([
+export const edges = ref<Edge[]>([
     { id: "e1-2", source: "1", target: "2", label: "a", type: "decisionEdge", data: { reachable: false } },
     { id: "e1-7", source: "1", target: "7", label: "b", type: "decisionEdge", data: { reachable: false } },
     { id: "e2-3", source: "2", target: "3", label: "a", type: "decisionEdge", data: { reachable: false } },
