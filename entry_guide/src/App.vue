@@ -13,14 +13,14 @@ const { updateNode } = useVueFlow()
 import { nodes, edgesTemplate } from "./graphData";
 
 const nodeStates: { [key: string]: string } = {
-  "1": "0",
-  "2": "1",
-  "4": "1"
+  "1": "a",
+  "2": "b",
+  "4": "b"
 }
 
 // Toggle the state of a node
 const toggleState = (node: Node) => {
-  nodeStates[String(node.id)] = nodeStates[String(node.id)] === "0" ? "1" : "0";
+  nodeStates[String(node.id)] = nodeStates[String(node.id)] === "a" ? "b" : "a";
   updateNode(
     node.id,
     {
