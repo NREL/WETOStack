@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useNode } from '@vue-flow/core'
+import { useNode } from "@vue-flow/core";
 
 const { node } = useNode();
 
@@ -13,18 +13,27 @@ const isB = (state: string) => {
 </script>
 
 <template>
-  <div>
+  <div :class="{'reachable': node.data.reachable}" class="node">
     <span :class="{'bold': isA(node.data.state)}" class="label">{{ node.data.a }}</span> |
     <span :class="{'bold': isB(node.data.state)}" class="label">{{ node.data.b }}</span>
   </div>
 </template>
 
-<style>
+<style scoped>
 .label {
   font-weight: normal;
-  color: "white";
+  color: black;
 }
 .bold {
   font-weight: bold;
+}
+.node {
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #ccc;
+}
+.reachable {
+  background-color: #28a745;
 }
 </style>

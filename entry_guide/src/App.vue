@@ -1,102 +1,85 @@
 <script setup lang="ts">
-import { ref } from 'vue'  
-import type { Node, Edge } from '@vue-flow/core'  
+import { ref, markRaw } from 'vue'
+import type { Node, Edge } from '@vue-flow/core'
 import { VueFlow, useVueFlow } from '@vue-flow/core'
 import { MiniMap } from '@vue-flow/minimap'
 import '@vue-flow/core/dist/style.css'
 import '@vue-flow/minimap/dist/style.css'
 import DecisionNode from './DecisionNode.vue'
 import ToolNode from './ToolNode.vue'
+import DecisionEdge from './DecisionEdge.vue'
+import { nodes, edges } from "./graphData";
 
-const { updateNode } = useVueFlow()
 
-import { nodes, edgesTemplate } from "./graphData";
-
-const nodeStates: { [key: string]: string } = {
-  "1": "a",
-  "2": "b",
-  "4": "b"
-}
+// Utilities
 
 // Toggle the state of a node
-const toggleState = (node: Node) => {
-  nodeStates[String(node.id)] = nodeStates[String(node.id)] === "a" ? "b" : "a";
-  updateNode(
-    node.id,
-    {
-      data: {
-        ...node.data,
-        state: nodeStates[String(node.id)]
-      },
-      style: {
-        ...node.style,
-        backgroundColor: nodeStates[String(node.id)] === "0" ? "#ccc" : "#28a745",
-      }
-    }
-  )
+const toggleState = (nodeId: string) => {
+  const node = nodes.value.find((n) => n.id === nodeId);
+  if (!node) return;
+
+  // Toggle state
+  node.data.state = node.data.state === "a" ? "b" : "a";
+  // console.log(`Node ${nodeId} state: ${node.data.state}`);
+
+  setReachable("1");
 };
 
-// Determine reachable nodes dynamically
-const getReachableNodes = (startNodeId: string) => {
-  const reachable = new Set<string>();
+const setReachable = (startNodeId: string) => {
   const queue = [startNodeId];
+
+  nodes.value.forEach((node) => {
+    node.data.reachable = false;
+  });
+  edges.value.forEach((edge) => {
+    edge.data.reachable = false;
+  });
 
   while (queue.length > 0) {
     const current = queue.shift()!;
-    reachable.add(current);
 
+    const node = nodes.value.find((n) => n.id === current);
+    node.data.reachable = true;
+    
     // Find outgoing edges with label matching the current node state
-    edgesTemplate.forEach((edge) => {
-      if (edge.source === current && edge.label === nodeStates[edge.source] && !reachable.has(edge.target)) {
+    edges.value.forEach((edge: Edge) => {
+      if (
+        edge.source === node.id             // Edge starts at current node
+        && edge.label === node.data.state   // Edge label matches current node state, a or b
+        && !node.reachable) {               // Target node has not been visited; if it has, this could lead to an infinite loop
+        
+        edge.data.reachable = true;
         queue.push(edge.target);
       }
     });
   }
-
-  return reachable;
 };
 
-const reachableNodes = getReachableNodes("1");
+// Initialization
+setReachable("1");
 
-// const { styledNodes } = useVueFlow() // Consider using useVueFlow for access to internal state
-const styledNodes = ref<Node[]>(
-  nodes.map((node) => ({
-    id: node.id,
-    position: {...node.position},
-    type: node.type,
-    data: {
-      ...node.data,
-    },
-    style: {
-      backgroundColor: reachableNodes.has(node.id) ? "#28a745" : "#ccc",
-      color: "#fff",
-      padding: "8px",
-      borderRadius: "4px",
-      textAlign: "center",
-    }
-  }))
-);
 
-// Update edges to reflect state
-const styledEdges = ref<Edge[]>(
-  edgesTemplate.map((edge) => ({
-    ...edge,
-    type: "smoothstep",
-    style: {
-      stroke: edge.label === nodeStates[edge.source] ? "green" : "grey",
-      strokeWidth: 2,
-    },
-  }))
-);
+// Execution
+
+// Vue Flow store
+const { onNodeClick } = useVueFlow();
+
+onNodeClick((event) => {
+  if (event?.node?.id) {
+    toggleState(event.node.id);
+  }
+});
+
 </script>
+
 
 <template>
   <div class="app">
     <h1>Entry Guide: Estimate Performance</h1>
     <VueFlow
-      :edges="styledEdges"
-      v-model:nodes="styledNodes"
-      @node-click="toggleState($event.node)"
+      :nodes="nodes"
+      :edges="edges"
+      :edgeTypes="{ decisionEdge: markRaw(DecisionEdge) }"
       :fit-view-on-init=true
       >
       <template #node-decision>
@@ -105,6 +88,10 @@ const styledEdges = ref<Edge[]>(
 
       <template #node-tool>
         <ToolNode />
+      </template>
+
+      <template #edge-decision>
+        <DecisionEdge />
       </template>
 
       <MiniMap />
