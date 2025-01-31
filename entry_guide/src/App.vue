@@ -7,6 +7,7 @@ import { MiniMap } from '@vue-flow/minimap'
 import DecisionNode from './DecisionNode.vue'
 import ToolNode from './ToolNode.vue'
 import DecisionEdge from './DecisionEdge.vue'
+import SummaryNode from './SummaryNode.vue';
 import StateControls from './StateControls.vue'
 import { useLayout } from './Layout'
 
@@ -65,6 +66,18 @@ const setReachable = (startNodeId: string) => {
 // Initialization
 setReachable("1");
 
+const nodeTypes = {
+  summaryNode: markRaw(SummaryNode),
+};
+const nodeSummary = ref<Node[]>([
+  {
+    id: 'summary-node',
+    type: 'summaryNode',
+    position: { x: 0, y: 0 },
+    data: { label: 'Hello, Vue Flow!' },
+  },
+]);
+
 const { layout } = useLayout()
 const { fitView } = useVueFlow()
 
@@ -94,12 +107,18 @@ onNodeClick((event) => {
   <div class="app">
     <h1>Entry Guide: Estimate Performance</h1>
     <VueFlow
-      :nodes="nodes"
+      :nodes="[...nodes, ...nodeSummary]"
       :edges="edges"
+      :nodeTypes="nodeTypes"
       :edgeTypes="{ decisionEdge: markRaw(DecisionEdge) }"
       @nodes-initialized="layoutGraph('TD')">
 
       <StateControls />
+
+      <template #node-summary>
+        <SummaryNode />
+      </template>
+
       <template #node-decision>
         <DecisionNode />
       </template>
