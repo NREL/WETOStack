@@ -14,18 +14,18 @@ export const nodes = ref<Node[]>([
             state: null,
             reachable: false
         },
-        position: { x: 0, y: 0 },
+        position: { x: 0, y: 0},
     },
     {
         id: "2",
         type: "decision",
         data: {
-            a: "Time domain",
+            a: "Dynamic",
             b: "Steady state",
             state: null,
             reachable: false
         },
-        position: { x: -200, y: 150 },
+        position: { x: 0, y: 0},
     },
     {
         id: "3",
@@ -36,7 +36,7 @@ export const nodes = ref<Node[]>([
             state: null,
             reachable: false
         },
-        position: { x: -200, y: 300 },
+        position: { x: 0, y: 0},
     },
     {
         id: "4",
@@ -47,7 +47,7 @@ export const nodes = ref<Node[]>([
             state: null,
             reachable: false
         },
-        position: { x: 0, y: 250 },
+        position: { x: 0, y: 0},
     },
     {
         id: "5",
@@ -58,7 +58,7 @@ export const nodes = ref<Node[]>([
             state: null,
             reachable: false
         },
-        position: { x: -200, y: 450 },
+        position: { x: 0, y: 0},
     },
     {
         id: "6",
@@ -69,7 +69,7 @@ export const nodes = ref<Node[]>([
             state: null,
             reachable: false
         },
-        position: { x: -200, y: 600 },
+        position: { x: 0, y: 0},
     },
     {
         id: "7",
@@ -80,7 +80,7 @@ export const nodes = ref<Node[]>([
             state: null,
             reachable: false
         },
-        position: { x: 200, y: 150 },
+        position: { x: 0, y: 0},
     },
     {
         id: "8",
@@ -91,7 +91,7 @@ export const nodes = ref<Node[]>([
             state: null,
             reachable: false
         },
-        position: { x: 200, y: 300 },
+        position: { x: 0, y: 0},
     },
 
 
@@ -101,7 +101,7 @@ export const nodes = ref<Node[]>([
             label: "FLORIS",
             reachable: false
         },
-        position: { x: -50, y: 350 },
+        position: { x: 0, y: 0},
         type: "tool",
     },
     {
@@ -110,16 +110,16 @@ export const nodes = ref<Node[]>([
             label: "FAD",
             reachable: false
         },
-        position: { x: 75, y: 400 },
+        position: { x: 0, y: 0},
         type: "tool",
     },
     {
         id: "11",
         data: {
-            label: "WindSE or Ard",
+            label: "WindSE",
             reachable: false
         },
-        position: { x: -100, y: 400 },
+        position: { x: 0, y: 0},
         type: "tool",
     },
     {
@@ -128,7 +128,7 @@ export const nodes = ref<Node[]>([
             label: "FAST.Farm",
             reachable: false
         },
-        position: { x: -100, y: 550 },
+        position: { x: 0, y: 0},
         type: "tool",
     },
     {
@@ -137,7 +137,7 @@ export const nodes = ref<Node[]>([
             label: "ExaWind Stack",
             reachable: false
         },
-        position: { x: -100, y: 700 },
+        position: { x: 0, y: 0},
         type: "tool",
     },
     {
@@ -146,7 +146,7 @@ export const nodes = ref<Node[]>([
             label: "AMR-Wind or ERF",
             reachable: false
         },
-        position: { x: -200, y: 750 },
+        position: { x: 0, y: 0},
         type: "tool",
     },
     {
@@ -155,7 +155,7 @@ export const nodes = ref<Node[]>([
             label: "WISDEM",
             reachable: false
         },
-        position: { x: 150, y: 250 },
+        position: { x: 0, y: 0},
         type: "tool",
     },
     {
@@ -164,7 +164,7 @@ export const nodes = ref<Node[]>([
             label: "WEIS",
             reachable: false
         },
-        position: { x: 150, y: 450 },
+        position: { x: 0, y: 0},
         type: "tool",
     },
     {
@@ -173,9 +173,18 @@ export const nodes = ref<Node[]>([
             label: "OpenFAST",
             reachable: false
         },
-        position: { x: 200, y: 500 },
+        position: { x: 0, y: 0},
         type: "tool",
     },
+    {
+        id: "18",
+        data: {
+            label: "Ard",
+            reachable: false
+        },
+        position: { x: 0, y: 0},
+        type: "tool",
+    }
 ]);
 
 // Export edges
@@ -196,4 +205,5 @@ export const edges = ref<Edge[]>([
     { id: "e7-8", source: "7", target: "8", label: "b", type: "decisionEdge", data: { reachable: false } },
     { id: "e8-16", source: "8", target: "16", label: "a", type: "decisionEdge", data: { reachable: false } },
     { id: "e8-17", source: "8", target: "17", label: "b", type: "decisionEdge", data: { reachable: false } },
+    { id: "e3-18", source: "3", target: "18", label: "b", type: "decisionEdge", data: { reachable: false } },
 ]);

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@dagrejs/dagre": "^1.1.4",
     "@vue-flow/core": "^1.42.1",
     "@vue-flow/minimap": "^1.5.2",
     "html-to-image": "^1.11.11",

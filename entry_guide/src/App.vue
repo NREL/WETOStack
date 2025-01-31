@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { markRaw } from 'vue'
+import { nextTick, ref, markRaw } from 'vue'
 import type { Node, Edge } from '@vue-flow/core'
 import { VueFlow, useVueFlow } from '@vue-flow/core'
 import { MiniMap } from '@vue-flow/minimap'
@@ -8,6 +8,8 @@ import DecisionNode from './DecisionNode.vue'
 import ToolNode from './ToolNode.vue'
 import DecisionEdge from './DecisionEdge.vue'
 import StateControls from './StateControls.vue'
+import { useLayout } from './Layout'
+
 import { nodes, edges } from "./graphData";
 
 
@@ -63,6 +65,16 @@ const setReachable = (startNodeId: string) => {
 // Initialization
 setReachable("1");
 
+const { layout } = useLayout()
+const { fitView } = useVueFlow()
+
+async function layoutGraph(direction: string) {
+  nodes.value = layout(nodes.value, edges.value, direction)
+
+  nextTick(() => {
+    fitView()
+  })
+}
 
 // Execution
 
@@ -85,8 +97,8 @@ onNodeClick((event) => {
       :nodes="nodes"
       :edges="edges"
       :edgeTypes="{ decisionEdge: markRaw(DecisionEdge) }"
-      fit-view-on-init
-      >
+      @nodes-initialized="layoutGraph('TD')">
+
       <StateControls />
       <template #node-decision>
         <DecisionNode />
