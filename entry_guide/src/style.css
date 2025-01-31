@@ -1,3 +1,8 @@
+@import 'https://cdn.jsdelivr.net/npm/@vue-flow/core@latest/dist/style.css';
+@import 'https://cdn.jsdelivr.net/npm/@vue-flow/core@latest/dist/theme-default.css';
+@import 'https://cdn.jsdelivr.net/npm/@vue-flow/minimap@latest/dist/style.css';
+@import 'https://cdn.jsdelivr.net/npm/@vue-flow/controls@latest/dist/style.css';
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -38,7 +43,7 @@ h1 {
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  /* padding: 0.6em 1.2em; */
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -76,4 +81,55 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+#app {
+  text-transform: uppercase;
+  /* font-family: 'JetBrains Mono', monospace; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #212e3c;
+}
+
+.vue-flow__minimap {
+  transform: scale(75%);
+  transform-origin: bottom right;
+}
+
+.vue-flow__panel {
+    background-color:#2d3748;
+    padding:10px;
+    border-radius:8px;
+    box-shadow:0 0 10px #00000080
+}
+
+.vue-flow__panel .buttons {
+    display:flex;
+    gap:8px
+}
+
+.vue-flow__panel button {
+    border:none;
+    cursor:pointer;
+    background-color:#4a5568;
+    border-radius:8px;
+    color:#fff;
+    box-shadow:0 0 10px #0000004d;
+    width:40px;
+    height:40px;
+    font-size:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center
+}
+
+.vue-flow__panel button:hover {
+    background-color:#2563eb;
+    transition:background-color .2s
+}
+
+.vue-flow__panel button svg {
+  width:100%;
+  height:100%
 }

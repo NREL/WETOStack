@@ -3,11 +3,11 @@ import { markRaw } from 'vue'
 import type { Node, Edge } from '@vue-flow/core'
 import { VueFlow, useVueFlow } from '@vue-flow/core'
 import { MiniMap } from '@vue-flow/minimap'
-import '@vue-flow/core/dist/style.css'
-import '@vue-flow/minimap/dist/style.css'
+
 import DecisionNode from './DecisionNode.vue'
 import ToolNode from './ToolNode.vue'
 import DecisionEdge from './DecisionEdge.vue'
+import StateControls from './StateControls.vue'
 import { nodes, edges } from "./graphData";
 
 
@@ -87,6 +87,7 @@ onNodeClick((event) => {
       :edgeTypes="{ decisionEdge: markRaw(DecisionEdge) }"
       fit-view-on-init
       >
+      <StateControls />
       <template #node-decision>
         <DecisionNode />
       </template>
