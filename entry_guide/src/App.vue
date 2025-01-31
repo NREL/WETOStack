@@ -3,6 +3,7 @@ import { nextTick, ref, markRaw } from 'vue'
 import type { Node, Edge } from '@vue-flow/core'
 import { VueFlow, useVueFlow } from '@vue-flow/core'
 import { MiniMap } from '@vue-flow/minimap'
+import { Background } from '@vue-flow/background'
 
 import DecisionNode from './DecisionNode.vue'
 import ToolNode from './ToolNode.vue'
@@ -132,6 +133,9 @@ onNodeClick((event) => {
       </template>
 
       <MiniMap />
+
+      <Background />
+
     </VueFlow>
   </div>
 </template>
