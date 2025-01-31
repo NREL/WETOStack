@@ -14,7 +14,7 @@ const softwareList = computed(() => {
 
 <template>
   <Panel position="top-left">
-    <div class="summary-node">
+    <div class="summary-panel">
       <h2>Software List</h2>
       <ul class="software-list">
         <li v-for="software in softwareList" :key="software.id">
@@ -26,7 +26,7 @@ const softwareList = computed(() => {
 </template>
 
 <style scoped>
-.summary-node {
+.summary-panel {
   padding: 16px;
   background-color: #f9f9f9;
   border: 2px solid #28a745;

@@ -143,7 +143,7 @@ export const nodes = ref<Node[]>([
     {
         id: "14",
         data: {
-            label: "AMR-Wind or ERF",
+            label: "AMR-Wind",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -184,7 +184,17 @@ export const nodes = ref<Node[]>([
         },
         position: { x: 0, y: 0},
         type: "tool",
-    }
+    },
+    {
+        id: "19",
+        data: {
+            label: "ERF",
+            reachable: false
+        },
+        position: { x: 0, y: 0},
+        type: "tool",
+    },
+
 ]);
 
 // Export edges
@@ -206,4 +216,5 @@ export const edges = ref<Edge[]>([
     { id: "e8-16", source: "8", target: "16", label: "a", type: "decisionEdge", data: { reachable: false } },
     { id: "e8-17", source: "8", target: "17", label: "b", type: "decisionEdge", data: { reachable: false } },
     { id: "e3-18", source: "3", target: "18", label: "b", type: "decisionEdge", data: { reachable: false } },
+    { id: "e6-19", source: "6", target: "19", label: "a", type: "decisionEdge", data: { reachable: false } },
 ]);
