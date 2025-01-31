@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { nextTick, ref, markRaw } from 'vue'
+import { nextTick, markRaw } from 'vue'
 import type { Node, Edge } from '@vue-flow/core'
 import { VueFlow, useVueFlow } from '@vue-flow/core'
 import { MiniMap } from '@vue-flow/minimap'

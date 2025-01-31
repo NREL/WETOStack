@@ -1,7 +1,6 @@
 import dagre from '@dagrejs/dagre'
 import { Position, useVueFlow } from '@vue-flow/core'
 import { ref } from 'vue'
-import type { Ref } from 'vue'
 import type { Node, Edge } from '@vue-flow/core'
 
 /**
