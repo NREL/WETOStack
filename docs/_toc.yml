@@ -4,17 +4,6 @@
 format: jb-book
 root: index
 parts:
-- caption: Activity and Events
-  chapters:
-  - file: activity/updates
-  - file: workshops/nawea_2024
-  - file: workshops/user_workshops_2024
-    sections:
-    - file: workshops/user_workshops_2024_report
-  - file: workshops/nawea_2023
-  - file: workshops/workshop
-    sections:
-    - file: workshops/workshop_report
 
 - caption: Portfolio Analysis
   chapters:
@@ -33,3 +22,15 @@ parts:
   chapters:
   - file: software_dev/best_practices
   - file: software_dev/developer_resources
+      
+- caption: Engagement Notes
+  chapters:
+  - file: activity/updates
+  - file: workshops/nawea_2024
+  - file: workshops/user_workshops_2024
+    sections:
+    - file: workshops/user_workshops_2024_report
+  - file: workshops/nawea_2023
+  - file: workshops/workshop
+    sections:
+    - file: workshops/workshop_report
