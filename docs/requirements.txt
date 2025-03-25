@@ -11,3 +11,4 @@ pandas~=2.2
 networkx
 ghapi
 pygraphviz
+squarify

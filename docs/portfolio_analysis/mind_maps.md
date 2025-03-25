@@ -1,9 +1,7 @@
 (technical_areas)=
 # Technical Areas
 
-The WETO software portfolio can be subdivided into key technical areas that
-cover the breadth of wind energy system design and analysis.
-The technical areas and their associated tools are listed here.
+The WETO software portfolio can be subdivided in many different ways. The dynamic software listing offers a helpful way for users to peruse the portfolio based on various characteristics.  The mind maps below offer an extended description of the models based on some of their key technical characteristics.
 
 ````{card}
 Engineering-fidelity Physics Models
