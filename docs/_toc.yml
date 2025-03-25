@@ -7,14 +7,11 @@ parts:
 
 - caption: Portfolio Analysis
   chapters:
-  - file: technical_areas/overview
-  - file: capabilities/overview
+  - file: portfolio_analysis/overview
     sections:
-    - file: capabilities/aero
-    - file: capabilities/system_design
-    - file: capabilities/wake_loss_wfc
-  - file: portfolio_analysis/software_list
-  - file: portfolio_analysis/attribute_table
+    - file: portfolio_analysis/software_list
+    - file: portfolio_analysis/mind_maps
+    - file: portfolio_analysis/attribute_table
   - file: portfolio_analysis/map_network
   - file: portfolio_analysis/attributes_schema
 

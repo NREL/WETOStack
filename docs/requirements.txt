@@ -10,3 +10,4 @@ itables~=2.2
 pandas~=2.2
 networkx
 ghapi
+pygraphviz
