@@ -5,13 +5,12 @@ format: jb-book
 root: index
 parts:
 
-- caption: Portfolio Analysis
+- caption: The Portfolio
   chapters:
   - file: portfolio_analysis/overview
-    sections:
-    - file: portfolio_analysis/software_list
-    - file: portfolio_analysis/mind_maps
-    - file: portfolio_analysis/attribute_table
+  - file: portfolio_analysis/software_list
+  - file: portfolio_analysis/mind_maps
+  - file: portfolio_analysis/attribute_table
   - file: portfolio_analysis/map_network
   - file: portfolio_analysis/attributes_schema
 
