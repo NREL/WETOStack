@@ -1,0 +1,40 @@
+/* From: https://www.w3schools.com/howto/howto_js_filter_elements.asp */
+.container {
+  overflow: hidden;
+}
+
+.filterDiv {
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 130px;
+  line-height: 130px;
+  text-align: center;
+  margin: 2px;
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.filterBtn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.filterBtn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.filterBtn.isOn {
+  background-color: #666;
+  color: white;
+}

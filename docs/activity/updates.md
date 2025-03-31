@@ -10,13 +10,10 @@ kernelspec:
   name: python3
 ---
 
-# News and Releases
+# Latest Releases
 
 Keep up with the latest updates from components of the WETO Stack here!
-While each project has its own documentation, this page contains high-level information,
-links to sources, and other news that may be of interest to the WETO community.
-
-## Releases from the past 30 days
+This page is automatically updated to list releases from the past 30 days.
 
 ```{code-cell} ipython3
 :tags: [hide-input]
@@ -62,7 +59,3 @@ display(Markdown(release_list_md))
 display(Markdown(f"*Updated on {datetime.now(tz=timezone(-timedelta(hours=7))).strftime('%Y-%m-%d')}*"))
 # Note the timedelta is inaccurate for part of the year, but it's purpose is to have the correct day
 ```
-
-## Latest News
-
-- [May 28 2024: OpenFAST is now available via conda-forge for all three major operating systems!](openfast_conda)

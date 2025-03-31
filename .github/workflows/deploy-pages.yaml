@@ -45,8 +45,6 @@ jobs:
       run: |
         pip install --upgrade pip
         pip install -r requirements.txt
-        pip install -r docs/requirements.txt
-
     # Build the Vue app first, and then move it to the docs/_static folder so that it's included
     # in the JupyterBook build.
     - name: Build the Vue app

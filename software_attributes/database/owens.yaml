@@ -95,14 +95,14 @@ file_structure_stability: semantic_versioning
 
 # WETO Integrations
 dependencies:
-- - AeroDyn
+- - openfast
   - direct
-- - MoorDyn
-  - direct
-- - HydroDyn
-  - direct
-- - Turbsim
-  - direct
+# - - MoorDyn
+#   - direct
+# - - HydroDyn
+#   - direct
+# - - turbsim
+#   - direct
 
 # # Community Health
 # open_issues: 0..N
