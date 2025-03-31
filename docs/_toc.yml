@@ -4,7 +4,25 @@
 format: jb-book
 root: index
 parts:
-- caption: Activity and Events
+
+- caption: The Portfolio
+  chapters:
+  - file: portfolio_analysis/overview
+  - file: portfolio_analysis/software_list
+    sections:
+    - file: portfolio_analysis/software_other
+  - file: portfolio_analysis/mind_maps
+  - file: portfolio_analysis/attribute_table
+  - file: portfolio_analysis/map_network
+  - file: portfolio_analysis/attributes_schema
+
+- caption: Software Quality
+  chapters:
+  - file: software_dev/rubric
+  - file: software_dev/best_practices
+  - file: software_dev/developer_resources
+      
+- caption: Engagement Notes
   chapters:
   - file: activity/updates
   - file: workshops/nawea_2024
@@ -15,21 +33,3 @@ parts:
   - file: workshops/workshop
     sections:
     - file: workshops/workshop_report
-
-- caption: Portfolio Analysis
-  chapters:
-  - file: technical_areas/overview
-  - file: capabilities/overview
-    sections:
-    - file: capabilities/aero
-    - file: capabilities/system_design
-    - file: capabilities/wake_loss_wfc
-  - file: portfolio_analysis/software_list
-  - file: portfolio_analysis/attribute_table
-  - file: portfolio_analysis/map_network
-  - file: portfolio_analysis/attributes_schema
-
-- caption: Resources
-  chapters:
-  - file: software_dev/best_practices
-  - file: software_dev/developer_resources

@@ -2,56 +2,6 @@
 (software_listing)=
 # Software Listing
 
-```{mermaid}
-%%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
-
-mindmap
-    root("WETO Software Portfolio")
-        ps(Engineering-fidelity Physics Models)
-            OpenFAST
-            FAST.Farm
-            MoorPy
-            RAFT
-            OWENS
-
-        hfm(High Fidelity Models)
-            AMR Wind
-            Nalu Wind
-            OpenTurbine
-            ERF
-            pyNuMAD
-
-        do(Design & Optimization)
-            WEIS
-            WISDEM
-            WindSE
-            HOPP
-            SONATA
-
-        ctrl(Controls)
-            ROSCO
-            FLORIS
-            FLASC
-            hercules
-
-        ra(Resource Assessment)
-            DW TAP
-
-        cost(Cost Models)
-            LandBOSSE
-            ORBIT
-            CORAL
-            NRWAL
-
-        wild(Wild Life Impact)
-            SSRS
-
-        om(Operation and Maintenance)
-            OpenOA
-            WOMBAT
-```
-
-The set of software under the WETO umbrella is listed here.
 While this is intended to be a complete list, it is likely missing some projects.
 Please [suggest an edit](https://github.com/nrel/wetostack/edit/main/docs/portfolio_analysis/software_list.md)
 if any information here is incorrect.
@@ -60,178 +10,105 @@ Including a software in this list requires the following:
 - Entry in [docs/software_list.md](https://github.com/NREL/WETOStack/blob/main/docs/portfolio_analysis/software_list.md)
 - Corresponding YAML file in [software_attributes/database](https://github.com/NREL/WETOStack/tree/main/software_attributes/database)
 
-This listing contains two groups of software projects:
-
-1. WETO-funded software
-2. Other projects funded by various agencies and mechanisms
-
 All of these tools relate to some aspect of wind energy development from component design
 and analysis to cost modeling and supply chain analysis.
 
-
 ## Active support
 
-These projects are actively supported and funded by WETO as of FY23.
+These projects are actively supported and funded by WETO.
+Select one or a combination of categories to down-select projects.
 
-**Engineering-fidelity physics models**
-- OpenFAST: https://github.com/openfast/openfast
-- FAST.Farm: https://github.com/openfast/openfast
-- MoorPy: https://github.com/nrel/moorpy
-- RAFT: https://github.com/WISDEM/RAFT
-- OWENS: https://github.com/sandialabs/OWENS.jl
+```{div} my-class
+<div id="myBtnContainer">
+  <button class="filterBtn isOff" id="turbine" onclick="filterSelection('turbine')">Turbine</button>
+  <button class="filterBtn isOff" id="farm" onclick="filterSelection('farm')">Farm</button>
+  <button class="filterBtn isOff" id="component" onclick="filterSelection('component')">Component</button>
+  <button class="filterBtn isOff" id="high" onclick="filterSelection('high')">High Fidelity</button>
+  <button class="filterBtn isOff" id="middle" onclick="filterSelection('middle')">Middle Fidelity</button>
+  <button class="filterBtn isOff" id="low" onclick="filterSelection('low')">Low Fidelity</button>
+  <button class="filterBtn isOff" id="time" onclick="filterSelection('time')">Time Domain</button>
+  <button class="filterBtn isOff" id="freq" onclick="filterSelection('freq')">Freq Domain</button>
+  <button class="filterBtn isOff" id="steady" onclick="filterSelection('steady')">Steady State</button>
+  <button class="filterBtn isOff" id="cost" onclick="filterSelection('cost')">Cost</button>
+  <button class="filterBtn isOff" id="design" onclick="filterSelection('design')">Design</button>
+  <button class="filterBtn isOff" id="controls" onclick="filterSelection('controls')">Controls</button>
+  <button class="filterBtn isOff" id="resource" onclick="filterSelection('resource')">Resource</button>
+  <button class="filterBtn isOff" id="operations" onclick="filterSelection('operations')">O&M</button>
+  <button class="filterBtn isOff" id="wildlife" onclick="filterSelection('wildlife')">Wildlife</button>
+  <button class="filterBtn isOff" id="grid" onclick="filterSelection('grid')">Grid</button>
+  <button class="filterBtn isOff" id="wisdem" onclick="filterSelection('wisdem')">WISDEM Modules</button>
+  <button class="filterBtn isOff" id="openfast" onclick="filterSelection('openfast')">OpenFAST Modules</button>
+  <button class="filterBtn isOff" id="exawind" onclick="filterSelection('exawind')">ExaWind Modules</button>
+  <button class="filterBtn isOff" id="prepost" onclick="filterSelection('prepost')">Pre/Post-processing</button>
+</div>
 
-**High fidelity models**
-- AMR-Wind: https://github.com/exawind/amr-wind
-- Nalu-Wind: https://github.com/exawind/nalu-wind
-- OpenTurbine: https://github.com/exawind/openturbine
-- ERF: https://github.com/erf-model/ERF
-- pyNuMAD: https://github.com/sandialabs/pyNuMAD
-
-**Design and optimization**
-- WEIS: https://github.com/wisdem/weis
-- WISDEM: https://github.com/wisdem/wisdem
-- WindSE: https://github.com/nrel/windse
-- HOPP: https://github.com/NREL/HOPP
-- SONATA: https://github.com/ptrbortolotti/SONATA
-
-**Controls development**
-- ROSCO: https://github.com/NREL/ROSCO
-- FLORIS: https://github.com/nrel/floris
-- FLASC: https://github.com/nrel/flasc
-- hercules: https://github.com/nrel/hercules
-
-**Resources assessment**
-- DW TAP: https://github.com/NREL/dw-tap-app
-
-**Cost models**
-- LandBOSSE: https://github.com/WISDEM/LandBOSSE
-- ORBIT: https://github.com/WISDEM/ORBIT
-- CORAL: https://github.com/NREL/CORAL
-- NRWAL: https://github.com/NREL/NRWAL
-
-**Operation and Maintenance**
-- OpenOA: https://github.com/nrel/openoa
-- WOMBAT: https://github.com/WISDEM/WOMBAT
-
-**Wildlife Impact**
-- SSRS: https://github.com/NREL/SSRS
-
-
-## Other status
-
-These projects are either funded outside of WETO, are not actively funded, or are deprecated.
-
-**Turbine and component models**
-- CCBlade: https://github.com/WISDEM/CCBlade
-- KiteFAST: https://github.com/openfast/kitefast
-- MAFRIT: https://github.com/NREL/MAFRIT
-- pBEAM: https://github.com/WISDEM/pBEAM
-- PyFrame3DD: https://github.com/WISDEM/pyFrame3DD
-- CACTUS: https://github.com/sandialabs/CACTUS
-- WEC-Sim/MOST: https://github.com/WEC-Sim/WEC-Sim and http://www.morenergylab.polito.it/most/
-
-*Deprecated or no longer supported:*
-- ADAMS2AD: The MSC.ADAMS-to-AeroDyn (ADAMS2AD) interface is a software package for simulating the coupled dynamic response of horizontal-axis wind turbines.
-- BladeFS: Blade Fatigue Static (BladeFS) is a MATLAB script that was developed to determine loads and deflections associated with fatigue and static structural testing of wind turbine blades using matrix based finite element analysis.
-- RotorSE: This is a module for static aerodynamic and structural analysis of wind turbine rotors.
-- TowerSE: This is a module for static aerodynamic and structural analysis of wind turbine towers.
-
-**High fidelity models**
-- SOWFA: https://github.com/nrel/sowfa
-- NuMAD: https://github.com/sandialabs/NuMAD
-
-**Wind farm controls**
-- moa_python: https://github.com/nrel/moa_python
-
-**Numerical weather prediction**
-- WRF: https://github.com/wrf-model/WRF
-- MMC-WRF: https://github.com/a2e-mmc/WRF
-
-**Design and optimization**
-- G2Aero: https://github.com/NREL/G2Aero
-- Gear-SCouP: https://github.com/NREL/GEAR-SCouP
-- WISDEM/dakota_driver: https://github.com/WISDEM/dakota_driver
-- WPGNN and PLayGen: https://github.com/NREL/WPGNN
-
-*Deprecated or no longer supported:*
-- HARP_Opt: Horizontal Axis Rotor Performance Optimization (HARP_Opt) utilizes a multiple-objective genetic algorithm and blade-element momentum theory flow model to design horizontal-axis wind and hydrokinetic turbine rotors.
-- NAFNoise: NREL AirFoil Noise (NAFNoise) is a program that predicts the noise of any airfoil shape for five different types of noise sources.
-- PROPID: PROP Inverse Design (PROPID) is aerodynamic design software developed by the University of Illinois at Urbana-Champaign. You can use it to design rotors.
-- DrivePy: DrivePy is physics-based drivetrain model that sizes drivetrain components based on aerodynamic and operational loads for use in a systems engineering model. It also calculates costs based on empirical data collected by NREL's National Wind Technology Center.
-- JacketSE: This is a module for static hydrodynamic, aerodynamic, and structural design and analysis of wind turbine jacket and towers within the Systems Engineering toolbox.
-- Nacelle Systems Engineering Model and Hub Systems Engineering Model: nacelleSE and hubSE are models that size wind turbine hub system and drivetrain components based on key turbine design parameters and load inputs from a rotor model.
-
-*Repository not found:*
-- INN Airfoil Tools: This software package contains code to perform airfoil inverse shape design using a sparsified invertible neural network model. This is a specialized deep learning architecture that enables both network weights to be shared to evaluate forward or inverse passes through the network. As a design tool, this network allows practitioners to specify aerodynamic and structural properties and generate shapes that satisfy those properties. 
-
-**Cost models**
-- FUSED-Wind: https://github.com/FUSED-Wind/fusedwind
-- Marmot: https://github.com/NREL/Marmot
-- HybridBOSSE: https://github.com/NREL/HybridBOSSE - A tool for estimating BOS costs for hybrid power plants that share infrastructure.
-
-*Deprecated or no longer supported:*
-- Turbine_costSE: turb_costSE is a set of models that link wind turbine component masses (and a few other key variables) to component costs.
-- LandOpExSE: This is a cost model for operational expenditures for land-based wind plants.
-- NREL_CSM: NREL Wind Energy Cost and Scaling Model
-
-*Repository not found:*
-- JEDI (more macro than software)
-- ORCA
-- CREST: Cost of Renewable Energy Spreadsheet Tool
-
-
-### Utilities
-- python-toolbox: https://github.com/openfast/python_toolbox
-- matlab-toolbox: https://github.com/openfast/matlab_toolbox
-- weio: https://github.com/ebranlard/weio
-- windtools: https://github.com/NREL/windtools
-
-**Deprecated or no longer supported**
-
-- AirfoilPrep: AirfoilPrep is a preprocessor for generating airfoil tables for AeroDyn. https://github.com/WISDEM/AirfoilPreppy
-- BModes: BModes is a finite-element code that provides dynamically coupled modes for a beam.
-- IECWind: IECWind is a utility program used to create wind files for InflowWind-based programs.
-- Modes: Modes generates mode shapes for wind turbine towers and blades.
-- PreComp: PreComp is a code that provides span-variant structural properties for composite blades.
-- SS_Fitting: SS_Fitting is a MATLAB toolbox designed to provide a state-space model based on the WAMIT output files.
-
-**Included in OpenFAST**
-- TurbSim: TurbSim is a stochastic, full-field, turbulence simulator primarily for use with InflowWind-based simulation tools.
-
-**Grid load and demand models**
-
-- dGen: https://github.com/NREL/dgen
-- dsgrid: https://github.com/dsgrid/dsgrid
-- REopt: https://github.com/NREL/REopt.jl
-- reV: https://github.com/NREL/rev
-- reVX: https://github.com/NREL/reVX
-- rex: https://github.com/NREL/rex
-- MAGMA: https://github.com/NREL/MAGMA
-
-**Postprocessors**
-
-*Deprecated or no longer supported:*
-- Crunch: Crunch is a software utility that performs several types of post-processing analyses for one or more files.
-- GenStats: GenStats is a fairly simple utility that generates statistics for one or more files.
-- GPP: GPP (pronounced "jeep") is a general-purpose postprocessor for wind turbine data analysis.
-- MBC: MBC is a set of MATLAB scripts that performs multi-blade coordinate (MBC) transformation on wind turbine system models.
-- MCrunch: MCrunch is a MATLAB-based postprocessor for wind turbine data analysis.
-- MExtremes: MExtremes (pronounced em-extremes) is a set of MATLABscripts that generate extreme-event tables for one or more time series.
-- MLife: MLife (pronounced em-life) is a set of MATLAB scripts that calculate fatigue life and statistics for one or more time series.
-
-**Other**
-
-- CELAVI: https://github.com/NREL/celavi
-- CEWAM: https://github.com/NREL/CEWAM
-- GDX-pandas: https://github.com/NREL/gdx-pandas
-- L-TERRA: https://github.com/NREL/L-TERRA
-- NaTGenPD: https://github.com/NREL/NaTGenPD
-- OSOS: https://github.com/NREL/osos
-- R2PD: https://github.com/Smart-DS/R2PD
-- Reegle Tagging API (CKAN Extension): https://github.com/REEEP/ckanext-climate-tagger
-- sup3r: https://github.com/NREL/sup3r
-- WindView: https://github.com/windview/client
-
+<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+<div class="container">
+  <a href="https://github.com/openfast/openfast"><div class="filterDiv all turbine middle time openfast">OpenFAST</div></a>
+  <a href="https://github.com/openfast/openfast"><div class="filterDiv all farm middle time">FAST.Farm</div></a>
+  <a href="https://github.com/wisdem/raft"><div class="filterDiv all turbine middle freq">RAFT</div></a>
+  <a href="https://github.com/sandialabs/OWENS.jl"><div class="filterDiv all turbine middle time">OWENS</div></a>
+  <a href="https://github.com/exawind"><div class="filterDiv all farm turbine high time exawind">ExaWind</div></a>
+  <a href="https://github.com/exawind/amr-wind"><div class="filterDiv all farm high time exawind">AMR-Wind</div></a>
+  <a href="https://github.com/exawind/nalu-wind"><div class="filterDiv all turbine high time exawind">NALU-Wind</div></a>
+  <a href="https://github.com/exawind/openturbine"><div class="filterDiv all turbine high time exawind">OpenTurbine</div></a>
+  <a href="https://github.com/erf-model/ERF"><div class="filterDiv all farm high time resource">ERF</div></a>
+  <a href="https://github.com/sandialabs/pyNuMAD"><div class="filterDiv all component high time">pyNuMAD</div></a>
+  <a href="https://github.com/wisdem/weis"><div class="filterDiv all turbine low middle time freq design">WEIS</div></a>
+  <a href="https://github.com/wisdem/wisdem"><div class="filterDiv all turbine low steady design cost wisdem">WISDEM</div></a>
+  <a href="https://github.com/nrel/windse"><div class="filterDiv all farm middle time design">WindSE</div></a>
+  <a href="https://github.com/nrel/hopp"><div class="filterDiv all turbine low steady design">HOPP</div></a>
+  <a href="https://github.com/wisdem/sonata"><div class="filterDiv all component middle steady design">SONATA</div></a>
+  <a href="https://github.com/nrel/rosco"><div class="filterDiv all component middle time controls">ROSCO</div></a>
+  <a href="https://github.com/nrel/floris"><div class="filterDiv all farm low steady controls">FLORIS</div></a>
+  <a href="https://github.com/nrel/flasc"><div class="filterDiv all farm operations middle time controls">FLASC</div></a>
+  <a href="https://github.com/nrel/hercules"><div class="filterDiv all farm middle high time controls">hercules</div></a>
+  <a href="https://github.com/nrel/dw-tap-app"><div class="filterDiv all time resource">DW TAP</div></a>
+  <a href="https://github.com/wisdem/landbosse"><div class="filterDiv all cost farm wisdem">LandBOSSE</div></a>
+  <a href="https://github.com/wisdem/orbit"><div class="filterDiv all cost farm wisdem">ORBIT</div></a>
+  <a href="https://github.com/wisdem/wombat"><div class="filterDiv all cost farm wisdem operations">WOMBAT</div></a>
+  <a href="https://github.com/nrel/coral"><div class="filterDiv all cost farm">CORAL</div></a>
+  <a href="https://github.com/nrel/nrwal"><div class="filterDiv all cost farm">NRWAL</div></a>
+  <a href="https://github.com/nrel/openoa"><div class="filterDiv all farm turbine operations">OpenOA</div></a>
+  <a href="https://github.com/nrel/ssrs"><div class="filterDiv all farm wildlife">SSRS</div></a>
+  <a href="https://github.com/nrel/moorpy"><div class="filterDiv all component wisdem steady low">MoorPy</div></a>
+  <a href="https://github.com/nrel/pcrunch"><div class="filterDiv all middle time prepost">pCrunch</div></a>
+  <a href="https://github.com/wisdem/wisdem"><div class="filterDiv all component wisdem steady low">CCBlade</div></a>
+  <a href="https://github.com/wisdem/wisdem"><div class="filterDiv all component wisdem steady low">DrivetrainSE</div></a>
+  <a href="https://github.com/wisdem/wisdem"><div class="filterDiv all component wisdem steady low">FixedBottomSE</div></a>
+  <a href="https://github.com/wisdem/wisdem"><div class="filterDiv all component wisdem steady low">pyFrame3DD</div></a>
+  <a href="https://github.com/wisdem/wisdem"><div class="filterDiv all component wisdem steady low">RotorSE</div></a>
+  <a href="https://github.com/wisdem/wisdem"><div class="filterDiv all component wisdem steady low">TowerSE</div></a>
+  <a href="https://github.com/wisdem/wisdem"><div class="filterDiv all farm wisdem steady low">PlantFinanceSE</div></a>
+  <a href="https://github.com/wisdem/wisdem"><div class="filterDiv all component wisdem steady low prepost">PreComp</div></a>
+  <a href="https://github.com/wisdem/wisdem"><div class="filterDiv all turbine wisdem steady low cost">NREL CSM</div></a>
+  <a href="https://github.com/openfast/openfast"><div class="filterDiv all component middle time openfast">AeroDyn</div></a>
+  <a href="https://github.com/openfast/openfast"><div class="filterDiv all component middle time openfast">BeamDyn</div></a>
+  <a href="https://github.com/openfast/openfast"><div class="filterDiv all component middle time openfast">ElastoDyn</div></a>
+  <a href="https://github.com/openfast/openfast"><div class="filterDiv all component middle time openfast">HydroDyn</div></a>
+  <a href="https://github.com/openfast/openfast"><div class="filterDiv all component middle time openfast">IceDyn</div></a>
+  <a href="https://github.com/openfast/openfast"><div class="filterDiv all component middle time openfast">InflowWind</div></a>
+  <a href="https://github.com/openfast/openfast"><div class="filterDiv all component middle time openfast">SeaState</div></a>
+  <a href="https://github.com/openfast/openfast"><div class="filterDiv all component middle time openfast">MoorDyn</div></a>
+  <a href="https://github.com/openfast/openfast"><div class="filterDiv all component middle time openfast">ServoDyn</div></a>
+  <a href="https://github.com/openfast/openfast"><div class="filterDiv all component middle time openfast">SubDyn</div></a>
+  <a href="https://github.com/openfast/openfast"><div class="filterDiv all farm middle time openfast">OLAF</div></a>
+  <a href="https://github.com/openfast/openfast"><div class="filterDiv all farm middle time openfast">TurbSim</div></a>
+  <a href="https://github.com/openfast/openfast"><div class="filterDiv all middle time openfast prepost">OpenFAST_IO</div></a>
+  <a href="https://github.com/openfast/matlab_toolbox"><div class="filterDiv all middle time openfast prepost">Matlab Tools</div></a>
+  <a href="https://github.com/nrel/windtools"><div class="filterDiv all high time prepost">windtools</div></a>
+  <a href="https://github.com/nrel/dgen"><div class="filterDiv all grid">dGen</div></a>
+  <a href="https://github.com/dsgrid/dsgrid"><div class="filterDiv all grid">dsgrid</div></a>
+  <a href="https://github.com/nrel/REopt.jl"><div class="filterDiv all grid">REopt</div></a>
+  <a href="https://github.com/nrel/rev"><div class="filterDiv all grid">reV</div></a>
+  <a href="https://github.com/nrel/revx"><div class="filterDiv all grid">reVX</div></a>
+  <a href="https://github.com/nrel/rex"><div class="filterDiv all grid">rex</div></a>
+  <a href="https://github.com/nrel/magma"><div class="filterDiv all grid">MAGMA</div></a>
+  <a href="https://github.com/nrel/reeds-2.0"><div class="filterDiv all grid">ReEDS</div></a>
+  <a href="https://github.com/nrel/sup3r"><div class="filterDiv all time resource">Super Resolution</div></a>
+  <a href="https://www.nrel.gov/grid/wind-toolkit.html"><div class="filterDiv all time resource">Wind Toolkit</div></a>
+</div>
+```
 
 ## GitHub organizations
 

@@ -1,17 +1,8 @@
 # WETO Software Stack
 
-NREL's National Wind Technology Center is engaged in a multiyear effort to elevate the
-quality and robustness of the WETO Software Stack, the software portfolio supported by
-Department of Energy's [Wind Energy Technologies Office (WETO)](https://www.energy.gov/eere/wind/wind-energy-technologies-office).
-To achieve this goal, a dedicated *Portfolio Coordination* project is under way with the
-following focus areas:
+The WETO Software Stack is the software portfolio supported by the Department of Energy's [Wind Energy Technologies Office (WETO)](https://www.energy.gov/eere/wind/wind-energy-technologies-office).  Through the national laboratories and their univeristy collaborators, this portfolio includes engineering and techno-economic models focused on wind energy across a spectrum of model fidelities and use cases.
 
-- Characterize the existing software portfolio to identify quality levels, capabilities, and gaps
-- Identify challenges and opportunities in the current software development processes
-- Build a community of model owners and practitioners who participate in annual workshops to
-  discuss the state of the WETO software portfolio and develop future road maps
-
-This dashboard contains the results and information related to each focus area.
+Please use the navigation at the left or below to jump to your desired content.  If you are a new user looking to find the right tool for your application, please see the Entry Guide.
 
 ## Table of Contents
 ```{tableofcontents}
