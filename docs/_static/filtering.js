@@ -6,31 +6,6 @@ function filterSelection(c) {
     // Get all filter buttons
     var btnFilters = document.getElementsByClassName("filterBtn");
 
-    // Special case for "all" button
-    if (c == "all") {
-        for (var i = 0; i < btnFilters.length; i++) {
-
-            if (btnFilters[i].id.indexOf("all") > -1) {
-
-                if (btnFilters[i].className.split(" ").indexOf("isOn") > -1) {
-                    btnFilters[i].classList.replace("isOn", "isOff");
-                    break;
-
-                } else if (btnFilters[i].className.split(" ").indexOf("isOff") > -1) {
-                    btnFilters[i].classList.replace("isOff", "isOn");
-                    for (var j = 0; j < btnFilters.length; j++) {
-                        if (btnFilters[j].id.indexOf("all") == -1) {
-                            btnFilters[j].classList.replace("isOn", "isOff");
-                        }
-                    }
-                    break;
-
-                }
-            }
-        }
-        return;
-    }
-
     // Toggle the clicked button state
     for (var i = 0; i < btnFilters.length; i++) {
         if (btnFilters[i].id == c) {
