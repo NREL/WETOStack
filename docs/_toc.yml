@@ -9,6 +9,8 @@ parts:
   chapters:
   - file: portfolio_analysis/overview
   - file: portfolio_analysis/software_list
+    sections:
+    - file: portfolio_analysis/software_other
   - file: portfolio_analysis/mind_maps
   - file: portfolio_analysis/attribute_table
   - file: portfolio_analysis/map_network
