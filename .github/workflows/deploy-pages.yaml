@@ -43,6 +43,7 @@ jobs:
         python-version: '3.11'
     - name: Install dependencies
       run: |
+        sudo apt-get install graphviz graphviz-dev
         pip install --upgrade pip
         pip install -r requirements.txt
     # Build the Vue app first, and then move it to the docs/_static folder so that it's included
