@@ -1,48 +1,85 @@
-// From: https://www.w3schools.com/howto/howto_js_filter_elements.asp
-filterSelection("all")
+
+// Derived from: https://www.w3schools.com/howto/howto_js_filter_elements.asp
+
 function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
 
-// Show filtered elements
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
+    // Get all filter buttons
+    var btnFilters = document.getElementsByClassName("filterBtn");
+
+    // Special case for "all" button
+    if (c == "all") {
+        for (var i = 0; i < btnFilters.length; i++) {
+
+            if (btnFilters[i].id.indexOf("all") > -1) {
+
+                if (btnFilters[i].className.split(" ").indexOf("isOn") > -1) {
+                    btnFilters[i].classList.replace("isOn", "isOff");
+                    break;
+
+                } else if (btnFilters[i].className.split(" ").indexOf("isOff") > -1) {
+                    btnFilters[i].classList.replace("isOff", "isOn");
+                    for (var j = 0; j < btnFilters.length; j++) {
+                        if (btnFilters[j].id.indexOf("all") == -1) {
+                            btnFilters[j].classList.replace("isOn", "isOff");
+                        }
+                    }
+                    break;
+
+                }
+            }
+        }
+        return;
     }
-  }
-}
 
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    // Toggle the clicked button state
+    for (var i = 0; i < btnFilters.length; i++) {
+        if (btnFilters[i].id == c) {
+            if (btnFilters[i].className.indexOf("isOn") > -1) {
+                btnFilters[i].classList.replace("isOn", "isOff");
+            } else if (btnFilters[i].className.indexOf("isOff") > -1) {
+                btnFilters[i].classList.replace("isOff", "isOn");
+            }
+            break;
+        }
     }
-  }
-  element.className = arr1.join(" ");
+
+    // Add filters to to the filterList for all buttons that are "on"
+    var filterList = new Array();
+    for (var i = 0; i < btnFilters.length; i++) {
+        if (btnFilters[i].className.indexOf("isOn") > -1) {
+            filterList.push(btnFilters[i].id);
+        }
+    }
+
+    // Get all model divs that will be filtered in or out; these show the model names
+    var divModels = document.getElementsByClassName("filterDiv");
+
+    // Filter the models based on the current filter list
+    for (var i = 0; i < divModels.length; i++) {
+        var showModel = true;
+        for (var j = 0; j < filterList.length; j++) {
+            if (divModels[i].className.indexOf(filterList[j]) == -1) {
+                showModel = false;
+                break;
+            }
+        }
+
+        if (showModel) {
+            divModels[i].classList.add("show");
+        } else {
+            divModels[i].classList.remove("show");
+        }
+    }
+
+    // console.log(filterList);
 }
 
-// Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("filterBtn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
+document.addEventListener("DOMContentLoaded", function (event) {
+    // Get all model divs that will be filtered in or out; these show the model names
+    var divModels = document.getElementsByClassName("filterDiv");
+
+    // Show all models to start
+    for (var i = 0; i < divModels.length; i++) {
+        divModels[i].classList.add("show");
+    }
+});

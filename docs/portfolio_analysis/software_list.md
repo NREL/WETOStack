@@ -19,27 +19,27 @@ These projects are actively supported and funded by WETO. Click "*Show All*" to 
 
 ```{div} my-class
 <div id="myBtnContainer">
-  <button class="filterBtn" onclick="filterSelection('all')"> Show all</button>
-  <button class="filterBtn" onclick="filterSelection('turbine')">Turbine</button>
-  <button class="filterBtn" onclick="filterSelection('farm')">Farm</button>
-  <button class="filterBtn" onclick="filterSelection('component')">Component</button>
-  <button class="filterBtn" onclick="filterSelection('high')">High Fidelity</button>
-  <button class="filterBtn" onclick="filterSelection('middle')">Middle Fidelity</button>
-  <button class="filterBtn" onclick="filterSelection('low')">Low Fidelity</button>
-  <button class="filterBtn" onclick="filterSelection('time')">Time Domain</button>
-  <button class="filterBtn" onclick="filterSelection('freq')">Freq Domain</button>
-  <button class="filterBtn" onclick="filterSelection('steady')">Steady State</button>
-  <button class="filterBtn" onclick="filterSelection('cost')">Cost</button>
-  <button class="filterBtn" onclick="filterSelection('design')">Design</button>
-  <button class="filterBtn" onclick="filterSelection('controls')">Controls</button>
-  <button class="filterBtn" onclick="filterSelection('resource')">Resource</button>
-  <button class="filterBtn" onclick="filterSelection('operations')">O&M</button>
-  <button class="filterBtn" onclick="filterSelection('wildlife')">Wildlife</button>
-  <button class="filterBtn" onclick="filterSelection('grid')">Grid</button>
-  <button class="filterBtn" onclick="filterSelection('wisdem')">WISDEM Modules</button>
-  <button class="filterBtn" onclick="filterSelection('openfast')">OpenFAST Modules</button>
-  <button class="filterBtn" onclick="filterSelection('exawind')">ExaWind Modules</button>
-  <button class="filterBtn" onclick="filterSelection('prepost')">Pre/Post-processing</button>
+  <button class="filterBtn isOn" id="all" onclick="filterSelection('all')"> Show all</button>
+  <button class="filterBtn isOff" id="turbine" onclick="filterSelection('turbine')">Turbine</button>
+  <button class="filterBtn isOff" id="farm" onclick="filterSelection('farm')">Farm</button>
+  <button class="filterBtn isOff" id="component" onclick="filterSelection('component')">Component</button>
+  <button class="filterBtn isOff" id="high" onclick="filterSelection('high')">High Fidelity</button>
+  <button class="filterBtn isOff" id="middle" onclick="filterSelection('middle')">Middle Fidelity</button>
+  <button class="filterBtn isOff" id="low" onclick="filterSelection('low')">Low Fidelity</button>
+  <button class="filterBtn isOff" id="time" onclick="filterSelection('time')">Time Domain</button>
+  <button class="filterBtn isOff" id="freq" onclick="filterSelection('freq')">Freq Domain</button>
+  <button class="filterBtn isOff" id="steady" onclick="filterSelection('steady')">Steady State</button>
+  <button class="filterBtn isOff" id="cost" onclick="filterSelection('cost')">Cost</button>
+  <button class="filterBtn isOff" id="design" onclick="filterSelection('design')">Design</button>
+  <button class="filterBtn isOff" id="controls" onclick="filterSelection('controls')">Controls</button>
+  <button class="filterBtn isOff" id="resource" onclick="filterSelection('resource')">Resource</button>
+  <button class="filterBtn isOff" id="operations" onclick="filterSelection('operations')">O&M</button>
+  <button class="filterBtn isOff" id="wildlife" onclick="filterSelection('wildlife')">Wildlife</button>
+  <button class="filterBtn isOff" id="grid" onclick="filterSelection('grid')">Grid</button>
+  <button class="filterBtn isOff" id="wisdem" onclick="filterSelection('wisdem')">WISDEM Modules</button>
+  <button class="filterBtn isOff" id="openfast" onclick="filterSelection('openfast')">OpenFAST Modules</button>
+  <button class="filterBtn isOff" id="exawind" onclick="filterSelection('exawind')">ExaWind Modules</button>
+  <button class="filterBtn isOff" id="prepost" onclick="filterSelection('prepost')">Pre/Post-processing</button>
 </div>
 
 <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->

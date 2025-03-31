@@ -38,3 +38,7 @@
   background-color: #666;
   color: white;
 }
+.filterBtn.isOn {
+  background-color: #666;
+  color: white;
+}
