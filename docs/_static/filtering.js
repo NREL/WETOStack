@@ -4,7 +4,7 @@
 function filterSelection(c) {
 
     // Get all filter buttons
-    var btnFilters = document.getElementsByClassName("filterBtn");
+    const btnFilters = Array.from(document.getElementsByClassName("filterBtn"));
 
     // Toggle the clicked button state
     for (var i = 0; i < btnFilters.length; i++) {
@@ -19,12 +19,8 @@ function filterSelection(c) {
     }
 
     // Add filters to to the filterList for all buttons that are "on"
-    var filterList = new Array();
-    for (var i = 0; i < btnFilters.length; i++) {
-        if (btnFilters[i].className.indexOf("isOn") > -1) {
-            filterList.push(btnFilters[i].id);
-        }
-    }
+    var filterList = btnFilters.filter( (button) => button.className.indexOf("isOn") > -1 );    // Get's the <button>
+    filterList = filterList.map((filterButton) => filterButton.id);                             // Get's the id
 
     // Get all model divs that will be filtered in or out; these show the model names
     var divModels = document.getElementsByClassName("filterDiv");
