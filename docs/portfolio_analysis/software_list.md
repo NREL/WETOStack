@@ -15,11 +15,11 @@ and analysis to cost modeling and supply chain analysis.
 
 ## Active support
 
-These projects are actively supported and funded by WETO. Click "*Show All*" to get started.
+These projects are actively supported and funded by WETO.
+Select one or a combination of categories to down-select projects.
 
 ```{div} my-class
 <div id="myBtnContainer">
-  <button class="filterBtn isOn" id="all" onclick="filterSelection('all')"> Show all</button>
   <button class="filterBtn isOff" id="turbine" onclick="filterSelection('turbine')">Turbine</button>
   <button class="filterBtn isOff" id="farm" onclick="filterSelection('farm')">Farm</button>
   <button class="filterBtn isOff" id="component" onclick="filterSelection('component')">Component</button>

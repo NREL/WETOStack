@@ -50,11 +50,7 @@ function filterSelection(c) {
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    // Get all model divs that will be filtered in or out; these show the model names
-    var divModels = document.getElementsByClassName("filterDiv");
-
     // Show all models to start
-    for (var i = 0; i < divModels.length; i++) {
-        divModels[i].classList.add("show");
-    }
+    const divModels = Array.from(document.getElementsByClassName("filterDiv"));
+    divModels.forEach((model) => model.classList.add("show"));
 });

@@ -34,10 +34,6 @@
 }
 
 /* Add a dark background to the active button */
-.filterBtn.active {
-  background-color: #666;
-  color: white;
-}
 .filterBtn.isOn {
   background-color: #666;
   color: white;
