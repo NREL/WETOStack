@@ -45,7 +45,6 @@ jobs:
       run: |
         pip install --upgrade pip
         pip install -r requirements.txt
-        pip install -r docs/requirements.txt
     - name: Build the book
       working-directory: ${{runner.workspace}}/WETOStack/docs/
       run: |

@@ -11,7 +11,7 @@ The site is built using [Jupyter Book](https://jupyterbook.org/intro.html).
 To build the site, run the following command:
 
 ```bash
-pip install -r docs/requirements.txt
+pip install -r requirements.txt
 
 cd docs/
 
@@ -39,8 +39,8 @@ Note that the docs/_build folder must be removed and a rebuild done if changes t
 
 ## Dependencies
 
-The Python packages required to build this project are listed in `requirements.txt`.
-Additional dependencies for the documentation are in `docs/requirements.txt`.
+The Python packages required to build this project, including those for the documentation site,
+are listed in `requirements.txt`.
 
 ## License
 

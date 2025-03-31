@@ -3,3 +3,20 @@ json-schema-for-humans
 matplotlib>=3.9.1
 numpy~=1.26
 pyyaml
+
+# For the docs
+jupyter-book~=1.0
+# sphinx-book-theme-1.1.4       # Note 1.1.2 has a broken sidebar
+pydata-sphinx-theme~=0.15
+sphinxcontrib.mermaid~=0.9
+sphinxcontrib.youtube~=1.4
+sphinx-simplepdf~=1.6
+
+# attribute tables
+# import altair as alt
+itables~=2.2
+pandas~=2.2
+networkx
+ghapi
+pygraphviz
+squarify
