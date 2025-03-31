@@ -20,7 +20,7 @@
 }
 
 /* Style the buttons */
-.btn {
+.filterBtn {
   border: none;
   outline: none;
   padding: 12px 16px;
@@ -29,12 +29,12 @@
 }
 
 /* Add a light grey background on mouse-over */
-.btn:hover {
+.filterBtn:hover {
   background-color: #ddd;
 }
 
 /* Add a dark background to the active button */
-.btn.active {
+.filterBtn.active {
   background-color: #666;
   color: white;
 }
