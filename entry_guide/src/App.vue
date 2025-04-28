@@ -13,7 +13,7 @@ import StateControls from './StateControls.vue'
 import { useLayout } from './Layout'
 
 import { nodes, edges } from "./graphData";
-import { models } from "./database";
+
 
 // Utilities
 
@@ -65,19 +65,6 @@ const setReachable = (startNodeId: string) => {
 };
 
 // Initialization
-models.value.forEach((model: any) => {
-  nodes.value.push({
-    id: model.name,
-    data: {
-      label: model.name,
-      reachable: false,
-    },
-    position: { x: 0, y: 0 },
-    type: "tool",
-  });
-});
-console.log(nodes);
-
 setReachable("1");
 
 const { layout } = useLayout()
