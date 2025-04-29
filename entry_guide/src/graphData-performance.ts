@@ -1,5 +1,5 @@
 
-import { ref } from 'vue'  
+import { ref } from 'vue'
 import type { Node, Edge } from '@vue-flow/core'
 
 
@@ -98,7 +98,7 @@ export const nodes = ref<Node[]>([
     {
         id: "9",
         data: {
-            label: "FLORIS",
+            label: "FLORIS (LF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -107,7 +107,7 @@ export const nodes = ref<Node[]>([
     {
         id: "10",
         data: {
-            label: "FAD",
+            label: "FAD (LF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -116,7 +116,7 @@ export const nodes = ref<Node[]>([
     {
         id: "11",
         data: {
-            label: "WindSE",
+            label: "WindSE (MF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -125,7 +125,7 @@ export const nodes = ref<Node[]>([
     {
         id: "12",
         data: {
-            label: "FAST.Farm",
+            label: "FAST.Farm (MF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -134,7 +134,7 @@ export const nodes = ref<Node[]>([
     {
         id: "13",
         data: {
-            label: "ExaWind Stack",
+            label: "ExaWind Stack (HF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -143,7 +143,7 @@ export const nodes = ref<Node[]>([
     {
         id: "14",
         data: {
-            label: "AMR-Wind",
+            label: "AMR-Wind (HF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -152,7 +152,7 @@ export const nodes = ref<Node[]>([
     {
         id: "15",
         data: {
-            label: "WISDEM",
+            label: "WISDEM (LF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -161,7 +161,7 @@ export const nodes = ref<Node[]>([
     {
         id: "16",
         data: {
-            label: "WEIS",
+            label: "WEIS (MF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -170,7 +170,7 @@ export const nodes = ref<Node[]>([
     {
         id: "17",
         data: {
-            label: "OpenFAST",
+            label: "OpenFAST (MF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -179,7 +179,7 @@ export const nodes = ref<Node[]>([
     {
         id: "18",
         data: {
-            label: "Ard",
+            label: "Ard (MF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -188,7 +188,7 @@ export const nodes = ref<Node[]>([
     {
         id: "19",
         data: {
-            label: "ERF",
+            label: "ERF (HF)",
             reachable: false
         },
         position: { x: 0, y: 0},

@@ -33,6 +33,7 @@ const isB = (state: string) => {
   border-radius: 4px;
   text-align: center;
   background-color: #ccc;
+  color: black;
 }
 .reachable {
   background-color: #93c47d;

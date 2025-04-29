@@ -13,12 +13,11 @@ import StateControls from './StateControls.vue'
 import { useLayout } from './Layout'
 
 //import { nodes, edges } from "./graphData-performance";
-import { nodes, edges } from "./graphData-design";
+//import { nodes, edges } from "./graphData-design";
 //import { nodes, edges } from "./graphData-costs";
 //import { nodes, edges } from "./graphData-controls";
 //import { nodes, edges } from "./graphData-data";
-//import { nodes, edges } from "./graphData-metocean";
-//import { nodes, edges } from "./graphData-visualize";
+import { nodes, edges } from "./graphData-metocean";
 
 
 // Utilities
@@ -101,12 +100,11 @@ onNodeClick((event) => {
 <template>
   <div class="app">
     <!-- <h1>Entry Guide: Estimate Performance</h1> -->
-    <h1>Entry Guide: System Design</h1>
-    <!-- <h1>Entry Guide: Estimate Costs</h1> -->
+    <!-- <h1>Entry Guide: System Design</h1> -->
+    <!-- <h1>Entry Guide: Estimate Costs</h1>  -->
     <!-- <h1>Entry Guide: Turbine and Farm Controls</h1>  -->
-    <!-- <h1>Entry Guide: Analyze Data</h1>  -->
-    <!-- <h1>Entry Guide: Simulate the Environment</h1>  -->
-    <!-- <h1>Entry Guide: Visualize</h1>  -->
+    <!-- <h1>Entry Guide: Analyze or Visualize Data</h1>  -->
+    <h1>Entry Guide: Simulate the Environment</h1>
     <VueFlow
       :nodes="nodes"
       :edges="edges"

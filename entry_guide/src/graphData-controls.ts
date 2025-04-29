@@ -1,5 +1,5 @@
 
-import { ref } from 'vue'  
+import { ref } from 'vue'
 import type { Node, Edge } from '@vue-flow/core'
 
 
@@ -9,8 +9,8 @@ export const nodes = ref<Node[]>([
         id: "1",
         type: "decision",
         data: {
-            a: "Farm",
-            b: "Turbine",
+            a: "Hybrids",
+            b: "Wind Energy",
             state: null,
             reachable: false
         },
@@ -20,7 +20,7 @@ export const nodes = ref<Node[]>([
         id: "2",
         type: "decision",
         data: {
-            a: "Dynamic",
+            a: "Time Domain",
             b: "Steady state",
             state: null,
             reachable: false
@@ -31,8 +31,8 @@ export const nodes = ref<Node[]>([
         id: "3",
         type: "decision",
         data: {
-            a: "Power",
-            b: "Power + Loads",
+            a: "Farm",
+            b: "Turbine",
             state: null,
             reachable: false
         },
@@ -42,8 +42,8 @@ export const nodes = ref<Node[]>([
         id: "4",
         type: "decision",
         data: {
-            a: "Floating",
-            b: "Land-based",
+            a: "Time Domain",
+            b: "Steady state",
             state: null,
             reachable: false
         },
@@ -53,8 +53,8 @@ export const nodes = ref<Node[]>([
         id: "5",
         type: "decision",
         data: {
-            a: "ABL",
-            b: "Synthetic Turbulence",
+            a: "Simulation",
+            b: "Measured Data",
             state: null,
             reachable: false
         },
@@ -64,8 +64,8 @@ export const nodes = ref<Node[]>([
         id: "6",
         type: "decision",
         data: {
-            a: "Resolve geometry",
-            b: "Actuator methods",
+            a: "Controller Simulation",
+            b: "Controller Design",
             state: null,
             reachable: false
         },
@@ -75,30 +75,28 @@ export const nodes = ref<Node[]>([
         id: "7",
         type: "decision",
         data: {
-            a: "Variable",
-            b: "Steady state",
+            a: "Model the ABL",
+            b: "No ABL model",
             state: null,
             reachable: false
         },
         position: { x: 0, y: 0},
     },
+
+
     {
         id: "8",
-        type: "decision",
         data: {
-            a: "Design",
-            b: "Batch Simulation",
-            state: null,
+            label: "Hercules (HF)",
             reachable: false
         },
         position: { x: 0, y: 0},
+        type: "tool",
     },
-
-
     {
         id: "9",
         data: {
-            label: "FLORIS",
+            label: "HOPP (LF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -107,7 +105,7 @@ export const nodes = ref<Node[]>([
     {
         id: "10",
         data: {
-            label: "FAD",
+            label: "ROSCO (MF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -116,7 +114,7 @@ export const nodes = ref<Node[]>([
     {
         id: "11",
         data: {
-            label: "WindSE",
+            label: "FLORIS (LF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -125,7 +123,7 @@ export const nodes = ref<Node[]>([
     {
         id: "12",
         data: {
-            label: "FAST.Farm",
+            label: "FLASC (MF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -134,7 +132,7 @@ export const nodes = ref<Node[]>([
     {
         id: "13",
         data: {
-            label: "ExaWind Stack",
+            label: "WHOC (MF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -143,7 +141,7 @@ export const nodes = ref<Node[]>([
     {
         id: "14",
         data: {
-            label: "AMR-Wind",
+            label: "AMR-Wind (HF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -152,43 +150,7 @@ export const nodes = ref<Node[]>([
     {
         id: "15",
         data: {
-            label: "WISDEM",
-            reachable: false
-        },
-        position: { x: 0, y: 0},
-        type: "tool",
-    },
-    {
-        id: "16",
-        data: {
-            label: "WEIS",
-            reachable: false
-        },
-        position: { x: 0, y: 0},
-        type: "tool",
-    },
-    {
-        id: "17",
-        data: {
-            label: "OpenFAST",
-            reachable: false
-        },
-        position: { x: 0, y: 0},
-        type: "tool",
-    },
-    {
-        id: "18",
-        data: {
-            label: "Ard",
-            reachable: false
-        },
-        position: { x: 0, y: 0},
-        type: "tool",
-    },
-    {
-        id: "19",
-        data: {
-            label: "ERF",
+            label: "FAST.Farm (MF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -200,21 +162,17 @@ export const nodes = ref<Node[]>([
 // Export edges
 export const edges = ref<Edge[]>([
     { id: "e1-2", source: "1", target: "2", label: "a", type: "decisionEdge", data: { reachable: false } },
-    { id: "e1-7", source: "1", target: "7", label: "b", type: "decisionEdge", data: { reachable: false } },
-    { id: "e2-3", source: "2", target: "3", label: "a", type: "decisionEdge", data: { reachable: false } },
-    { id: "e2-4", source: "2", target: "4", label: "b", type: "decisionEdge", data: { reachable: false } },
-    { id: "e3-5", source: "3", target: "5", label: "a", type: "decisionEdge", data: { reachable: false } },
-    { id: "e3-11", source: "3", target: "11", label: "b", type: "decisionEdge", data: { reachable: false } },
+    { id: "e1-3", source: "1", target: "3", label: "b", type: "decisionEdge", data: { reachable: false } },
+    { id: "e2-8", source: "2", target: "8", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e2-9", source: "2", target: "9", label: "b", type: "decisionEdge", data: { reachable: false } },
+    { id: "e3-4", source: "3", target: "4", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e3-10", source: "3", target: "10", label: "b", type: "decisionEdge", data: { reachable: false } },
+    { id: "e4-5", source: "4", target: "5", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e4-11", source: "4", target: "11", label: "b", type: "decisionEdge", data: { reachable: false } },
     { id: "e5-6", source: "5", target: "6", label: "a", type: "decisionEdge", data: { reachable: false } },
     { id: "e5-12", source: "5", target: "12", label: "b", type: "decisionEdge", data: { reachable: false } },
-    { id: "e6-14", source: "6", target: "14", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e6-7", source: "6", target: "7", label: "a", type: "decisionEdge", data: { reachable: false } },
     { id: "e6-13", source: "6", target: "13", label: "b", type: "decisionEdge", data: { reachable: false } },
-    { id: "e4-9", source: "4", target: "9", label: "a", type: "decisionEdge", data: { reachable: false } },
-    { id: "e4-10", source: "4", target: "10", label: "b", type: "decisionEdge", data: { reachable: false } },
-    { id: "e7-15", source: "7", target: "15", label: "a", type: "decisionEdge", data: { reachable: false } },
-    { id: "e7-8", source: "7", target: "8", label: "b", type: "decisionEdge", data: { reachable: false } },
-    { id: "e8-16", source: "8", target: "16", label: "a", type: "decisionEdge", data: { reachable: false } },
-    { id: "e8-17", source: "8", target: "17", label: "b", type: "decisionEdge", data: { reachable: false } },
-    { id: "e3-18", source: "3", target: "18", label: "b", type: "decisionEdge", data: { reachable: false } },
-    { id: "e6-19", source: "6", target: "19", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e7-14", source: "7", target: "14", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e7-15", source: "7", target: "15", label: "b", type: "decisionEdge", data: { reachable: false } },
 ]);

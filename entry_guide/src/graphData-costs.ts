@@ -9,8 +9,8 @@ export const nodes = ref<Node[]>([
         id: "1",
         type: "decision",
         data: {
-            a: "Hybrid Energy",
-            b: "Wind Energy",
+            a: "Wind Energy",
+            b: "Hybrid Energy",
             state: null,
             reachable: false
         },
@@ -53,8 +53,8 @@ export const nodes = ref<Node[]>([
         id: "5",
         type: "decision",
         data: {
-            a: "Onshore",
-            b: "Offshore",
+            a: "Offshore",
+            b: "Onshore",
             state: null,
             reachable: false
         },
@@ -114,7 +114,7 @@ export const nodes = ref<Node[]>([
     {
         id: "11",
         data: {
-            label: "WISDEM",
+            label: "WISDEM (LF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -123,7 +123,7 @@ export const nodes = ref<Node[]>([
     {
         id: "12",
         data: {
-            label: "WOMBAT",
+            label: "WOMBAT (LF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -132,7 +132,7 @@ export const nodes = ref<Node[]>([
     {
         id: "13",
         data: {
-            label: "WAVES",
+            label: "WAVES (LF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -141,7 +141,7 @@ export const nodes = ref<Node[]>([
     {
         id: "14",
         data: {
-            label: "LandBOSSE",
+            label: "LandBOSSE (LF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -150,7 +150,7 @@ export const nodes = ref<Node[]>([
     {
         id: "15",
         data: {
-            label: "CORAL",
+            label: "CORAL (LF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -159,7 +159,7 @@ export const nodes = ref<Node[]>([
     {
         id: "16",
         data: {
-            label: "NRWAL",
+            label: "NRWAL (LF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -168,7 +168,7 @@ export const nodes = ref<Node[]>([
     {
         id: "17",
         data: {
-            label: "ORBIT",
+            label: "ORBIT (LF)",
             reachable: false
         },
         position: { x: 0, y: 0},
@@ -181,8 +181,8 @@ export const edges = ref<Edge[]>([
     { id: "e1-2", source: "1", target: "2", label: "a", type: "decisionEdge", data: { reachable: false } },
     { id: "e1-8", source: "1", target: "8", label: "b", type: "decisionEdge", data: { reachable: false } },
     { id: "e1-9", source: "1", target: "9", label: "b", type: "decisionEdge", data: { reachable: false } },
-    { id: "e2-3", source: "2", target: "3", label: "b", type: "decisionEdge", data: { reachable: false } },
-    { id: "e2-4", source: "2", target: "4", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e2-3", source: "2", target: "3", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e2-4", source: "2", target: "4", label: "b", type: "decisionEdge", data: { reachable: false } },
     { id: "e3-9", source: "3", target: "9", label: "a", type: "decisionEdge", data: { reachable: false } },
     { id: "e3-10", source: "3", target: "10", label: "a", type: "decisionEdge", data: { reachable: false } },
     { id: "e3-11", source: "3", target: "11", label: "b", type: "decisionEdge", data: { reachable: false } },
@@ -194,6 +194,6 @@ export const edges = ref<Edge[]>([
     { id: "e5-14", source: "5", target: "14", label: "b", type: "decisionEdge", data: { reachable: false } },
     { id: "e5-13", source: "5", target: "13", label: "b", type: "decisionEdge", data: { reachable: false } },
     { id: "e6-15", source: "6", target: "15", label: "b", type: "decisionEdge", data: { reachable: false } },
-    { id: "e7-16", source: "8", target: "16", label: "b", type: "decisionEdge", data: { reachable: false } },
-    { id: "e7-17", source: "8", target: "17", label: "b", type: "decisionEdge", data: { reachable: false } },
+    { id: "e7-16", source: "7", target: "16", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e7-17", source: "7", target: "17", label: "b", type: "decisionEdge", data: { reachable: false } },
 ]);
