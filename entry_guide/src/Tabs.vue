@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+import type { TabItem } from './types';
 
-const props = defineProps({
-    tabs: {
-        type: Array,
-        required: true,
-        default: () => []
-    },
-});
+const props = defineProps<{
+    tabs: TabItem[];
+}>();
 
 const selectedTab = ref(0);
 
@@ -22,13 +19,8 @@ const activeTab = computed(() => props.tabs[selectedTab.value]);
 <template>
     <div>
         <div class="tabs">
-            <div
-                v-for="(tab, index) in tabs"
-                :key="index"
-                class="tab"
-                :class="{ active: selectedTab.value === index }"
-                @click="selectTab(index)"
-            >
+            <div v-for="(tab, index) in tabs" :key="index" class="tab" :class="{ active: selectedTab === index }"
+                @click="selectTab(index)">
                 {{ tab.title }}
             </div>
         </div>
