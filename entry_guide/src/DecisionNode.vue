@@ -26,6 +26,7 @@ const isB = (state: string) => {
 }
 .bold {
   font-weight: bold;
+  color: yellow;
 }
 .node {
   padding: 8px;
@@ -34,6 +35,7 @@ const isB = (state: string) => {
   background-color: #ccc;
 }
 .reachable {
-  background-color: #28a745;
+  background-color: #93c47d;
 }
 </style>
+<!-- old reachable color 28a745; -->

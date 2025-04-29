@@ -8,10 +8,8 @@ parts:
 - caption: The Portfolio
   chapters:
   - file: portfolio_analysis/overview
-  - url: https://rafmudaf.github.io/WETOStack/_static/entry_guide/index.html
+  - url: https://nrel.github.io/WETOStack/_static/entry_guide/index.html
     title: Entry Guide - Graph
-  - url: https://rafmudaf.github.io/WETOStack/_static/entry_guide_dtree/index.html
-    title: Entry Guide - Decision Tree
   - file: technical_areas/overview
   - file: portfolio_analysis/software_list
     sections:
@@ -27,7 +25,7 @@ parts:
   - file: software_dev/rubric
   - file: software_dev/best_practices
   - file: software_dev/developer_resources
-      
+
 - caption: Engagement Notes
   chapters:
   - file: activity/updates
@@ -39,4 +37,3 @@ parts:
   - file: workshops/workshop
     sections:
     - file: workshops/workshop_report
-

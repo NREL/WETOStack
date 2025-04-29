@@ -12,7 +12,13 @@ import SummaryPanel from './SummaryPanel.vue';
 import StateControls from './StateControls.vue'
 import { useLayout } from './Layout'
 
-import { nodes, edges } from "./graphData";
+//import { nodes, edges } from "./graphData-performance";
+import { nodes, edges } from "./graphData-design";
+//import { nodes, edges } from "./graphData-costs";
+//import { nodes, edges } from "./graphData-controls";
+//import { nodes, edges } from "./graphData-data";
+//import { nodes, edges } from "./graphData-metocean";
+//import { nodes, edges } from "./graphData-visualize";
 
 
 // Utilities
@@ -43,7 +49,7 @@ const setReachable = (startNodeId: string) => {
 
     const node: Node = nodes.value.find((n: Node) => n.id === current);
     node.data.reachable = true;
-    
+
     // Find outgoing edges with label matching the current node state
     edges.value.forEach((edge: Edge) => {
       if (
@@ -56,7 +62,7 @@ const setReachable = (startNodeId: string) => {
         // After a design change, the check is not necessary but it could be an issue if the
         // graph includes cycles in the future. The appropriate check is whether the edge's
         // target node is reachable.
-        
+
         edge.data.reachable = true;
         queueNodes.push(edge.target);
       }
@@ -94,7 +100,13 @@ onNodeClick((event) => {
 
 <template>
   <div class="app">
-    <h1>Entry Guide: Estimate Performance</h1>
+    <!-- <h1>Entry Guide: Estimate Performance</h1> -->
+    <h1>Entry Guide: System Design</h1>
+    <!-- <h1>Entry Guide: Estimate Costs</h1> -->
+    <!-- <h1>Entry Guide: Turbine and Farm Controls</h1>  -->
+    <!-- <h1>Entry Guide: Analyze Data</h1>  -->
+    <!-- <h1>Entry Guide: Simulate the Environment</h1>  -->
+    <!-- <h1>Entry Guide: Visualize</h1>  -->
     <VueFlow
       :nodes="nodes"
       :edges="edges"

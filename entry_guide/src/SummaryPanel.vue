@@ -34,7 +34,7 @@ const softwareList = computed(() => {
   text-align: left;
 }
 .software-list {
-  font-size: 1.4em;
+  font-size: 1em;
 }
 .software-list li:hover {
   background-color: #e0ffe0;
