@@ -2,12 +2,20 @@
 import { ref } from 'vue';
 
 import Tabs from './Tabs.vue';
-import PerformanceTab from './tabs/PerformanceTab.vue';
+import ControlsTab from './tabs/ControlsTab.vue';
 import CostsTab from './tabs/CostsTab.vue';
+import DataTab from './tabs/DataTab.vue';
+import DesignTab from './tabs/DesignTab.vue';
+import MetoceanTab from './tabs/MetoceanTab.vue';
+import PerformanceTab from './tabs/PerformanceTab.vue';
 
 const tabList = ref([
-  { title: 'Performance', component: PerformanceTab },
-  { title: 'Costs', component: CostsTab }
+  { title: 'Controls', component: ControlsTab },
+  { title: 'Costs', component: CostsTab },
+  { title: 'Data', component: DataTab },
+  { title: 'Design', component: DesignTab },
+  { title: 'Metocean', component: MetoceanTab },
+  { title: 'Performance', component: PerformanceTab }
 ]);
 
 </script>

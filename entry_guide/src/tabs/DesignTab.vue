@@ -13,7 +13,7 @@ import StateControls from '../StateControls.vue';
 import { toggleState, setReachable } from '../utils';
 import { useLayout } from '../Layout';
 
-import { nodes, edges } from "../data/costs";
+import { nodes, edges } from "../data/data";
 
 defineOptions({
     title: '',
@@ -50,7 +50,7 @@ async function layoutGraph(direction: string) {
 
 <template lang="html">
 
-    <h2>Estimate Costs</h2>
+    <h2>System Design</h2>
 
     <div class="vueflow_container">
         <VueFlow :nodes="nodes" :edges="edges" :edgeTypes="{ decisionEdge: markRaw(DecisionEdge) }"
