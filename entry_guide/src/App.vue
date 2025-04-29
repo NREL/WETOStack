@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 
 import Tabs from './Tabs.vue';
 import type { TabItem } from './types';
@@ -10,14 +9,14 @@ import DesignTab from './tabs/DesignTab.vue';
 import MetoceanTab from './tabs/MetoceanTab.vue';
 import PerformanceTab from './tabs/PerformanceTab.vue';
 
-const tabList = ref<TabItem[]>([
+const tabList: TabItem[] = [
     { title: 'Controls', component: ControlsTab },
     { title: 'Costs', component: CostsTab },
     { title: 'Data', component: DataTab },
     { title: 'Design', component: DesignTab },
     { title: 'Metocean', component: MetoceanTab },
     { title: 'Performance', component: PerformanceTab }
-]);
+];
 
 </script>
 
