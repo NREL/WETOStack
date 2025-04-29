@@ -42,6 +42,7 @@ const activeTab = computed(() => props.tabs[selectedTab.value]);
     margin-right: 0.5em;
     cursor: pointer;
     border-bottom: 2px solid transparent;
+    border-color: #42b983;
 }
 
 .tab.active {
