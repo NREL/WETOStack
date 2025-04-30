@@ -23,6 +23,7 @@ const tabList: TabItem[] = [
 <template>
     <div class="app">
         <h1>Entry Guide</h1>
+        <p> Navigate the WETO Stack Entry Guide by toggling the switches below to select the software for your task </p>
         <div class="tab_container">
             <Tabs :tabs="tabList">
                 <template #default="{ activeTab }: { activeTab: TabItem }">
