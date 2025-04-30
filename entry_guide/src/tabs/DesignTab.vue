@@ -13,7 +13,7 @@ import StateControls from '../StateControls.vue';
 import { toggleState, setReachable } from '../utils';
 import { useLayout } from '../Layout';
 
-import { nodes, edges } from "../data/data";
+import { nodes, edges } from "../data/design";
 
 defineOptions({
     title: '',
