@@ -24,6 +24,7 @@ const tabList: TabItem[] = [
     <div class="app">
         <h1>Entry Guide</h1>
         <p> Navigate the WETO Stack Entry Guide by toggling the switches below to select the software for your task </p>
+        <p> Legend: HF / MF / LF = High / Medium / Low Fidelity </p>
         <div class="tab_container">
             <Tabs :tabs="tabList">
                 <template #default="{ activeTab }: { activeTab: TabItem }">
