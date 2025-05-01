@@ -10,7 +10,6 @@ parts:
   - file: portfolio_analysis/overview
   - url: https://nrel.github.io/WETOStack/_static/entry_guide/index.html
     title: Entry Guide - Graph
-  - file: technical_areas/overview
   - file: portfolio_analysis/software_list
     sections:
     - file: portfolio_analysis/software_other
