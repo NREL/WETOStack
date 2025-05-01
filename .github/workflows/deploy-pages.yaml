@@ -28,7 +28,7 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# This job installs dependencies, builds the book, and pushes it to `gh-pages`
+# This job installs dependencies, builds the site, and pushes it to `gh-pages`
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -46,7 +46,15 @@ jobs:
         sudo apt-get install graphviz graphviz-dev
         pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Build the book
+    # Build the Vue app first, and then move it to the docs/_static folder so that it's included
+    # in the JupyterBook build.
+    - name: Build the Vue app
+      working-directory: ${{runner.workspace}}/WETOStack/entry_guide
+      run: |
+        npm install
+        npm run build
+        mv dist ../docs/_static/entry_guide
+    - name: Build the JupyterBook
       working-directory: ${{runner.workspace}}/WETOStack/docs/
       run: |
         jupyter-book build .
