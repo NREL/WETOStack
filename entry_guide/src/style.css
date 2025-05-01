@@ -1,6 +1,5 @@
 @import 'https://cdn.jsdelivr.net/npm/@vue-flow/core@latest/dist/style.css';
 @import 'https://cdn.jsdelivr.net/npm/@vue-flow/core@latest/dist/theme-default.css';
-@import 'https://cdn.jsdelivr.net/npm/@vue-flow/minimap@latest/dist/style.css';
 @import 'https://cdn.jsdelivr.net/npm/@vue-flow/controls@latest/dist/style.css';
 
 :root {
@@ -91,11 +90,6 @@ button:focus-visible {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #212e3c;
-}
-
-.vue-flow__minimap {
-  transform: scale(75%);
-  transform-origin: bottom right;
 }
 
 .vue-flow__panel {

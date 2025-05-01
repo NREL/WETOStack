@@ -1,7 +1,6 @@
 <script setup lang="ts">
 
 import { nextTick, markRaw } from 'vue';
-import { MiniMap } from '@vue-flow/minimap';
 import { Background } from '@vue-flow/background';
 import { VueFlow, useVueFlow } from '@vue-flow/core';
 
@@ -71,8 +70,6 @@ async function layoutGraph(direction: string) {
             <template #edge-decision>
                 <DecisionEdge />
             </template>
-
-            <MiniMap />
 
             <Background />
 
