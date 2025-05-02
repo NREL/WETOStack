@@ -76,10 +76,3 @@ async function layoutGraph(direction: string) {
         </VueFlow>
     </div>
 </template>
-
-<style scoped>
-.vueflow_container {
-    text-align: center;
-    height: 75vh;
-}
-</style>
