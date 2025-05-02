@@ -147,6 +147,47 @@ Or paste this line directly into your browser bar:
 Note that the `docs/_build` folder must be removed and a rebuild completed if there are changes to
 the `software_attributes/database/` YAML files.
 
+## Entry Guide Project Description
+
+The Entry Guide project is built with [VueJS](https://vuejs.org) as a reactive front-end framework.
+The language is TypeScript and a VueJS domain-specific language that is essentially HTML.
+The Vue files have the `.vue` suffix and define the Vue components with three sections:
+
+- script
+- template
+- style (optional)
+
+The script section is TypeScript and defines the data and functions used to create the content
+laid out in the template section.
+The style section optionally contains CSS styling for the elements in the template section.
+
+The app is structured as a main page with tabs that contain [VueFlow](https://vueflow.dev)
+canvases that render the graphs.
+The main entry point is `App.vue`, and it loads the tab elements and lays out the main page.
+The tab bar itself (the row of tab names on the main page) is described in `Tabs.vue`.
+The tab elements are defined in corresponding files in `tabs/`.
+The tab elements load their corresponding graph data from `data/` and then create their layout
+using the `layout` function from `Layout.ts` which uses [DagreJS](https://github.com/dagrejs/dagre)
+to systematically produce the layout.
+Some additional functionality for the graph reactivity is available in `utils.ts` and configured
+in the tab elements.
+All tabs are essentially the same code and structure but load a different data file.
+
+The graph data are defined as nodes and edges.
+A node can be either a `type: decision` or `type: tool`.
+When the graph traversal routines reach a tool node, they stop traversing.
+Decision-type nodes have "a" and "b" attributes to provide the switch functionality.
+The edges must be defined as a source, target, and label.
+The source and target are node IDs, and the label is either `a` or `b` to denote which state
+of the switch activates the edge.
+
+New tabs can be added by copying an existing tab and data file to new files.
+The data should be updated as appropriate.
+Then, the tab element should be imported in `App.vue` and added as an element to the
+`tabList` variable.
+From there, the app should include the new tab in the existing structure.
+
 ## License
 
-WETO Software Stack is licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+WETO Software Stack is licensed under
+Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
