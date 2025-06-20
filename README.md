@@ -1,12 +1,15 @@
 
 # WETO Stack
 
-This repository contains the source files for the documentation of the WETO Software Stack,
-which includes an entry guide for new users,
-multiple listings and categorization of the software models,
-software quality characterization,
-and notes from the developer and user engagement that created the WETOStack content.
+This repository contains the source files for the documentation of the WETO Software Stack, 
+a software portfolio wholly or partially supported by the Department of 
+Energy's [Wind Energy Technologies Office (WETO)](https://www.energy.gov/eere/wind/wind-energy-technologies-office).  
+The source files include an entry guide for new users, multiple listings and categorization of the software models, 
+software quality characterization, and notes from the developer and user engagement that created the WETOStack content. 
 See [nrel.github.io/WETOStack/](https://nrel.github.io/WETOStack/) for more information.
+
+Note that while a "software stack" usually refers to a set of integrated software codes, the portfolio of codes 
+in the WETO Stack is diverse and can be used individually or integrated, depending on the use case. 
 
 Copyright 2024 Alliance for Sustainable Energy, LLC.
 
