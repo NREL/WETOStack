@@ -8,6 +8,8 @@ parts:
 - caption: The Portfolio
   chapters:
   - file: portfolio_analysis/overview
+  - url: https://nrel.github.io/WETOStack/_static/entry_guide/index.html
+    title: Entry Guide
   - file: portfolio_analysis/software_list
     sections:
     - file: portfolio_analysis/software_other
@@ -16,12 +18,13 @@ parts:
   - file: portfolio_analysis/map_network
   - file: portfolio_analysis/attributes_schema
 
+
 - caption: Software Quality
   chapters:
   - file: software_dev/rubric
   - file: software_dev/best_practices
   - file: software_dev/developer_resources
-      
+
 - caption: Engagement Notes
   chapters:
   - file: activity/updates
