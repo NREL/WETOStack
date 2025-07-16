@@ -189,5 +189,4 @@ From there, the app should include the new tab in the existing structure.
 
 ## License
 
-WETO Software Stack is licensed under
-Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+WETO Software Stack is licensed under Apache 2.0.
