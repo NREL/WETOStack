@@ -36,7 +36,7 @@ does_loads: true
 supported_platforms:
 - any
 package_manager:
-- PyPi
+- pypi
 - conda
 package_manager_url:
 - https://pypi.org/project/OpenRAFT/
