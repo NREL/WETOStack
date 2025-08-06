@@ -35,11 +35,13 @@ does_loads: true
 # Distribution
 supported_platforms:
 - any
-# package_manager:
-# - TODO
-# package_manager_url:
-# - TODO
-# installation_complexity: TODO
+package_manager:
+- pypi
+- conda
+package_manager_url:
+- https://pypi.org/project/OpenRAFT/
+- https://anaconda.org/conda-forge/openraft
+installation_complexity: 1
 
 # Documentation
 documentation_url: https://openraft.readthedocs.io/en/latest/

@@ -22,6 +22,7 @@ repo_list = [
     ("https://github.com", "NREL", "HOPP"),
     ("https://github.com", "WISDEM", "landbosse"),
     ("https://github.com", "WISDEM", "WOMBAT"),
+    ("https://github.com", "WISDEM", "ard"),
 ]
 
 for repo in repo_list:
