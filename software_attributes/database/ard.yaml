@@ -13,7 +13,6 @@ last_release_date: "2024-12-30"
 scope:
 - farm
 - system
-- atmosphere
 system_type:
 - hawt
 system_location:
@@ -27,14 +26,14 @@ turbine_model:
 - actuator
 wake_model:
 - analytical
-- navier_stokes
+#- navier_stokes # when windse is included
 does_controls: true
 does_costs: true
 does_data_analysis: false
 does_design: true
 does_design_optimization: true
 does_simulation: true
-does_loads: false
+does_loads: true # via surrogates
 tags:
 - layout optimization
 - wake steering
