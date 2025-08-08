@@ -56,6 +56,7 @@ Select one or a combination of categories to down-select projects.
   <a href="https://github.com/sandialabs/pyNuMAD"><div class="filterDiv all component high time">pyNuMAD</div></a>
   <a href="https://github.com/wisdem/weis"><div class="filterDiv all turbine low middle time freq design">WEIS</div></a>
   <a href="https://github.com/wisdem/wisdem"><div class="filterDiv all turbine low steady design cost wisdem">WISDEM</div></a>
+  <a href="https://github.com/wisdem/ard"><div class="filterDiv all farm middle low time steady design">Ard</div></a>
   <a href="https://github.com/nrel/windse"><div class="filterDiv all farm middle time design">WindSE</div></a>
   <a href="https://github.com/nrel/hopp"><div class="filterDiv all turbine low steady design">HOPP</div></a>
   <a href="https://github.com/wisdem/sonata"><div class="filterDiv all component middle steady design">SONATA</div></a>

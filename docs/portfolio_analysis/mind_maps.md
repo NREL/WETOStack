@@ -81,6 +81,7 @@ mindmap
             WEIS
             WISDEM
             WindSE
+  			Ard
             HOPP
             SONATA
         ctrl(" ")
@@ -93,6 +94,7 @@ mindmap
 - WEIS https://github.com/wisdem/weis - Wind Energy with Integrated Servo-control performs multifidelity co-design of wind turbines by combining multiple NREL-developed tools to enable design optimization of floating offshore wind turbines.
 - WISDEM https://github.com/wisdem/wisdem - Set of wind turbine and plant cost and energy production models along with financial models for assessing overall wind plant cost of energy.
 - WindSE https://github.com/nrel/windse - Python package that uses a FEniCS backend to perform wind farm simulations and optimization. 
+- Ard https://github.com/WISDEM/Ard/ - Make plant-level design choices for the whole system and its interactions to make wind energy projects more successful.
 - HOPP https://github.com/NREL/HOPP - Assesses optimal designs for the deployment of utility-scale hybrid energy plants, particularly considering wind, solar and storage.
 - SONATA https://github.com/ptrbortolotti/SONATA - Toolbox for Multidisciplinary Rotor Blade Design Environment for Structural Optimization and Aeroelastic Analysis.
 ````

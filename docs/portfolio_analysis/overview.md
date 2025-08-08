@@ -30,6 +30,7 @@ mindmap
             WISDEM
             WindSE
             HOPP
+			   Ard
 
         ctrl(Controls)
             ROSCO
@@ -60,7 +61,7 @@ mindmap
 |Application      |Design Exploration |Detailed Design   |Highly Resolving |
 |:----------------|:------------------|:-----------------|:----------------|
 |                 |                   |                  |                 |
-|**Single Turbine** |WISDEM, RAFT (WEIS)|OpenFAST (WEIS), Owens |ExaWind          |
-|**Full Wind Plant**|FLORIS             |FAST.Farm, WindSE |ExaWind, ERF     |
+|**Single Turbine** |WISDEM, RAFT (WEIS)|OpenFAST (WEIS), Owens  |ExaWind          |
+|**Full Wind Plant**|FLORIS       (Ard) |FAST.Farm, WindSE (Ard) |ExaWind, ERF     |
 
 

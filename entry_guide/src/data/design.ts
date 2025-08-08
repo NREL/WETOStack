@@ -174,6 +174,8 @@ export const edges = ref<Edge[]>([
     { id: "e6-7", source: "6", target: "7", label: "a", type: "decisionEdge", data: { reachable: false } },
     { id: "e6-12", source: "6", target: "12", label: "b", type: "decisionEdge", data: { reachable: false } },
     { id: "e6-13", source: "6", target: "13", label: "b", type: "decisionEdge", data: { reachable: false } },
+    { id: "e7-13a", source: "7", target: "13", label: "a", type: "decisionEdge", data: { reachable: false } },
     { id: "e7-14", source: "7", target: "14", label: "a", type: "decisionEdge", data: { reachable: false } },
+    { id: "e7-13b", source: "7", target: "13", label: "b", type: "decisionEdge", data: { reachable: false } },
     { id: "e7-15", source: "7", target: "15", label: "b", type: "decisionEdge", data: { reachable: false } },
 ]);
