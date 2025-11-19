@@ -28,6 +28,7 @@ parts:
 - caption: Engagement Notes
   chapters:
   - file: activity/updates
+  - file: workshops/nawea_2025
   - file: workshops/nawea_2024
   - file: workshops/user_workshops_2024
     sections:
